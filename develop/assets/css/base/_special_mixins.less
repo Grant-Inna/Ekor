@@ -1,0 +1,35 @@
+/*
+@media (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
+  .example {
+    background-image: url(img.png);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .example {
+    background-image: url(img@2x.png);
+  }
+}
+*/
+
+
+.r1(@name) {  // Уменьшенная версия
+    @media (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
+        background-image: url('@{name}');
+    }
+}
+.r2(@name) { // Качество выше
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('@{name}');
+    }
+}
+
+.none1190() {
+    .to( 1190px, {
+        display: none;
+    });
+}
+.none890() {
+    .lg-block({
+        display: none;
+    });
+}

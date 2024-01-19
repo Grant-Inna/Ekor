@@ -1,0 +1,120 @@
+header {
+   position: relative;
+   z-index: 510;
+   background-color: @color-white;
+}
+.header__main {
+   background-color: @color-white;
+   padding-top: 25px;
+   padding-bottom: 21px;
+   
+   .xl-block({
+      padding-top: 16px;
+      padding-bottom: 16px;
+   })
+}
+.header__logo {
+   margin-right: auto;
+}
+.header__aside {
+   background-color: @color-blue;
+   padding-top: 12px;
+   padding-bottom: 12px;
+   
+   .none890();
+}
+
+.header__to-catalog {
+   .flex();
+   .items-center();
+   margin-right: 30px;
+    span {
+       .montserrat-semibold();
+       font-size: 16px;
+       color: @color-white;
+    }
+}
+.header__search {
+   height: 40px;
+   max-width: 375px;
+   flex-grow: 1;
+   
+   margin-right: auto;
+}
+
+.header__form {
+   .flex();
+   .items-center();
+   padding: 10px 12px;
+   box-sizing: border-box;
+   width: 100%;
+   height: 100%;
+   border-radius: 8px;
+   background-color: @color-white;
+   
+   button {
+      margin-right: 8px;
+   }
+}
+
+.header__aside-icons {
+   .flex();
+   .items-center();
+   .justify-between();
+   
+   max-width: 424px;
+   flex-grow: 1;
+   
+   .to( 1190px, {
+      max-width: 159px;
+   });
+   .to( 890px, {
+      max-width: unset;
+   })
+}
+
+.header__section {
+   .flex();
+   .items-center();
+   color: @color-white;
+   span,
+   .login {
+      .montserrat-semibold();
+      font-size: 16px;
+       line-height: 1px;
+      color: @color-white;
+      cursor: default;
+   }
+   div[class^='icon__'] {
+       position: relative;
+      z-index: 10;
+       line-height: 1px;
+      cursor: pointer;
+   }
+   
+   span,
+   .element {
+      .none1190();
+   }
+}
+
+
+.amount {
+   position: absolute;
+   
+   top: -2px;
+   right: -1px;
+   
+   z-index: 100;
+   padding: 0;
+   width: 14px;
+   height: 14px;
+   background-color: @color-yellow;
+   border-radius: 40px;
+   
+   .flex-center();
+   .montserrat-semibold();
+   font-size: 10px;
+   line-height: .5px;
+   color: @color-blue;
+}

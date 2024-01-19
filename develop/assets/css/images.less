@@ -1,0 +1,43 @@
+.svg-b(@folder1, @folder2, @name) {
+   background-image: url("../data/@{folder1}/@{folder2}/@{name}.svg");
+   background-repeat: no-repeat;
+}
+.svg(@folder, @name) {
+   background-image: url("../data/@{folder}/@{name}.svg");
+   background-repeat: no-repeat;
+}
+.png(@folder, @name) {
+   background-image: url("../data/@{folder}/@{name}.png");
+   background-repeat: no-repeat;
+}
+
+
+.logo( @name) {
+   background-image: url("../images/svg/logo/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.header__logo {
+   .logo__image {
+      .logo('b-logo')
+   }
+   .logo__text {
+      .logo('b-words')
+   }
+}
+.footer__logo {
+   .logo__image {
+      .logo('logo')
+   }
+   .logo__text {
+      .logo('words');
+      .xs-block({
+         .logo('xs-words');
+      })
+   }
+}
+
+
+

@@ -1,0 +1,54 @@
+html {
+   font-size: 15px;
+   .middle( font-size, 12px );
+   .xs( font-size, 10px );
+}
+body {
+   .montserrat-medium();
+   background-color: @color-back-main;
+}
+.wrapper {
+   .wrapper();
+}
+.row() {
+   .row-flex();
+}
+.row {
+   .row-flex();
+}
+.col {
+   .col();
+}
+
+a {
+   display: block;
+   text-decoration: none;
+   cursor: pointer;
+   
+   color: inherit;
+   .tr();
+}
+
+input {
+   .un-input();
+   width: 90%;
+   height: 90%;
+}
+button {
+   .un-button()
+}
+
+menu {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+input::-moz-placeholder { color: @color-gray-search; font-size: 14px; .montserrat-medium();}
+input::-webkit-input-placeholder { color: @color-gray-search; font-size: 14px; .montserrat-medium();}
+input:-ms-input-placeholder { color: @color-gray-search; font-size: 14px; .montserrat-medium();}
+input::-ms-input-placeholder { color: @color-gray-search; font-size: 14px; .montserrat-medium();}
+input::placeholder { color: @color-gray-search; font-size: 14px; .montserrat-medium();}

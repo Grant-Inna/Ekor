@@ -1,0 +1,32 @@
+@font1: 'Montserrat';
+
+
+@font-face {
+  font-family: '@{font1}-Bold';
+  src: url('../fonts/@{font1}/@{font1}-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: '@{font1}-SemiBold';
+  src: url('../fonts/@{font1}/@{font1}-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: '@{font1}-Medium';
+  src: url('../fonts/@{font1}/@{font1}-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+
+.montserrat-bold() {
+  font-family: '@{font1}-Bold', Proxima Nova, Gilroy, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.montserrat-semibold() {
+  font-family: '@{font1}-SemiBold', Proxima Nova, Gilroy, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.montserrat-medium() {
+  font-family: '@{font1}-Medium', Proxima Nova, Gilroy, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}

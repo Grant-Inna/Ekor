@@ -1,0 +1,103 @@
+.icon(@folder, @name) {
+   background-image: url("../images/svg/@{folder}/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.icon-i-i(@folder, @name) {
+   background-image: url("../images/svg/icons/@{folder}/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.icon-i(@name) {
+   background-image: url("../images/svg/icons/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.icon-size() {
+   width: 24px;
+   height: 24px;
+   cursor: pointer;
+}
+
+*[class^='icon__'] {
+   .icon-size();
+   .tr();
+}
+
+/*   Social   */
+header {
+   .icon__telegram {
+      .icon('social', 'b-t');
+   }
+   .icon__whatsapp {
+      .icon('social', 'b-w');
+   }
+}
+
+/*   Header   */
+header {
+   .icon__basket {
+      .icon-i-i('menu', 'basket');
+   }
+   .icon__favorites {
+      .icon-i-i('menu', 'favorites');
+   }
+    .icon__user {
+       .icon-i-i('menu', 'b-user');
+    }
+   .icon__search {
+      .icon-i-i('menu', 'search');
+   }
+   .icon__dots {
+      .icon-i-i('menu', 'dots');
+   }
+   .icon__burger {
+      .icon-i-i('menu', 'burger'); // del
+      width: 20px;
+      height: 20px;
+   }
+   .icon__close-b {
+      .icon-i-i('menu', 'b-close'); // del
+   }
+}
+
+@media screen and (max-width: @break_lg) {
+   .icon-size() {
+      width: 20px;
+      height: 20px;
+   }
+   
+   *[class^='icon__'] {
+      .icon-size();
+      .tr();
+   }
+    header {
+   .icon__basket {
+      .icon-i-i('menu', 'b-basket');
+   }
+   .icon__favorites {
+      .icon-i-i('menu', 'b-favorites');
+   }
+   .icon__dots {
+      .icon-i-i('menu', 'b-dots');
+   }
+   .icon__close-b {
+      .icon-i-i('menu', 'b-close'); // del
+   }
+}
+}
+.icon__close {
+   .icon-i-i('menu', 'close');
+}
+
+/*   Social   */
+/*   Social   */
+/*   Social   */
+/*   Social   */
+/*   Social   */
