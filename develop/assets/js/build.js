@@ -11,13 +11,13 @@ $(document).ready(function () {
    appendToMobile(width);
    function appendToMobile( width ) {
       if ( width <= 1190 ) {
-         $('.header__menu, .header__contact').appendTo('.header__menu-mobile .column.start');
-         $('.header__social').appendTo('.header__menu-mobile .column.start');
+         $('.header__menu, .header__contact').appendTo('.header__menu_mobile .column.start');
+         $('.header__social').appendTo('.header__menu_mobile .column.start');
          $('.header__main .burger__holder').show().on( 'click', showMobileMenu);
          
          if ( width <= 890 ) {
-            $('.header__to-catalog.row_flex-10, .header__aside-icons').prependTo('.header__menu-mobile .column.start');
-            $('.header__search').prependTo('.header__menu-mobile .column.start');
+            $('.header__to-catalog.row_flex-10, .header__aside-icons').prependTo('.header__menu_mobile .column.start');
+            $('.header__search').prependTo('.header__menu_mobile .column.start');
             $('.header__aside').hide();
          } else {
             $('.header__to-catalog.row_flex-10, .header__search, .header__aside-icons').prependTo('.header__aside .wrapper');
@@ -37,8 +37,8 @@ $(document).ready(function () {
          display: "block",
          opacity: "1"
       };
-      if ( $('.header__menu-mobile').css('display') !== 'block' ) {
-         $('.header__menu-mobile').slideDown(500);
+      if ( $('.header__menu_mobile').css('display') !== 'block' ) {
+         $('.header__menu_mobile').slideDown(500);
          $('#black_back').css(style_blackLayer); // Появление заднего фона
          $('.header__main .burger__holder').addClass('close');
       } else {
@@ -50,7 +50,7 @@ $(document).ready(function () {
       });
    }
    function hideMobileMenu() {
-      $('.header__menu-mobile').slideUp(200);
+      $('.header__menu_mobile').slideUp(200);
       $('#black_back').prop('style', '');  // Скрытие задника
       $('.header__main .burger__holder').removeClass('close');
    }
@@ -67,6 +67,21 @@ $(document).ready(function () {
       });
    
   /* каруселька */
+   const carousel_holder = $('.carousel__holder');
+   if (carousel_holder.length > 0) {
+      carousel_holder.slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         speed: 1500,
+         arrows: false,
+         dots: true,
+         infinite: true,
+         autoplay: false
+      });
+   }
+   
+   /* нажатие на disabled ссылки */
+   $('a[disabled="disabled"], button[disabled="disabled"]').on( 'click', function(event) { event.preventDefault(); event.stopPropagation(); return false; });
    
    /* плавный скрол */
    

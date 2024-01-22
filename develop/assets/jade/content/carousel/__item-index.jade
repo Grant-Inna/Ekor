@@ -1,0 +1,7 @@
+mixin item_index( numb, text, little_text )
+   .carousel__item( class='carousel__item-#{numb}')
+      .carousel__item_text
+         h1.caption.text-white !{text}
+         h2.text-16.text-white !{little_text}
+         a( href='' ).button-yellow
+            span Получить прайс

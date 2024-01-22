@@ -1,9 +1,15 @@
 .wrapper.flex {
    .flex();
-   .items-center();
+   //.items-center();
+}
+.flex {
+   .flex();
 }
 .column {
    .column();
+}
+.center {
+   .items-center()
 }
 .start {
    .items-start();
@@ -15,6 +21,18 @@
    padding: 0 !important;
    color: inherit;
 }
+.relative { // del
+   position: relative;
+}
+.relation_content { // del
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+}
 .row_flex-10 {
    margin-left: -5px;
    margin-right: -5px;
@@ -24,7 +42,62 @@
       padding-left: 5px;
    }
 }
+.quarter { // del
+   width: 25%;
+}
+.third { // del
+   width: 33%;
+}
+.half { // del
+   width: 50%;
+}
+.two-thirds { // del
+   width: 66%;
+}
+.text-white {
+   color: @color-white
+}
 
+h1.caption {
+   .montserrat-semibold();
+   font-size: 50px;
+   line-height: 100%;
+   .xl-block({
+      font-size: 32px;
+      line-height: 120%;
+   });
+   .sm-block({
+      font-size: 24px;
+      line-height: 110%;
+   });
+}
+h1.title {
+   .montserrat-semibold();
+   font-size: 40px;
+   .xl-block({
+      font-size: 30px;
+   });
+   .sm-block({
+      font-size: 24px;
+   });
+}
+h2.title {
+   .montserrat-semibold();
+   font-size: 24px;
+   
+   .sm-block({
+      font-size: 18px;
+   });
+}
+.text-16 {
+   .montserrat-medium();
+   font-size: 16px;
+   line-height: 120%;
+   .sm-block({
+      font-size: 14px;
+      line-height: 130%;
+   })
+}
 .row_flex-16 {
    margin-left: -8px;
    margin-right: -8px;
@@ -33,6 +106,32 @@
       padding-right: 8px;
       padding-left: 8px;
    }
+}
+.row_flex-32 {
+   margin-left: -16px;
+   margin-right: -16px;
+   
+   & > * {
+      padding-right: 16px;
+      padding-left: 16px;
+   }
+}
+.row_flex-80-media { // del
+   margin-left: -40px;
+   margin-right: -40px;
+   
+   & > * {
+      padding-right: 40px;
+      padding-left: 40px;
+   }
+   .md-block({
+      margin-left: 0;
+      margin-right: 0;
+      & > * {
+         padding-right: 0;
+         padding-left: 0;
+      }
+   });
 }
 
 
@@ -48,4 +147,15 @@
    transition: opacity .2s;
    
    display: none;
+}
+
+
+.mt20 {
+   margin-top: 20px;
+}
+.mb20 {
+   margin-bottom: 20px;
+}
+.pt20 { // del
+   padding-top: 20px;
 }

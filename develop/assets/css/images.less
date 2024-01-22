@@ -39,5 +39,51 @@
    }
 }
 
+/* line */
+.lines() {
+    background-image: url("../images/svg/bg/lines.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
 
-
+/* main карусель на главной */
+.carousel-little-img( @numb, @size ) {
+    background-image: url("../images/@{size}/carousel/index-@{numb}.png");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: bottom right;
+}
+.carousel__item-1-img() {
+   .carousel-little-img( 1, 'large' );
+   .lg-block({
+      .carousel-little-img( 1, 'middle' );
+   });
+   .sm-block({
+      .carousel-little-img( 1, 'small' );
+   });
+}
+.carousel__item-2-img() {
+   .carousel-little-img( 2, 'large' );
+   .lg-block({
+      .carousel-little-img( 2, 'middle' );
+   });
+   .sm-block({
+      .carousel-little-img( 2, 'small' );
+   });
+}
+.carousel__item-3-img() {
+   .carousel-little-img( 3, 'large' );
+   .lg-block({
+      .carousel-little-img( 3, 'middle' );
+      background-position: top right;
+   });
+   .middle-block({
+      background-position: bottom right;
+   });
+   .sm-block({
+      .carousel-little-img( 3, 'small' );
+   });
+   
+   
+}

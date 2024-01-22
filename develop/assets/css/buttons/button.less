@@ -1,0 +1,39 @@
+.button-yellow {
+   .flex-center();
+   width: 288px;
+   height: 48px;
+   border-radius: 10px;
+   background-color: @color-yellow;
+   color: @color-blue;
+   .montserrat-semibold();
+   font-size: 14px;
+   .lg-block({
+      width: 223px;
+   });
+   .sm-block({
+      width: 150px;
+      height: 38px;
+   });
+   border: 1px solid @color-yellow;
+   box-sizing: border-box;
+   .tr();
+}
+.button-yellow:hover,
+.button-yellow:active {
+   background-color: @color-yellow-light;
+   border: 1px solid @color-yellow-light;
+   .tr();
+}
+a.button-yellow[disabled] {
+   background-color: @color-gray-light;
+   border: 1px solid @color-gray-light;
+   .tr();
+   pointer-events: none;
+  cursor: default;
+}
+.button-yellow:focus,
+.button-yellow:target {
+   background-color: white;
+   border: 1px solid @color-blue;
+   .tr();
+}

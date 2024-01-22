@@ -16,6 +16,11 @@
   src: url('../fonts/@{font1}/@{font1}-Medium.ttf') format('truetype');
   font-weight: 500;
 }
+@font-face {
+  font-family: '@{font1}-Regular';
+  src: url('../fonts/@{font1}/@{font1}-Medium.ttf') format('truetype');
+  font-weight: 400;
+}
 
 
 .montserrat-bold() {
@@ -29,4 +34,8 @@
 .montserrat-medium() {
   font-family: '@{font1}-Medium', Proxima Nova, Gilroy, Arial, Helvetica, sans-serif;
   font-weight: 500;
+}
+.montserrat-regular() {
+  font-family: '@{font1}-Regular', Proxima Nova, Gilroy, Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }

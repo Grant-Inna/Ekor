@@ -39,6 +39,14 @@ header {
       .icon('social', 'b-w');
    }
 }
+footer {
+   .icon__telegram {
+      .icon('social', 't');
+   }
+   .icon__whatsapp {
+      .icon('social', 'w');
+   }
+}
 
 /*   Header   */
 header {
@@ -75,7 +83,6 @@ header {
    
    *[class^='icon__'] {
       .icon-size();
-      .tr();
    }
     header {
    .icon__basket {
@@ -89,6 +96,10 @@ header {
    }
    .icon__close-b {
       .icon-i-i('menu', 'b-close'); // del
+   }
+    footer *[class^='icon__'] {
+      width: 24px;
+       height: 24px;
    }
 }
 }
