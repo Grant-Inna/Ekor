@@ -1,8 +1,8 @@
 mixin menu-item( text, link, clear )
    case clear
       when 'О'
-         span.menu__item
+         li.menu__item
             a.menu__item_link( href='/#{link}.html' aria-label='Ссылка на страницу о компании') !{text}
       default
-         .menu__item
+         li.menu__item
             a.menu__item_link( href='/#{link}.html' aria-label='Ссылка на страницу !{text}') !{text}
