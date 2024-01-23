@@ -1,0 +1,3 @@
+<img fetchpriority="high" src="/path/to/hero-image.webp">
+картинка рыбов в крутилке на главной
+коррекция header для каждой страницы
