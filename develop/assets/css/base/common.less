@@ -57,7 +57,18 @@
 .text-white {
    color: @color-white
 }
-
+.text-blue {
+   color: @color-blue;
+}
+.back-blue { // del
+   background-color: @color-blue-gray;
+}
+.text-small {
+   .montserrat-medium();
+   font-size: 12px;
+   line-height: 16px;
+   color: @color-gray;
+}
 h1.caption {
    .montserrat-semibold();
    font-size: 50px;
@@ -74,8 +85,10 @@ h1.caption {
 h1.title {
    .montserrat-semibold();
    font-size: 40px;
+   line-height: 100%;
    .xl-block({
       font-size: 30px;
+      line-height: 110%;
    });
    .sm-block({
       font-size: 24px;
@@ -149,11 +162,16 @@ h2.title {
    display: none;
 }
 
-
-.mt20 {
+.mb10 {
+   margin-bottom: 10px;
+}
+.mb16 {
+   margin-bottom: 16px;
+}
+.mt20 { // del
    margin-top: 20px;
 }
-.mb20 {
+.mb20 { //del
    margin-bottom: 20px;
 }
 .pt20 { // del

@@ -2,17 +2,17 @@ include ../menu/desktop/__item
 #black_back
 header
    .wrapper.flex.center.header__main
-      .header__logo.logo__holder.row_flex-10
+      a( href='/' ).header__logo.logo__holder.row_flex-10
          .logo__image
          .logo__text
       .header__menu
          menu.menu__holder.row_flex-16
-            +menu-item( 'Доставка' )
-            +menu-item( 'Прайс' )
-            +menu-item( 'Производство' )
-            +menu-item( 'Оплата' )
-            +menu-item( 'Контакты' )
-            +menu-item( 'О&nbsp;компании' )
+            +menu-item( 'Доставка', 'delivery' )
+            +menu-item( 'Прайс', 'price' )
+            +menu-item( 'Производство', 'production' )
+            +menu-item( 'Оплата', 'payment' )
+            +menu-item( 'Контакты', 'contacts' )
+            +menu-item( 'О&nbsp;компании', 'about' )
       .header__social
          .social__holder.row_flex-10
             .social__icon

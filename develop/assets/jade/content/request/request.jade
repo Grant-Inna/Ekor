@@ -1,0 +1,23 @@
+section( aria-label='Подать заявку на сотрудничество' ).request__container.wrapper
+   .request__wrapper
+      .request__image_holder.request__holder
+         .request__image
+      .request__form_holder.request__holder
+         h1.title.text-blue Оставьте заявку на&nbsp;сотрудничество
+         form#request_form.request__form
+            label( for='request_name' ).label-input.mb10
+               input#request_name( type='text' ).input.input-big
+               .sup Имя
+            label( for='request_numb' ).label-input.mb10
+               input#request_numb( type='tel' ).input.input-big
+               .sup Номер телефона
+            label( for='request_numb' ).label-input.mb16
+               input#request_mail( type='mail' ).input.input-big
+               .sup Email
+            .flex.row_flex-10
+               label#request_label.label-checkbox( for='request_checkbox' )
+                  input#request_checkbox.checkbox-hidden( type='checkbox' )
+                  .checkbox
+               span.text-small Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением
+            button#reguest_btn.button-yellow.button-long( type='button' )
+               span Получить

@@ -1,0 +1,43 @@
+.label-checkbox {
+   position: relative;
+   z-index: 50;
+}
+.checkbox-hidden {
+   position: absolute;
+   left: -99999px;
+   width: 0;
+   height: 0;
+   opacity: 0;
+}
+
+.label-input {
+   position: relative;
+   z-index: 50;
+   .flex();
+   .items-center();
+   background: @color-blue-gray;
+   
+   border-radius: 10px;
+}
+.label-input input {
+   position: relative;
+   z-index: 60;
+   background-color: transparent;
+}
+.label-input .sup {
+   position: absolute;
+   z-index: 55;
+   left: 16px;
+   .montserrat-medium();
+   font-size: 14px;
+   line-height: 130%;
+   color: @color-gray;
+   .tr();
+}
+.label-input input:focus + .sup {
+   font-size: 12px;
+   line-height: 120%;
+   color: rgba(60, 60, 67, 0.3);
+   .tr();
+   margin-bottom: 36px;
+}

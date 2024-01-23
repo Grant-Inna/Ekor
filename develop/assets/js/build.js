@@ -76,7 +76,7 @@ $(document).ready(function () {
          arrows: false,
          dots: true,
          infinite: true,
-         autoplay: false
+         autoplay: true
       });
    }
    
@@ -98,5 +98,29 @@ $(document).ready(function () {
    if ($('#container_main').length > 0) {
       $('.scrollbar-inner').scrollbar();
    }
+   
+   /* чекбокс и кнопка */
+    if ( $('#request_form').length > 0 ) {
+       checkboxChecked( '#request_form', '#request_checkbox', '#reguest_btn', '#request_name', '#request_mail');
+    }
+   
+   function checkboxChecked( form, box, btn, input1, input2 ) {
+       $(btn).prop('disabled', true);
+      $(form).on('input', function() {
+         $(btn).prop('disabled', ![
+         $(input1).val().length !== 0,
+         $(input2).val().length !== 0,
+         $(box).prop('checked'),
+      ].every(Boolean));
+   })}
+    
+    /* placeholder */
+  if ($('.sup').length > 0) {
+     // $('input').val().length === 0 ? $('input').siblings('.sup').hide() : $('input').siblings('.sup').show();
+     $('input').on( 'input', function() {
+        let sup = $(this).siblings('.sup');
+        $(this).val().length > 1 ? sup.hide() : sup.show()
+     });
+  }
    
  });

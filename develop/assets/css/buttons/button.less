@@ -24,7 +24,8 @@
    border: 1px solid @color-yellow-light;
    .tr();
 }
-a.button-yellow[disabled] {
+a.button-yellow[disabled],
+button:disabled {
    background-color: @color-gray-light;
    border: 1px solid @color-gray-light;
    .tr();
@@ -37,3 +38,15 @@ a.button-yellow[disabled] {
    border: 1px solid @color-blue;
    .tr();
 }
+.button-long {
+   width: 100%;
+   .lg-block({
+      width: 100%;
+   });
+   .sm-block({
+      width: 100%;
+      height: 48px;
+   });
+}
+
+

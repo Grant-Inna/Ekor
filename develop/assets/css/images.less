@@ -6,9 +6,17 @@
    background-image: url("../data/@{folder}/@{name}.svg");
    background-repeat: no-repeat;
 }
-.png(@folder, @name) {
-   background-image: url("../data/@{folder}/@{name}.png");
+.size-contain(@size, @name) {
+    background-image: url("../images/@{size}/@{name}");
    background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+}
+.size-cover(@size, @name) {
+    background-image: url("../images/@{size}/@{name}");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
 }
 
 
@@ -42,6 +50,12 @@
 /* line */
 .lines() {
     background-image: url("../images/svg/bg/lines.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+.lines-request() {
+    background-image: url("../images/svg/bg/request.png");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -84,6 +98,13 @@
    .sm-block({
       .carousel-little-img( 3, 'small' );
    });
-   
-   
+}
+.request() {
+   .size-cover( 'large', 'request.jpg' );
+   .lg-block({
+      .size-cover( 'middle', 'request.jpg' );
+   });
+   .sm-block({
+      .size-cover( 'small', 'request.jpg' );
+   })
 }
