@@ -129,8 +129,20 @@ header {
    height: 26px;
    .tr();
 }
+*[class^='icofood__'] {
+   width: 26px;
+   height: 26px;
+   .tr();
+}
 .icofish( @name ) {
    background-image: url("../images/svg/food/fish/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.icofood( @name ) {
+   background-image: url("../images/svg/food/@{name}.svg");
    background-repeat: no-repeat;
    background-size: contain;
    background-position: center;
@@ -147,6 +159,43 @@ header {
 }
 .icofish__fileryby {
    .icofish( 'file_i_steyki_ryby');
+}
+
+.icofood__polufabrikaty {
+   .icofood( '1-polufabrikaty')
+}
+.icofood__konservy {
+   .icofood( '2-konservy')
+}
+.icofood__molochnaya_produktsiya {
+   .icofood( '3-molochnaya_produktsiya')
+}
+.icofood__gotovaya {
+   .icofood( '4-gotovaya')
+}
+.icofood__izdelie_iz_testa {
+   .icofood( '5-izdelie_iz_testa')
+}
+.icofood__bakaleya {
+   .icofood( '6-bakaleya')
+}
+.icofood__myaso_i_ptitsa {
+   .icofood( '7-myaso_i_ptitsa')
+}
+.icofood__okhlazhdennaya_ryba {
+   .icofood( '8-okhlazhdennaya_ryba')
+}
+.icofood__maslo_rastitelnyoe {
+   .icofood( '9-maslo_rastitelnyoe')
+}
+.icofood__zamorozhennyye_ovoshchi_yagody {
+   .icofood( '10-zamorozhennyye_ovoshchi_yagody')
+}
+.icofood__krasnaya_ikra {
+   .icofood( '11-krasnaya_ikra')
+}
+.icofood__sousy {
+   .icofood( '12-sousy')
 }
 
 

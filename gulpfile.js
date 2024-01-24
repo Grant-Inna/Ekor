@@ -38,6 +38,9 @@ let gridOptions = {
       xl: {
          width: "1190px",
       },
+      ll: {
+         width: "970px"
+      },
       lg: {
          width: "890px"
       },

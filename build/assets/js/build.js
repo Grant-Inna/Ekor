@@ -151,11 +151,12 @@ $(document).ready(function () {
       if ( width <= 890) {
          catalog_top = 0
       } else {
-         catalog_top = height_header + height_aside + 10;
+         catalog_top = height_header + height_aside  + 10;
       }
       
       if ( $('#catalog').css('display') !== 'block' ) {
          $('#catalog').slideDown(500).offset({top: catalog_top});
+         // $('#catalog').animate({ top: catalog_top }, 200);
          
          $('#catalog_trigger').addClass('open');
          hideMobileMenu();
@@ -175,18 +176,52 @@ $(document).ready(function () {
    }
    
    /* catalog inner */
-    if ($('#catalog').length > 0) {
-      $('.catalog__section .icon__angle').on( 'click', (event) => showCatalogArticles(event.target) )
+    if ($('.scrollbar-inner').length > 0 && width > 970) {
+      $('.catalog__section .catalog__section-caption').on( 'click', (event) => showCatalogArticles(event.target) )
    }
     function showCatalogArticles( target ) {
-       let articles = $(target).closest('.catalog__section').find('.catalog__articles');
-       // console.log(articles);
-       if ( $(target).hasClass('open')) {
-          articles.slideUp();
-          $(target).removeClass('open')
+       let $articles = $(target).closest('.catalog__section').find('.catalog__articles'),
+           $icon =  $(target).closest('.catalog__section').find('.icon__angle');
+       if ( $icon.hasClass('open')) {
+          $articles.slideUp(100);
+          $icon.removeClass('open')
+          
        } else {
-          articles.slideDown();
-          $(target).addClass('open')
+          // $('.catalog__articles').slideUp(100);
+          $articles.slideDown(300).css( 'display', 'flex');
+          $icon.addClass('open')
        }
     }
+    
+    /* catalog на мобилках */
+   
+   // при нажатии на section эта страница должна пропадать и появляться блок со списком article
+   // нужно при нажатии передовать инфу, чтобы открылось именно нужное
+   
+   if ($('#catalog').length > 0 && width <= 970 ) {
+      let $section_caption = $('.catalog__section-caption');
+      $section_caption.on( 'click', (event) => { showArticlesList(event.target)});
+      
+      $('.icon__close').on( 'click', hideCatalog);
+   }
+   function showArticlesList( section_caption ) {
+      let section = $(section_caption).closest('.catalog__section');
+      let $id = $(section_caption).data( 'article');
+      let current_article = $('#' + $id);
+      
+      let $back = $('.icon__angle');
+      $('.catalog__section').not(section).hide();
+      $(section_caption).hide();
+      
+      $back.removeClass('dis');
+      $('.icon__angle.spec').on( 'click', hideArticlesList);
+      
+      $(current_article).appendTo(section);
+      
+      // $('.icon__angle').on( 'click', hideArticlesList);
+   }
+   function hideArticlesList() {
+      $('.catalog__section').show();
+      console.log();
+   }
  });
