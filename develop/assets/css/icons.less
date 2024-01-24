@@ -108,7 +108,7 @@ header {
 }
 }
 .icon__close {
-   .icon-i-i('menu', 'close');
+   .icon-i-i('menu', 'b-close');
 }
 
 /*   checkbox   */
@@ -120,7 +120,37 @@ header {
 .checkbox-hidden:checked +.checkbox {
     .icon-i-i('control', 'yes-checkbox')
 }
-/*   Social   */
+.icon__angle {
+   .icon-i( 'up' );
+}
+/*   catalog food   */
+*[class^='icofish__'] {
+   width: 26px;
+   height: 26px;
+   .tr();
+}
+.icofish( @name ) {
+   background-image: url("../images/svg/food/fish/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.icofish__sveshemor {
+   .icofish( 'svezhemorozhennaya_ryba');
+}
+.icofish__morejap {
+   .icofish( 'moreprodukty_Japan');
+}
+.icofish__moreprodukty {
+   .icofish( 'moreprodukty');
+}
+.icofish__fileryby {
+   .icofish( 'file_i_steyki_ryby');
+}
+
+
+
 /*   Social   */
 /*   Social   */
 /*   Social   */

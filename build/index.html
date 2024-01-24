@@ -43,9 +43,21 @@
           </div>
         </div>
         <aside class="header__aside">
-          <div class="wrapper flex"><a href="/catalog.html" aria-label="Ссылка на страницу каталога всех товаров" class="header__to-catalog row_flex-10">
-              <div class="icon__dots"></div>
-              <div class="icon__close hide"></div><span>Каталог товаров</span></a>
+          <div class="wrapper flex">
+            <div id="catalog_trigger" class="header__to-catalog row_flex-10">
+              <div class="dots__holder">
+                <div class="dots">
+                  <div class="d"></div>
+                </div>
+                <div class="dots">
+                  <div class="d"></div>
+                </div>
+                <div class="dots">
+                  <div class="d"></div>
+                </div>
+                <div class="icon__dots"></div>
+              </div><span>Каталог товаров</span>
+            </div>
             <div class="header__search">
               <form class="header__form">
                 <button type="button" class="icon__search"></button>
@@ -128,6 +140,67 @@
           </div>
         </div>
       </section>
+      <section id="catalog" aria-label="Каталог со всеми товарами" class="catalog__container">
+        <div class="wrapper">
+          <div class="catalog__holder">
+            <div class="catalog__top">
+              <div class="catalog__caption"></div>
+              <div class="icon__close"></div>
+            </div>
+            <div class="catalog__block">
+              <div class="catalog__section">
+                <div class="catalog__section-caption">
+                  <div class="icofish__sveshemor"></div>
+                  <div class="catalog__section-name">Свежемороженая рыба</div>
+                  <div class="icon__angle"></div>
+                </div>
+                <div class="catalog__articles">
+                  <div class="scrollbar-inner">
+                    <div class="catalog__scroll"><a href="/products/undefined.html" class="catalog__link">Голец</a><a href="/products/undefined.html" class="catalog__link">Голец</a><a href="/products/undefined.html" class="catalog__link">Голец</a><a href="/products/undefined.html" class="catalog__link">Голец</a><a href="/products/undefined.html" class="catalog__link">Голец</a><a href="/products/undefined.html" class="catalog__link">Горбуша</a><a href="/products/undefined.html" class="catalog__link">Горбуша</a><a href="/products/undefined.html" class="catalog__link">Горбуша</a><a href="/products/undefined.html" class="catalog__link">Горбуша</a><a href="/products/undefined.html" class="catalog__link">Горбуша</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__section">
+                <div class="catalog__section-caption">
+                  <div class="icofish__fileryby"></div>
+                  <div class="catalog__section-name">Филе рыбы, стейки, фарш</div>
+                  <div class="icon__angle"></div>
+                </div>
+                <div class="catalog__articles"><a href="/products/undefined.html" class="catalog__link">Голец</a><a href="/products/undefined.html" class="catalog__link">Горбуша</a>
+                </div>
+              </div>
+              <div class="catalog__section">
+                <div class="catalog__section-caption">
+                  <div class="icofish__moreprodukty"></div>
+                  <div class="catalog__section-name">Креветки / Морепродукты</div>
+                  <div class="icon__angle"></div>
+                </div>
+                <div class="catalog__articles"><a href="/products/undefined.html" class="catalog__link">Голец</a><a href="/products/undefined.html" class="catalog__link">Горбуша</a>
+                </div>
+              </div>
+              <div class="catalog__section">
+                <div class="catalog__section-caption">
+                  <div class="icofish__morejap"></div>
+                  <div class="catalog__section-name">Морепродукты для японской кухни</div>
+                  <div class="icon__angle"></div>
+                </div>
+                <div class="catalog__articles"><a href="/products/undefined.html" class="catalog__link">Голец</a><a href="/products/undefined.html" class="catalog__link">Горбуша</a>
+                </div>
+              </div>
+              <div class="catalog__section">
+                <div class="catalog__section-caption">
+                  <div class="icofish__fileryby"></div>
+                  <div class="catalog__section-name">Фасованная рыба «Экор»</div>
+                  <div class="icon__angle"></div>
+                </div>
+                <div class="catalog__articles"><a href="/products/undefined.html" class="catalog__link">Голец</a><a href="/products/undefined.html" class="catalog__link">Горбуша</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <footer class="footer__holder">
         <div class="wrapper">
           <div class="footer__information_holder">
@@ -152,12 +225,12 @@
           <div class="footer__links_holder row_flex-32">
             <div class="footer__links_section footer_links-1">
               <div class="footer__links_caption">Покупателям</div>
-              <div class="footer__links"><span class="footer__link">Прайс</span><span class="footer__link">Доставка</span><span class="footer__link">Чат-бот</span><span class="footer__link">Производство</span><span class="footer__link">Контакты</span>
+              <div class="footer__links"><a href="undefined" class="footer__link">Прайс</a><a href="undefined" class="footer__link">Доставка</a><a href="undefined" class="footer__link">Чат-бот</a><a href="undefined" class="footer__link">Производство</a><a href="undefined" class="footer__link">Контакты</a>
               </div>
             </div>
             <div class="footer__links_section footer_links-2">
               <div class="footer__links_caption">Каталог</div>
-              <div class="footer__links row_flex-32"><span class="footer__link">Свежемороженая <br>рыба</span><span class="footer__link">Филе рыбы, стейки, <br>фарш</span><span class="footer__link">Морепродукты</span><span class="footer__link">Фасованная рыба Экор</span><span class="footer__link">Полуфабрикаты</span><span class="footer__link">Готовая продукция Экор</span><span class="footer__link">Мясо, птица</span><span class="footer__link">Замороженные <br>продукты</span><span class="footer__link">Консервы</span><span class="footer__link">Продукты питания оптом</span><span class="footer__link">Карта сайта</span>
+              <div class="footer__links row_flex-32"><a href="undefined" class="footer__link">Свежемороженая <br>рыба</a><a href="undefined" class="footer__link">Филе рыбы, стейки, <br>фарш</a><a href="undefined" class="footer__link">Морепродукты</a><a href="undefined" class="footer__link">Фасованная рыба Экор</a><a href="undefined" class="footer__link">Полуфабрикаты</a><a href="undefined" class="footer__link">Готовая продукция Экор</a><a href="undefined" class="footer__link">Мясо, птица</a><a href="undefined" class="footer__link">Замороженные <br>продукты</a><a href="undefined" class="footer__link">Консервы</a><a href="undefined" class="footer__link">Продукты питания оптом</a><a href="undefined" class="footer__link">Карта сайта</a>
               </div>
             </div>
           </div>

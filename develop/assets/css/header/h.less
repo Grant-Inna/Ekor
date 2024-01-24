@@ -17,6 +17,8 @@ header {
    margin-right: auto;
 }
 .header__aside {
+   position: relative;
+   z-index: 50;
    background-color: @color-blue;
    padding-top: 12px;
    padding-bottom: 12px;
@@ -28,6 +30,7 @@ header {
    .flex();
    .items-center();
    margin-right: 30px;
+   cursor: pointer;
     span {
        .montserrat-semibold();
        font-size: 16px;

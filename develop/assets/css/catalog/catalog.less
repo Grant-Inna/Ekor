@@ -1,0 +1,120 @@
+.dots__holder {
+   .column();
+   .justify-between();
+    width: 24px;
+    height: 20px;
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+.dots {
+   position: relative;
+   z-index: 50;
+   .flex();
+   .justify-center();
+   width: 24px;
+   height: 4px;
+}
+.dots .d {
+   width: 4px;
+   height: 4px;
+   border-radius: 50px;
+   background-color: white;
+   .tr();
+}
+.dots {
+   &:before,
+   &:after {
+      .pseudo();
+      width: 4px;
+      height: 4px;
+      border-radius: 50px;
+      background-color: white;
+      .tr();
+   }
+   &:before {
+      left: 0;
+   }
+   &:after {
+      right: 0;
+   }
+}
+.dots__holder:hover {
+      .dots:nth-of-type(2) {
+      &:before {
+         left: 50%;
+         transform: translateX(-60%);
+         opacity: 0;
+         .tr();
+      }
+      &:after {
+         left: 50%;
+         transform: translateX(-60%);
+         opacity: 0;
+         .tr();
+      }
+   }
+   .dots:first-of-type {
+      .d {
+         margin-left: 100%;
+         .tr();
+      }
+   }
+   .dots:nth-of-type(3) {
+      .d {
+         margin-left: 100%;
+         .tr();
+      }
+      
+   }
+}
+.header__to-catalog.open .dots__holder {
+   .dots:first-of-type {
+      transform: rotate(135deg) translateY(-3.2px) translateX(9.4px);
+      .tr();
+   
+      .d {
+         width: 28px;
+         height: 2px;
+         .tr();
+      }
+       &:before,
+      &:after {
+           height: 2px;
+       }
+   }
+   .dots:nth-of-type(2) {
+      transition: transform .3s, opacity .2s;
+      transform: rotate(45deg);
+      opacity: 0;
+   }
+   .dots:nth-of-type(3) {
+       transform: rotate(-135deg) translateY(2.4px) translateX(6.9px);
+      .tr();
+      
+      .d {
+         width: 28px;
+         height: 2px;
+         .tr();
+      }
+       &:before,
+      &:after {
+           height: 2px;
+       }
+   }
+
+}
+
+
+.icon__dots {
+   display: none;
+}
+@media screen and (max-width: @break_lg) {
+   .icon__dots,
+   .catalog__caption,
+   .icon__close {
+      display: block;
+   }
+   .dots {
+      display: none;
+   }
+}

@@ -1,0 +1,61 @@
+include __catalog-article
+section#catalog( aria-label='Каталог со всеми товарами' ).catalog__container
+   .wrapper
+      .catalog__holder
+         .catalog__top
+            .catalog__caption
+            .icon__close
+         .catalog__block
+            .catalog__section
+               .catalog__section-caption
+                  .icofish__sveshemor
+                  .catalog__section-name Свежемороженая рыба
+                  .icon__angle
+               .catalog__articles
+                  .scrollbar-inner
+                     .catalog__scroll
+                        +catalog-article( 'Голец' )
+                        +catalog-article( 'Голец' )
+                        +catalog-article( 'Голец' )
+                        +catalog-article( 'Голец' )
+                        +catalog-article( 'Голец' )
+                        +catalog-article( 'Горбуша' )
+                        +catalog-article( 'Горбуша' )
+                        +catalog-article( 'Горбуша' )
+                        +catalog-article( 'Горбуша' )
+                        +catalog-article( 'Горбуша' )
+            .catalog__section
+               .catalog__section-caption
+                  .icofish__fileryby
+                  .catalog__section-name Филе рыбы, стейки, фарш
+                  .icon__angle
+               .catalog__articles
+                  +catalog-article( 'Голец' )
+                  +catalog-article( 'Горбуша' )
+
+            .catalog__section
+               .catalog__section-caption
+                  .icofish__moreprodukty
+                  .catalog__section-name Креветки / Морепродукты
+                  .icon__angle
+               .catalog__articles
+                  +catalog-article( 'Голец' )
+                  +catalog-article( 'Горбуша' )
+
+            .catalog__section
+               .catalog__section-caption
+                  .icofish__morejap
+                  .catalog__section-name Морепродукты для японской кухни
+                  .icon__angle
+               .catalog__articles
+                  +catalog-article( 'Голец' )
+                  +catalog-article( 'Горбуша' )
+
+            .catalog__section
+               .catalog__section-caption
+                  .icofish__fileryby
+                  .catalog__section-name Фасованная рыба «Экор»
+                  .icon__angle
+               .catalog__articles
+                  +catalog-article( 'Голец' )
+                  +catalog-article( 'Горбуша' )
