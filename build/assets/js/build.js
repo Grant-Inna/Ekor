@@ -202,26 +202,35 @@ $(document).ready(function () {
       let $section_caption = $('.catalog__section-caption');
       $section_caption.on( 'click', (event) => { showArticlesList(event.target)});
       
-      $('.icon__close').on( 'click', hideCatalog);
+      $('.icon__close.cat').on( 'click', hideCatalog);
    }
    function showArticlesList( section_caption ) {
       let section = $(section_caption).closest('.catalog__section');
-      let $id = $(section_caption).data( 'article');
+      let caption = $(section_caption).closest('.catalog__section-caption');
+      let $id = caption.data( 'article');
       let current_article = $('#' + $id);
+      console.log($id);
+      console.log(current_article);
+      let $back = $('.icon__angle.cat');
       
-      let $back = $('.icon__angle');
+      if ($back.is(':visible')) {
+         $('.catalog__holder').addClass('open')
+      }
+      
       $('.catalog__section').not(section).hide();
-      $(section_caption).hide();
+      $(current_article).show();
+      $(caption).hide();
       
       $back.removeClass('dis');
-      $('.icon__angle.spec').on( 'click', hideArticlesList);
+      $back.on( 'click', hideArticlesList);
       
-      $(current_article).appendTo(section);
-      
-      // $('.icon__angle').on( 'click', hideArticlesList);
    }
    function hideArticlesList() {
       $('.catalog__section').show();
+      $('.catalog__section-caption').show();
+      $('.icon__angle.cat').addClass('dis');
+      $('.catalog__articles').hide();
+      $('.catalog__holder').removeClass('open');
       console.log();
    }
  });

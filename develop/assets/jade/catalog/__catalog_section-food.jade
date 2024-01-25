@@ -1,20 +1,20 @@
 mixin catalog-food( icon, text, textS )
    case textS
-      when ''
+      when '-'
          section( aria-lanel='#{text}' ).catalog__section.catalog__section-food
             .catalog__section-caption( data-article='#{icon}' )
                div( class='icofood__#{icon}')
                .catalog__section-name !{text}
                .icon__angle
-            article.catalog__articles
+            article.catalog__articles( id='#{icon}' )
                .scrollbar-inner
-                  .catalog__scroll( id='#{icon}' )
+                  .catalog__scroll
                      +catalog-article( 'Голец' )
                      +catalog-article( 'Голец' )
+                     +catalog-article( 'Креветки' )
                      +catalog-article( 'Голец' )
                      +catalog-article( 'Голец' )
-                     +catalog-article( 'Голец' )
-                     +catalog-article( 'Голец' )
+                     +catalog-article( 'Креветки' )
                      +catalog-article( 'Голец' )
                      +catalog-article( 'Голец' )
                      +catalog-article( 'Голец' )
@@ -61,12 +61,12 @@ mixin catalog-food( icon, text, textS )
                div( class='icofood__#{icon}')
                .catalog__section-name !{text}
                .icon__angle
-            article.catalog__articles
+            article.catalog__articles( id='#{icon}' )
                .scrollbar-inner
-                  .catalog__scroll( id='#{icon}' )
+                  .catalog__scroll
                      +catalog-article( 'Голец' )
                      +catalog-article( 'Голец' )
-                     +catalog-article( 'Голец' )
+                     +catalog-article( 'Креветки' )
                      +catalog-article( 'Голец' )
                      +catalog-article( 'Голец' )
                      +catalog-article( 'Горбуша' )
