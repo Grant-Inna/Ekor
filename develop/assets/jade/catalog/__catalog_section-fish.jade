@@ -4,7 +4,7 @@ mixin catalog-fish( icon, text, textS )
          section( aria-lanel='#{text}' ).catalog__section
             .catalog__section-caption( data-article='#{icon}' )
                div( class='icofish__#{icon}')
-               .catalog__section-name  !{text}
+               h2.catalog__section-name  !{text}
                .icon__angle
             article.catalog__articles( id='#{icon}' )
                .scrollbar-inner

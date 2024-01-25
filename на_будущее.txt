@@ -3,3 +3,6 @@
 коррекция header для каждой страницы
 картинка рыбов на главной в карусенльке
 проверить на наличие contactS
+уменьшит картинку на главной в крутилке
+
+картинки в webp https://onlineconvertfree.com/ru/convert-format/png-to-webp/
