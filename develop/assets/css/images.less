@@ -108,3 +108,27 @@
       .size-cover( 'small', 'request.jpg' );
    })
 }
+
+
+/* главная - cover, белые прямоугольники  */
+.cover-img( @numb, @size ) {
+    background-image: url("../images/@{size}/cover/cover-@{numb}.svg");
+   background-repeat: no-repeat;
+   //background-size: contain;
+   background-position: bottom right;
+}
+.cover-block-1() {
+   .cover-img( '1', 'large');
+   .xl-block({
+      .cover-img( '1', 'middle');
+   });
+   .md-block({
+      .cover-img( '1', 'large');
+   })
+}
+.cover-block-2() {
+   .cover-img( '2', 'large');
+}
+.cover-block-3() {
+   .cover-img( '3', 'large');
+}

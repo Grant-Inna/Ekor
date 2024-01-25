@@ -90,6 +90,7 @@
 }
 .catalog__scroll-main {
    .flex();
+   overflow: hidden;
 }
 .catalog__articles .scroll-wrapper {
    overflow: hidden !important;
@@ -97,6 +98,9 @@
    margin-top: 15px;
    margin-bottom: 15px;
    width: 100%;
+}
+.scroll-wrapper {
+   padding: 0 !important;
 }
 .catalog__link  {
    color: @color-blue;
@@ -150,7 +154,6 @@
    .catalog__holder {
       min-height: 70vh;
    }
-   
 .catalog__block.row {
    .catalog__scroll {
        height: 60vh;
@@ -169,6 +172,7 @@
       max-height: 60vh;
    }
    .catalog__scroll-main {
+      overflow: unset;
       display: block;
       max-height: 60vh;
       padding-right: 20px;
@@ -176,7 +180,7 @@
    }
    .scroll-wrapper {
        overflow: hidden !important;
-       padding: 2px !important;
+       padding: 0 !important;
        padding-left: 5px !important;
    }
    .icon__angle {
@@ -247,7 +251,9 @@
       .flex-center();
       height: 0;
       margin-bottom: 30px;
-      padding-right: 14px;
+      //padding-right: 14px;
+      margin-right: 0;
+      margin-left: 0;
    }
    .catalog__top.open {
       height: 60px;
@@ -365,7 +371,7 @@
       padding-right: 15px;
    }
    .catalog__holder {
-      padding: 0 5px 10px 10px;
+      padding: 0 5px 4vh 10px;
    }
    .catalog__top {
       margin-bottom: 0;
