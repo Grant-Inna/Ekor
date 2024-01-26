@@ -1,0 +1,93 @@
+/* компания предлогает и всякое такое */
+.variety_products {
+   margin-top: 80px;
+   .sm-block({
+      margin-top: 40px;
+   });
+}
+.variety_products .grid-wrapper {
+   grid-column-gap: 20px;
+   grid-row-gap: 40px;
+   
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: auto 1fr auto auto 1fr;
+   
+   div[class^='image__'] {
+      border-radius: 10px;
+      overflow: hidden;
+   }
+   .text-18-title {
+      margin-top: 16px;
+      .lg-block({
+         margin-top: 10px;
+      })
+   }
+   .text-14 {
+      display: inline-block;
+      width: 90%;
+      margin-top: 6px;
+      .md-block({
+         display: none;
+      })
+   }
+}
+.variety_products .section__caption {
+   grid-column: ~"1 / 5";
+   display: grid;
+   grid-template-columns: repeat( 4, 1fr);
+   .section-title-text-14 {
+      grid-column: ~"1 / 2";
+   }
+   .caption {
+      grid-column: ~"2 / 5";
+   }
+}
+.variety_products__block-square {
+   grid-column: span 1;
+   grid-row: span 1;
+   
+}
+.variety_products__block-rectangle {
+   grid-column: span 2;
+   grid-row: span 1;
+}
+
+
+@media screen and (max-width: @break_ll) {
+   .variety_products .grid-wrapper {
+      grid-row-gap: 20px;
+      
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 1fr auto auto 1fr auto 1fr auto;
+   }
+   .variety_products .section__caption {
+      grid-column: ~"1 / 5";
+      display: grid;
+      grid-template-columns: repeat( 4, 1fr);
+      .section-title-text-14 {
+         grid-column: ~"1 / 2";
+      }
+      .caption {
+         grid-column: ~"2 / 5";
+      }
+   }
+   .variety_products__block-1,
+   .variety_products__block-2,
+   .variety_products__block-3 {
+      grid-column: span 1;
+      grid-row: span 1;
+   }
+   .variety_products__block-4 {
+      grid-column: ~"3 / 4";
+      grid-row: span 1;
+   }
+   .variety_products__block-5 {
+      grid-column: ~"1 / 2";
+      grid-row: span 1;
+   }
+   .variety_products__block-6,
+   .variety_products__block-7 {
+      grid-column: ~"1 / 5";
+      grid-row: span 1;
+   }
+}

@@ -132,3 +132,51 @@
 .cover-block-3() {
    .cover-img( '3', 'large');
 }
+/* ГЛАВНАЯ разная продукция */
+.variety_products( @size, @name ) {
+    background-image: url("../images/@{size}/product/@{name}.webp");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   width: 100%;
+   height: 100%;
+}
+.image__sveshemor {
+   .variety_products( 'large', 'sveshemor' )
+}
+.image__okhlazhdennaya_ryba {
+   .variety_products( 'large', 'okhlazhdennaya_ryba' )
+}
+.image__myaso_i_ptitsa {
+   .variety_products( 'large', 'myaso_i_ptitsa' )
+}
+.image__gotovaya {
+   .variety_products( 'large', 'gotovaya' )
+}
+.image__moreprodukty {
+   .variety_products( 'large', 'moreprodukty' )
+}
+.image__fileryby {
+   .variety_products( 'large', 'fileryby' )
+}
+.image__fish_in_packaging {
+   .variety_products( 'large', 'fish_in_packaging' )
+}
+.image__zamorozhennyye-ovoshchi-yagody {
+   .variety_products( 'large', 'zamorozhennyye-ovoshchi-yagody' )
+}
+.image__zamorozhennyye_ovoshchi_yagody {
+   .variety_products( 'large', 'zamorozhennyye_ovoshchi_yagody' )
+}
+.image__molochnaya-produktsiya {
+   .variety_products( 'large', 'molochnaya-produktsiya' )
+}
+.image__bakaleya {
+   .variety_products( 'large', 'bakaleya' )
+}
+.image__maslo-rastitelnyoe {
+   .variety_products( 'large', 'maslo-rastitelnyoe' )
+}
+.image__sousy {
+   .variety_products( 'large', 'sousy' )
+}
