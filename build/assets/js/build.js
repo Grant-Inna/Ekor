@@ -85,16 +85,38 @@ $(document).ready(function () {
    
   /* каруселька */
    const carousel_holder = $('.carousel__holder');
+   const variety_products = $('.variety_products__list');
    if (carousel_holder.length > 0) {
       carousel_holder.slick({
          slidesToShow: 1,
          slidesToScroll: 1,
          speed: 1500,
+         lazyLoad: 'ondemand',
          arrows: false,
          dots: true,
          infinite: true,
-         autoplay: true
+         autoplay: true,
+         focusOnSelect: true,
+        adaptiveHeight: true,
+         pauseOnHover: true
       });
+      carousel_holder.css({ marginRight: '-5px', marginLeft: '-5px' });
+      carousel_holder.find('.slick-slide').css('padding', '0 5px' )
+   }
+   if( width <= 450 && $('.variety_products').length > 0 ) {
+      variety_products.slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         speed: 500,
+         lazyLoad: 'ondemand',
+         arrows: true,
+         dots: false,
+         infinite: true,
+         autoplay: true,
+         focusOnSelect: true
+      });
+      variety_products.css({ marginRight: '-5px', marginLeft: '-5px' });
+      variety_products.find('.slick-slide').css('padding', '0 5px' )
    }
    
    /* нажатие на disabled ссылки */

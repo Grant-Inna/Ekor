@@ -136,10 +136,21 @@
 .variety_products( @size, @name ) {
     background-image: url("../images/@{size}/product/@{name}.webp");
    background-repeat: no-repeat;
-   background-size: contain;
+   background-size: cover;
    background-position: center;
    width: 100%;
    height: 100%;
+}
+.to485( @name ) {
+   .to( 485px, {
+      background-image: url("../images/small/product/@{name}.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+   });
+   
 }
 .image__sveshemor {
    .variety_products( 'large', 'sveshemor' )
@@ -154,19 +165,26 @@
    .variety_products( 'large', 'gotovaya' )
 }
 .image__moreprodukty {
-   .variety_products( 'large', 'moreprodukty' )
+   .variety_products( 'large', 'moreprodukty' );
+   .to485( 'moreprodukty');
 }
 .image__fileryby {
-   .variety_products( 'large', 'fileryby' )
+   .variety_products( 'large', 'fileryby' );
+   .ll-block({
+       .variety_products( 'middle', 'fileryby' );
+   });
+   .to485( 'fileryby');
 }
 .image__fish_in_packaging {
-   .variety_products( 'large', 'fish_in_packaging' )
+   .variety_products( 'large', 'fish_in_packaging' );
+   .ll-block({
+       .variety_products( 'middle', 'fish_in_packaging' );
+   });
+   .to485( 'fish_in_packaging');
 }
 .image__zamorozhennyye-ovoshchi-yagody {
-   .variety_products( 'large', 'zamorozhennyye-ovoshchi-yagody' )
-}
-.image__zamorozhennyye_ovoshchi_yagody {
-   .variety_products( 'large', 'zamorozhennyye_ovoshchi_yagody' )
+   .variety_products( 'large', 'zamorozhennyye-ovoshchi-yagody' );
+   .to485( 'zamorozhennyye-ovoshchi-yagody');
 }
 .image__molochnaya-produktsiya {
    .variety_products( 'large', 'molochnaya-produktsiya' )
