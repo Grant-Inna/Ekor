@@ -1,0 +1,9 @@
+mixin offer-info( numb, title, list )
+   label( for='select#{numb}').offer__label.offer__label-select
+      .offer__li #{numb}
+      .offer__select
+         .offer__title !{title}
+         select.offer__select.select2( id='select#{numb}')
+            option !{list}
+            option !{list}2
+            option !{list}3

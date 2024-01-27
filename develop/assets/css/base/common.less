@@ -88,6 +88,9 @@
    line-height: 16px;
    color: @color-gray;
 }
+.text-center {
+   text-align: center;
+}
 h1.caption {
    .montserrat-semibold();
    font-size: 50px;
@@ -115,7 +118,8 @@ h2.caption {
    });
 }
 
-h2.title {
+h2.title,
+h3.title {
    .montserrat-semibold();
    font-size: 24px;
    
@@ -157,6 +161,7 @@ h2.title {
    })
 }
 .row_flex-16 {
+   .flex();
    margin-left: -8px;
    margin-right: -8px;
    
@@ -166,6 +171,7 @@ h2.title {
    }
 }
 .row_flex-32 {
+   .flex();
    margin-left: -16px;
    margin-right: -16px;
    
@@ -206,6 +212,23 @@ h2.title {
    
    display: none;
 }
+
+//.select2.select2-container.select2-container--default
+//.select2-container--default.select2-selection--single
+.select2-container--default.select2-selection--single {
+   display: flex;
+   height: 60px;
+   .column();
+   .justify-start();
+   align-self: stretch;
+
+}
+
+
+
+
+
+
 .mtauto {
    margin-top: auto;
 }
