@@ -69,7 +69,6 @@
       grid-row-gap: 20px;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(6, auto);
-      margin-top: 30px;
       
        div[class^='image__'] {
          border-radius: 10px;
@@ -149,16 +148,15 @@
 }
 
 @media screen and (max-width: @break_middle) {
-   h3.caption.text-blue {
+   .variety_products h3.caption.text-blue {
       display: none;
    }
-   h3.caption.text-blue.second {
+   .variety_products h3.caption.text-blue.second {
       display: block;
    }
 }
 @media screen and (max-width: @break_sm) {
    .variety_products .variety_products__list {
-      margin-top: 20px;
       grid-column-gap: 15px;
       grid-row-gap: 15px;
       grid-template-columns: repeat(2, 1fr);

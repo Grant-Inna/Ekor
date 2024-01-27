@@ -1,4 +1,5 @@
 .footer__holder {
+   overflow: hidden;
    background-color: @color-blue;
    padding-top: 30px;
    padding-bottom: 60px;
@@ -46,6 +47,7 @@
    .footer__logo {
       margin-bottom: 32px;
       .sm-block({
+         .items-start();
          margin-bottom: 20px;
       })
    }
@@ -181,6 +183,10 @@
       max-width: 195px;
       min-width: 155px;
    });
+   .xxs-block({
+       max-width: 145px;
+      min-width: 110px;
+   });
 }
 
 .footer_links-1 {
@@ -192,6 +198,9 @@
        .xs-block({
          min-width: 130px;
       });
+      .xxs-block({
+         min-width: 100px;
+      })
    }
    .footer__link {
       .sm-block({

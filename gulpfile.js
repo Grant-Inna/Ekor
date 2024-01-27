@@ -27,7 +27,7 @@ let gridOptions = {
    offset: "20px",
    // mobileFirst: true,
    container: {
-      maxWidth: "1220px",
+      maxWidth: "1120px",
       fields: "0" // fields не меньше offset делённого на 2
    },
    breakPoints: {

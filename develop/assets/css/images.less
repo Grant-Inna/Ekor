@@ -217,3 +217,76 @@
       .index-offer( 'small')
    });
 }
+
+/* поставки в разные сферы бизнесса  */
+.busareas-image( @size, @num ) {
+   background-image: url("../images/@{size}/busareas/@{num}.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 10px;
+}
+.busareas-img-1() {
+   .busareas-image( 'large', '01');
+       background-position: 50% 30%;
+   .lg-block({
+      .r1( .busareas-image( 'small', '01'));
+   });
+   .r2( .busareas-image( 'large', '01'));
+   .sm-block({
+      .busareas-image( 'small', '01');
+   })
+}
+.busareas-img-2() {
+   .busareas-image( 'large', '02');
+       background-position: 50% 73%;
+   .lg-block({
+      .r1( .busareas-image( 'small', '02'));
+   });
+   .r2( .busareas-image( 'large', '02'));
+   .sm-block({
+      .busareas-image( 'small', '02');
+   })
+}
+.busareas-img-3() {
+   .busareas-image( 'large', '03');
+       background-position: 50% 90%;
+   .lg-block({
+      .r1( .busareas-image( 'small', '03'));
+   });
+   .r2( .busareas-image( 'large', '03'));
+   .sm-block({
+      .busareas-image( 'small', '03');
+   })
+}
+.busareas-img-4() {
+   .busareas-image( 'large', '04');
+       background-position: 50% 93%;
+   .lg-block({
+      .r1( .busareas-image( 'small', '04'));
+   });
+   .r2( .busareas-image( 'large', '04'));
+   .sm-block({
+      .busareas-image( 'small', '04');
+   })
+}
+/* ГЛАВНАЯ эффективная доставка */
+.delivery-index-img( @size ) {
+   background-image: url("../images/@{size}/delivery-index.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border-radius: 10px;
+}
+.delivery-index() {
+   .delivery-index-img( 'large' );
+    .lg-block({
+      .delivery-index-img( 'middle' );
+   });
+   .middle-block({
+      .r2( .delivery-index-img( 'middle'));
+      .r1( .delivery-index-img( 'small'));
+   });
+   .sm-block({
+      .busareas-image( 'small', '04');
+   })
+}

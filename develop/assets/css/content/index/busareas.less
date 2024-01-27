@@ -1,0 +1,230 @@
+/*  специализируемся на разных сферах бизнесса   */
+.busareas__container {
+      .section-margin()
+}
+.busareas__content {
+   .flex();
+   flex-wrap: wrap;
+   background-color: @color-white;
+   border-radius: 20px;
+   .lg-block({
+   });
+   .middle-block({
+      padding: 0;
+   });
+   .xl-block({
+      .column();
+   });
+   h3.caption.text-blue {
+      br {
+         display: none;
+      }
+   }
+}
+.busareas__block {
+   .flex();
+   width: 50%;
+   .xl-block({
+      width: 100%;
+   });
+}
+.busareas__block:nth-of-type(3),
+.busareas__block:nth-of-type(4) {
+   .flex();
+   flex-direction: row-reverse;
+   span,
+   .text-18-title {
+      text-align: left;
+   }
+}
+
+.busareas__text {
+   .column();
+   .justify-between();
+   flex-grow: 1;
+   position: relative;
+   max-width: 280px;
+   height: 200px;
+   padding: 20px;
+   &:before,
+   &:after {
+      .pseudo();
+      background-color: @color-gray-light;
+      border-radius: 5px;
+   }
+   .xl-block({
+      max-width: unset;
+      width: 50%;
+   })
+}
+.busareas__text span {
+   .montserrat-medium();
+   font-size: 14px;
+   line-height: 20px;
+   color: @color-black;
+   .sm-block({
+      line-height: 120%;
+   })
+}
+
+
+.busareas__image {
+   position: relative;
+   min-width: 240px;
+   width: 240px;
+   height: 200px;
+   padding: 20px;
+   border-radius: 10px;
+   &:before,
+   &:after {
+      .pseudo();
+      background-color: @color-gray-light;
+      border-radius: 5px;
+   }
+   .xl-block({
+      width: 50%;
+   })
+}
+.busareas__text:before,
+.busareas__image:before {
+   top: 20px;
+   bottom: 20px;
+   width: 1px;
+   height: calc( 100% - 40px);
+   right: 0;
+}
+.busareas__text:after,
+.busareas__image:after {
+   right: 20px;
+   left: 20px;
+   height: 1px;
+   width: calc( 100% - 40px);
+   bottom: 0;
+}
+
+
+
+.busareas_image-1 {
+   .busareas-img-1();
+   width: 100%;
+   height: 100%;
+}
+.busareas_image-2 {
+   .busareas-img-2();
+   width: 100%;
+   height: 100%;
+}
+.busareas_image-3 {
+   .busareas-img-3();
+   width: 100%;
+   height: 100%;
+}
+.busareas_image-4 {
+   .busareas-img-4();
+   width: 100%;
+   height: 100%;
+}
+
+
+.busareas__block:nth-of-type(2) .busareas__text,
+.busareas__block:nth-of-type(4) .busareas__image {
+   &:before {
+      display: none;
+   }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: @break_xl) {
+   .busareas__content {
+      
+      padding: 1vw 8vw 2vw;
+      box-sizing: border-box;
+   }
+   .busareas__block:nth-of-type(2) {
+      .flex();
+      flex-direction: row-reverse;
+      span,
+      .text-18-title {
+         text-align: left;
+      }
+   }
+   .busareas__block:nth-of-type(3) {
+      flex-direction: row;
+       span,
+      .text-18-title {
+         text-align: left;
+      }
+   }
+   .busareas__block:nth-of-type(1) {
+      .busareas__text:before {
+         display: none;
+      }
+   }
+   .busareas__block:nth-of-type(2) {
+      .busareas__text:before {
+         display: block;
+      }
+      .busareas__image:before {
+         display: none;
+      }
+   }
+   .busareas__block:nth-of-type(3) {
+      .busareas__text:before {
+         display: none;
+      }
+   }
+   .busareas__block:nth-of-type(4) {
+      .busareas__text:after,
+      .busareas__image:after {
+         display: none;
+      }
+   }
+}
+
+@media screen and (max-width: @break_lg) {
+   .busareas__content {
+      padding: 1vw 3vw 2vw;
+      box-sizing: border-box;
+   }
+}
+@media screen and (max-width: @break_sm) {
+   .busareas__container .wrapper:nth-of-type(2) {
+      padding: 0;
+   }
+   .busareas__block {
+      max-height: 125px;
+      height: 20vw;
+      min-height: 105px;
+   }
+   .busareas__image,
+   .busareas__text {
+      padding: 10px;
+   }
+   .busareas__image {
+      min-width: 135px;
+      max-height: 150px;
+      min-height: unset;
+      height: unset;
+   }
+   .busareas__text {
+      height: unset;
+   }
+   .text-18-title {
+      font-size: 14px;
+      line-height: 100%;
+   }
+}
+@media screen and (max-width: @break_xxs) {
+   .busareas__container h3.caption.text-blue {
+      br {
+         display: block;
+      }
+   }
+}

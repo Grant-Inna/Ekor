@@ -247,3 +247,58 @@ h3.title {
 .pt20 { // del
    padding-top: 20px;
 }
+
+.section__caption {
+   display: grid;
+   grid-template-columns: repeat( 4, 1fr);
+   margin-bottom: 40px;
+   
+   .section-title-text-14 {
+      grid-column: ~"1 / 2";
+   }
+   .caption {
+      grid-column: ~"2 / 5";
+   }
+    
+    .ll-block({
+      grid-column: ~"1 / 5";
+      grid-row: ~"1 / 2";
+      margin-bottom: 30px;
+      grid-template-columns: repeat( 3, 1fr);
+      .section-title-text-14 {
+         grid-column: ~"1 / 2";
+      }
+      .caption {
+         grid-column: ~"2 / 4";
+      }
+    });
+    .xs-block({
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat( 2, auto);
+       margin-bottom: 20px;
+      .section-title-text-14 {
+         margin-bottom: 6px;
+         grid-column: span 1;
+         grid-row: ~"1 / 2";
+      }
+      .caption {
+         grid-column: span 1;
+         grid-row: ~"2 / 3";
+      }
+    })
+}
+
+
+.section-margin() {
+   margin-top: 80px;
+      margin-bottom: 80px;
+   .lg-block({
+      padding-top: 40px;
+      padding-bottom: 45px;
+   });
+   .sm-block({
+      margin-top: 40px;
+      margin-bottom: 40px;
+   });
+}
