@@ -289,4 +289,20 @@ $(document).ready(function () {
          $(this).addClass('focus');
       });
    }
+   
+   /* ГЛАВНАЯ  читать далее */
+   $('.watch-more').slideUp(0);
+   if ( width <= 470 && $('.reputation__tile').length > 0 ) {
+      $('.watch-more').slideDown(0);
+      $('.reputation__block-6, .reputation__block-7, .reputation__block-8').appendTo('.reputation__tile .reputation__more');
+      $('.reputation__tile .watch-more').on( 'click', showMore);
+   } else if ( width > 470 ) {
+      $('.reputation__block-6, .reputation__block-7, .reputation__block-8').appendTo('.reputation__tile');
+   }
+   function showMore() {
+      let btn = $('.watch-more');
+      $(btn).siblings('.more').slideDown(300);
+      $(btn).slideUp(300)
+   
+   }
  });
