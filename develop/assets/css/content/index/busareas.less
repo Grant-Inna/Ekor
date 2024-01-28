@@ -1,6 +1,12 @@
 /*  специализируемся на разных сферах бизнесса   */
 .busareas__container {
-      .section-margin()
+   .section-margin();
+   
+   .caption.text-blue {
+      br {
+         display: none;
+      }
+   }
 }
 .busareas__content {
    .flex();
@@ -15,11 +21,6 @@
    .xl-block({
       .column();
    });
-   h3.caption.text-blue {
-      br {
-         display: none;
-      }
-   }
 }
 .busareas__block {
    .flex();
@@ -132,6 +133,14 @@
       display: none;
    }
 }
+.busareas__block:nth-of-type(3) .busareas__text,
+.busareas__block:nth-of-type(3) .busareas__image,
+.busareas__block:nth-of-type(4) .busareas__text,
+.busareas__block:nth-of-type(4) .busareas__image {
+   &:after {
+      display: none;
+   }
+}
 
 
 
@@ -193,6 +202,23 @@
       padding: 1vw 3vw 2vw;
       box-sizing: border-box;
    }
+   .busareas__text:before,
+   .busareas__image:before {
+      top: 10px;
+      bottom: 10px;
+      width: 1px;
+      height: calc( 100% - 20px);
+      right: 0;
+   }
+   .busareas__text:after,
+   .busareas__image:after {
+      right: 10px;
+      left: 10px;
+      height: 1px;
+      width: calc( 100% - 20px);
+      bottom: 0;
+   }
+
 }
 @media screen and (max-width: @break_sm) {
    .busareas__container .wrapper:nth-of-type(2) {

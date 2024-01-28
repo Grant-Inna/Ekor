@@ -88,6 +88,8 @@ $(document).ready(function () {
   /* каруселька */
    const carousel_holder = $('.carousel__holder');
    const variety_products = $('.variety_products__list');
+   const choose_block = $('.choose__block-photo');
+   
    if (carousel_holder.length > 0) {
       carousel_holder.slick({
          slidesToShow: 1,
@@ -105,7 +107,9 @@ $(document).ready(function () {
       carousel_holder.css({ marginRight: '-5px', marginLeft: '-5px' });
       carousel_holder.find('.slick-slide').css('padding', '0 5px' )
    }
-   if( width <= 450 && $('.variety_products').length > 0 ) {
+   // console.log(width <= 450);
+   // console.log($('.variety_products').length);
+   if( width <= 485 && $('.variety_products').length > 0 ) {
       variety_products.slick({
          slidesToShow: 1,
          slidesToScroll: 1,
@@ -119,6 +123,20 @@ $(document).ready(function () {
       });
       variety_products.css({ marginRight: '-5px', marginLeft: '-5px' });
       variety_products.find('.slick-slide').css('padding', '0 5px' )
+   }
+   if (width <= 590 && choose_block.length > 0) {
+       choose_block.slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         speed: 700,
+         lazyLoad: 'ondemand',
+          infinite: false,
+         arrows: true,
+         dots: false,
+         focusOnSelect: true
+      });
+      choose_block.css({ marginRight: '-5px', marginLeft: '-5px' });
+      choose_block.find('.slick-slide').css('padding', '0 5px' )
    }
    
    /* нажатие на disabled ссылки */
