@@ -1,0 +1,17 @@
+include __subscribe_social
+section.subscribe__container
+   .wrapper
+      .subscribe__wrapper
+         h2.subscribe__caption Подписывайтесь на&nbsp;чат-бот оптовых цен
+         h3.subscribe__title Узнайте наши цены за&nbsp;пару секунд через наш чат-бот без писем и&nbsp;звонков менеджеру
+         .subscribe__holder
+            .subscribe__socials
+               +sub( 'whatsapp', "WhatsApp" )
+               +sub( 'telegram', 'Telegram' )
+               +sub( 'vkontakte', 'ВКонтакте' )
+
+            .subscribe__check
+               .ico__checkbox.mr10
+               span.text-small.text-gray Нажимая на&nbsp;кнопку, вы соглашаетесь с&nbsp;политикой конфиденциальности ресурса
+
+

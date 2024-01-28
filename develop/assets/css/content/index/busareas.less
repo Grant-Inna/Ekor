@@ -62,7 +62,7 @@
    .montserrat-medium();
    font-size: 14px;
    line-height: 20px;
-   color: @color-black;
+   color: @color-gray;
    .sm-block({
       line-height: 120%;
    })
@@ -192,7 +192,9 @@
    .busareas__block:nth-of-type(4) {
       .busareas__text:after,
       .busareas__image:after {
-         display: none;
+         display: block;
+         top: 0;
+         bottom: unset;
       }
    }
 }
