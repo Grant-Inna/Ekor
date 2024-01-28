@@ -292,3 +292,19 @@
       .delivery-index-img( 'small');
    })
 }
+/* ГЛАВНАЯ рука */
+.hand-index( @size ) {
+   background-image: url("../images/@{size}/hand.webp");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: bottom right;
+}
+.hand-index-img() {
+   .hand-index( 'large');
+   .lg-block({
+      .hand-index( 'middle');
+   });
+   .xs-block({
+      .hand-index( 'small');
+   });
+}

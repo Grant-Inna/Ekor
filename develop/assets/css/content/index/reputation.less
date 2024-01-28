@@ -13,13 +13,7 @@
       "f f j j k k k k";
 }
 .reputation__block {
-   .column();
-   .justify-between();
-   padding: 20px;
-   box-sizing: border-box;
-   border-radius: 20px;
-   background-color: @color-white;
-   
+   .block-white();
 }
 .reputation__title {
    .montserrat-semibold();
@@ -34,7 +28,7 @@
    });
 }
 .reputation__text {
-   color: @color-black;
+   color: @color-gray;
    margin-top: auto;
    padding-top: 126px;
    max-width: 65%;
@@ -107,9 +101,6 @@
          "j j"
          "k k";
    }
-   .reputation__block {
-      padding: 16px;
-   }
    .reputation__block-3 {
       grid-area: c;
       grid-column: ~"2 / 3";
@@ -148,7 +139,6 @@
       }
    }
    .reputation__block {
-      padding: 16px;
       margin-bottom: 10px;
    }
    .reputation__block-2 {
