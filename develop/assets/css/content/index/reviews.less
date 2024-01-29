@@ -1,0 +1,32 @@
+.reviews__container {
+   .section-margin();
+}
+.reviews__content {
+   
+   .gr();
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(2, auto);
+   .gap2040();
+   > * {
+      grid-column: ~"2 / 5";
+      grid-row: span 1;
+   }
+   p {
+      .xs-block({
+         grid-column: ~"1 / 5";
+      })
+   }
+}
+.review__wrapper {
+   .lg-block({
+      grid-column: ~"1 / 5";
+   });
+   .section-padding-403015();
+
+   border-radius: 20px;
+   background-color: @color-white;
+   
+   .gr();
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, auto);
+}

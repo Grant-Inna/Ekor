@@ -1,0 +1,134 @@
+.programs__container {
+   .section-margin();
+   h3.caption.text-blue {
+      max-width: 90%;
+      .ll-block({
+         max-width: 88%;
+      });
+      .lg-block({
+         max-width: 100%;
+      });
+   }
+   .wrapper {
+      .lg-block({
+         padding-left: 0 !important;
+         padding-right: 0 !important;
+      });
+      .middle-block({
+         padding-left: 0;
+         padding-right: 0;
+      });
+      .sm-block({
+         padding-left: 0;
+         padding-right: 0;
+      });
+      .xxs-block({
+         padding-left: 0;
+         padding-right: 0;
+      });
+   }
+   .section__caption,
+   .slick-list {
+      .lg-block({
+         padding-left: 62px !important;
+         padding-right: 62px !important;
+      });
+      .middle-block({
+         padding-left: 42px !important;
+         padding-right: 42px !important;
+      });
+      .sm-block({
+         padding-left: 30px !important;
+         padding-right: 30px !important;
+      });
+      .xxs-block({
+         padding-left: 15px !important;
+         padding-right: 15px !important;
+      });
+   }
+   .from(@break_lg, {
+   .slick-arrow {
+      position: absolute;
+      z-index: 70;
+      top: -90px;
+      transform: translateY(-100%);
+      color: transparent;
+      font-size: 0;
+      line-height: 0;
+      .xl-block({
+         top: -30px;
+       });
+      .ll-block({
+         top: -30px;
+       });
+      
+   }
+   
+   .slick-prev[aria-disabled="false"] {
+      right: 43px;
+      .arrow-prev-active();
+   }
+   
+   .slick-next[aria-disabled="false"] {
+      right: 5px;
+      .arrow-next-active();
+   }
+   
+   .slick-next[aria-disabled="true"] {
+      right: 5px;
+      .arrow-next()
+   }
+   
+   .slick-prev[aria-disabled="true"] {
+      right: 43px;
+      .arrow-prev()
+   }});
+
+   .lg-block({
+      .good-friendly-arrows();
+   })
+}
+.programs__holder .relative {
+   z-index: 10;
+   &:after,
+   &:before {
+      .pseudo();
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+   }
+   &:before {
+      z-index: 20;
+      width: 70px;
+      height: 70px;
+      background-color: @color-yellow-2;
+      border-radius: 100px;
+   }
+   &:after {
+      z-index: 30;
+      .pseudo();
+      .play-icon();
+      transform: translateX(-33%) translateY(-50%);
+   }
+   
+   .relation {
+      padding-top: 44.6%;
+      .lg-block({
+         padding-top: 58.5%;
+      });
+      .sm-block({
+         padding-top: 100%;
+      });
+   }
+}
+.programs__video {
+   border-radius: 20px;
+}
+.programs_video-1 {
+   .video-img-1();
+}
+.programs_video-2 {
+   .video-img-2();
+}
+
+

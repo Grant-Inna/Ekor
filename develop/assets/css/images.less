@@ -308,3 +308,45 @@
       .hand-index( 'small');
    });
 }
+
+/* ГЛАВНОЕ видео b камера */
+.video( @size, @numb ) {
+   background-image: url("../images/@{size}/video/poster-@{numb}.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border-radius: 20px;
+   width: 100%;
+   height: 100%;
+}
+.video-img-1() {
+   .video( 'middle', '1' );
+   .middle-block({
+      .video( 'small', '1' );
+   })
+}
+.video-img-2() {
+   .video( 'middle', '2' );
+   .middle-block({
+      .video( 'small', '2' );
+   })
+}
+
+.camera( @numb ) {
+   background-image: url("../images/middle/camera/@{numb}.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border-radius: 10px;
+   width: 100%;
+   height: 100%;
+}
+.camera-img-1() {
+   .camera( '1' );
+}
+.camera-img-2() {
+   .camera( '2' );
+}
+.camera-img-3() {
+   .camera( '3' );
+}

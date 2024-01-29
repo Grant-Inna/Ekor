@@ -1,1 +1,10 @@
-<svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" transform="matrix(1 0 0 -1 0 28)" fill="#F4F7FB" r="14"/><path d="M11.813 10.935L14.942 14l-3.13 3.065 1.121 1.1L17.194 14l-4.26-4.165-1.121 1.1z" fill="#fff"/><mask id="a" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="9" width="7" height="10"><path d="M11.813 10.935L14.942 14l-3.13 3.065 1.121 1.1L17.194 14l-4.26-4.165-1.121 1.1z" fill="#fff"/></mask><g mask="url(#a)"><rect width="10.5" height="10.5" rx="1.75" transform="matrix(1 0 0 -1 8.75 19.25)" fill="#203686"/></g></svg>
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="14" cy="14" rx="14" ry="14" transform="matrix(1 0 0 -1 0 28)" fill="#F4F7FB"/>
+<path d="M11.8125 10.9347L14.9421 13.9998L11.8125 17.0649L12.9344 18.1646L17.194 13.9998L12.9344 9.83497L11.8125 10.9347Z" fill="white"/>
+<mask id="mask0_2788_39593" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="9" width="7" height="10">
+<path d="M11.8125 10.9347L14.9421 13.9998L11.8125 17.0649L12.9344 18.1646L17.194 13.9998L12.9344 9.83497L11.8125 10.9347Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_2788_39593)">
+<rect width="10.5" height="10.5" rx="1.75" transform="matrix(1 0 0 -1 8.75 19.25)" fill="#203686"/>
+</g>
+</svg>
