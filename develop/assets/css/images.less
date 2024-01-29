@@ -350,3 +350,49 @@
 .camera-img-3() {
    .camera( '3' );
 }
+/* ГЛАВНАЯ контакты карта */
+.index-map( @size, @numb ) {
+   background-image: url("../images/@{size}/index-contact/@{numb}.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.index-map-1() {
+   .index-map( 'large', '1');
+   .lg-block({
+      .index-map( 'middle', '1');
+   });
+   .md-block({
+      .index-map( 'large', '1');
+   });
+   .xxs-block({
+      .index-map( 'small', '1');
+   });
+}
+.index-map-2() {
+   .index-map( 'large', '2');
+   .lg-block({
+      .index-map( 'middle', '2');
+   });
+   .md-block({
+      .index-map( 'large', '2');
+   });
+   .xxs-block({
+      .index-map( 'small', '2');
+   });
+}
+.index-map-3() {
+   .index-map( 'large', '3');
+   .lg-block({
+      .index-map( 'middle', '3');
+   });
+   .md-block({
+      .index-map( 'large', '3');
+   });
+   .xxs-block({
+      .index-map( 'small', '3');
+   });
+}

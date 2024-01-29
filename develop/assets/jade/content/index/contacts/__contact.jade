@@ -1,0 +1,10 @@
+mixin contact( num, big, text, small1, small2)
+   article.contact_index___item(class='contact_index__item-#{num}')
+      .contact_index___title.text-blue.text-18-title.mb !{big}
+      .contact_index___text
+         .text-blue.text-14.md !{text}
+         .text-dark.text-14.mb !{small1}
+         .text-dark.text-14.mb !{small2}
+      .contact_index___map
+         div(class='contact_index__image-#{num}')
+
