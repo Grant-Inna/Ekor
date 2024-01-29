@@ -16,123 +16,8 @@ $(document).ready(function () {
       if ( width <= 1190 && new_width > 1190 || width > 1190 && new_width <= 1190 ) {
          appendToMobile(new_width);
       }
-      
-      
-  /* каруселька крутилка */
-   const carousel_holder = $('.carousel__holder'),
-         variety_products = $('.variety_products__list'),
-         choose_block = $('.choose__block_photo'),
-         programs_carousel = $('.programs__carousel'),
-         cameras_carousel = $('.cameras__row');
-   
-   if (carousel_holder.length > 0) {
-      carousel_holder.slick({
-         slidesToShow: 1,
-         slidesToScroll: 1,
-         speed: 1500,
-         lazyLoad: 'ondemand',
-         arrows: false,
-         dots: true,
-         infinite: true,
-         autoplay: true,
-         focusOnSelect: true,
-        adaptiveHeight: true,
-         pauseOnDotsHover: true
-      });
-      carousel_holder.css({ marginRight: '-5px', marginLeft: '-5px' });
-      carousel_holder.find('.slick-slide').css('padding', '0 5px' )
-   }
-   // console.log(width <= 450);
-   // console.log($('.variety_products').length);
-   if( width <= 485 && $('.variety_products').length > 0 ) {
-      variety_products.slick({
-         slidesToShow: 1,
-         slidesToScroll: 1,
-         speed: 700,
-         lazyLoad: 'ondemand',
-         arrows: true,
-         dots: false,
-         autoplay: true,
-         infinite: true,
-         focusOnSelect: true,
-        centerMode: true,
-        centerPadding: '180px'
-      });
-      variety_products.css({ marginRight: '-5px', marginLeft: '-5px' });
-      variety_products.find('.slick-slide').css('padding', '0 5px' )
-   }
-   if (width <= 590 && choose_block.length > 0) {
-       choose_block.slick({
-         slidesToShow: 1,
-         slidesToScroll: 1,
-         speed: 700,
-         lazyLoad: 'ondemand',
-          infinite: false,
-         arrows: true,
-         dots: false,
-         focusOnSelect: true
-      });
-      choose_block.css({ marginRight: '-5px', marginLeft: '-5px' });
-      choose_block.find('.slick-slide').css('padding', '0 5px' )
-   }
-   if (programs_carousel.length > 0) {
-          programs_carousel.slick({
-         slidesToShow: 1,
-         slidesToScroll: 1,
-         speed: 700,
-         lazyLoad: 'ondemand',
-         infinite: false,
-         arrows: true,
-         dots: false,
-         responsive: [
-          {
-            breakpoint: 890,
-            settings: {
-               centerMode: true,
-              centerPadding: '20px'
-            }
-          },
-          {
-            breakpoint: 590,
-            settings: {
-              centerMode: true,
-              centerPadding: '10px'
-            }
-          },
-         ]
-      });
-      programs_carousel.css({ marginRight: '-5px', marginLeft: '-5px' });
-      programs_carousel.find('.slick-slide').css('padding', '0 5px' )
-   }
-   if (width <= 470 && cameras_carousel.length > 0) {
-      cameras_carousel.slick({
-         slidesToShow: 1,
-         slidesToScroll: 1,
-         speed: 700,
-         lazyLoad: 'ondemand',
-         infinite: false,
-         arrows: true,
-         dots: false
-      });
-      cameras_carousel.css({ marginRight: '-5px', marginLeft: '-5px' });
-      cameras_carousel.find('.slick-slide').css('padding', '0 5px' )
-   }
-   
-   
-      /* ГЛАВНАЯ  читать далее */
-   
-   if ( width <= 475 && $('.reputation__tile').length > 0 ) {
-      $('.watch-more').slideDown(0);
-      $('.reputation__block-6, .reputation__block-7, .reputation__block-8').appendTo('.reputation__tile .reputation__more');
-      $('.reputation__tile .watch-more').on( 'click', showMore);
-   } else if ( width > 470 ) {
-      $('.reputation__block-6, .reputation__block-7, .reputation__block-8').appendTo('.reputation__tile');
-      $('.watch-more').slideUp(0);
-   }
-   
-   
-   
    });
+   
    function showBlackBack() {
       let style_blackLayer = {
          display: "block",
@@ -287,18 +172,22 @@ $(document).ready(function () {
       programs_carousel.css({ marginRight: '-5px', marginLeft: '-5px' });
       programs_carousel.find('.slick-slide').css('padding', '0 5px' )
    }
-   if (width <= 470 && cameras_carousel.length > 0) {
-      cameras_carousel.slick({
-         slidesToShow: 1,
-         slidesToScroll: 1,
-         speed: 700,
-         lazyLoad: 'ondemand',
-         infinite: false,
-         arrows: true,
-         dots: false
-      });
-      cameras_carousel.css({ marginRight: '-5px', marginLeft: '-5px' });
-      cameras_carousel.find('.slick-slide').css('padding', '0 5px' )
+   if (cameras_carousel.length > 0) {
+               console.log(!!$(cameras_carousel).find('.slick-initialized'));
+   
+      if (width <= 470 && !$(cameras_carousel).find('.slick-initialized')) {
+         cameras_carousel.not('.slick-initialized').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 700,
+            lazyLoad: 'ondemand',
+            infinite: false,
+            arrows: true,
+            dots: false
+         });
+         cameras_carousel.css({marginRight: '-5px', marginLeft: '-5px'});
+         cameras_carousel.find('.slick-slide').css('padding', '0 5px')
+      }
    }
    
    /* нажатие на disabled ссылки */

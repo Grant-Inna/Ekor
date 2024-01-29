@@ -25,7 +25,7 @@
    //   });
    //}
    
-   //.good-friendly-arrows();
+   .good-friendly-arrows();
 }
 .cameras__wrapper {
    .section-text-half();
@@ -67,11 +67,8 @@
 }
 
 .cameras__row {
-   .from( @break_xs, {
-   
       grid-column: ~"1 / 25";
       grid-row: span 1;
-   
    
       .gr();
       grid-template-columns: repeat(4, 1fr);
@@ -88,7 +85,7 @@
          margin-top: 15px;
          max-height: 180px;
       });
-   });
+   
   
    .xs-block({
       grid-template-columns: unset;
@@ -100,7 +97,6 @@
    });
 }
 
-.from(@break_xs, {
    
    .camera__block:first-of-type {
       grid-column: ~"2 / 3";
@@ -114,11 +110,10 @@
    }
   
    
-});
 .camera__block {
    
    .middle-block({
-      grid-column: span 1;
+      //grid-column: ~"1 / 25";
       grid-row: ~"1 / 2";
    });
 }
