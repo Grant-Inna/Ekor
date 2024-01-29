@@ -259,4 +259,24 @@ header {
    height: 16px;
 }
 
-/*   Social   */
+/*   ГЛАВНАЯ звезды рейтинг   */
+.rating-stars( @name ) {
+   background-image: url("../images/svg/icons/review/stars-@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.rating-stars-4() {
+   .rating-stars( '4');
+}
+.rating-stars-5() {
+   .rating-stars( '5');
+}
+.user-photo() {
+   background-image: url("../images/svg/icons/review/user.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
