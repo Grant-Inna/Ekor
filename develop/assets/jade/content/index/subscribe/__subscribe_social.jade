@@ -1,5 +1,4 @@
 mixin sub( icon, name_of )
-   a( class='subscribe__social-#{icon}' href='/' target='_blank').subscribe__social_holder
-      label( for='number_#{icon}' class='icon__#{icon}')
+   a( class='subscribe__social-#{icon}' href='/' target='_blank' title='Перейти в #{name_of} компании' aria-label='Ссылка на #{name_of} компании').subscribe__social_holder
+      div( class='icon__#{icon}')
       span.text-white #{name_of}
-      input( type='tel' id='number_#{icon}').subscribe__social_input.input-thin.input-big

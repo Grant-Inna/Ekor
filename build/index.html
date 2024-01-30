@@ -30,12 +30,14 @@
           </div>
           <div class="header__social">
             <div class="social__holder row_flex-10">
-              <div class="social__icon"><a href="" target="_blank" aria-label="Ссылка на телеграм компании" class="icon__telegram"></a></div>
-              <div class="social__icon"><a href="" target="_blank" aria-label="Ссылка на вотапп компании" class="icon__whatsapp"></a></div>
+              <div class="social__icon"><a href="" target="_blank" title="Перейти в группу Telegram компании" aria-label="Ссылка на телеграм компании" class="icon__telegram"></a></div>
+              <div class="social__icon">
+                <div aria-label="Ввести свой номер для подключения whataspp компании" class="icon__whatsapp"></div>
+                <div class="header__input"></div>
+              </div>
             </div>
           </div>
-          <div class="header__contact">
-            <div class="contact__number">8&nbsp;(495)&nbsp;637-82-28</div>
+          <div class="header__contact"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">8&nbsp;(495)&nbsp;637-82-28</a>
             <div class="contacts__text">Заказать звонок</div>
           </div>
           <div class="burger__holder">
@@ -533,13 +535,12 @@
             <h2 class="subscribe__caption">Подписывайтесь на&nbsp;чат-бот оптовых цен</h2>
             <h3 class="subscribe__title">Узнайте наши цены за&nbsp;пару секунд через наш чат-бот без писем и&nbsp;звонков менеджеру</h3>
             <div class="subscribe__holder">
-              <div class="subscribe__socials"><a href="/" target="_blank" class="subscribe__social-whatsapp subscribe__social_holder">
-                        <label for="number_whatsapp" class="icon__whatsapp"></label><span class="text-white">WhatsApp</span>
-                        <input type="tel" id="number_whatsapp" class="subscribe__social_input input-thin input-big"></a><a href="/" target="_blank" class="subscribe__social-telegram subscribe__social_holder">
-                        <label for="number_telegram" class="icon__telegram"></label><span class="text-white">Telegram</span>
-                        <input type="tel" id="number_telegram" class="subscribe__social_input input-thin input-big"></a><a href="/" target="_blank" class="subscribe__social-vkontakte subscribe__social_holder">
-                        <label for="number_vkontakte" class="icon__vkontakte"></label><span class="text-white">ВКонтакте</span>
-                        <input type="tel" id="number_vkontakte" class="subscribe__social_input input-thin input-big"></a>
+              <div class="subscribe__socials">
+                <label for="number_whatsapp" class="subscribe__social_holder subscribe__social-whatsapp"><a href="" title="Перейти в whatsapp компании" aria-label="Ссылка на вотсап компании" class="icon__whatsapp"></a>
+                  <input type="tel" id="number_whatsapp" placeholder="+7(___)__-__-__" class="subscribe__social_input input-thin input-big"><span class="text-white">WhatsApp</span>
+                </label><a href="/" target="_blank" title="Перейти в Telegram компании" aria-label="Ссылка на Telegram компании" class="subscribe__social-telegram subscribe__social_holder">
+                        <div class="icon__telegram"></div><span class="text-white">Telegram</span></a><a href="/" target="_blank" title="Перейти в ВКонтакте компании" aria-label="Ссылка на ВКонтакте компании" class="subscribe__social-vkontakte subscribe__social_holder">
+                        <div class="icon__vkontakte"></div><span class="text-white">ВКонтакте</span></a>
               </div>
               <div class="subscribe__check">
                 <div class="ico__checkbox mr10"></div><span class="text-small text-gray">Нажимая на&nbsp;кнопку, вы соглашаетесь с&nbsp;политикой конфиденциальности ресурса</span>
@@ -992,8 +993,7 @@
             <div class="footer__information">
               <div class="footer__information_section"><span>Адрес: г.&nbsp;Москва, Открытое шоссе, 13, стр.&nbsp;1</span></div>
               <div class="footer__information_section"><span>E-mail: info@ekorfish.ru</span></div>
-              <div class="footer__contacts">
-                <div class="contact__number">8&nbsp;(495)&nbsp;637-82-28</div>
+              <div class="footer__contacts"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">8&nbsp;(495)&nbsp;637-82-28</a>
                 <div class="footer__socials">
                   <div class="social__holder row_flex-10">
                     <div class="social__icon"><a href="" target="_blank" class="icon__telegram"></a></div>

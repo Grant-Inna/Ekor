@@ -84,7 +84,7 @@ $(document).ready(function () {
                return "Результаты не найдены";
             }
          },
-      minimumResultsForSearch: Infinity
+         minimumResultsForSearch: Infinity
       });
    
   /* каруселька крутилка */
@@ -97,9 +97,9 @@ $(document).ready(function () {
       carousel_holder.slick({
          slidesToShow: 1,
          slidesToScroll: 1,
-         speed: 1500,
+         speed: 1200,
          lazyLoad: 'ondemand',
-         arrows: false,
+         arrows: true,
          dots: true,
          infinite: true,
          autoplay: true,
@@ -120,11 +120,9 @@ $(document).ready(function () {
          lazyLoad: 'ondemand',
          arrows: true,
          dots: false,
-         // autoplay: true,
+         autoplay: true,
          infinite: true,
-         focusOnSelect: true,
-        centerMode: true,
-        centerPadding: '180px'
+         focusOnSelect: true
       });
       variety_products.css({ marginRight: '-5px', marginLeft: '-5px' });
       variety_products.find('.slick-slide').css('padding', '0 5px' )
@@ -135,7 +133,7 @@ $(document).ready(function () {
          slidesToScroll: 1,
          speed: 700,
          lazyLoad: 'ondemand',
-          infinite: false,
+         infinite: false,
          arrows: true,
          dots: false,
          focusOnSelect: true
@@ -144,36 +142,21 @@ $(document).ready(function () {
       choose_block.find('.slick-slide').css('padding', '0 5px' )
    }
    if (programs_carousel.length > 0) {
-          programs_carousel.slick({
+         programs_carousel.slick({
          slidesToShow: 1,
          slidesToScroll: 1,
          speed: 700,
          lazyLoad: 'ondemand',
          infinite: false,
+         autoplay: true,
          arrows: true,
-         dots: false,
-         responsive: [
-          {
-            breakpoint: 890,
-            settings: {
-               centerMode: true,
-              centerPadding: '20px'
-            }
-          },
-          {
-            breakpoint: 590,
-            settings: {
-              centerMode: true,
-              centerPadding: '10px'
-            }
-          },
-         ]
+         dots: false
       });
       programs_carousel.css({ marginRight: '-5px', marginLeft: '-5px' });
       programs_carousel.find('.slick-slide').css('padding', '0 5px' )
    }
    
-   /* нажатие на disabled ссылки */
+   /* нажатие на disabled ссылки или кнопки */
    $('a[disabled="disabled"], button[disabled="disabled"]').on( 'click', function(event) { event.preventDefault(); event.stopPropagation(); return false; });
    
    /* плавный скрол */
@@ -347,4 +330,16 @@ $(document).ready(function () {
       $(btn).slideUp(300)
    }
    
+   /* ГЛАВНАЯ блок с рукой подписка whatsapp */
+   if ( width > 470 && $('.subscribe__socials').length > 0) {
+      $('label.subscribe__social-whatsapp').on( 'click', showTelInput);
+      $('.subscribe__social-whatsapp a').on( 'click', false)
+   } else if ( width <= 470) {
+      $('.subscribe__social-whatsapp a').on( 'click', true)
+   }
+   function showTelInput() {
+      let input = $('.subscribe__social-whatsapp input');
+      $(input).fadeIn(200);
+      $('.subscribe__social-whatsapp span').fadeOut(100)
+   }
  });

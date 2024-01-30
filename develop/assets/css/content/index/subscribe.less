@@ -120,6 +120,7 @@
    })
 }
 .subscribe__social_holder {
+   cursor: pointer;
    .flex-center();
    //height: 60px;
    padding: 18px 25px;
@@ -171,4 +172,26 @@
 }
 .subscribe__social_input {
    display: none;
+}
+
+
+.subscribe__social_holder {
+
+input::-moz-placeholder { color: @color-white; font-size: 14px; .montserrat-medium();}
+input::-webkit-input-placeholder { color: @color-white; font-size: 14px; .montserrat-medium();}
+input:-ms-input-placeholder { color: @color-white; font-size: 14px; .montserrat-medium();}
+input::-ms-input-placeholder { color: @color-white; font-size: 14px; .montserrat-medium();}
+input::placeholder { color: @color-white; font-size: 14px; .montserrat-medium();}
+
+}
+.subscribe__social_holder input {
+   width: 100px;
+   margin-left: 10px;
+   display: none;
+}
+.subscribe__social_holder input:focus {
+   display: block;
+   + span {
+      display: none;
+   }
 }
