@@ -109,9 +109,10 @@ $(document).ready(function () {
       carousel_holder.css({ marginRight: '-5px', marginLeft: '-5px' });
       carousel_holder.find('.slick-slide').css('padding', '0 5px' )
    }
-   // console.log(width <= 450);
-   // console.log($('.variety_products').length);
-   if( width <= 485 && $('.variety_products').length > 0 ) {
+
+   // console.log(width);
+   if( width <= 486 && $('.variety_products').length > 0 ) {
+      
       variety_products.slick({
          slidesToShow: 1,
          slidesToScroll: 1,
@@ -119,7 +120,7 @@ $(document).ready(function () {
          lazyLoad: 'ondemand',
          arrows: true,
          dots: false,
-         autoplay: true,
+         // autoplay: true,
          infinite: true,
          focusOnSelect: true,
         centerMode: true,
