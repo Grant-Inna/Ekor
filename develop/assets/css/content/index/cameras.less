@@ -25,7 +25,12 @@
    //   });
    //}
    
-   .good-friendly-arrows();
+   .watch-more {
+      .xs-block({
+         margin-top: 10px;
+         display: flex;
+      });
+   }
 }
 .cameras__wrapper {
    .section-text-half();
@@ -64,6 +69,17 @@
       .play-icon-small();
       transform: translateX(-33%) translateY(-50%);
    }
+  
+}
+.camera__block {
+   .xs-block({
+      margin-bottom: 20px;
+   });
+   &:last-of-type {
+      .xs-block({
+         margin-bottom: 0;
+      });
+   }
 }
 
 .cameras__row {
@@ -79,11 +95,9 @@
          grid-template-rows: 1fr;
       });
       .sm-block({
-         grid-template-rows: minmax(180px, 180px);
          grid-column: span 1;
          grid-gap: 10px;
          margin-top: 15px;
-         max-height: 180px;
       });
    
   
