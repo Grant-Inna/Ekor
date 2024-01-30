@@ -337,7 +337,7 @@ $(document).ready(function () {
       $('.cameras__row').appendTo('.cameras__wrapper .cameras__more');
       $('.cameras__wrapper .watch-more').on( 'click', showMore);
    } else if ( width > 470 ) {
-      $('.camera__block').appendTo('.cameras__wrapper');
+      $('.cameras__row').appendTo('.cameras__wrapper');
    }
    
    function showMore() {
