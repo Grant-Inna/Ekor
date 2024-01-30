@@ -104,7 +104,6 @@ $(document).ready(function () {
          infinite: true,
          autoplay: true,
          focusOnSelect: true,
-        adaptiveHeight: true,
          pauseOnDotsHover: true
       });
       carousel_holder.css({ marginRight: '-5px', marginLeft: '-5px' });
