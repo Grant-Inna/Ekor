@@ -1,6 +1,7 @@
 $(document).ready(function () {
    'use strict';
    const width = $(document).width();
+
    
    /* полоса прокрутки */
    
@@ -90,8 +91,7 @@ $(document).ready(function () {
    const carousel_holder = $('.carousel__holder'),
          variety_products = $('.variety_products__list'),
          choose_block = $('.choose__block_photo'),
-         programs_carousel = $('.programs__carousel'),
-         cameras_carousel = $('.cameras__row');
+         programs_carousel = $('.programs__carousel');
    
    if (carousel_holder.length > 0) {
       carousel_holder.slick({
@@ -170,23 +170,6 @@ $(document).ready(function () {
       });
       programs_carousel.css({ marginRight: '-5px', marginLeft: '-5px' });
       programs_carousel.find('.slick-slide').css('padding', '0 5px' )
-   }
-   if (cameras_carousel.length > 0) {
-               console.log(!!$(cameras_carousel).find('.slick-initialized'));
-   
-      if (width <= 470 && !$(cameras_carousel).find('.slick-initialized')) {
-         cameras_carousel.not('.slick-initialized').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: 700,
-            lazyLoad: 'ondemand',
-            infinite: false,
-            arrows: true,
-            dots: false
-         });
-         cameras_carousel.css({marginRight: '-5px', marginLeft: '-5px'});
-         cameras_carousel.find('.slick-slide').css('padding', '0 5px')
-      }
    }
    
    /* нажатие на disabled ссылки */
@@ -349,6 +332,14 @@ $(document).ready(function () {
    } else if ( width > 470 ) {
       $('.reputation__block-6, .reputation__block-7, .reputation__block-8').appendTo('.reputation__tile');
    }
+   if ( width <= 475 && $('.cameras__row').length > 0 ) {
+      $('.watch-more').slideDown(0);
+      $('.cameras__row').appendTo('.cameras__wrapper .cameras__more');
+      $('.cameras__wrapper .watch-more').on( 'click', showMore);
+   } else if ( width > 470 ) {
+      $('.camera__block').appendTo('.cameras__wrapper');
+   }
+   
    function showMore() {
       let btn = $('.watch-more');
       $(btn).siblings('.more').slideDown(300);
