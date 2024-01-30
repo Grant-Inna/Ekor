@@ -342,4 +342,10 @@ $(document).ready(function () {
       $(input).fadeIn(200);
       $('.subscribe__social-whatsapp span').fadeOut(100)
    }
+   
+   /* ГЛОБАЛЬНОЕ ввод номера при наведении на вотсап */
+   
+   
+   
+  
  });
