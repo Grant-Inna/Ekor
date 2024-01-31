@@ -1,0 +1,27 @@
+#openModal_callme.modal
+   .wrapper
+      .modal__dialog
+         .modal__content
+            .request__image_holder.request__holder
+               .request__image
+            .request__form_holder.request__holder
+               h2.title.text-blue Заказать звонок
+               form#callme_form.request__form
+                  label( for='callme_name' ).label-input.mb10
+                     input#callme_name( type='text' ).input.input-big
+                     span.sup Имя
+                  label( for='callme_number' ).label-input.mb10
+                     input#callme_number( type='tel' ).input.input-big
+                     span.sup Номер телефона
+                  label( for='callme_comment' ).label-input.mb16
+                     input#callme_comment( type='email' ).input.input-big
+                     span.sup Комментарий
+                  .flex.row_flex-10
+                     label#callme_label.label-checkbox( for='callme_checkbox' )
+                        input#callme_checkbox.checkbox-hidden( type='checkbox' )
+                        span.checkbox
+                     span.text-small Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением
+                  button#callme_btn.button-yellow.button-long( type='button' )
+                     span Отправить
+         .modal__close
+            .icon__close-w

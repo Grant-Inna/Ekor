@@ -28,6 +28,7 @@ $(document).ready(function () {
    }
    function hideBlackBack() {
       $('#black_back').prop('style', '');  // Скрытие задника
+      $('#black_back').removeClass('.up')
    }
    
    appendToMobile(width);
@@ -182,6 +183,9 @@ $(document).ready(function () {
    if ( $('.offer__contact').length > 0 ) {
        checkboxChecked( '#offer_form', '#offer_checkbox', '#offer_btn', '#offer_name', '#offer_mail');
     }
+   if ($('#openModal_callme').length > 0) {
+      checkboxChecked( '#callme_form', '#callme_checkbox', '#callme_btn', '#callme_name', '#callme_number');
+   }
    
    function checkboxChecked( form, box, btn, input1, input2 ) {
       $(form).on( 'focus', function() {$(btn).prop('disabled', true)});
@@ -197,7 +201,7 @@ $(document).ready(function () {
     /* placeholder */
   if ($('.sup').length > 0) {
      // $('input').val().length === 0 ? $('input').siblings('.sup').hide() : $('input').siblings('.sup').show();
-     $('input').on( 'input', function() {
+     $('input').on( 'input, change', function() {
         let sup = $(this).siblings('.sup');
         $(this).val().length > 1 ? sup.hide() : sup.show()
      });
@@ -301,7 +305,7 @@ $(document).ready(function () {
    if ($('.offer__container').length > 0) {
       $('.offer__info .offer__label:first-child').addClass('focus');
       $('.offer__info .offer__label').on( 'click', function() {
-         console.log($(this));
+         // console.log($(this));
          $('.offer__info  .focus').not($(this)).removeClass('focus');
          $(this).addClass('focus');
       });
@@ -350,11 +354,63 @@ $(document).ready(function () {
    function showHeaderInput() {
       $('.input_number-holder').toggleClass('show')
    }
+   /* ГЛОБАЛЬНЫЙ ввод номера по маске */
    if ($('input[type="tel"]')) {
       $('input[type="tel"]').on( 'input', function() {
          $.mask.definitions['h'] = "[0|1|3|4|5|6|7|9]";
          $(this).mask("+7 (h99) 999-99-99");
      });
+   }
+  
+   /* ГЛОБАЛЬНЫЙ открытие модального окна */
+   if ($('.openModal_callme')) {
+      $('.openModal_callme').on( 'click', (event) => openModal(event.target));
+   }
+   function openModal( target ) {
+      // console.log(target);
+      let click = $(target).data( 'modal');
+      $('#openModal_' + click).removeAttr( 'style').addClass('show');
+      $('#black_back').addClass('up').fadeIn();
+      $('.header__menu_mobile').slideUp(300);
+      $('.header__main .burger__holder').removeClass('close');
+      
+            // Клик по ссылке "Закрыть".
+      $('.modal__close').on( 'click', function() {
+         $(this).parents('.modal').fadeOut();
+         hideMobileMenu();
+         $('div[id^="openModal_"]').removeClass('show');
+      });
+
+      // Закрытие по клавише Esc.
+      $(document).keydown(function(event) {
+         if (event.keyCode === 27) {
+            event.stopPropagation();
+            hideMobileMenu();
+            hideModal();
+         }
+      });
+
+      // Клик по фону, но не по окну.
+      $('#black_back').on( 'click', function(event) {
+         // // event.stopPropagation();
+         // console.log(event.target);
+         // if (event.target !== $('#openModal_' + click)) {
+         //    console.log('сама модалка');
+         //    return false
+         // }
+         hideMobileMenu();
+         hideModal()
+      });
+      
+      $('#openModal_' + click).find('button').on( 'click', function(event) {
+         event.stopPropagation();
+         hideMobileMenu();
+         hideModal();
+      });
+   }
+   function hideModal() {
+      $('.modal').fadeOut();
+      $('div[id^="openModal_"]').removeClass('show');
    }
   
  });

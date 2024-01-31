@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="header__contact"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">8&nbsp;(495)&nbsp;637-82-28</a>
-            <div class="contacts__text">Заказать звонок</div>
+            <div data-modal="callme" class="openModal_callme contacts__text">Заказать звонок</div>
           </div>
           <div class="burger__holder">
             <div class="burger__line"></div>
@@ -1024,12 +1024,46 @@
           </div>
         </div>
       </footer>
+      <div id="openModal_callme" class="modal">
+        <div class="wrapper">
+          <div class="modal__dialog">
+            <div class="modal__content">
+              <div class="request__image_holder request__holder">
+                <div class="request__image"></div>
+              </div>
+              <div class="request__form_holder request__holder">
+                <h2 class="title text-blue">Заказать звонок</h2>
+                <form id="callme_form" class="request__form">
+                  <label for="callme_name" class="label-input mb10">
+                    <input id="callme_name" type="text" class="input input-big"><span class="sup">Имя</span>
+                  </label>
+                  <label for="callme_number" class="label-input mb10">
+                    <input id="callme_number" type="tel" class="input input-big"><span class="sup">Номер телефона</span>
+                  </label>
+                  <label for="callme_comment" class="label-input mb16">
+                    <input id="callme_comment" type="email" class="input input-big"><span class="sup">Комментарий</span>
+                  </label>
+                  <div class="flex row_flex-10">
+                    <label id="callme_label" for="callme_checkbox" class="label-checkbox">
+                      <input id="callme_checkbox" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                    </label><span class="text-small">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
+                  </div>
+                  <button id="callme_btn" type="button" class="button-yellow button-long"><span>Отправить</span></button>
+                </form>
+              </div>
+            </div>
+            <div class="modal__close">
+              <div class="icon__close-w"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/jquery.mask.js"></script>
     <script src="./assets/js/slick.js"></script>
     <script src="./assets/js/scrollbar.js"></script>
     <script src="./assets/js/select2.js"></script>
     <script src="./assets/js/build.js"></script>
-    <script src="./assets/js/jquery.mask.js"></script>
   </body>
 </html>

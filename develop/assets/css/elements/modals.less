@@ -1,0 +1,63 @@
+/* Стили всплывающего окна по-умолчанию */
+.modal {
+   position: fixed;
+   z-index: 1500;
+   top: 22vh;
+   width: 100%;
+   //right: 0;
+   //bottom: 0;
+   //left: 0;
+   //background-color: rgba(32, 54, 134, 0.35);
+   opacity: 0;
+   transition: opacity .2s;
+   
+   display: none;
+}
+/* При отображении модального окно */
+//.show.modal:target,
+.show.modal {
+   display: block;
+   opacity: 1;
+   pointer-events: auto; /* элемент видим для событий мыши */
+   overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal__dialog {
+   .flex();
+    position: relative;
+    width: 100%;
+   //margin-top: 20vh;
+}
+
+/* Стили для блока с контентом окна */
+.modal__content {
+    position: relative;
+   z-index: 1550;
+    .flex();
+    background-color: #fff;
+    width: calc(100% - 20px);
+   overflow: hidden;
+    outline: 0;
+    border-radius: 20px;
+   &:after {
+      .pseudo();
+      z-index: 1500;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .lines();
+   }
+   
+   .request__form_holder {
+      position: relative;
+      z-index: 1600;
+   }
+}
+
+.modal__close {
+   width: 20px;
+   height: 100%;
+}
