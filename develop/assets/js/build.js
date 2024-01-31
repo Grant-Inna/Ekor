@@ -344,8 +344,17 @@ $(document).ready(function () {
    }
    
    /* ГЛОБАЛЬНОЕ ввод номера при наведении на вотсап */
-   
-   
-   
+   if ($('.header__input input').length > 0) {
+      $('.social__icon-whatsapp').hover( showHeaderInput)
+   }
+   function showHeaderInput() {
+      $('.header__input').toggleClass('show')
+   }
+   if ($('input[type="tel"]')) {
+      $('input[type="tel"]').on( 'input', function() {
+         $.mask.definitions['h'] = "[0|1|3|4|5|6|7|9]";
+         $(this).mask("+7 (h99) 999-99-99");
+     });
+   }
   
  });

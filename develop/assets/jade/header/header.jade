@@ -17,9 +17,10 @@ header
          .social__holder.row_flex-10
             .social__icon
                a.icon__telegram( href='' target='_blank' title='Перейти в группу Telegram компании' aria-label='Ссылка на телеграм компании')
-            .social__icon
+            .social__icon.social__icon-whatsapp
                .icon__whatsapp( aria-label='Ввести свой номер для подключения whataspp компании')
                .header__input
+                  input.mask-phone( type='tel' placeholder='+7(___)__-__-__')
 
       .header__contact
          a( href='tel:84956378228' aria-label='Позвонить на номер компании' ).contact__number 8&nbsp;(495)&nbsp;637-82-28
