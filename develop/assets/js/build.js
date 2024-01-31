@@ -348,7 +348,7 @@ $(document).ready(function () {
       $('.social__icon-whatsapp').hover( showHeaderInput)
    }
    function showHeaderInput() {
-      $('.header__input').toggleClass('show')
+      $('.input_number-holder').toggleClass('show')
    }
    if ($('input[type="tel"]')) {
       $('input[type="tel"]').on( 'input', function() {

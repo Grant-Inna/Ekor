@@ -15,9 +15,11 @@ footer.footer__holder
                .footer__socials
                   .social__holder.row_flex-10
                      .social__icon
-                        a.icon__telegram( href='' target='_blank')
-                     .social__icon
-                        a.icon__whatsapp( href='' target='_blank')
+                        a.icon__telegram( href='' target='_blank' title='Перейти в группу Telegram компании' aria-label='Ссылка на телеграм компании')
+                     .social__icon.social__icon-whatsapp
+                        .icon__whatsapp( aria-label='Ввести свой номер для подключения whataspp компании' )
+                        .input_number-holder
+                           input.input_number( type='tel' placeholder='+7(___)__-__-__')
       .footer__links_holder.row_flex-32
          .footer__links_section.footer_links-1
             .footer__links_caption Покупателям

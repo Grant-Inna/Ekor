@@ -17,3 +17,54 @@
    height: 24px;
    background: transparent;
 }
+
+
+
+.input_number-holder {
+   .none();
+   position: absolute;
+   z-index: 100;
+   bottom: -100%;
+   left: 0;
+   width: 180px;
+   transform: translateY(50%);
+   border-radius: 0 10px 10px 10px;
+   padding-left: 5px;
+   .xl-block({
+      right: 0;
+      top: 0;
+      bottom: unset;
+      left: unset;
+      transform: translateX(100%);
+   });
+}
+.input_number-holder .show {
+   .block();
+}
+.input_number-holder input {
+   padding-left: 15px;
+   width: 160px;
+   border-radius: 0 10px 10px 10px;
+   height: 40px;
+   background-color: @color-yellow-2;
+   color: @color-blue;
+ 
+   
+   .xl-block({
+      background-color: @color-white;
+      //color: @color-blue;
+   });
+}
+
+.input_number-holder input::-moz-placeholder { color: @color-blue; }
+.input_number-holder input::-webkit-input-placeholder { color: @color-blue; }
+.input_number-holder input:-ms-input-placeholder { color: @color-blue; }
+.input_number-holder input::-ms-input-placeholder { color: @color-blue; }
+.input_number-holder input::placeholder { color: @color-blue; }
+
+.social__icon-whatsapp:hover .input_number-holder {
+   display: block;
+}
+.social__icon-whatsapp {
+   position: relative;
+}
