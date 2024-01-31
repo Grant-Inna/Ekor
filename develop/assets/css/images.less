@@ -317,7 +317,7 @@
    });
 }
 
-/* ГЛАВНОЕ видео b камера */
+/* ГЛАВНОЕ видео и камера */
 .video( @size, @numb ) {
    background-image: url("../images/@{size}/video/poster-@{numb}.webp");
    background-repeat: no-repeat;
@@ -403,4 +403,12 @@
    .xxs-block({
       .index-map( 'small', '3');
    });
+}
+
+/* рамка у менеджера */
+.stroke-img() {
+    background-image: url("../images/middle/managers/stroke.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
 }

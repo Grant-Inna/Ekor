@@ -28,7 +28,7 @@ $(document).ready(function () {
    }
    function hideBlackBack() {
       $('#black_back').prop('style', '');  // Скрытие задника
-      $('#black_back').removeClass('.up')
+      $('#black_back').removeClass('up')
    }
    
    appendToMobile(width);
