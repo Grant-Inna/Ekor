@@ -15,18 +15,18 @@ section.offer__container
                .request__form#offer_form
                   label( for='offer_name' ).label-input.mb10
                      input#offer_name( type='text' ).input.input-big
-                     span.sup Имя
-                  label( for='offer_numb' ).label-input.mb10
-                     input#offer_numb( type='tel' ).input.input-big
-                     span.sup Номер телефона
-                  label( for='offer_mail' ).label-input.mb16
+                     span.sup Имя и Фамилия
+                  label( for='offer_mail' ).label-input.mb10
                      input#offer_mail( type='email' ).input.input-big
                      span.sup Email
+                  label( for='offer_numb' ).label-input.mb16
+                     input#offer_numb( type='tel' ).input.input-big
+                     span.sup Номер телефона
                   .flex.row_flex-10
                      label#offer_label.label-checkbox( for='offer_checkbox' )
-                        input#offer_checkbox.checkbox-hidden( type='checkbox' )
+                        input#offer_checkbox.checkbox-hidden( type='checkbox' checked='true' )
                         span.checkbox
                      span.text-small.text-dark Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением
-                  button#offer_btn.button-yellow.button-long( type='button' )
+                  button#offer_btn.button-yellow.bg-yellow-2.button-long( type='button' )
                      span Получить
 

@@ -45,7 +45,7 @@ let gridOptions = {
          width: "890px"
       },
       middle: {
-         width: "770px",
+         width: "768px",
          fields: "42px"
       },
       md: {
@@ -60,7 +60,7 @@ let gridOptions = {
       },
       xxs: {
          width: "370px",
-         fields: "15px",
+         fields: "16px",
          offset: "10px"
       },
       tiny: {

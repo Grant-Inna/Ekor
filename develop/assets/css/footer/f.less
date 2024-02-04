@@ -46,6 +46,9 @@
    flex-basis: 43%;
    .footer__logo {
       margin-bottom: 32px;
+      .middle-block({
+         margin-bottom: 20px;
+      });
       .sm-block({
          .items-start();
          margin-bottom: 20px;
@@ -53,7 +56,12 @@
    }
 }
 .footer__information {
+   
    > div {
+      
+      .middle-block({
+         min-width: 209px;
+      });
       margin-bottom: 32px;
       .sm-block({
          flex-grow: unset;
@@ -110,7 +118,7 @@
 }
 .footer__information_section {
    .montserrat-regular();
-   color: @color-white;
+   color: rgba(255, 255, 255, 0.8);
    font-size: 16px;
    line-height: 145%;
 }
@@ -120,15 +128,22 @@
    height: 100%;
    flex-basis: 50%;
    min-width: 669px;
+   
    .lg-block({
       min-width: unset;
+   });
+   .middle-block({
+      //.justify-between()
    });
    .sm-block({
       .justify-start();
    });
 }
-.footer__links_section { // del
-   //max-height: 235px;
+.footer__links_section:first-of-type {
+   width: 193px;
+   .sm-block({
+      width: unset;
+   })
 }
 .footer__links_caption {
    font-size: 16px;
@@ -143,7 +158,7 @@
 .footer__links {
    .column();
    flex-wrap: wrap;
-   max-height: 232px; // влияет на длинну списка
+   max-height: 262px; // влияет на длинну списка
    .sm-block({
       max-height: unset;
       //max-width: 180px;
@@ -165,8 +180,9 @@
    min-width: 160px;
    max-width: 216px;
    //white-space: nowrap;
-   margin-top: 16px;
+   margin-top: 18px;
    font-size: 16px;
+   line-height: 22px;
    color: @color-white;
    
    .xl-block({
@@ -175,6 +191,7 @@
    });
    
    .middle-block({
+      margin-top: 7px;
       max-width: 173px;
       min-width: unset;
    });

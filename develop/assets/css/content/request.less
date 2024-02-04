@@ -1,5 +1,5 @@
 .request__container {
-   margin-top: 80px;
+   margin-top: 84px;
    margin-bottom: 80px;
    
    .sm-block({
@@ -20,10 +20,14 @@
    .text-small {
       margin-top: -2px;
       cursor: default;
+      .middle-block({
+         margin-top: 0;
+      })
    }
 }
+@request_width: 48.5%;
 .request__image_holder {
-   width: 53.5%;
+   width: 100% - @request_width;
    .xl-block({
       width: 45%;
    });
@@ -38,7 +42,7 @@
    height: 100%;
 }
 .request__form_holder {
-   width: 100% - 53.5%;
+   width: @request_width;
    //background-color: @color-white;
    .lines-request();
    padding: 40px;
@@ -50,9 +54,25 @@
       width: 100%;
       padding: 30px;
    });
+   .middle-block({
+      padding-top: 24px;
+   });
    .sm-block({
       padding: 20px;
    });
+   .xs-block({
+      padding: 15px;
+   });
+   input {
+      .sm-block({
+         height: 47px;
+      });
+   }
+   label:last-of-type {
+      .sm-block({
+         margin-bottom: 20px;
+      });
+   }
 }
 .request__form_holder h2 {
    margin-bottom: 20px;

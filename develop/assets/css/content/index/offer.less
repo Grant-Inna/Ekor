@@ -13,6 +13,9 @@
       margin-top: 40px;
       margin-bottom: 40px;
    });
+   .xs-block({
+      padding-top: 25px;
+   });
    .image-offer();
    
    h2.caption {
@@ -20,8 +23,16 @@
       .lg-block({
          margin-bottom: 26px;
       });
+      .middle-block({
+         width: 90%;
+      });
       .sm-block({
          margin-bottom: 30px;
+      });
+      .xs-block({
+         line-height: 25px;
+         margin-bottom: 25px;
+         margin-left: 12px;
       });
    }
    .wrapper.form {
@@ -90,14 +101,6 @@
 .offer__select {
    width: 100%;
 }
-.offer__title {
-   color: @color-gray;
-   .montserrat-medium();
-   font-size: 14px;
-   line-height: 130%;
-   margin-bottom: 6px;
-   .tr();
-}
 .offer__li {
    .column-center();
    width: 48px;
@@ -119,7 +122,7 @@
    .montserrat-medium();
    font-size: 14px;
    line-height: 130%;
-   margin-bottom: 6px;
+   margin-bottom: 4px;
    .tr();
 }
 select.offer__select { // del
@@ -130,6 +133,7 @@ select.offer__select { // del
       border: 1px solid @color-blue;
       background-color: @color-blue;
       color: @color-blue-gray;
+      text-decoration: underline;
       .tr();
    }
    
@@ -142,7 +146,16 @@ select.offer__select { // del
 .offer__contact {
    .lg-block({
       margin-top: 20px;
-   })
+   });
+   .middle-block({
+      margin-top: 10px;
+   });
+   h3.title {
+      .middle-block({
+         .montserrat-semibold();
+         font-size: 16px;
+      })
+   }
 }
 .offer__contact button {
    margin-top: 30px;
@@ -166,8 +179,21 @@ select.offer__select { // del
       width: 25px;
       height: 25px;
    }
+   .offer__label .offer__li {
+      margin-right: 8px;
+   }
+   
+   .offer__select {
+      width: 100%;
+      margin-left: -28px;
+   }
 }
-@media screen and (max-width: @break_xxs) {
+@media screen and (max-width: @break_xs) {
+   .offer__container {
+      .text-small {
+         line-height: 14px;
+      }
+   }
    .offer__li {
       .column-center();
       width: 18px;
@@ -175,13 +201,14 @@ select.offer__select { // del
       color: @color-gray;
       flex-shrink: 0;
    }
-   .offer__select {
-      width: 100%;
-      margin-left: -40px;
-   }
    .offer__title {
       padding-top: 2px;
-      padding-left: 40px;
+      padding-left: 28px;
       margin-bottom: 10px;
+   }
+   
+   .offer__label-select {
+      margin-bottom: 8px;
+      width: 100%;
    }
 }

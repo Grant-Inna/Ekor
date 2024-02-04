@@ -21,6 +21,7 @@
 }
 .bg-yellow-2 {
    background-color: @color-yellow-2;
+   border-color: @color-yellow-2;
 }
 .button-yellow:hover,
 .button-yellow:active {
@@ -52,6 +53,12 @@ button:disabled {
       height: 48px;
    });
 }
+.button-small {
+   width: 235px;
+   .sm-block({
+      width: 260px;
+   });
+}
 
 
 .watch-more {
@@ -60,6 +67,7 @@ button:disabled {
    height: 48px;
    border-radius: 10px;
    background-color: @color-blue-gray;
+   cursor: pointer;
    
    span {
       color: @color-blue;

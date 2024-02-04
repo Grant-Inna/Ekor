@@ -1,30 +1,52 @@
 .reviews__container {
-   .section-margin();
+      margin-top: 80px;
+      margin-bottom: 80px;
+   .lg-block({
+      margin-top: 78px;
+      margin-bottom: 40px;
+   });
+   .sm-block({
+      margin-top: 40px;
+      margin-bottom: 40px;
+   });
 }
 .reviews__content {
-   
+   margin-top: -20px;
    .gr();
-   grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(2, auto);
-   .gap2040();
+   grid-row-gap: 20px;
+   grid-column-gap: 32px;
    > * {
-      grid-column: ~"2 / 5";
+      grid-column: ~"4 / 13";
       grid-row: span 1;
       .xl-block({
-         grid-column: ~"1 / 5";
+         grid-column: ~"1 / 13";
          grid-row: span 1;
       })
    }
    p {
-      grid-column: ~"2 / 4";
-      .xs-block({
-         grid-column: ~"1 / 5";
-      })
+      grid-column: ~"4 / 13";
+      max-width: 345px;
+      line-height: 140%;
+      .sm-block({
+         grid-column: span 1;
+      });
    }
+   .middle-block({
+      margin-top: 0;
+      grid-row-gap: 30px;
+      grid-column-gap: 20px;
+   });
+   .sm-block({
+      margin-top: -9px;
+      grid-template-columns: auto;
+      grid-row-gap: 10px;
+   });
 }
 .review__wrapper {
    .ll-block({
-      grid-column: ~"1 / 5";
+      grid-column: ~"1 / 13";
    });
    .section-padding-403015();
 
@@ -32,36 +54,77 @@
    background-color: @color-white;
    
    .gr();
-   grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(18, 1fr);
    grid-template-rows: repeat(2, auto);
+   grid-column-gap: 32px;
    grid-row-gap: 20px;
    .middle-block({
-      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, auto);
+   });
+   .md-block({
+      grid-column-gap: 20px;
+      grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(3, auto);
+   });
+   .sm-block({
+      border-radius: 10px;
+      grid-column: span 1;
+      grid-column-gap: 0;
+      grid-template-columns: auto auto;
+      //padding-right: 20px;
    });
    
    .review__first {
-      grid-column: span 1;
+      grid-column: span 9;
       grid-row: ~"1 / 2";
+      .middle-block({
+         grid-column: span 6;
+      });
+      .sm-block({
+         grid-column: span 1;
+         //padding-right: 5px;
+      });
       .xxs-block({
          font-size: 14px;
          line-height: 120%;
-      })
+      });
+      
+      &:nth-of-type(2) {
+         text-align: right;
+      }
    }
 }
 .review__block-1 {
-   grid-column: span 1;
-   grid-row: ~"2 / 3";
+   grid-row: span 1;
+   grid-column: ~"1 / 4";
    .middle-block({
-      grid-column: span 2;
+      grid-column: span 4;
+      grid-row: ~"2 / 3";
+   });
+   .md-block({
+      grid-column: ~"1 / 13";
+      grid-row: ~"2 / 3";
+   });
+   .sm-block({
+      grid-column: ~"1 / 3";
       grid-row: ~"2 / 3";
    });
 }
 .review__block-2 {
-   grid-column: span 1;
-   grid-row: ~"2 / 3";
+   grid-row: span 1;
+   grid-column: ~"9 / 19";
    .middle-block({
-      grid-column: span 2;
+      grid-column: span 8;
+      grid-row: ~"2 / 3";
+   });
+   .md-block({
+      grid-column: ~"1 / 12";
+      grid-row: ~"3 / 4";
+   });
+   .sm-block({
+      grid-column: ~"1 / 3";
       grid-row: ~"3 / 4";
    });
 }
@@ -101,6 +164,10 @@
 }
 .review__name {
    margin-bottom: 5px;
+   .xs-block({
+      font-size: 14px;
+      line-height: 120%;
+   });
 }
 
 
@@ -108,13 +175,14 @@
    
    .gr();
    grid-template-columns: 108px 75px 75px;
-   grid-template-rows: 10px 16px 14px 30px 68px;
+   grid-template-rows: 10px 20px 14px 30px 68px;
    grid-column-gap: 14px;
    .lg-block({
       grid-template-columns: 62px 75px 75px;
       grid-template-rows: 5px 16px 20px 68px;
    });
-   .xxs-block({
+   .xs-block({
+      grid-template-rows: 5px 18px 20px 68px;
       grid-template-columns: 62px 75px auto;
    })
 }
@@ -139,12 +207,17 @@
    grid-column: ~"1 / 4";
    grid-row: ~"5 / 6";
    margin-top: 20px;
+   max-width: 261px;
    .lg-block({
       grid-row: ~"4 / 5";
       margin-top: 20px;
    });
-   .xxs-block({
+   .middle-block({
+      width: 243px;
+   });
+   .xs-block({
       width: 100%;
+      height: 48px;
    });
 }
 
@@ -161,6 +234,9 @@
    grid-template-columns: 50px minmax(137px, auto);
    grid-template-rows: 23px 18px 23px 26px auto 24px;
    grid-column-gap: 10px;
+   .middle-block({
+      grid-template-rows: 23px 18px 20px 26px auto 24px;
+   });
    .xxs-block({
       grid-template-columns: 50px auto;
    })

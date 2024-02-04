@@ -3,7 +3,7 @@ section( aria-label='Подать заявку на сотрудничество
       .request__image_holder.request__holder
          .request__image
       .request__form_holder.request__holder
-         h2.title.text-blue Оставьте заявку на&nbsp;сотрудничество
+         h2.caption.text-blue Оставьте заявку на&nbsp;сотрудничество
          form#request_form.request__form
             label( for='request_name' ).label-input.mb10
                input#request_name( type='text' ).input.input-big
@@ -16,8 +16,8 @@ section( aria-label='Подать заявку на сотрудничество
                span.sup Email
             .flex.row_flex-10
                label#request_label.label-checkbox( for='request_checkbox' )
-                  input#request_checkbox.checkbox-hidden( type='checkbox' )
+                  input#request_checkbox.checkbox-hidden( type='checkbox' checked='true' )
                   span.checkbox
-               span.text-small Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением
-            button#reguest_btn.button-yellow.button-long( type='button' )
+               span.text-dark.text-small Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением
+            button#reguest_btn.button-yellow.button-long.bg-yellow-2( type='button' )
                span Получить

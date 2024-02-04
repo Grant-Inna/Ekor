@@ -1,5 +1,18 @@
 .advantages__container {
-   .section-margin();
+      margin-top: 80px;
+      margin-bottom: 80px;
+   .lg-block({
+      margin-top: 80px;
+      margin-bottom: 40px;
+   });
+   .middle-block({
+      margin-top: 85px;
+      margin-bottom: 40px;
+   });
+   .sm-block({
+      margin-top: 49px;
+      margin-bottom: 40px;
+   });
 }
 .advantages__list { // del
 
@@ -13,17 +26,46 @@
 .advantages__item {
    display: grid;
    grid-template-columns: repeat( 12, 1fr);
-   padding: 16px 0;
+   grid-column-gap: 32px;
+   padding: 16px 0 17px;
    border-top: 1px solid @opacity-blue-20;
+   .middle-block({
+      grid-column-gap: 20px;
+      padding: 20px 0 15px;
+   });
+}
+.advantages__item-2,
+.advantages__item-5 {
+   .xs-block({
+      br {
+         .none();
+      }
+   });
 }
 .advantages__number {
       grid-column: ~"1 / 4";
 }
 .advantages__title {
    grid-column: ~"4 / 9";
+   .middle-block({
+      width: 86%;
+   });
+   .xs-block({
+      width: 100%;
+      font-size: 16px;
+      line-height: 120%;
+      margin-bottom: 6px;
+   })
 }
 .advantages__text {
    grid-column: ~"9 / 13";
+   .middle-block({
+      width: 86%;
+   });
+   .xs-block({
+      width: 100%;
+          line-height: 125%;
+   })
 }
 
 .advantages__item-6 {
@@ -33,7 +75,22 @@
       margin-bottom: 0;
    })
 }
-
+.advantages__item-4 .advantages__title {
+   .middle-block({
+       width: 100%;
+      br {
+         .none()
+      }
+   });
+}
+.advantages__item-4 .advantages__text {
+   .middle-block({
+       width: 100%;
+      br {
+         .none()
+      }
+   });
+}
 
 
 @media screen and (max-width: @break_xl) {
@@ -63,5 +120,25 @@
    }
    .advantages__text {
       grid-column: ~"2 / 13";
+   }
+}
+@media screen and (max-width: @break_sm) {
+   .advantages__item {
+      grid-template-columns: 26px auto;
+      grid-column-gap: 0;
+      padding: 16px 0 14px;
+   }
+   .advantages__item-1 {
+      grid-template-columns: 23px auto;
+   }
+   
+   .advantages__item-4,
+   .advantages__item-5,
+   .advantages__item-6 {
+      padding: 18px 0 14px;
+   }
+   .advantages__title,
+   .advantages__text {
+      grid-column: ~"2 / 3";
    }
 }

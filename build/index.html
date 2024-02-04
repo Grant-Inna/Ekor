@@ -34,13 +34,15 @@
               <div class="social__icon social__icon-whatsapp">
                 <div aria-label="Ввести свой номер для подключения whataspp компании" class="icon__whatsapp"></div>
                 <div class="input_number-holder">
-                  <input type="tel" placeholder="+7(___)__-__-__" class="input_number">
+                  <input type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input_number">
                 </div>
               </div>
             </div>
           </div>
-          <div class="header__contact"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">8&nbsp;(495)&nbsp;637-82-28</a>
-            <div data-modal="callme" class="openModal_callme contacts__text">Заказать звонок</div>
+          <div class="header__contact"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">8&nbsp;(495)&nbsp;637-82-28</a><span data-modal="callme" class="openModal_callme contacts__text">Заказать звонок</span></div>
+          <div class="header__holder_mobile">
+            <div class="header__m_icons row_flex-20"><a class="icon__user"></a><a class="icon__favorites"></a><a class="icon__basket relative">
+                <div id="amount_basket" class="amount">1</div></a></div>
           </div>
           <div class="burger__holder">
             <div class="burger__line"></div>
@@ -68,7 +70,7 @@
                 <input type="search" placeholder="Поиск" class="search">
               </form>
             </div>
-            <div class="header__aside-icons">
+            <div class="header__aside_icons">
               <div class="header__section row_flex-10">
                 <div class="icon__favorites">
                   <div id="amount_favorites" class="amount">5</div>
@@ -77,7 +79,7 @@
               <div class="header__section row_flex-10">
                 <div class="icon__basket">
                   <div id="amount_basket" class="amount">1</div>
-                </div><span>3 000,0</span>
+                </div><span>10 000,00</span>
                 <div class="element">&#8381;</div>
               </div>
               <div class="header__section row_flex-10">
@@ -100,7 +102,7 @@
                     <div class="carousel__item_inner carousel__item-1">
                       <div class="carousel__item_text">
                         <h1 class="caption text-white">> 1000 наименований продуктов питания оптом</h1>
-                        <h2 class="text-16 text-white">для HoReCa, общепита,<br>производителей</h2><a href="" class="button-yellow"><span>Получить прайс</span></a>
+                        <h2 class="text-16 text-white">для HoReCa, общепита,<br>производителей</h2><a href="" class="button-yellow bg-yellow-2"><span>Получить прайс</span></a>
                       </div>
                     </div>
                   </div>
@@ -108,7 +110,7 @@
                     <div class="carousel__item_inner carousel__item-2">
                       <div class="carousel__item_text">
                         <h1 class="caption text-white">Собственное производство по&nbsp;переработке рыбы и&nbsp;морепродуктов</h1>
-                        <h2 class="text-16 text-white">Работайте с&nbsp;производителем<br>напрямую</h2><a href="" class="button-yellow"><span>Получить прайс</span></a>
+                        <h2 class="text-16 text-white">Работайте с&nbsp;производителем<br>напрямую</h2><a href="" class="button-yellow bg-yellow-2"><span>Получить прайс</span></a>
                       </div>
                     </div>
                   </div>
@@ -116,7 +118,7 @@
                     <div class="carousel__item_inner carousel__item-3">
                       <div class="carousel__item_text">
                         <h1 class="caption text-white">Специализируемся на&nbsp;поставках рыбы и&nbsp;морепродуктов со&nbsp;всего мира</h1>
-                        <h2 class="text-16 text-white">для&nbsp;HoReCa, магазины<br>&laquo;У&nbsp;дома&raquo;, торговые сети</h2><a href="" class="button-yellow"><span>Получить прайс</span></a>
+                        <h2 class="text-16 text-white">для&nbsp;HoReCa, магазины<br>&laquo;У&nbsp;дома&raquo;, торговые сети</h2><a href="" class="button-yellow bg-yellow-2"><span>Получить прайс</span></a>
                       </div>
                     </div>
                   </div>
@@ -127,12 +129,12 @@
         <div class="wrapper">
           <article class="cover__holder cover_holder-1">
                   <h2 class="title cover__caption">Чат-бот цен на&nbsp;все наши продукты питания</h2>
-                  <p class="cover__text">Узнайте наши цены за пару секунд без писем и звонков менеджеру</p><a href="/" target="_blank" class="btn mtauto"><img src="/assets/images/svg/social/btn-w.svg"></a>
+                  <p class="cover__text">Узнайте наши цены за пару секунд без писем и звонков менеджеру</p><a href="/" target="_blank" class="btn mtauto"><img src="./assets/images/svg/social/btn-w.svg"></a>
           </article>
           <article class="cover__holder cover_holder-2">
                   <h2 class="title cover__caption">Лосось охлажденный</h2>
-                  <p class="cover__text">Акционная цена <b>1700</b>&nbsp;₽&nbsp;/&nbsp;кг</p>
-                  <div class="badge_yellow mtauto">до&nbsp;31.12.2023&nbsp;г.</div>
+                  <p class="cover__text">Акционная цена <b>1700&nbsp;₽&nbsp;/&nbsp;кг</b></p>
+                  <div class="badge_yellow mtauto"><span>до&nbsp;31.12.2023&nbsp;г.</span></div>
           </article>
           <article class="cover__holder cover_holder-3">
                   <h2 class="title cover__caption">Доставка в&nbsp;день заказа</h2>
@@ -140,10 +142,10 @@
           </article>
         </div>
       </section>
-      <section class="variety_products">
+      <section class="variety_products__container">
         <div class="wrapper">
           <div class="variety_products__caption section__caption">
-            <h2 class="section-title-text-14">Наш ассортимент</h2>
+            <h2 class="section-title-text-14">Наш <br>ассортимент</h2>
             <h3 class="caption text-blue">Компания предлагает более 500 наименований рыбной продукции и&nbsp;разнообразных товаров питания</h3>
             <h3 class="caption text-blue second">Полный ассортимент продуктов для&nbsp;общепита</h3>
           </div>
@@ -182,7 +184,7 @@
                         <div class="image__gotovaya"></div>
                       </div>
                     </div>
-                    <h2 class="text-18-title">Замороженное мясо, птица</h2><span class="text-14 text-blue">Со&nbsp;всего мира</span>
+                    <h2 class="text-18-title">Готовая продукция &laquo;Экор&raquo;</h2><span class="text-14 text-blue">Собственного производства</span>
                   </article>
                   <article class="variety_products__block-rectangle variety_product-5">
                     <div class="relative">
@@ -305,20 +307,20 @@
                 <h3 class="title text-blue mb10">Контактные данные</h3>
                 <div id="offer_form" class="request__form">
                   <label for="offer_name" class="label-input mb10">
-                    <input id="offer_name" type="text" class="input input-big"><span class="sup">Имя</span>
+                    <input id="offer_name" type="text" class="input input-big"><span class="sup">Имя и Фамилия</span>
                   </label>
-                  <label for="offer_numb" class="label-input mb10">
-                    <input id="offer_numb" type="tel" class="input input-big"><span class="sup">Номер телефона</span>
-                  </label>
-                  <label for="offer_mail" class="label-input mb16">
+                  <label for="offer_mail" class="label-input mb10">
                     <input id="offer_mail" type="email" class="input input-big"><span class="sup">Email</span>
+                  </label>
+                  <label for="offer_numb" class="label-input mb16">
+                    <input id="offer_numb" type="tel" class="input input-big"><span class="sup">Номер телефона</span>
                   </label>
                   <div class="flex row_flex-10">
                     <label id="offer_label" for="offer_checkbox" class="label-checkbox">
-                      <input id="offer_checkbox" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                      <input id="offer_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
                     </label><span class="text-small text-dark">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
                   </div>
-                  <button id="offer_btn" type="button" class="button-yellow button-long"><span>Получить</span></button>
+                  <button id="offer_btn" type="button" class="button-yellow bg-yellow-2 button-long"><span>Получить</span></button>
                 </div>
               </div>
             </div>
@@ -328,8 +330,8 @@
       <section class="busareas__container">
         <div class="wrapper">
           <div class="section__caption">
-                  <h2 class="section-title-text-14">Универсальные поставки</h2>
-                  <h3 class="caption text-blue">Мы <br>специализируемся на&nbsp;поставках для&nbsp;различных сфер бизнеса</h3>
+                  <h2 class="section-title-text-14">Универсальные<br>поставки</h2>
+                  <h3 class="caption text-blue">Мы&nbsp;специализируе<br>мся на&nbsp;поставках для&nbsp;различных сфер бизнеса</h3>
           </div>
         </div>
         <div class="wrapper">
@@ -381,9 +383,9 @@
               <p class="text-14 text-blue">Технология GPS обеспечивает точный мониторинг вашего заказа, позволяя вам всегда быть в&nbsp;курсе его местоположения на&nbsp;карте.</p>
             </div>
             <div class="delivery_index__facts">
-              <p class="text-18-title text-blue">Доставка от&nbsp;50&nbsp;кг по&nbsp;Мосвке и&nbsp;области</p>
-              <p class="text-18-title text-blue">Доставляем на&nbsp;следующий день после заказа</p>
-              <p class="text-18-title text-blue">GPS мониторинг ваших заказов</p>
+              <p class="text-18-title text-blue"><span>Доставка от&nbsp;50&nbsp;кг по&nbsp;Мосвке и&nbsp;области</span></p>
+              <p class="text-18-title text-blue"><span>Доставляем на&nbsp;следующий день после заказа</span></p>
+              <p class="text-18-title text-blue"><span>GPS мониторинг ваших заказов</span></p>
             </div>
             <div class="delivery_index__image relative">
               <div class="relation"></div>
@@ -435,7 +437,7 @@
                       <div class="choose__manager_name">Мария</div>
                     </article>
             </div>
-            <button class="button-yellow">Заказать звонок</button>
+            <button class="button-yellow bg-yellow-2 button-small">Заказать звонок</button>
           </div>
         </div>
       </section>
@@ -449,32 +451,32 @@
                   <article class="advantages__item advantages__item-1">
                     <div class="advantages__number text-small text-dark">01</div>
                     <div class="advantages__title text-18-title">Отсрочка платежа с&nbsp;первой поставки</div>
-                    <div class="advantages__text text-16">Начните сотрудничество с&nbsp;уверенностью, получив возможность отложенного платежа</div>
+                    <div class="advantages__text text-14">Начните сотрудничество с&nbsp;уверенностью, получив возможность отложенного платежа</div>
                   </article>
                   <article class="advantages__item advantages__item-2">
                     <div class="advantages__number text-small text-dark">02</div>
-                    <div class="advantages__title text-18-title">Бесплатные образцы на&nbsp;проработку для&nbsp;общепита</div>
-                    <div class="advantages__text text-16">Оцените качество наших продуктов, получив бесплатные образцы для&nbsp;тщательной проверки</div>
+                    <div class="advantages__title text-18-title">Бесплатные образцы на&nbsp;проработку <br>для&nbsp;общепита</div>
+                    <div class="advantages__text text-14">Оцените качество наших продуктов, получив бесплатные образцы для&nbsp;тщательной проверки</div>
                   </article>
                   <article class="advantages__item advantages__item-3">
                     <div class="advantages__number text-small text-dark">03</div>
                     <div class="advantages__title text-18-title">Доставка от&nbsp;50&nbsp;кг</div>
-                    <div class="advantages__text text-16">Экономьте на&nbsp;доставке, начиная с&nbsp;минимальных объемов заказ</div>
+                    <div class="advantages__text text-14">Экономьте на&nbsp;доставке, начиная с&nbsp;минимальных объемов заказ</div>
                   </article>
                   <article class="advantages__item advantages__item-4">
                     <div class="advantages__number text-small text-dark">04</div>
-                    <div class="advantages__title text-18-title">Фиксация цен для&nbsp;участников тендеров</div>
-                    <div class="advantages__text text-16">Гарантированные стабильные цены для&nbsp;участников тендеров</div>
+                    <div class="advantages__title text-18-title">Фиксация цен для&nbsp;участников <br>тендеров</div>
+                    <div class="advantages__text text-14">Гарантированные стабильные цены для&nbsp;участников тендеров</div>
                   </article>
                   <article class="advantages__item advantages__item-5">
                     <div class="advantages__number text-small text-dark">05</div>
-                    <div class="advantages__title text-18-title">Отдадим дешевле, если найдете цены ниже</div>
-                    <div class="advantages__text text-16">Мы уверены в&nbsp;наших конкурентоспособных ценах. В&nbsp;случае нахождения более низких цен, предоставим еще более выгодное предложение.</div>
+                    <div class="advantages__title text-18-title">Отдадим дешевле, если найдете цены <br>ниже</div>
+                    <div class="advantages__text text-14">Мы уверены в&nbsp;наших конкурентоспособных ценах. В&nbsp;случае нахождения более низких цен, предоставим еще более выгодное предложение.</div>
                   </article>
                   <article class="advantages__item advantages__item-6">
                     <div class="advantages__number text-small text-dark">06</div>
                     <div class="advantages__title text-18-title">Тестовая поставка со&nbsp;100% возвратом</div>
-                    <div class="advantages__text text-16">Попробуйте нашу продукцию без риска. В&nbsp;случае неудовлетворенности, мы вернем 100% стоимости тестовой поставки.</div>
+                    <div class="advantages__text text-14">Попробуйте нашу продукцию без риска. В&nbsp;случае неудовлетворенности, мы вернем 100% стоимости тестовой поставки.</div>
                   </article>
           </div>
         </div>
@@ -483,49 +485,49 @@
         <div class="wrapper">
           <div class="section__caption">
                   <h2 class="section-title-text-14">Самое главное</h2>
-                  <h3 class="caption text-blue">Наш опыт и&nbsp;репутаци&nbsp;&mdash; это самое главное</h3>
+                  <h3 class="caption text-blue">Наш опыт и&nbsp;репутация&nbsp;&mdash;<br>это самое главное</h3>
           </div>
           <div class="reputation__tile">
                   <article class="reputation__block reputation__block-1">
-                    <div class="reputation__number text-small text-dark">01</div>
-                    <div class="reputation__title">Личный кабинет для&nbsp;заказов</div>
+                    <div class="reputation__number text-small text-opacity">01</div>
+                    <div class="reputation__title">Личный кабинет <br>для&nbsp;заказов</div>
                     <div class="reputation__text text-14">Удобный личный кабинет для&nbsp;управления и&nbsp;размещения ваших заказов</div>
                   </article>
                   <article class="reputation__block reputation__block-2">
-                    <div class="reputation__number text-small text-dark">02</div>
+                    <div class="reputation__number text-small text-opacity">02</div>
                     <div class="reputation__title">25&nbsp;лет работы</div>
                     <div class="reputation__text text-14">Производство с&nbsp;1998&nbsp;г.</div>
                   </article>
                   <article class="reputation__block reputation__block-3">
-                    <div class="reputation__number text-small text-dark">03</div>
+                    <div class="reputation__number text-small text-opacity">03</div>
                     <div class="reputation__title">>&nbsp;2000&nbsp;м2 </div>
                     <div class="reputation__text text-14">Морозильных складов</div>
                   </article>
                   <article class="reputation__block reputation__block-4">
-                    <div class="reputation__number text-small text-dark">04</div>
-                    <div class="reputation__title">Сроки годности товаров на&nbsp;сайте</div>
+                    <div class="reputation__number text-small text-opacity">04</div>
+                    <div class="reputation__title">Сроки годности товаров <br>на&nbsp;сайте</div>
                     <div class="reputation__text text-14">Полная прозрачность с&nbsp;информацией о&nbsp;сроках годности каждого товара</div>
                   </article>
                   <article class="reputation__block reputation__block-5">
-                    <div class="reputation__number text-small text-dark">05</div>
-                    <div class="reputation__title">Весь товар в&nbsp;прайсе есть в&nbsp;наличии</div>
+                    <div class="reputation__number text-small text-opacity">05</div>
+                    <div class="reputation__title">Весь товар <br>в&nbsp;прайсе есть в&nbsp;наличии</div>
                     <div class="reputation__text text-14">Гарантируем наличие всех товаров из&nbsp;прайс&ndash;листа</div>
                   </article>
             <div class="watch-more"><span>Показать еще</span></div>
             <div class="reputation__more more hide"></div>
                   <article class="reputation__block reputation__block-6">
-                    <div class="reputation__number text-small text-dark">06</div>
+                    <div class="reputation__number text-small text-opacity">06</div>
                     <div class="reputation__title">Реальные фото</div>
                     <div class="reputation__text text-14">На&nbsp;сайте представлены реальные фотографии каждой партии товаров</div>
                   </article>
                   <article class="reputation__block reputation__block-7">
-                    <div class="reputation__number text-small text-dark">07</div>
+                    <div class="reputation__number text-small text-opacity">07</div>
                     <div class="reputation__title">40 автомобилей</div>
                     <div class="reputation__text text-14">На&nbsp;доставке ежедневно</div>
                   </article>
                   <article class="reputation__block reputation__block-8">
-                    <div class="reputation__number text-small text-dark">08</div>
-                    <div class="reputation__title">Гарантируем принятие к&nbsp;зачету нашего НДС </div>
+                    <div class="reputation__number text-small text-opacity">08</div>
+                    <div class="reputation__title">Гарантируем принятие <br>к&nbsp;зачету нашего НДС </div>
                     <div class="reputation__text text-14">Демонстрируем прозрачность и&nbsp;честность в&nbsp;деловых отношениях</div>
                   </article>
           </div>
@@ -539,7 +541,7 @@
             <div class="subscribe__holder">
               <div class="subscribe__socials">
                 <label for="number_whatsapp" class="subscribe__social_holder subscribe__social-whatsapp"><a href="" title="Перейти в whatsapp компании" aria-label="Ссылка на вотсап компании" class="icon__whatsapp"></a>
-                  <input type="tel" id="number_whatsapp" placeholder="+7(___)__-__-__" class="subscribe__social_input input-thin input-big"><span class="text-white">WhatsApp</span>
+                  <input type="tel" id="number_whatsapp" placeholder="+7(_ _ _) _ _-_ _-_ _" class="subscribe__social_input input-thin input-big"><span class="text-white">WhatsApp</span>
                 </label><a href="/" target="_blank" title="Перейти в Telegram компании" aria-label="Ссылка на Telegram компании" class="subscribe__social-telegram subscribe__social_holder">
                         <div class="icon__telegram"></div><span class="text-white">Telegram</span></a><a href="/" target="_blank" title="Перейти в ВКонтакте компании" aria-label="Ссылка на ВКонтакте компании" class="subscribe__social-vkontakte subscribe__social_holder">
                         <div class="icon__vkontakte"></div><span class="text-white">ВКонтакте</span></a>
@@ -558,8 +560,10 @@
                   <h3 class="caption text-blue">Экор&nbsp;&mdash; крупная производственно&ndash;торговая компания, занимающаяся производством и&nbsp;реализацией рыбы и&nbsp;морепродуктов</h3>
           </div>
           <div class="about_index__content">
-            <p class="section_part_text text-14 text-blue">С&nbsp;1998 года компания &laquo;Экор&raquo; предоставляет широкий ассортимент замороженной рыбы, готовых продуктов и&nbsp;других продуктов питания. Компания имеет в&nbsp;своём составе более 40 автомобилей рефрижераторов, которые позволяют быстро доставить охлаждённую и&nbsp;замороженную рыбу по&nbsp;Москве и&nbsp;МО. Общий оборот компаний составляет более 2,5 миллиардов&nbsp;руб в&nbsp;год. Численность сотрудников более 100 человек и&nbsp;более 3000 постоянных клиентов.</p>
-            <p class="section_part_text text-14 text-blue">Компания &laquo;Экор&raquo; предлагает разнообразный выбор рыбы и&nbsp;морепродуктов оптом с&nbsp;доставкой при&nbsp;заказе от&nbsp;15000 рублей. Она осуществляет прямые поставки из&nbsp;различных регионов и&nbsp;стран, предоставляет отсрочку платежа, а&nbsp;также обеспечивает конкурентоспособные цены и&nbsp;имеет открытую бухгалтерскую отчётность. Разработанный компанией чат-бот оптовых цен, даёт возможность оперативно запросить и&nbsp;сравнить цены.</p>
+            <div class="about_index__text">
+              <p class="section_part_text text-14 text-blue">С&nbsp;1998 года компания &laquo;Экор&raquo; предоставляет широкий ассортимент замороженной рыбы, готовых продуктов и&nbsp;других продуктов питания. Компания имеет в&nbsp;своём составе более 40 автомобилей рефрижераторов, которые позволяют быстро доставить охлаждённую и&nbsp;замороженную рыбу по&nbsp;Москве и&nbsp;МО. Общий оборот компаний составляет более 2,5 миллиардов&nbsp;руб в&nbsp;год. Численность сотрудников более 100 человек и&nbsp;более 3000 постоянных клиентов.</p>
+              <p class="section_part_text text-14 text-blue">Компания &laquo;Экор&raquo; предлагает разнообразный выбор рыбы и&nbsp;морепродуктов оптом с&nbsp;доставкой при&nbsp;заказе от&nbsp;15000 рублей. Она осуществляет прямые поставки из&nbsp;различных регионов и&nbsp;стран, предоставляет отсрочку платежа, а&nbsp;также обеспечивает конкурентоспособные цены и&nbsp;имеет открытую бухгалтерскую отчётность. Разработанный компанией чат-бот оптовых цен, даёт возможность оперативно запросить и&nbsp;сравнить цены.</p>
+            </div>
             <div class="about_index__facts">
                     <article class="about_index__block about-index__block-1">
                       <h3 class="caption text-blue about_index__title">25 лет</h3><span class="about_index__span text-dark text-14">опыта работы</span>
@@ -581,7 +585,7 @@
         <div class="wrapper">
           <div class="section__caption">
                   <h2 class="section-title-text-14">Немного о&nbsp;нас</h2>
-                  <h3 class="caption text-blue">Наше участие в&nbsp;программах &laquo;Естественный отбор&raquo; и&nbsp;&laquo;Кухня&raquo;</h3>
+                  <h3 class="caption text-blue">Наше участие в&nbsp;программах &laquo;Естественный отбор&raquo; <br>и&nbsp;&laquo;Кухня&raquo;</h3>
           </div>
           <div class="programs__carousel">
             <article class="programs__holder">
@@ -600,7 +604,7 @@
                   <div data-video="ТУТ ВИДЕО" class="programs__video programs_video-2"></div>
                 </div>
               </div>
-              <div class="programs__name text-18-title mt10">Наша продукция на&nbsp;программе &laquo;Кухня&raquo;</div>
+              <div class="programs__name text-18-title">Наша продукция на&nbsp;программе &laquo;Кухня&raquo;</div>
             </article>
           </div>
         </div>
@@ -612,37 +616,39 @@
                   <h3 class="caption text-blue">Наши онлайн&ndash;камеры</h3>
           </div>
           <div class="cameras__wrapper">
-            <p class="section_part_text text-14 text-blue">Погрузитесь в&nbsp;мир нашего производства и&nbsp;складских операций через наши онлайн-камеры.</p>
-            <p class="section_part_text text-14 text-blue">Следите за&nbsp;каждым этапом производства и&nbsp;убедитесь в&nbsp;высоком стандарте качества наших товаров.</p>
+            <div class="cameras__text">
+              <p class="section_part_text text-14 text-blue">Погрузитесь в&nbsp;мир нашего производства и&nbsp;складских операций через наши онлайн-камеры.</p>
+              <p class="section_part_text text-14 text-blue">Следите за&nbsp;каждым этапом производства и&nbsp;убедитесь в&nbsp;высоком стандарте качества наших товаров.</p>
+            </div>
             <div class="watch-more"><span>Смотреть список видео</span></div>
             <div class="cameras__more more hide"></div>
             <div class="cameras__row">
-              <article class="camera__block">
+              <article class="camera__block camera__block-1">
                 <div class="relative">
                   <div class="relation"></div>
                   <div class="relation_content">
                     <div class="cameras__video cameras__video-1"></div>
                   </div>
                 </div>
-                <div class="programs__name text-18-title mt10">Офис</div>
+                <div class="camera__name text-18-title">Офис</div>
               </article>
-              <article class="camera__block">
+              <article class="camera__block camera__block-2">
                 <div class="relative">
                   <div class="relation"></div>
                   <div class="relation_content">
                     <div class="cameras__video cameras__video-2"></div>
                   </div>
                 </div>
-                <div class="programs__name text-18-title mt10">Производство</div>
+                <div class="camera__name text-18-title">Производство</div>
               </article>
-              <article class="camera__block">
+              <article class="camera__block camera__block-3">
                 <div class="relative">
                   <div class="relation"></div>
                   <div class="relation_content">
                     <div class="cameras__video cameras__video-3"></div>
                   </div>
                 </div>
-                <div class="programs__name text-18-title mt10">Склады</div>
+                <div class="camera__name text-18-title">Склады</div>
               </article>
             </div>
           </div>
@@ -681,7 +687,7 @@
             <div class="request__image"></div>
           </div>
           <div class="request__form_holder request__holder">
-            <h2 class="title text-blue">Оставьте заявку на&nbsp;сотрудничество</h2>
+            <h2 class="caption text-blue">Оставьте заявку на&nbsp;сотрудничество</h2>
             <form id="request_form" class="request__form">
               <label for="request_name" class="label-input mb10">
                 <input id="request_name" type="text" class="input input-big"><span class="sup">Имя</span>
@@ -694,10 +700,10 @@
               </label>
               <div class="flex row_flex-10">
                 <label id="request_label" for="request_checkbox" class="label-checkbox">
-                  <input id="request_checkbox" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                </label><span class="text-small">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
+                  <input id="request_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
+                </label><span class="text-dark text-small">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
               </div>
-              <button id="reguest_btn" type="button" class="button-yellow button-long"><span>Получить</span></button>
+              <button id="reguest_btn" type="button" class="button-yellow button-long bg-yellow-2"><span>Получить</span></button>
             </form>
           </div>
         </div>
@@ -710,7 +716,7 @@
           </div>
           <div class="contacts_index__holder">
                   <article class="contact_index___item contact_index__item-1">
-                    <div class="contact_index___title text-blue text-18-title mb">Центральный офис</div>
+                    <div class="contact_index___title text-blue text-18-title mb">Центральный <br>офис</div>
                     <div class="contact_index___text">
                       <div class="text-blue text-14 mb">г.&nbsp;Москва, Открытое шоссе, 13, стр.&nbsp;1</div>
                       <div class="text-dark text-14 mb">8&nbsp;(800)&nbsp;505-01-82, +7&nbsp;(495)&nbsp;637-82-28</div>
@@ -734,7 +740,7 @@
                   <article class="contact_index___item contact_index__item-3">
                     <div class="contact_index___title text-blue text-18-title mb">Склад отгрузки </div>
                     <div class="contact_index___text">
-                      <div class="text-blue text-14 mb">Ленинградская область, Ломоносовский район, Виллозское городское поселение, Южная часть производственной зоны Горелово, 1-й&nbsp;квартал, 1</div>
+                      <div class="text-blue text-14 mb">Ленинградская область, Ломоносовский район, Виллозское городское поселение, Южная часть производственной зоны Горелово, 1-й&nbsp;квартал, 1...</div>
                       <div class="text-dark text-14 mb">8&nbsp;(800)&nbsp;505-01-82</div>
                       <div class="text-dark text-14 mb">Пн-Пт:&nbsp;9.00-17.00 • Сб-Вс:&nbsp;выходной</div>
                     </div>
@@ -988,21 +994,21 @@
       <footer class="footer__holder">
         <div class="wrapper">
           <div class="footer__information_holder">
-            <div class="footer__logo logo__holder row_flex-16">
+            <div class="footer__logo logo__holder row_flex-10">
               <div class="logo__image"></div>
               <div class="logo__text"></div>
             </div>
             <div class="footer__information">
               <div class="footer__information_section"><span>Адрес: г.&nbsp;Москва, Открытое шоссе, 13, стр.&nbsp;1</span></div>
               <div class="footer__information_section"><span>E-mail: info@ekorfish.ru</span></div>
-              <div class="footer__contacts"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">8&nbsp;(495)&nbsp;637-82-28</a>
+              <div class="footer__contacts"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">+7&nbsp;(495)&nbsp;637-82-28</a>
                 <div class="footer__socials">
                   <div class="social__holder row_flex-10">
                     <div class="social__icon"><a href="" target="_blank" title="Перейти в группу Telegram компании" aria-label="Ссылка на телеграм компании" class="icon__telegram"></a></div>
                     <div class="social__icon social__icon-whatsapp">
                       <div aria-label="Ввести свой номер для подключения whataspp компании" class="icon__whatsapp"></div>
                       <div class="input_number-holder">
-                        <input type="tel" placeholder="+7(___)__-__-__" class="input_number">
+                        <input type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input_number">
                       </div>
                     </div>
                   </div>

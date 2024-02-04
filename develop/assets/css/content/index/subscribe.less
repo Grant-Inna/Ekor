@@ -1,5 +1,14 @@
 .subscribe__container {
-   .section-margin();
+      margin-top: 80px;
+      margin-bottom: 80px;
+   .lg-block({
+      margin-top: 76px;
+      margin-bottom: 40px;
+   });
+   .sm-block({
+      margin-top: 40px;
+      margin-bottom: 40px;
+   });
 }
 .subscribe__wrapper {
    position: relative;
@@ -26,16 +35,20 @@
       right: 0;
       bottom: 0;
       width: 100%;
-      height: 90%;
+      height: 100%;
       .hand-index-img();
       
       .lg-block({
          width: 50%;
          height: 80%;
       });
+      .middle-block({
+         width: 50%;
+         height: 86%;
+      });
       .xs-block({
-         width: 16em;
-         height: 24em;
+         width: 11em;
+         height: 20em;
          bottom: 15px;
       });
    }
@@ -43,6 +56,9 @@
       position: relative;
       z-index: 60;
    }
+   .xxs-block({
+      border-radius: 10px;
+   })
 }
 .subscribe__caption {
    .montserrat-semibold();
@@ -57,11 +73,18 @@
       line-height: 110%;
       margin-bottom: 10px;
    });
+   .middle-block({
+      letter-spacing: -0.7px;
+   });
    .sm-block({
       width: 10em;
       font-size: 24px;
       line-height: 110%;
+      letter-spacing: 0;
    });
+   .xs-block({
+      width: 9em;
+   })
 }
 .subscribe__title {
     .montserrat-medium();
@@ -69,9 +92,14 @@
    font-size: 18px;
    line-height: 120%;
    width: 18em;
+   letter-spacing: 0.2px;
    .lg-block({
       font-size: 14px;
       line-height: 130%;
+   });
+   .middle-block({
+      width: 20em;
+      letter-spacing: -0.1px;
    });
    .sm-block({
       width: 209px;
@@ -87,6 +115,9 @@
    .sm-block({
       padding-top: 54px;
    });
+   .xs-block({
+      width: 100%;
+   });
 }
 .subscribe__check {
    .flex();
@@ -96,7 +127,10 @@
       width: 353px;
       .sm-block({
          width: 201px;
-      })
+      });
+      .xs-block({
+         line-height: 13px;
+      });
    }
    .sm-block({
       margin-top: 16px;
@@ -115,7 +149,7 @@
    });
    
    .xs-block({
-      grid-template-columns: repeat(3, 36px);
+      grid-template-columns: repeat(3, 40px);
       grid-template-rows: 1fr;
    })
 }
@@ -176,6 +210,15 @@
 
 
 .subscribe__social_holder {
+   .xs-block({
+      width: 40px;
+      height: 40px;
+      box-sizing: border-box;
+      div[class^='icon__'] {
+          width: 24px;
+         height: 24px;
+      }
+   });
    input {
       color: @color-white
    }

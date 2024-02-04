@@ -20,11 +20,19 @@ header
             .social__icon.social__icon-whatsapp
                .icon__whatsapp( aria-label='Ввести свой номер для подключения whataspp компании')
                .input_number-holder
-                  input.input_number( type='tel' placeholder='+7(___)__-__-__')
+                  input.input_number( type='tel' placeholder='+7(_ _ _) _ _-_ _-_ _')
 
       .header__contact
          a( href='tel:84956378228' aria-label='Позвонить на номер компании' ).contact__number 8&nbsp;(495)&nbsp;637-82-28
-         .openModal_callme.contacts__text( data-modal='callme') Заказать звонок
+         span.openModal_callme.contacts__text( data-modal='callme') Заказать звонок
+      .header__holder_mobile
+
+         .header__m_icons.row_flex-20
+            a().icon__user
+            a().icon__favorites
+            a().icon__basket.relative
+               #amount_basket.amount 1
+
       .burger__holder
          .burger__line
    include ../menu/desktop/aside
