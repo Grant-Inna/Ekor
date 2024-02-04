@@ -122,7 +122,7 @@ $(document).ready(function () {
          lazyLoad: 'ondemand',
          arrows: true,
          dots: false,
-         // autoplay: true,
+         autoplay: true,
          infinite: true,
          focusOnSelect: true
       });

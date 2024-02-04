@@ -104,7 +104,7 @@ $(document).ready(function () {
          arrows: true,
          dots: true,
          infinite: true,
-         // autoplay: true,
+         autoplay: true,
          focusOnSelect: true,
          pauseOnDotsHover: true
       });
@@ -122,7 +122,7 @@ $(document).ready(function () {
          lazyLoad: 'ondemand',
          arrows: true,
          dots: false,
-         // autoplay: true,
+         autoplay: true,
          infinite: true,
          focusOnSelect: true
       });
