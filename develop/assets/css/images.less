@@ -122,25 +122,25 @@
 
 /* главная - cover, белые прямоугольники  */
 .cover-img( @numb, @size ) {
-    background-image: url("../images/@{size}/cover/cover-@{numb}.svg");
+    background-image: url("../images/@{size}/cover/cover-@{numb}");
    background-repeat: no-repeat;
    //background-size: contain;
    background-position: bottom right;
 }
 .cover-block-1() {
-   .cover-img( '1', 'large');
+   .cover-img( '1.png', 'large');
    .xl-block({
-      .cover-img( '1', 'middle');
+      .cover-img( '1.png', 'middle');
    });
    .md-block({
-      .cover-img( '1', 'large');
+      .cover-img( '1.png', 'large');
    })
 }
 .cover-block-2() {
-   .cover-img( '2', 'large');
+   .cover-img( '2.svg', 'large');
 }
 .cover-block-3() {
-   .cover-img( '3', 'large');
+   .cover-img( '3.svg', 'large');
 }
 /* ГЛАВНАЯ разная продукция */
 .variety_products( @size, @name ) {
@@ -231,7 +231,7 @@
    .lg-block({
       .index-offer( 'middle')
    });
-   .sm-block({
+   .xs-block({
       .index-offer( 'small')
    });
 }
