@@ -1,7 +1,7 @@
 $(document).ready(function () {
    'use strict';
-   let width = $(document).width();
-   let container_width = $('.container').width();
+   const width = $(document).width();
+   const container_width = $('.container').width();
 
    
    /* полоса прокрутки */
@@ -18,8 +18,6 @@ $(document).ready(function () {
       if ( width <= 1190 && new_width > 1190 || width > 1190 && new_width <= 1190 ) {
          appendToMobile(new_width);
       }
-      width = new_width; container_width = $('.container').width();
-      return { width, container_width }
    });
    
    function showBlackBack() {
