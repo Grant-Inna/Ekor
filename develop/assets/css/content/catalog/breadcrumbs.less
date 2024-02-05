@@ -14,15 +14,23 @@
    line-height: 14px;
    color: @color-gray;
    margin-right: 24px;
+   margin-left: 1px;
 }
 .breadcrumbs__link:after {
    content: '/';
    display: block;
    position: absolute;
    font-size: 14px;
+   line-height: 17px;
    width: 5px;
    top: -1px;
-   bottom: -1px;
+   bottom: -2px;
    right: -10px;
    transform: translateX(100%);
+}
+.breadcrumbs__active {
+   .montserrat-medium();
+   font-size: 12px;
+   line-height: 14px;
+   color: @color-blue;
 }

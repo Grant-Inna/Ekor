@@ -1,0 +1,28 @@
+.catalog_main__container {
+
+}
+.catalog_main__wrapper {
+   .gr();
+   grid-template-columns: 252px auto;
+   grid-template-rows: 100%;
+   grid-column-gap: 50px;
+   .to(1440px, {
+      grid-template-columns: 256px auto;
+      grid-column-gap: 32px;
+   });
+   .to(768px, {
+      grid-template-columns: auto;
+      grid-column-gap: 0;
+   });
+                                 min-height: 1000px;
+}
+.catalog_main__section {
+   grid-column: ~"3 / 4";
+   
+   background-color: grey;
+}
+.catalog_main__filter {
+   grid-column: ~"1 / 2";
+   
+   background-color: #1ccacd;
+}
