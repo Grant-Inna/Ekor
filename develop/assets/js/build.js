@@ -1,7 +1,7 @@
 $(document).ready(function () {
    'use strict';
-   const width = $(document).width();
-   const container_width = $('.container').width();
+   let width = $(document).width();
+   let container_width = $('.container').width();
 
    
    /* полоса прокрутки */
@@ -18,6 +18,8 @@ $(document).ready(function () {
       if ( width <= 1190 && new_width > 1190 || width > 1190 && new_width <= 1190 ) {
          appendToMobile(new_width);
       }
+      width = new_width; container_width = $('.container').width();
+      return { width, container_width }
    });
    
    function showBlackBack() {
@@ -129,7 +131,7 @@ $(document).ready(function () {
       variety_products.css({ marginRight: '-5px', marginLeft: '-5px' });
       variety_products.find('.slick-slide').css('padding', '0 5px' )
    }
-   if (width <= 590 && choose_block.length > 0) {
+   if (container_width <= 590 && choose_block.length > 0) {
        choose_block.slick({
          slidesToShow: 1,
          slidesToScroll: 1,
