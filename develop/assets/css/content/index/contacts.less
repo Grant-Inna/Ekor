@@ -46,6 +46,7 @@
    padding-right: 15px;
    .lg-block({
       padding-right: 0;
+      grid-column: ~"7 / 17";
    });
    .middle-block({
       grid-column: ~"7 / 17";
@@ -61,10 +62,13 @@
    & div {
       width: 100%;
       border-radius: 20px;
-      .middle-block({
+      .lg-block({
          border-radius: 10px;
       });
    }
+   .lg-block({
+      grid-column: ~"17 / 25";
+   });
    .middle-block({
       grid-column: ~"17 / 25";
    });
@@ -83,7 +87,7 @@
    .md-block({
       height: 180px;
    });
-   .sm-block({
+   .xs-block({
       height: 120px;
    });
 }
