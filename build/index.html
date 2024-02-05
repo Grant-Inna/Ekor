@@ -15,7 +15,7 @@
     <div id="container_main" class="container">
       <div id="black_back"></div>
       <header>
-        <div class="wrapper flex center header__main"><a href="/" aria-label="Ссылка для возврата на главную страницу сайта" title="На главную страницу" class="header__logo logo__holder row_flex-10">
+        <div class="wrapper flex center header__main"><a href="/" aria-label="Ссылка для возврата на главную страницу сайта" title="На главную страницу" class="header__logo logo__holder">
             <div class="logo__image"></div>
             <div class="logo__text"></div></a>
           <div class="header__menu">
@@ -102,7 +102,7 @@
                     <div class="carousel__item_inner carousel__item-1">
                       <div class="carousel__item_text">
                         <h1 class="caption text-white">> 1000 наименований продуктов питания оптом</h1>
-                        <h2 class="text-16 text-white">для HoReCa, общепита,<br>производителей</h2><a href="" class="button-yellow bg-yellow-2"><span>Получить прайс</span></a>
+                        <h2 class="text-16 text-white">для HoReCa, общепита,<br>производителей</h2><a href="" class="button-yellow"><span>Получить прайс</span></a>
                       </div>
                     </div>
                   </div>
@@ -110,7 +110,7 @@
                     <div class="carousel__item_inner carousel__item-2">
                       <div class="carousel__item_text">
                         <h1 class="caption text-white">Собственное производство по&nbsp;переработке рыбы и&nbsp;морепродуктов</h1>
-                        <h2 class="text-16 text-white">Работайте с&nbsp;производителем<br>напрямую</h2><a href="" class="button-yellow bg-yellow-2"><span>Получить прайс</span></a>
+                        <h2 class="text-16 text-white">Работайте с&nbsp;производителем<br>напрямую</h2><a href="" class="button-yellow"><span>Получить прайс</span></a>
                       </div>
                     </div>
                   </div>
@@ -118,7 +118,7 @@
                     <div class="carousel__item_inner carousel__item-3">
                       <div class="carousel__item_text">
                         <h1 class="caption text-white">Специализируемся на&nbsp;поставках рыбы и&nbsp;морепродуктов со&nbsp;всего мира</h1>
-                        <h2 class="text-16 text-white">для&nbsp;HoReCa, магазины<br>&laquo;У&nbsp;дома&raquo;, торговые сети</h2><a href="" class="button-yellow bg-yellow-2"><span>Получить прайс</span></a>
+                        <h2 class="text-16 text-white">для&nbsp;HoReCa, магазины<br>&laquo;У&nbsp;дома&raquo;, торговые сети</h2><a href="" class="button-yellow"><span>Получить прайс</span></a>
                       </div>
                     </div>
                   </div>
@@ -320,7 +320,7 @@
                       <input id="offer_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
                     </label><span class="text-small text-dark">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
                   </div>
-                  <button id="offer_btn" type="button" class="button-yellow bg-yellow-2 button-long"><span>Получить</span></button>
+                  <button id="offer_btn" type="button" class="button-yellow button-long"><span>Получить</span></button>
                 </div>
               </div>
             </div>
@@ -437,7 +437,7 @@
                       <div class="choose__manager_name">Мария</div>
                     </article>
             </div>
-            <button class="button-yellow bg-yellow-2 button-small">Заказать звонок</button>
+            <button data-modal="callme" class="button-yellow button-small openModal_callme">Заказать звонок</button>
           </div>
         </div>
       </section>
@@ -668,7 +668,7 @@
               <div class="review__block-1">
                 <div class="review__points text-blue">4,7</div>
                 <div class="review__stars"></div>
-                <div class="review__rating text-small text-dark">77&nbsp;отзывов&nbsp;/&nbsp;169&nbsp;оценок</div><a class="review__button bg-yellow-2 button-yellow"><span>Оставить отзыв</span></a>
+                <div class="review__rating text-small text-dark">77&nbsp;отзывов&nbsp;/&nbsp;169&nbsp;оценок</div><a class="review__button button-yellow"><span>Оставить отзыв</span></a>
               </div>
               <div class="review__block-2">
                 <div class="review__photo"></div>
@@ -703,7 +703,7 @@
                   <input id="request_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
                 </label><span class="text-dark text-small">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
               </div>
-              <button id="reguest_btn" type="button" class="button-yellow button-long bg-yellow-2"><span>Получить</span></button>
+              <button id="reguest_btn" type="button" class="button-yellow button-long"><span>Получить</span></button>
             </form>
           </div>
         </div>
@@ -994,7 +994,7 @@
       <footer class="footer__holder">
         <div class="wrapper">
           <div class="footer__information_holder">
-            <div class="footer__logo logo__holder row_flex-10">
+            <div class="footer__logo logo__holder">
               <div class="logo__image"></div>
               <div class="logo__text"></div>
             </div>
@@ -1051,7 +1051,7 @@
                   </label>
                   <div class="flex row_flex-10">
                     <label id="callme_label" for="callme_checkbox" class="label-checkbox">
-                      <input id="callme_checkbox" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                      <input id="callme_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
                     </label><span class="text-small">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
                   </div>
                   <button id="callme_btn" type="button" class="button-yellow button-long"><span>Отправить</span></button>
