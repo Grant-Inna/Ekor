@@ -1,4 +1,8 @@
-<svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" fill="#203686" r="14"/><path d="M11.813 17.065L14.942 14l-3.13-3.065 1.121-1.1L17.194 14l-4.26 4.165-1.121-1.1z" fill="#fff"/><mask id="a" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="9" width="7" height="10"><path d="M11.813 17.065L14.942 14l-3.13-3.065 1.121-1.1L17.194 14l-4.26 4.165-1.121-1.1z" fill="#fff"/></mask><g mask="url(#a)"><rect x="8.75" y="8.75" width="10.5" height="10.5" rx="1.75" fill="#fff"/></g></svg>white"/>
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="14" cy="14" rx="14" ry="14" fill="#203686"/>
+<path d="M11.8125 17.0649L14.9421 13.9998L11.8125 10.9346L12.9344 9.83496L17.194 13.9998L12.9344 18.1645L11.8125 17.0649Z" fill="white"/>
+<mask id="mask0_2788_39594" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="9" width="7" height="10">
+<path d="M11.8125 17.0649L14.9421 13.9998L11.8125 10.9346L12.9344 9.83496L17.194 13.9998L12.9344 18.1645L11.8125 17.0649Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_2788_39594)">
 <rect x="8.75" y="8.75" width="10.5" height="10.5" rx="1.75" fill="white"/>

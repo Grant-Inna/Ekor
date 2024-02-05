@@ -1,9 +1,33 @@
 //@import "smart-grid";
 @import "breadcrumbs";
+@import "main";
 
+
+@offset: 60px;
+@offset_xxl: @offset;
+
+@offset_one_side: (@offset / 2);
+@offset_xxl_one_side: (@offset_xxl / 2);
+
+@fields: 60px;
+@fields_xxl: 60px;
+
+.wrapper-full(){
+    padding-left: @fields;
+    padding-right: @fields;
+
+    .xxl-block({
+        padding-left: @fields_xxl;
+        padding-right: @fields_xxl;
+    });
+}
 
 .wrapper-big(){
     max-width: 1756px;
     margin: 0 auto;
     .wrapper-full();
+    
+    .xxl-block({
+        .wrapper();
+    })
 }

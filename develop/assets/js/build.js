@@ -6,7 +6,7 @@ $(document).ready(function () {
    
    /* полоса прокрутки */
    
-   if ($('#container_main').length > 0) {
+   if ($('.container').length > 0 ) {
       $('.scrollbar-inner').scrollbar();
    }
    
