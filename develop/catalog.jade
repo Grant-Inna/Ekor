@@ -1,0 +1,23 @@
+doctype
+html( lang='ru' )
+
+   include assets/jade/static/__head
+   +title( 'Каталог | Экор' )
+
+
+
+
+   body
+      #container_catalog.container
+
+         include assets/jade/header/header
+         include assets/jade/content/catalog/breadcrumbs/breadcrumbs
+
+
+         include assets/jade/catalog/catalog
+
+
+         include assets/jade/footer/footer
+         include assets/jade/modal/modal-callme
+
+      include assets/jade/static/script

@@ -20,7 +20,28 @@
          padding-right: 15px !important;
       });
    }
-   .good-friendly-arrows();
+   .slick-prev.slick-arrow,
+   .slick-next.slick-arrow {
+      position: absolute;
+      transform: none;
+      z-index: 100;
+      top: 0;
+      bottom: 0;
+      width: 20%;
+      height: 100%;
+      color: transparent;
+      font-size: 1px;
+      line-height: 0;
+   }
+   .slick-prev.slick-arrow {
+      height: 50%;
+      left: 0;
+      bottom: 50%;
+   }
+   .slick-next.slick-arrow {
+      right: 0;
+   }
+
 }
 .carousel__holder .carousel__item {
    min-height: 400px;
@@ -53,6 +74,11 @@
 .carousel__item_text {
    position: relative;
    z-index: 150;
+   
+   .button-yellow {
+      position: relative;
+      z-index: 200;
+   }
 }
 .carousel__item_text h2.text-16.text-white {
    margin-top: 18px;
