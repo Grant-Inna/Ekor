@@ -19,9 +19,26 @@
    box-sizing: border-box;
    .tr();
 }
-.bg-yellow-2 {
-   background-color: @color-yellow-2;
-   border-color: @color-yellow-2;
+.button-gray {
+   .flex-center();
+   cursor: pointer;
+   width: 288px;
+   height: 48px;
+   border-radius: 10px;
+   background-color: transparent;
+   color: @color-gray-search;
+   .montserrat-semibold();
+   font-size: 14px;
+   .lg-block({
+      width: 223px;
+   });
+   .sm-block({
+      width: 150px;
+      height: 38px;
+   });
+   border: 1px solid transparent;
+   box-sizing: border-box;
+   .tr();
 }
 .button-yellow:hover,
 .button-yellow:active {
@@ -42,6 +59,15 @@ button:disabled {
    background-color: white;
    border: 1px solid @color-blue;
    .tr();
+}
+.button-gray:hover {
+   .tr();
+   color: @opacity-blue-30;
+}
+.button-gray:focus,
+.button-gray:target {
+   .tr();
+   color: @color-gray;
 }
 .button-long {
    width: 100%;

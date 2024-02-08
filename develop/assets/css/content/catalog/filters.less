@@ -1,0 +1,128 @@
+.catalog_main__container {
+.icon__angle {
+   width: 20px;
+   height: 20px;
+   transform: rotate(-90deg);
+   margin-right: -4px;
+   margin-bottom: 3px;
+}
+.icon__angle.open {
+   transform: rotate(0);
+}
+.catalog__section_caption {
+   padding: 8px 16px;
+   height: auto;
+   
+   border-radius: 10px;
+   margin-right: 0;
+   margin-left: 0;
+   > div {
+      padding-right: 0;
+      padding-left: 0;
+   }
+   & div[class^='icofish__'],
+   & div[class^='icofood__'] {
+      width: 26px;
+      height: 26px;
+      margin-right: 10px;
+      padding-right: 0;
+      padding-left: 0;
+   }
+   & div[class^='icofood__'] {
+      margin-left: -4px;
+   }
+}
+div[class^='icofood__'] + .catalog__section-name + .icon__angle {
+   margin-right: 0;
+}
+.catalog__section-name {
+   .montserrat-medium();
+   font-size: 14px;
+   line-height: 128%;
+}
+.catalog__section.open .catalog__section_caption  {
+   .tr();
+   background-color: white;
+}
+.catalog__section.open .catalog__section-name {
+   .montserrat-semibold();
+}
+.catalog__section:hover .catalog__section_caption  {
+   .tr();
+   background-color: white;
+}
+.catalog__section:hover .catalog__section-name {
+   .montserrat-semibold();
+}
+.catalog__articles {
+   .flex();
+   .justify-between();
+   align-items: stretch;
+   background-color: transparent;
+   padding: 0 20px 16px 16px;
+   height: 600px;
+   
+   display: none;
+}
+.catalog__articles .scroll-wrapper {
+   margin-top: 10px;
+}
+
+.catalog__link {
+   .montserrat-medium();
+   font-size: 14px;
+   line-height: 130%;
+   padding: 8px 16px;
+   background-color: transparent;
+   border-radius: 10px;
+   .tr();
+   
+   &:hover {
+      background-color: @color-blue-gray;
+      .tr();
+   }
+}
+
+
+.scroll-wrapper > .scroll-content {
+   height: 100% !important;
+   max-height: unset;
+}
+.scrollbar-inner > .scroll-element div {
+   height: 96%;
+   top: 2%;
+   bottom: 2%;
+}
+.scrollbar-inner > .scroll-element .scroll-bar {
+   background-color: #879fbe;
+}
+
+.catalog__scroll-main {
+   max-height: 700px;
+   min-height: 700px;
+}
+
+
+@media screen and (max-width: @break_xxl) {
+   .icon__angle {
+      width: 20px;
+      height: 20px;
+      transform: rotate(0);
+      margin-right: -4px;
+      margin-bottom: 3px;
+   }
+   .icon__angle.open {
+      transform: rotate(180deg);
+   }
+}
+
+
+
+
+
+
+
+
+
+}
+

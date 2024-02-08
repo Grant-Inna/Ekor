@@ -1,0 +1,25 @@
+include __fiter-item
+form#catalog_filters.catalog_main__filters
+   .catalog_main__title
+      span.text-blue Фильтры
+      .ico__filters
+         .f
+         .f
+   .catalog_main__list_holder
+      +filter-item( 'Вид заморозки', 'vid_zamorozki', 'checkbox', 'Быстрая заморозка', 'Медленная заморозка', 'Бомбинированная заморозка', 'Заморозка в&nbsp;ледяную глазурь', 'Плавающая заморозка' )
+      +filter-item( 'Температура хранения, <br>&deg;С', 'temperatura_hranenia', 'radio', '–18 и&nbsp;ниже', 'от&nbsp;–10 до&nbsp;–12', 'от&nbsp;–4 до&nbsp;–6', 'от&nbsp;0 до&nbsp;–2', '-' )
+      +filter-item( '% остатка срока годности для серии, которой больше на складах', 'ostatok_godnosti', 'radio', '40% и&nbsp;больше', '50% и&nbsp;больше', '60% и&nbsp;больше', '80% и&nbsp;больше', '90% и&nbsp;больше' )
+      +filter-item( 'Дикая / Аквакультура', 'dikaya_kyltyrnaya', 'radio', 'Дикая', 'Аквакультура', 'Любая', '-' )
+      +filter-item( 'Вид разделки', 'vid_razdelki', 'checkbox', 'Быстрая заморозка', 'Медленная заморозка', 'Бомбинированная заморозка', 'Заморозка в&nbsp;ледяную глазурь', 'Плавающая заморозка' )
+      +filter-item( 'ГОСТ / ТУ', 'gost_ty', 'checkbox', 'ГОСТ', 'ТУ', '-' )
+      +filter-item( 'Место заморозки', 'mesto_zamorozki', 'checkbox', 'В месте вылова', 'В порту', 'На фабрике', '-' )
+      +filter-item( 'Морская / Пресноводная', 'more_presnovodnaya', 'radio', 'Морская', 'Пресноводная', 'Любая', '-' )
+      +filter-item( 'Наличие чешуи', 'cheshyya', 'radio', 'Есть', 'Нет', 'Не важно', '-' )
+
+   .catalog_main__buttons
+      button#catalog_filters_reset( type='reset' name='catalog_main__filters' ).button.button-gray
+         span Сбросить
+      button#catalog_filters_submit( type='submit' disabled='true' ).button.button-yellow
+         span Применить
+
+

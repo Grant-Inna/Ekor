@@ -69,51 +69,6 @@ let gridOptions = {
    }
 };
 
-let gridBigOptions = {
-   columns: 24,
-   offset: "20px",
-   container: {
-      maxWidth: "1756px",
-      fields: "20px" // fields не меньше offset делённого на 2
-   },
-   breakPoints: {
-      xxl: {
-         width: "1235px",
-         fields: "60px"
-      },
-      xl: {
-         width: "1190px",
-      },
-      ll: {
-         width: "970px"
-      },
-      lg: {
-         width: "890px"
-      },
-      middle: {
-         width: "768px",
-         fields: "42px"
-      },
-      md: {
-         width: "682px",
-         fields: "30px"
-      },
-      sm: {
-         width: "590px",
-      },
-      xs: {
-         width: "470px"
-      },
-      xxs: {
-         width: "370px",
-         fields: "16px",
-         offset: "10px"
-      },
-      tiny: {
-         width: "320px"
-      }
-   }
-};
 
 function html(done){
    return gulp.src( base + '*.jade' )
@@ -189,10 +144,6 @@ function grid(done){
    smartgrid( src + 'css/base', gridOptions);
    done();
 }
-function gridBig(done){
-   smartgrid( src + 'css/base/big', gridBigOptions);
-   done();
-}
 
 const build = gulp.series(clear,
    gulp.parallel(html, styles, js, images, data, fonts )
@@ -201,7 +152,6 @@ const build = gulp.series(clear,
 gulp.task('build', build);
 gulp.task('watch', gulp.series(build, watch));
 gulp.task('grid', gulp.parallel(grid));
-gulp.task('gridBig', gulp.parallel(gridBig));
 gulp.task('fonts', fonts);
 gulp.task('js', js);
 gulp.task('data', data);

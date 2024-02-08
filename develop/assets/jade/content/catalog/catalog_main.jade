@@ -1,0 +1,29 @@
+include ../../catalog/__catalog-article
+include ../../catalog/__catalog_section-fish
+include ../../catalog/__catalog_section-food
+
+
+section.catalog_main__container
+   .wrapper-big
+      .catalog_main__wrapper
+         .catalog_main__content
+            h2.caption.text-blue.catalog_main__caption Свежемороженая рыба
+            .catalog_main__about.text-blue На сайте компании Экор можно купить свежемороженую рыбу оптом, морепродукты, рыбное филе от производителя. Осуществляем доставку в рестораны, магазины, оптовикам, в HoReCa по Москве и области на следующий день после заказа от 10 000 ₽. Все товары в каталоге есть в наличии, цены и фото реальные. Также в нашем ассортименте — замороженное мясо, овощи, ягоды, бакалея, масла, крупы, молочная продукция, консервация.
+            .catalog_main__show
+               select.select2.catalog__select#catalog_order
+                  option( selected='true') Популярные
+                  option Высокая цена
+                  option Низкая цена
+               select.select2.catalog__select#catalog_amount
+                  option( selected='true') Показывать по 30
+                  option Показывать по 60
+                  option Показывать по 100
+            .catalog_main__section
+               .catalog_main__articles
+               .catalog_main__articles
+               .catalog_main__articles
+               .catalog_main__articles
+               .catalog_main__articles
+         .catalog_main__filter
+            include filters/sections_block
+            include filters/filters_block

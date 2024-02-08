@@ -1,8 +1,8 @@
 mixin catalog-fish( icon, text, textS )
    case textS
       when '-'
-         section( aria-lanel='#{text}' ).catalog__section
-            .catalog__section-caption( data-article='#{icon}' )
+         section( aria-label='#{text}' ).catalog__section
+            .catalog__section_caption( data-article='#{icon}' )
                div( class='icofish__#{icon}')
                h2.catalog__section-name !{text}
                .icon__angle
@@ -20,8 +20,8 @@ mixin catalog-fish( icon, text, textS )
                      +catalog-article( 'Горбуша' )
                      +catalog-article( 'Горбуша' )
       default
-         section( aria-lanel='#{textS}' ).catalog__section
-            .catalog__section-caption( data-article='#{icon}' )
+         section( aria-label='#{textS}' ).catalog__section
+            .catalog__section_caption( data-article='#{icon}' )
                div( class='icofish__#{icon}')
                h2.catalog__section-name !{text}
                .icon__angle
