@@ -455,13 +455,7 @@ $(document).ready(function () {
       });
 
       // Клик по фону, но не по окну.
-      $('#black_back').on( 'click', function(event) {
-         // // event.stopPropagation();
-         // console.log(event.target);
-         // if (event.target !== $('#openModal_' + click)) {
-         //    console.log('сама модалка');
-         //    return false
-         // }
+      $('#black_back').on( 'click', function() {
          hideMobileMenu();
          hideModal()
       });
@@ -476,5 +470,31 @@ $(document).ready(function () {
       $('.modal').fadeOut();
       $('div[id^="openModal_"]').removeClass('show');
    }
-  
+   
+   /* CATALOG один продукт */
+   if ($('.product__options').length > 0) {
+      $('.product__options_btn').on( 'click', (event) => showProductOption(event.target));
+      $('.product__text').text($('.product__box').data('text'));
+      $('.product__weight .weight').text($('.product__box').data('weight'));
+      $('.product__buy .price span').text($('.product__box').data('price'));
+      $('.product__buy .price-kg span').text($('.product__scale').data('price'));
+   }
+  function showProductOption( current ) {
+      let btn = $(current).closest('.product__options_btn');
+      let text = $(current).closest('.product__options_btn').data('text'),
+          weight = $(current).closest('.product__options_btn').data('weight'),
+          holder = $(current).closest('.product__options').find('.product__text'),
+          amount = $(current).closest('.catalog_main__products').find('.product__weight .weight'),
+          price = $(current).closest('.product__options_btn').data('price'),
+          buy = $(current).closest('.catalog_main__products').find('.product__price .price span');
+      
+      holder.text('');
+      buy.text('');
+      holder.text(text);
+      $(current).closest('.product__options').find('.product__options_btn').addClass('opacity');
+      $(btn).removeClass('opacity');
+      amount.text(weight);
+      buy.text(price);
+      
+  }
  });

@@ -314,3 +314,56 @@ header {
    flex-shrink: 0;
 }
 
+/*  CATALOG один продукт  */
+.product-one( @name ) {
+   background-image: url("../images/svg/icons/product/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.icon__box {
+   .product-one('b-box')
+}
+.icon__scale {
+   .product-one('b-scale')
+}
+.icon__wholesale {
+   .product-one('b-wholesale')
+}
+.opacity {
+   .icon__box {
+      .product-one('box')
+   }
+   .icon__scale {
+      .product-one('scale')
+   }
+   .icon__wholesale {
+      .product-one('wholesale')
+   }
+}
+.icon__like {
+   .product-one('like')
+}
+.icon__like.like {
+   .product-one('b-like')
+}
+.ico-amount(@name) {
+   background-image: url("../images/svg/icons/product/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.ico__minus {
+   .ico-amount('b-minus')
+}
+.ico__plus {
+   .ico-amount('b-plus')
+}
+.ico__minus[disabled='true'] {
+   .ico-amount('minus')
+}
+.ico__plus[disabled='true'] {
+   .ico-amount('plus')
+}

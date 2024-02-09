@@ -46,8 +46,8 @@
    border: 1px solid @color-yellow-light;
    .tr();
 }
-a.button-yellow[disabled],
-button:disabled {
+a.button-yellow[disabled='true'],
+button[disabled='true'] {
    background-color: @color-gray-light;
    border: 1px solid @color-gray-light;
    .tr();
@@ -103,4 +103,20 @@ button:disabled {
    }
    
    display: unset;
+}
+
+
+.button-buy {
+   .flex-center();
+   border-radius: 4px;
+   background-color: @color-yellow-2;
+   width: 40px;
+   height: 40px;
+   
+   background-image: url("../images/svg/icons/product/buy.svg");
+   background-repeat: no-repeat;
+   background-size: 24px 24px;
+   background-position: center;
+   flex-shrink: 0;
+   
 }
