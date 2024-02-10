@@ -142,6 +142,9 @@ header {
 .icon__close-w {
    .icon-i-i('menu', 'close');
 }
+.icon__filter {
+   .icon-i-i('product', 'filters');
+}
 
 /*   checkbox  /  ratio  */
 .checkbox {
@@ -367,3 +370,21 @@ header {
 .ico__plus[disabled='true'] {
    .ico-amount('plus')
 }
+/*  pagination arrow  */
+.pagination_arrow[ disabled='false' ] {
+   .ico__arrow_prev {
+      .icon-i('b-arr-left');
+   }
+   .ico__arrow_next {
+      .icon-i('b-arr-right');
+   }
+}
+.pagination_arrow[ disabled='true' ] {
+   .ico__arrow_prev {
+      .icon-i('arr-left');
+   }
+   .ico__arrow_next {
+      .icon-i('arr-right');
+   }
+}
+

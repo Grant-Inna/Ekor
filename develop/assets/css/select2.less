@@ -566,12 +566,16 @@
 }
 .catalog__select + .select2-container {
     min-width: 190px;
+  .to( 525px, {
+      min-width: 100%;
+   });
 }
 .catalog__select + .select2-container--default .select2-selection--single {
    background-color: @color-white;
    border-radius: 10px;
    box-sizing: border-box;
-   height: 36px
+   height: 36px;
+  border: 1px solid @color-blue-gray;
 }
 .catalog__select + .select2-container .select2-selection--single .select2-selection__rendered {
    color: @color-blue;

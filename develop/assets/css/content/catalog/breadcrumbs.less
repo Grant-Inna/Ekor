@@ -1,10 +1,20 @@
 
-.breadcrumbs__container .wrapper {
-   .flex();
+.breadcrumbs__container {
+   .flex-wrap();
    .justify-start();
    .items-end();
-   height: 45px;
-   margin-bottom: 29px !important;
+   height: 20px;
+   margin-top: 25px;
+   margin-bottom: 29px;
+   .middle-block({
+      //height: 30px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+   });
+   .xs-block({
+      margin-top: 20px;
+      margin-bottom: 30px;
+   });
 }
 .breadcrumbs__link {
    position: relative;
@@ -29,8 +39,13 @@
 }
 .breadcrumbs__active {
    .montserrat-medium();
+   display: inline-block;
    font-size: 12px;
    line-height: 14px;
    color: @color-blue;
-   margin-left: -3px;
+   margin-left: 1px;
+   margin-top: 2px;
+   .xxs-block({
+      //width: 1;
+   })
 }

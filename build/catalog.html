@@ -39,7 +39,9 @@
               </div>
             </div>
           </div>
-          <div class="header__contact"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">8&nbsp;(495)&nbsp;637-82-28</a><span data-modal="callme" class="openModal_callme contacts__text">Заказать звонок</span></div>
+          <div class="header__contact"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">8&nbsp;(495)&nbsp;637-82-28</a>
+            <div data-modal="callme" class="openModal_callme contacts__text">Заказать звонок</div>
+          </div>
           <div class="header__holder_mobile">
             <div class="header__m_icons row_flex-20"><a class="icon__user"></a><a class="icon__favorites"></a><a class="icon__basket relative">
                 <div id="amount_basket" class="amount">1</div></a></div>
@@ -95,11 +97,11 @@
           </div>
         </div>
       </header>
-      <section class="breadcrumbs__container">
-        <div class="wrapper"><a href="./" class="breadcrumbs__link">Главная</a>
+      <div class="wrapper">
+        <section class="breadcrumbs__container"><a href="./" class="breadcrumbs__link">Главная</a>
           <div class="breadcrumbs__link">Каталог</div><a href="./" class="breadcrumbs__active">Свежемороженая рыба</a>
-        </div>
-      </section>
+        </section>
+      </div>
       <section class="catalog_main__container">
         <div class="wrapper-big">
           <div class="catalog_main__wrapper">
@@ -107,16 +109,23 @@
               <h2 class="caption text-blue catalog_main__caption">Свежемороженая рыба</h2>
               <div class="catalog_main__about text-blue">На сайте компании Экор можно купить свежемороженую рыбу оптом, морепродукты, рыбное филе от производителя. Осуществляем доставку в рестораны, магазины, оптовикам, в HoReCa по Москве и области на следующий день после заказа от 10 000 ₽. Все товары в каталоге есть в наличии, цены и фото реальные. Также в нашем ассортименте — замороженное мясо, овощи, ягоды, бакалея, масла, крупы, молочная продукция, консервация.</div>
               <div class="catalog_main__show">
-                <select id="catalog_order" class="select2 catalog__select">
-                  <option selected="true">Популярные</option>
-                  <option>Высокая цена</option>
-                  <option>Низкая цена</option>
-                </select>
-                <select id="catalog_amount" class="select2 catalog__select">
-                  <option selected="true">Показывать по 30</option>
-                  <option>Показывать по 60</option>
-                  <option>Показывать по 100</option>
-                </select>
+                <div class="catalog__select_holder-1">
+                  <select id="catalog_order" class="select2 catalog__select">
+                    <option selected="true">Популярные</option>
+                    <option>Высокая цена</option>
+                    <option>Низкая цена</option>
+                  </select>
+                </div>
+                <div class="catalog__select_holder-2">
+                  <select id="catalog_amount" class="select2 catalog__select">
+                    <option selected="true">Показывать по 30</option>
+                    <option>Показывать по 60</option>
+                    <option>Показывать по 100</option>
+                  </select>
+                </div>
+                <button id="show_filters" class="button catalog__fbutton text-blue">
+                  <div class="icon__filter"></div><span>Фильтры</span>
+                </button>
               </div>
               <div class="catalog_main__section">
                 <div class="catalog_main__products">
@@ -146,61 +155,21 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
                     </div>
-                    <button class="button button-buy"></button>
-                  </div>
-                </div>
-                <div class="catalog_main__products">
-                  <div class="product__image relative">
-                    <div class="relation"></div>
-                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
-                    <button class="button icon__like"></button>
-                  </div>
-                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
-                  <div class="product__data row">
-                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
-                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
-                    </div>
-                    <div class="block-12"><span class="text-dark">Срок годности:</span>
-                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
-                    </div>
-                  </div>
-                  <div class="product__options">
-                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
-                      <div class="icon__box"></div>
-                    </div>
-                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
-                      <div class="icon__scale"></div>
-                    </div>
-                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
-                      <div class="icon__wholesale"></div>
-                    </div>
-                    <div class="product__text text-blue"></div>
-                  </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
-                    </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
-                    </div>
-                    <button class="button button-buy"></button>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="catalog_main__products">
@@ -230,61 +199,21 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
                     </div>
-                    <button class="button button-buy"></button>
-                  </div>
-                </div>
-                <div class="catalog_main__products">
-                  <div class="product__image relative">
-                    <div class="relation"></div>
-                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
-                    <button class="button icon__like"></button>
-                  </div>
-                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
-                  <div class="product__data row">
-                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
-                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
-                    </div>
-                    <div class="block-12"><span class="text-dark">Срок годности:</span>
-                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
-                    </div>
-                  </div>
-                  <div class="product__options">
-                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
-                      <div class="icon__box"></div>
-                    </div>
-                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
-                      <div class="icon__scale"></div>
-                    </div>
-                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
-                      <div class="icon__wholesale"></div>
-                    </div>
-                    <div class="product__text text-blue"></div>
-                  </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
-                    </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
-                    </div>
-                    <button class="button button-buy"></button>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="catalog_main__products">
@@ -314,61 +243,21 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
                     </div>
-                    <button class="button button-buy"></button>
-                  </div>
-                </div>
-                <div class="catalog_main__products">
-                  <div class="product__image relative">
-                    <div class="relation"></div>
-                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
-                    <button class="button icon__like"></button>
-                  </div>
-                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
-                  <div class="product__data row">
-                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
-                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
-                    </div>
-                    <div class="block-12"><span class="text-dark">Срок годности:</span>
-                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
-                    </div>
-                  </div>
-                  <div class="product__options">
-                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
-                      <div class="icon__box"></div>
-                    </div>
-                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
-                      <div class="icon__scale"></div>
-                    </div>
-                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
-                      <div class="icon__wholesale"></div>
-                    </div>
-                    <div class="product__text text-blue"></div>
-                  </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
-                    </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
-                    </div>
-                    <button class="button button-buy"></button>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="catalog_main__products">
@@ -398,61 +287,21 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
                     </div>
-                    <button class="button button-buy"></button>
-                  </div>
-                </div>
-                <div class="catalog_main__products">
-                  <div class="product__image relative">
-                    <div class="relation"></div>
-                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
-                    <button class="button icon__like"></button>
-                  </div>
-                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
-                  <div class="product__data row">
-                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
-                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
-                    </div>
-                    <div class="block-12"><span class="text-dark">Срок годности:</span>
-                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
-                    </div>
-                  </div>
-                  <div class="product__options">
-                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
-                      <div class="icon__box"></div>
-                    </div>
-                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
-                      <div class="icon__scale"></div>
-                    </div>
-                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
-                      <div class="icon__wholesale"></div>
-                    </div>
-                    <div class="product__text text-blue"></div>
-                  </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
-                    </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
-                    </div>
-                    <button class="button button-buy"></button>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="catalog_main__products">
@@ -482,19 +331,21 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
                     </div>
-                    <button class="button button-buy"></button>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="catalog_main__products">
@@ -524,19 +375,197 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
                   </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                </div>
+                <div class="catalog_main__products">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
+                  <div class="product__data row">
+                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
                     </div>
-                    <button class="button button-buy"></button>
+                    <div class="block-12"><span class="text-dark">Срок годности:</span>
+                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                    </div>
+                  </div>
+                  <div class="product__options">
+                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                      <div class="icon__box"></div>
+                    </div>
+                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                      <div class="icon__scale"></div>
+                    </div>
+                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                      <div class="icon__wholesale"></div>
+                    </div>
+                    <div class="product__text text-blue"></div>
+                  </div>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
+                    </div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
+                  </div>
+                </div>
+                <div class="catalog_main__products">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
+                  <div class="product__data row">
+                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                    </div>
+                    <div class="block-12"><span class="text-dark">Срок годности:</span>
+                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                    </div>
+                  </div>
+                  <div class="product__options">
+                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                      <div class="icon__box"></div>
+                    </div>
+                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                      <div class="icon__scale"></div>
+                    </div>
+                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                      <div class="icon__wholesale"></div>
+                    </div>
+                    <div class="product__text text-blue"></div>
+                  </div>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
+                    </div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
+                  </div>
+                </div>
+                <div class="catalog_main__products">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
+                  <div class="product__data row">
+                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                    </div>
+                    <div class="block-12"><span class="text-dark">Срок годности:</span>
+                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                    </div>
+                  </div>
+                  <div class="product__options">
+                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                      <div class="icon__box"></div>
+                    </div>
+                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                      <div class="icon__scale"></div>
+                    </div>
+                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                      <div class="icon__wholesale"></div>
+                    </div>
+                    <div class="product__text text-blue"></div>
+                  </div>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
+                    </div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
+                  </div>
+                </div>
+                <div class="catalog_main__products">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
+                  <div class="product__data row">
+                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                    </div>
+                    <div class="block-12"><span class="text-dark">Срок годности:</span>
+                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                    </div>
+                  </div>
+                  <div class="product__options">
+                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                      <div class="icon__box"></div>
+                    </div>
+                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                      <div class="icon__scale"></div>
+                    </div>
+                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                      <div class="icon__wholesale"></div>
+                    </div>
+                    <div class="product__text text-blue"></div>
+                  </div>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
+                    </div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="subscribe__wrapper subscribe__wrapper_catalog">
@@ -582,61 +611,21 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
                     </div>
-                    <button class="button button-buy"></button>
-                  </div>
-                </div>
-                <div class="catalog_main__products">
-                  <div class="product__image relative">
-                    <div class="relation"></div>
-                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
-                    <button class="button icon__like"></button>
-                  </div>
-                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
-                  <div class="product__data row">
-                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
-                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
-                    </div>
-                    <div class="block-12"><span class="text-dark">Срок годности:</span>
-                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
-                    </div>
-                  </div>
-                  <div class="product__options">
-                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
-                      <div class="icon__box"></div>
-                    </div>
-                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
-                      <div class="icon__scale"></div>
-                    </div>
-                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
-                      <div class="icon__wholesale"></div>
-                    </div>
-                    <div class="product__text text-blue"></div>
-                  </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
-                    </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
-                    </div>
-                    <button class="button button-buy"></button>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="catalog_main__products">
@@ -666,61 +655,21 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
                     </div>
-                    <button class="button button-buy"></button>
-                  </div>
-                </div>
-                <div class="catalog_main__products">
-                  <div class="product__image relative">
-                    <div class="relation"></div>
-                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
-                    <button class="button icon__like"></button>
-                  </div>
-                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
-                  <div class="product__data row">
-                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
-                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
-                    </div>
-                    <div class="block-12"><span class="text-dark">Срок годности:</span>
-                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
-                    </div>
-                  </div>
-                  <div class="product__options">
-                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
-                      <div class="icon__box"></div>
-                    </div>
-                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
-                      <div class="icon__scale"></div>
-                    </div>
-                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
-                      <div class="icon__wholesale"></div>
-                    </div>
-                    <div class="product__text text-blue"></div>
-                  </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
-                    </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
-                    </div>
-                    <button class="button button-buy"></button>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="catalog_main__products">
@@ -750,61 +699,21 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
                     </div>
-                    <button class="button button-buy"></button>
-                  </div>
-                </div>
-                <div class="catalog_main__products">
-                  <div class="product__image relative">
-                    <div class="relation"></div>
-                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
-                    <button class="button icon__like"></button>
-                  </div>
-                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
-                  <div class="product__data row">
-                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
-                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
-                    </div>
-                    <div class="block-12"><span class="text-dark">Срок годности:</span>
-                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
-                    </div>
-                  </div>
-                  <div class="product__options">
-                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
-                      <div class="icon__box"></div>
-                    </div>
-                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
-                      <div class="icon__scale"></div>
-                    </div>
-                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
-                      <div class="icon__wholesale"></div>
-                    </div>
-                    <div class="product__text text-blue"></div>
-                  </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
-                    </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
-                    </div>
-                    <button class="button button-buy"></button>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="catalog_main__products">
@@ -834,61 +743,21 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
                     </div>
-                    <button class="button button-buy"></button>
-                  </div>
-                </div>
-                <div class="catalog_main__products">
-                  <div class="product__image relative">
-                    <div class="relation"></div>
-                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
-                    <button class="button icon__like"></button>
-                  </div>
-                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
-                  <div class="product__data row">
-                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
-                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
-                    </div>
-                    <div class="block-12"><span class="text-dark">Срок годности:</span>
-                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
-                    </div>
-                  </div>
-                  <div class="product__options">
-                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
-                      <div class="icon__box"></div>
-                    </div>
-                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
-                      <div class="icon__scale"></div>
-                    </div>
-                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
-                      <div class="icon__wholesale"></div>
-                    </div>
-                    <div class="product__text text-blue"></div>
-                  </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
-                    </div>
-                    <button disabled="false" class="button ico__plus"></button>
-                  </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
-                    </div>
-                    <button class="button button-buy"></button>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
                 <div class="catalog_main__products">
@@ -918,260 +787,444 @@
                     </div>
                     <div class="product__text text-blue"></div>
                   </div>
-                  <div class="product__amount">
-                    <button disabled="true" class="button ico__minus"></button>
-                    <div class="product__weight text-blue">
-                      <div class="weight"></div><span>&nbsp;кг</span>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
                     </div>
-                    <button disabled="false" class="button ico__plus"></button>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
                   </div>
-                  <div class="product__buy">
-                    <div class="product__price">
-                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
-                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                </div>
+                <div class="catalog_main__products">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
+                  <div class="product__data row">
+                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
                     </div>
-                    <button class="button button-buy"></button>
+                    <div class="block-12"><span class="text-dark">Срок годности:</span>
+                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                    </div>
+                  </div>
+                  <div class="product__options">
+                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                      <div class="icon__box"></div>
+                    </div>
+                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                      <div class="icon__scale"></div>
+                    </div>
+                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                      <div class="icon__wholesale"></div>
+                    </div>
+                    <div class="product__text text-blue"></div>
+                  </div>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
+                    </div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
+                  </div>
+                </div>
+                <div class="catalog_main__products">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
+                  <div class="product__data row">
+                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                    </div>
+                    <div class="block-12"><span class="text-dark">Срок годности:</span>
+                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                    </div>
+                  </div>
+                  <div class="product__options">
+                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                      <div class="icon__box"></div>
+                    </div>
+                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                      <div class="icon__scale"></div>
+                    </div>
+                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                      <div class="icon__wholesale"></div>
+                    </div>
+                    <div class="product__text text-blue"></div>
+                  </div>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
+                    </div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
+                  </div>
+                </div>
+                <div class="catalog_main__products">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
+                  <div class="product__data row">
+                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                    </div>
+                    <div class="block-12"><span class="text-dark">Срок годности:</span>
+                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                    </div>
+                  </div>
+                  <div class="product__options">
+                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                      <div class="icon__box"></div>
+                    </div>
+                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                      <div class="icon__scale"></div>
+                    </div>
+                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                      <div class="icon__wholesale"></div>
+                    </div>
+                    <div class="product__text text-blue"></div>
+                  </div>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
+                    </div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
+                  </div>
+                </div>
+                <div class="catalog_main__products">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div>
+                  <div class="product__data row">
+                    <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                      <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                    </div>
+                    <div class="block-12"><span class="text-dark">Срок годности:</span>
+                      <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                    </div>
+                  </div>
+                  <div class="product__options">
+                    <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                      <div class="icon__box"></div>
+                    </div>
+                    <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                      <div class="icon__scale"></div>
+                    </div>
+                    <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                      <div class="icon__wholesale"></div>
+                    </div>
+                    <div class="product__text text-blue"></div>
+                  </div>
+                  <div class="product__purchase">
+                    <div class="product__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight"></div><span>&nbsp;кг</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
+                    </div>
+                    <div class="product__buy">
+                      <div class="product__price">
+                        <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                        <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                      </div>
+                    </div>
+                    <button class="button button-buy product__button"></button>
                   </div>
                 </div>
               </div>
               <div class="catalog_main__pagination">
                 <div class="catalog_pagination">
-                  <button class="button pagination_arrow pagination_arrow-next"></button>
+                  <button disabled="true" class="button pagination_arrow">
+                    <div class="ico__arrow_prev"></div><span>Предыдущая</span>
+                  </button>
                   <div class="pagination_numbers">
-                    <button class="button pagination_numb"><span>1</span></button>
+                    <button class="button pagination_numb pagination_numb-active"><span>1</span></button>
                     <button class="button pagination_numb"><span>2</span></button>
-                    <button class="button pagination_numb pagination_numb-active"><span>3</span></button>
-                    <div class="pagination_numb"><span>...</span></div>
+                    <button class="button pagination_numb"><span>3</span></button>
+                    <div class="pagination_middle"><span>...</span></div>
                     <button class="button pagination_numb"><span>10</span></button>
                     <button class="button pagination_numb"><span>11</span></button>
                   </div>
-                  <button class="button pagination_arrow pagination_arrow-prev"></button>
+                  <button disabled="false" class="button pagination_arrow"><span>Следующая</span>
+                    <div class="ico__arrow_next"></div>
+                  </button>
                 </div>
               </div>
             </div>
             <div class="catalog_main__filter">
               <div class="catalog__block catalog__block-aside">
-                <section aria-label="Свежемороженая рыба" class="catalog__section open">
-                  <div data-article="sveshemor" class="catalog__section_caption">
-                    <div class="icofish__sveshemor"></div>
-                    <h2 class="catalog__section-name">Свежемороженая рыба</h2>
-                    <div class="icon__angle"></div>
-                  </div>
-                  <article id="sveshemor" class="catalog__articles">
-                    <div class="scrollbar-inner">
-                      <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
-                      </div>
+                <div class="scrollbar-inner">
+                  <section aria-label="Свежемороженая рыба" class="catalog__section open">
+                    <div data-article="sveshemor" class="catalog__section_caption">
+                      <div class="icofish__sveshemor"></div>
+                      <h2 class="catalog__section-name">Свежемороженая рыба</h2>
+                      <div class="icon__angle"></div>
                     </div>
-                  </article>
-                </section>
-                      <section aria-label="Филе рыбы, стейки, фарш" class="catalog__section">
-                        <div data-article="fileryby" class="catalog__section_caption">
-                          <div class="icofish__fileryby"></div>
-                          <h2 class="catalog__section-name">Филе рыбы, стейки, фарш</h2>
-                          <div class="icon__angle"></div>
+                    <article id="sveshemor" class="catalog__articles">
+                      <div class="scrollbar-inner">
+                        <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
                         </div>
-                        <article id="fileryby" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
-                            </div>
+                      </div>
+                    </article>
+                  </section>
+                        <section aria-label="Филе рыбы, стейки, фарш" class="catalog__section">
+                          <div data-article="fileryby" class="catalog__section_caption">
+                            <div class="icofish__fileryby"></div>
+                            <h2 class="catalog__section-name">Филе рыбы, стейки, фарш</h2>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Креветки / Морепродукты" class="catalog__section">
-                        <div data-article="moreprodukty" class="catalog__section_caption">
-                          <div class="icofish__moreprodukty"></div>
-                          <h2 class="catalog__section-name">Креветки / Морепродукты</h2>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="moreprodukty" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="fileryby" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Креветки / Морепродукты" class="catalog__section">
+                          <div data-article="moreprodukty" class="catalog__section_caption">
+                            <div class="icofish__moreprodukty"></div>
+                            <h2 class="catalog__section-name">Креветки / Морепродукты</h2>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Морепродукты для японской кухни" class="catalog__section">
-                        <div data-article="morejap" class="catalog__section_caption">
-                          <div class="icofish__morejap"></div>
-                          <h2 class="catalog__section-name">Морепродукты для&nbsp;японской кухни</h2>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="morejap" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="moreprodukty" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Морепродукты для японской кухни" class="catalog__section">
+                          <div data-article="morejap" class="catalog__section_caption">
+                            <div class="icofish__morejap"></div>
+                            <h2 class="catalog__section-name">Морепродукты для&nbsp;японской кухни</h2>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Фасованная рыба Экор" class="catalog__section catalog__section-food">
-                        <div data-article="packaging" class="catalog__section_caption">
-                          <div class="icofood__packaging"></div>
-                          <div class="catalog__section-name">Фасованная рыба &laquo;Экор&raquo;</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="packaging" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="morejap" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Фасованная рыба Экор" class="catalog__section catalog__section-food">
+                          <div data-article="packaging" class="catalog__section_caption">
+                            <div class="icofood__packaging"></div>
+                            <div class="catalog__section-name">Фасованная рыба &laquo;Экор&raquo;</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Полуфабрикаты" class="catalog__section catalog__section-food">
-                        <div data-article="polufabrikaty" class="catalog__section_caption">
-                          <div class="icofood__polufabrikaty"></div>
-                          <div class="catalog__section-name">Полуфабрикаты</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="polufabrikaty" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="packaging" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Полуфабрикаты" class="catalog__section catalog__section-food">
+                          <div data-article="polufabrikaty" class="catalog__section_caption">
+                            <div class="icofood__polufabrikaty"></div>
+                            <div class="catalog__section-name">Полуфабрикаты</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Готовая продукция Экор" class="catalog__section catalog__section-food">
-                        <div data-article="gotovaya" class="catalog__section_caption">
-                          <div class="icofood__gotovaya"></div>
-                          <div class="catalog__section-name">Готовая продукция &laquo;Экор&raquo;</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="gotovaya" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="polufabrikaty" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Готовая продукция Экор" class="catalog__section catalog__section-food">
+                          <div data-article="gotovaya" class="catalog__section_caption">
+                            <div class="icofood__gotovaya"></div>
+                            <div class="catalog__section-name">Готовая продукция &laquo;Экор&raquo;</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Мясо, птица" class="catalog__section catalog__section-food">
-                        <div data-article="myaso_i_ptitsa" class="catalog__section_caption">
-                          <div class="icofood__myaso_i_ptitsa"></div>
-                          <div class="catalog__section-name">Мясо, птица</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="myaso_i_ptitsa" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="gotovaya" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Мясо, птица" class="catalog__section catalog__section-food">
+                          <div data-article="myaso_i_ptitsa" class="catalog__section_caption">
+                            <div class="icofood__myaso_i_ptitsa"></div>
+                            <div class="catalog__section-name">Мясо, птица</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Замороженные &lt;br&gt;овощи" class="catalog__section catalog__section-food">
-                        <div data-article="zamorozhennyye_ovoshchi_yagody" class="catalog__section_caption">
-                          <div class="icofood__zamorozhennyye_ovoshchi_yagody"></div>
-                          <div class="catalog__section-name">Замороженные <br>овощи</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="zamorozhennyye_ovoshchi_yagody" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="myaso_i_ptitsa" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Замороженные &lt;br&gt;овощи" class="catalog__section catalog__section-food">
+                          <div data-article="zamorozhennyye_ovoshchi_yagody" class="catalog__section_caption">
+                            <div class="icofood__zamorozhennyye_ovoshchi_yagody"></div>
+                            <div class="catalog__section-name">Замороженные <br>овощи</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Консервация" class="catalog__section catalog__section-food">
-                        <div data-article="konservy" class="catalog__section_caption">
-                          <div class="icofood__konservy"></div>
-                          <div class="catalog__section-name">Консервация</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="konservy" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="zamorozhennyye_ovoshchi_yagody" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Консервация" class="catalog__section catalog__section-food">
+                          <div data-article="konservy" class="catalog__section_caption">
+                            <div class="icofood__konservy"></div>
+                            <div class="catalog__section-name">Консервация</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Изделия из теста" class="catalog__section catalog__section-food">
-                        <div data-article="izdelie_iz_testa" class="catalog__section_caption">
-                          <div class="icofood__izdelie_iz_testa"></div>
-                          <div class="catalog__section-name">Изделия из&nbsp;теста</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="izdelie_iz_testa" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="konservy" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Изделия из теста" class="catalog__section catalog__section-food">
+                          <div data-article="izdelie_iz_testa" class="catalog__section_caption">
+                            <div class="icofood__izdelie_iz_testa"></div>
+                            <div class="catalog__section-name">Изделия из&nbsp;теста</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Охлаждённая рыба" class="catalog__section catalog__section-food">
-                        <div data-article="okhlazhdennaya_ryba" class="catalog__section_caption">
-                          <div class="icofood__okhlazhdennaya_ryba"></div>
-                          <div class="catalog__section-name">Охлаждённая рыба</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="okhlazhdennaya_ryba" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="izdelie_iz_testa" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Охлаждённая рыба" class="catalog__section catalog__section-food">
+                          <div data-article="okhlazhdennaya_ryba" class="catalog__section_caption">
+                            <div class="icofood__okhlazhdennaya_ryba"></div>
+                            <div class="catalog__section-name">Охлаждённая рыба</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Икра красная" class="catalog__section catalog__section-food">
-                        <div data-article="krasnaya_ikra" class="catalog__section_caption">
-                          <div class="icofood__krasnaya_ikra"></div>
-                          <div class="catalog__section-name">Икра красная</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="krasnaya_ikra" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="okhlazhdennaya_ryba" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Икра красная" class="catalog__section catalog__section-food">
+                          <div data-article="krasnaya_ikra" class="catalog__section_caption">
+                            <div class="icofood__krasnaya_ikra"></div>
+                            <div class="catalog__section-name">Икра красная</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Масло и молочная продукция" class="catalog__section catalog__section-food">
-                        <div data-article="molochnaya_produktsiya" class="catalog__section_caption">
-                          <div class="icofood__molochnaya_produktsiya"></div>
-                          <div class="catalog__section-name">Масло и&nbsp;молочная продукция</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="molochnaya_produktsiya" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="krasnaya_ikra" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Масло и молочная продукция" class="catalog__section catalog__section-food">
+                          <div data-article="molochnaya_produktsiya" class="catalog__section_caption">
+                            <div class="icofood__molochnaya_produktsiya"></div>
+                            <div class="catalog__section-name">Масло и&nbsp;молочная продукция</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Бакалея и специи" class="catalog__section catalog__section-food">
-                        <div data-article="bakaleya" class="catalog__section_caption">
-                          <div class="icofood__bakaleya"></div>
-                          <div class="catalog__section-name">Бакалея и&nbsp;специи</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="bakaleya" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="molochnaya_produktsiya" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Бакалея и специи" class="catalog__section catalog__section-food">
+                          <div data-article="bakaleya" class="catalog__section_caption">
+                            <div class="icofood__bakaleya"></div>
+                            <div class="catalog__section-name">Бакалея и&nbsp;специи</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Масло растительное" class="catalog__section catalog__section-food">
-                        <div data-article="maslo_rastitelnyoe" class="catalog__section_caption">
-                          <div class="icofood__maslo_rastitelnyoe"></div>
-                          <div class="catalog__section-name">Масло растительное</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="maslo_rastitelnyoe" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="bakaleya" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Масло растительное" class="catalog__section catalog__section-food">
+                          <div data-article="maslo_rastitelnyoe" class="catalog__section_caption">
+                            <div class="icofood__maslo_rastitelnyoe"></div>
+                            <div class="catalog__section-name">Масло растительное</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
-                      <section aria-label="Майонезы, соусы" class="catalog__section catalog__section-food">
-                        <div data-article="sousy" class="catalog__section_caption">
-                          <div class="icofood__sousy"></div>
-                          <div class="catalog__section-name">Майонезы, соусы</div>
-                          <div class="icon__angle"></div>
-                        </div>
-                        <article id="sousy" class="catalog__articles">
-                          <div class="scrollbar-inner">
-                            <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                          <article id="maslo_rastitelnyoe" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
                             </div>
+                          </article>
+                        </section>
+                        <section aria-label="Майонезы, соусы" class="catalog__section catalog__section-food">
+                          <div data-article="sousy" class="catalog__section_caption">
+                            <div class="icofood__sousy"></div>
+                            <div class="catalog__section-name">Майонезы, соусы</div>
+                            <div class="icon__angle"></div>
                           </div>
-                        </article>
-                      </section>
+                          <article id="sousy" class="catalog__articles">
+                            <div class="scrollbar-inner">
+                              <div class="catalog__scroll"><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Креветки</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Голец</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a><a href="/catalog.html" class="catalog__link">Горбуша</a>
+                              </div>
+                            </div>
+                          </article>
+                        </section>
+                </div>
               </div>
               <form id="catalog_filters" class="catalog_main__filters">
                 <div class="catalog_main__title"><span class="text-blue">Фильтры</span>
@@ -1181,38 +1234,39 @@
                   </div>
                 </div>
                 <div class="catalog_main__list_holder">
-                                <form name="vid_zamorozki" class="catalog_main__block">
-                                  <div class="catalog_main__title_14"><span class="text-blue text-14">Вид заморозки</span>
-                                    <div class="icon__angle"></div>
-                                  </div>
-                                  <div class="catalog_main__list vid_zamorozki">
-                                                  <label for="vid_zamorozki-1" class="catalog_main__item">
-                                                    <div class="label-checkbox">
-                                                      <input id="vid_zamorozki-1" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                                                    </div><span class="text-blue">Быстрая заморозка</span>
-                                                  </label>
-                                                  <label for="vid_zamorozki-2" class="catalog_main__item">
-                                                    <div class="label-checkbox">
-                                                      <input id="vid_zamorozki-2" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                                                    </div><span class="text-blue">Медленная заморозка</span>
-                                                  </label>
-                                                  <label for="vid_zamorozki-3" class="catalog_main__item">
-                                                    <div class="label-checkbox">
-                                                      <input id="vid_zamorozki-3" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                                                    </div><span class="text-blue">Бомбинированная заморозка</span>
-                                                  </label>
-                                                  <label for="vid_zamorozki-4" class="catalog_main__item">
-                                                    <div class="label-checkbox">
-                                                      <input id="vid_zamorozki-4" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                                                    </div><span class="text-blue">Заморозка в&nbsp;ледяную глазурь</span>
-                                                  </label>
-                                                  <label for="vid_zamorozki-5" class="catalog_main__item">
-                                                    <div class="label-checkbox">
-                                                      <input id="vid_zamorozki-5" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                                                    </div><span class="text-blue">Плавающая заморозка</span>
-                                                  </label>
-                                  </div>
-                                </form>
+                  <form name="vid_zamorozki" class="catalog_main__block">
+                    <div class="catalog_main__title_14"><span class="text-blue text-14">Вид заморозки</span>
+                      <div class="icon__angle"></div>
+                    </div>
+                    <div class="catalog_main__list vid_zamorozki">
+                                    <label for="vid_zamorozki-1" class="catalog_main__item">
+                                      <div class="label-checkbox">
+                                        <input id="vid_zamorozki-1" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                                      </div><span class="text-blue">Быстрая заморозка</span>
+                                    </label>
+                                    <label for="vid_zamorozki-2" class="catalog_main__item">
+                                      <div class="label-checkbox">
+                                        <input id="vid_zamorozki-2" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                                      </div><span class="text-blue">Бомбинированная заморозка</span>
+                                    </label>
+                                    <label for="vid_zamorozki-3" class="catalog_main__item">
+                                      <div class="label-checkbox">
+                                        <input id="vid_zamorozki-3" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                                      </div><span class="text-blue">Заморозка в&nbsp;ледяную глазурь</span>
+                                    </label>
+                                    <label for="vid_zamorozki-4" class="catalog_main__item">
+                                      <div class="label-checkbox">
+                                        <input id="vid_zamorozki-4" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                                      </div><span class="text-blue">Плавающая заморозка</span>
+                                    </label>
+                                    <label for="vid_zamorozki-5" class="catalog_main__item">
+                                      <div class="label-checkbox">
+                                        <input id="vid_zamorozki-5" name="vid_zamorozki" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                                      </div><span class="text-blue">Медленная заморозка</span>
+                                    </label>
+                    </div>
+                  </form>
+                  <!--+filter-item( 'Вид заморозки', 'vid_zamorozki', 'checkbox', 'Быстрая заморозка', 'Медленная заморозка', 'Бомбинированная заморозка', 'Заморозка в&nbsp;ледяную глазурь', 'Плавающая заморозка' )-->
                                 <form name="temperatura_hranenia" class="catalog_main__block">
                                   <div class="catalog_main__title_14"><span class="text-blue text-14">Температура хранения, <br>&deg;С</span>
                                     <div class="icon__angle"></div>
@@ -1665,76 +1719,91 @@
           </div>
         </div>
       </section>
-      <footer class="footer__holder">
-        <div class="wrapper">
-          <div class="footer__information_holder">
-            <div class="footer__logo logo__holder">
-              <div class="logo__image"></div>
-              <div class="logo__text"></div>
-            </div>
-            <div class="footer__information">
-              <div class="footer__information_section"><span>Адрес: г.&nbsp;Москва, Открытое шоссе, 13, стр.&nbsp;1</span></div>
-              <div class="footer__information_section"><span>E-mail: info@ekorfish.ru</span></div>
-              <div class="footer__contacts"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">+7&nbsp;(495)&nbsp;637-82-28</a>
-                <div class="footer__socials">
-                  <div class="social__holder row_flex-10">
-                    <div class="social__icon"><a href="" target="_blank" title="Перейти в группу Telegram компании" aria-label="Ссылка на телеграм компании" class="icon__telegram"></a></div>
-                    <div class="social__icon social__icon-whatsapp">
-                      <div aria-label="Ввести свой номер для подключения whataspp компании" class="icon__whatsapp"></div>
-                      <div class="input_number-holder">
-                        <input type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input_number">
-                      </div>
+    </div>
+    <div id="filters_mobile_panel" class="filters_mobile__container">
+      <div class="filters_mobile__header">
+        <div class="filters_mobile__caption">Фильтры</div>
+        <div class="icon__close fil"></div>
+      </div>
+      <div class="filters_mobile__content">
+        <div class="scrollbar-inner">
+          <div class="filters_mobile__holder"></div>
+        </div>
+      </div>
+      <div class="filters_mobile__footer">
+        <button id="catalog_filters_reset" type="reset" name="catalog_main__filters" class="button button-gray"><span>Сбросить</span></button>
+        <button id="catalog_filters_submit" type="submit" disabled="false" class="button button-yellow"><span>Применить</span></button>
+      </div>
+    </div>
+    <footer class="footer__holder">
+      <div class="wrapper">
+        <div class="footer__information_holder">
+          <div class="footer__logo logo__holder">
+            <div class="logo__image"></div>
+            <div class="logo__text"></div>
+          </div>
+          <div class="footer__information">
+            <div class="footer__information_section"><span>Адрес: г.&nbsp;Москва, Открытое шоссе, 13, стр.&nbsp;1</span></div>
+            <div class="footer__information_section"><span>E-mail: info@ekorfish.ru</span></div>
+            <div class="footer__contacts"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">+7&nbsp;(495)&nbsp;637-82-28</a>
+              <div class="footer__socials">
+                <div class="social__holder row_flex-10">
+                  <div class="social__icon"><a href="" target="_blank" title="Перейти в группу Telegram компании" aria-label="Ссылка на телеграм компании" class="icon__telegram"></a></div>
+                  <div class="social__icon social__icon-whatsapp">
+                    <div aria-label="Ввести свой номер для подключения whataspp компании" class="icon__whatsapp"></div>
+                    <div class="input_number-holder">
+                      <input type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input_number">
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="footer__links_holder row_flex-32">
-            <div class="footer__links_section footer_links-1">
-              <div class="footer__links_caption">Покупателям</div>
-              <div class="footer__links"><a href="./catalog.html" class="footer__link">Прайс</a><a href="./catalog.html" class="footer__link">Доставка</a><a href="./catalog.html" class="footer__link">Чат-бот</a><a href="./catalog.html" class="footer__link">Производство</a><a href="./catalog.html" class="footer__link">Контакты</a>
-              </div>
+        </div>
+        <div class="footer__links_holder row_flex-32">
+          <div class="footer__links_section footer_links-1">
+            <div class="footer__links_caption">Покупателям</div>
+            <div class="footer__links"><a href="./catalog.html" class="footer__link">Прайс</a><a href="./catalog.html" class="footer__link">Доставка</a><a href="./catalog.html" class="footer__link">Чат-бот</a><a href="./catalog.html" class="footer__link">Производство</a><a href="./catalog.html" class="footer__link">Контакты</a>
             </div>
-            <div class="footer__links_section footer_links-2">
-              <div class="footer__links_caption">Каталог</div>
-              <div class="footer__links row_flex-32"><a href="./catalog.html" class="footer__link">Свежемороженая <br>рыба</a><a href="./catalog.html" class="footer__link">Филе рыбы, стейки, <br>фарш</a><a href="./catalog.html" class="footer__link">Морепродукты</a><a href="./catalog.html" class="footer__link">Фасованная рыба Экор</a><a href="./catalog.html" class="footer__link">Полуфабрикаты</a><a href="./catalog.html" class="footer__link">Готовая продукция Экор</a><a href="./catalog.html" class="footer__link">Мясо, птица</a><a href="./catalog.html" class="footer__link">Замороженные <br>продукты</a><a href="./catalog.html" class="footer__link">Консервы</a><a href="./catalog.html" class="footer__link">Продукты питания оптом</a><a href="./catalog.html" class="footer__link">Карта сайта</a>
-              </div>
+          </div>
+          <div class="footer__links_section footer_links-2">
+            <div class="footer__links_caption">Каталог</div>
+            <div class="footer__links row_flex-32"><a href="./catalog.html" class="footer__link">Свежемороженая <br>рыба</a><a href="./catalog.html" class="footer__link">Филе рыбы, стейки, <br>фарш</a><a href="./catalog.html" class="footer__link">Морепродукты</a><a href="./catalog.html" class="footer__link">Фасованная рыба Экор</a><a href="./catalog.html" class="footer__link">Полуфабрикаты</a><a href="./catalog.html" class="footer__link">Готовая продукция Экор</a><a href="./catalog.html" class="footer__link">Мясо, птица</a><a href="./catalog.html" class="footer__link">Замороженные <br>продукты</a><a href="./catalog.html" class="footer__link">Консервы</a><a href="./catalog.html" class="footer__link">Продукты питания оптом</a><a href="./catalog.html" class="footer__link">Карта сайта</a>
             </div>
           </div>
         </div>
-      </footer>
-      <div id="openModal_callme" class="modal">
-        <div class="wrapper">
-          <div class="modal__dialog">
-            <div class="modal__content">
-              <div class="request__image_holder request__holder">
-                <div class="request__image"></div>
-              </div>
-              <div class="request__form_holder request__holder">
-                <h2 class="title text-blue">Заказать звонок</h2>
-                <form id="callme_form" class="request__form">
-                  <label for="callme_name" class="label-input mb10">
-                    <input id="callme_name" type="text" class="input input-big"><span class="sup">Имя</span>
-                  </label>
-                  <label for="callme_number" class="label-input mb10">
-                    <input id="callme_number" type="tel" class="input input-big"><span class="sup">Номер телефона</span>
-                  </label>
-                  <label for="callme_comment" class="label-input mb16">
-                    <input id="callme_comment" type="email" class="input input-big"><span class="sup">Комментарий</span>
-                  </label>
-                  <div class="flex row_flex-10">
-                    <label id="callme_label" for="callme_checkbox" class="label-checkbox">
-                      <input id="callme_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
-                    </label><span class="text-small">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
-                  </div>
-                  <button id="callme_btn" type="button" class="button-yellow button-long"><span>Отправить</span></button>
-                </form>
-              </div>
+      </div>
+    </footer>
+    <div id="openModal_callme" class="modal">
+      <div class="wrapper">
+        <div class="modal__dialog">
+          <div class="modal__content">
+            <div class="request__image_holder request__holder">
+              <div class="request__image"></div>
             </div>
-            <div class="modal__close">
-              <div class="icon__close-w"></div>
+            <div class="request__form_holder request__holder">
+              <h2 class="title text-blue">Заказать звонок</h2>
+              <form id="callme_form" class="request__form">
+                <label for="callme_name" class="label-input mb10">
+                  <input id="callme_name" type="text" class="input input-big"><span class="sup">Имя</span>
+                </label>
+                <label for="callme_number" class="label-input mb10">
+                  <input id="callme_number" type="tel" class="input input-big"><span class="sup">Номер телефона</span>
+                </label>
+                <label for="callme_comment" class="label-input mb16">
+                  <input id="callme_comment" type="email" class="input input-big"><span class="sup">Комментарий</span>
+                </label>
+                <div class="flex row_flex-10">
+                  <label id="callme_label" for="callme_checkbox" class="label-checkbox">
+                    <input id="callme_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
+                  </label><span class="text-small">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
+                </div>
+                <button id="callme_btn" type="button" class="button-yellow button-long"><span>Отправить</span></button>
+              </form>
             </div>
+          </div>
+          <div class="modal__close">
+            <div class="icon__close-w"></div>
           </div>
         </div>
       </div>
