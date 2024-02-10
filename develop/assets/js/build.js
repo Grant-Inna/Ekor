@@ -510,7 +510,7 @@ $(document).ready(function () {
    if ($('#show_filters').is(':visible')) {
       $('#show_filters').on( 'click', showMobileFilters);
       $('.catalog_main__container .catalog__block.catalog__block-aside .catalog__section, .catalog_main__title, .catalog_main__list_holder').appendTo('.filters_mobile__container .filters_mobile__content .filters_mobile__holder')
-   }
+   } 
    function showMobileFilters() {
       showBlackBackUP();
       $('#black_back').on( 'click', function() {
