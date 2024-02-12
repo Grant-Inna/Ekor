@@ -275,7 +275,8 @@ $(document).ready(function () {
           
           if ($('.catalog_main__container').length > 0) {
              $('.catalog__articles').slideUp(200);
-             $articles.slideDown(300).css( 'display', 'flex');
+             // $articles.slideDown(300).css( 'display', 'flex');
+             $articles.slideDown(300);
              $('.icon__angle.open').not($icon).removeClass('open');
              $icon.addClass('open');
           } else {
@@ -452,24 +453,27 @@ $(document).ready(function () {
       parent.next('.catalog_main__list').slideToggle(200);
    }
    
-      /* разблокировать кнопку "применить"*/
-   if ($('#catalog_filters').length > 0) {
-      $('#catalog_filters').find('form').find('input').on( 'change', unlockButtonSubmit);
+      /* фильтры разблокировать кнопку "применить"*/
+   if ($('#catalog_filters_submit').length > 0 ) {
+      $('.catalog_main__item').find('input').on( 'change', unlockButtonSubmit);
       $('#catalog_filters_reset').on( 'click', resetFormButton);
    }
    
    
    function unlockButtonSubmit() {
       let btn = $('#catalog_filters_submit');
-      let box = $('#catalog_filters').find('form').find('input');
+      let box = $('.catalog_main__item').find('input');
       
       $(btn).prop('disabled', ![
-      $(box).is(':checked'),
+         $(box).is(':checked'),
       ].every(Boolean));
    }
-   function resetFormButton() {
-      let box = $('#catalog_filters').find('form').find('input');
-       box.prop('checked', false);
+   // console.log($('#catalog_filters_submit').length > 0);
+   function resetFormButton() { alert();
+      let btn = $('#catalog_filters_submit');
+      let box = $('.catalog_main__item').find('input');
+       $(box).prop('checked', false);
+       $(btn).prop('disabled', true);
    }
    
    /* CATALOG один продукт */
@@ -510,7 +514,7 @@ $(document).ready(function () {
    if ($('#show_filters').is(':visible')) {
       $('#show_filters').on( 'click', showMobileFilters);
       $('.catalog_main__container .catalog__block.catalog__block-aside .catalog__section, .catalog_main__title, .catalog_main__list_holder').appendTo('.filters_mobile__container .filters_mobile__content .filters_mobile__holder')
-   } 
+   }
    function showMobileFilters() {
       showBlackBackUP();
       $('#black_back').on( 'click', function() {

@@ -6,18 +6,7 @@ form#catalog_filters.catalog_main__filters
          .f
          .f
    .catalog_main__list_holder
-      form( name='vid_zamorozki' ).catalog_main__block
-         .catalog_main__title_14
-            span.text-blue.text-14 Вид заморозки
-            .icon__angle
-         .catalog_main__list( class='vid_zamorozki')
-            +filter-atom( 'vid_zamorozki', '1', 'checkbox', 'Быстрая заморозка' )
-            +filter-atom( 'vid_zamorozki', '2', 'checkbox', 'Бомбинированная заморозка' )
-            +filter-atom( 'vid_zamorozki', '3', 'checkbox', 'Заморозка в&nbsp;ледяную глазурь' )
-            +filter-atom( 'vid_zamorozki', '4', 'checkbox', 'Плавающая заморозка' )
-            +filter-atom( 'vid_zamorozki', '5', 'checkbox', 'Медленная заморозка' )
-
-      //+filter-item( 'Вид заморозки', 'vid_zamorozki', 'checkbox', 'Быстрая заморозка', 'Медленная заморозка', 'Бомбинированная заморозка', 'Заморозка в&nbsp;ледяную глазурь', 'Плавающая заморозка' )
+      +filter-item( 'Вид заморозки', 'vid_zamorozki', 'checkbox', 'Быстрая заморозка', 'Медленная заморозка', 'Бомбинированная заморозка', 'Заморозка в&nbsp;ледяную глазурь', 'Плавающая заморозка' )
       +filter-item( 'Температура хранения, <br>&deg;С', 'temperatura_hranenia', 'radio', '–18 и&nbsp;ниже', 'от&nbsp;–10 до&nbsp;–12', 'от&nbsp;–4 до&nbsp;–6', 'от&nbsp;0 до&nbsp;–2', '-' )
       +filter-item( '% остатка срока годности для серии, которой больше на складах', 'ostatok_godnosti', 'radio', '40% и&nbsp;больше', '50% и&nbsp;больше', '60% и&nbsp;больше', '80% и&nbsp;больше', '90% и&nbsp;больше' )
       +filter-item( 'Дикая / Аквакультура', 'dikaya_kyltyrnaya', 'radio', 'Дикая', 'Аквакультура', 'Любая', '-' )
@@ -28,9 +17,7 @@ form#catalog_filters.catalog_main__filters
       +filter-item( 'Наличие чешуи', 'cheshyya', 'radio', 'Есть', 'Нет', 'Не важно', '-' )
 
    .catalog_main__buttons
-      button#catalog_filters_reset( type='reset' name='catalog_main__filters' ).button.button-gray
-         span Сбросить
-      button#catalog_filters_submit( type='submit' disabled='true' ).button.button-yellow
-         span Применить
+      button#catalog_filters_reset( type='reset' ).button.button-gray Сбросить
+      button#catalog_filters_submit( type='submit' disabled='true' ).button.button-yellow Применить
 
 

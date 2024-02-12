@@ -62,6 +62,24 @@ button[disabled='true'] {
    pointer-events: none;
   cursor: default;
 }
+#catalog_filters_submit[disabled] {
+   .from(@break_second, {
+      background-color: @color-gray-light;
+      border: 1px solid @color-gray-light;
+      .tr();
+      pointer-events: none;
+      cursor: default;
+   });
+}
+#catalog_filters_submit[disabled='true'] {
+   .to(@break_second, {
+      background-color: @color-gray-light;
+      border: 1px solid @color-gray-light;
+      .tr();
+      pointer-events: none;
+      cursor: default;
+   });
+}
 .button-yellow:focus,
 .button-yellow:target {
    background-color: white;
