@@ -455,23 +455,39 @@ $(document).ready(function () {
    
       /* фильтры разблокировать кнопку "применить"*/
    if ($('#catalog_filters_submit').length > 0 ) {
-      $('.catalog_main__item').find('input').on( 'change', unlockButtonSubmit);
+      $('.catalog_main__item').find('input').on( 'input', unlockButtonSubmit);
       $('#catalog_filters_reset').on( 'click', resetFormButton);
+      
+      $('.filters_mobile__content').on( 'click', (event) => {
+         let current = event.target;
+         if ($(current).hasClass('checkbox-hidden')) {
+            unlockButtonSubmit();
+         }
+      });
+      $('.filters_mobile__footer').on( 'click', (event) => {
+         let current = event.target;
+         if ($(current).prop('id') === 'catalog_filters_reset') {
+            resetFormButton();
+         }
+      });
    }
    
    
    function unlockButtonSubmit() {
-      let btn = $('#catalog_filters_submit');
+      let btn = $('#catalog_filters_submit, .filters_mobile__footer #catalog_filters_submit');
       let box = $('.catalog_main__item').find('input');
       
+         // console.log($('.catalog_main__item').find('input').is(':checked'));
+
+      // $(box).is(':checked') ? $(btn).prop('disabled', false ) : $(btn).prop('disabled', true );
       $(btn).prop('disabled', ![
          $(box).is(':checked'),
       ].every(Boolean));
    }
    // console.log($('#catalog_filters_submit').length > 0);
-   function resetFormButton() { alert();
-      let btn = $('#catalog_filters_submit');
-      let box = $('.catalog_main__item').find('input');
+   function resetFormButton() {
+      let btn = $('#catalog_filters_submit, .filters_mobile__footer #catalog_filters_submit');
+      let box = $('.catalog_main__item, .filters_mobile__content').find('input');
        $(box).prop('checked', false);
        $(btn).prop('disabled', true);
    }
