@@ -103,8 +103,12 @@
    height: 100%;
    .lines2();
 }
-.carousel__item_inner:after {
-   .pseudo();
+.carousel__item_inner {
+   position: relative;
+}
+.carousel__item_inner .carousel__item_img {
+   position: absolute;
+   display: block;
    z-index: 100;
    right: 0;
    bottom: 0;
@@ -120,21 +124,21 @@
 }
 .carousel__item-1 {
     background-color: @color-green-dark;
-   &:after {
+   .carousel__item_img {
       min-width: 126px;
-      .carousel__item-1-img()
+      //.carousel__item-1-img()
    }
 }
 .carousel__item-2 {
     background-color: @color-blue-light;
-   &:after {
-      .carousel__item-2-img()
+   .carousel__item_img {
+      //.carousel__item-2-img()
    }
 }
 .carousel__item-3 {
     background-color: @color-orange;
-   &:after {
-      .carousel__item-3-img();
+   .carousel__item_img {
+      //.carousel__item-3-img();
          .middle-block({
             width: 45%;
          });

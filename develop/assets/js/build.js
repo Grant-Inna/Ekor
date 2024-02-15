@@ -108,7 +108,7 @@ $(document).ready(function () {
          arrows: true,
          dots: true,
          infinite: true,
-         autoplay: true,
+         // autoplay: true,
          focusOnSelect: true,
          pauseOnDotsHover: true
       });
@@ -163,15 +163,25 @@ $(document).ready(function () {
    /* нажатие на disabled ссылки или кнопки */
    $('a[disabled="disabled"], button[disabled="disabled"]').on( 'click', function(event) { event.preventDefault(); event.stopPropagation(); return false; });
    
-   /* плавный скрол */
-   
-   if ($('#totop').length > 0) {
-    
-      $('#totop').on( 'click', function() {
-         $('body, html').animate({scrollTop: 0 }, 600); // плавно переходим наверх
-      });
-      
+   /* размер картинок через data */
+   if ($('.absolute-img').length > 0) {
+      dataImage('.carousel__item.slick-slide[id^="slick-slide"]');
    }
+   function dataImage( parent, item ) {
+      let $parent = $(parent),
+          $img = $('.absolute-img');
+      let large = $parent.find($img).data('large'),
+          middle = $parent.find($img).data('middle'),
+          small = $parent.find($img).data('small');
+      let path;
+      if ( width >= 890 ) { path = large; }
+      else if ( width >= 590) { path = middle; }
+      else { path = small; }
+      $parent.find($img).css({"background-image": "url(" + path + ")"});
+      console.log($parent.find($img).css( 'background-image'));
+      // console.log($img);
+   }
+   
    
    /* полоса прокрутки */
    
