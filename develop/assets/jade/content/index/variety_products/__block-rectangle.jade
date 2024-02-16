@@ -1,9 +1,9 @@
-mixin block-rectangle( numb, image, title, text )
+mixin block-rectangle( numb, numb2, image, title, text )
    article.variety_products__block-rectangle( class='variety_product-#{numb}')
       .relative
          .relation-rectangle
-         .relation_content
-            div( class='image__#{image}' )
+         .relation_content( class='image__#{numb2}' )
+            .variety_products_image.absolute-img( data-large='./assets/images/large/product/#{image}.webp' data-middle='./assets/images/middle/product/#{image}.webp' data-small='./assets/images/small/product/#{image}.webp' )
       h2.text-18-title !{title}
       span.text-14.text-blue !{text}
 

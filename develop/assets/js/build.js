@@ -19,6 +19,16 @@ $(document).ready(function () {
       if ( width <= 1190 && new_width > 1190 || width > 1190 && new_width <= 1190 ) {
          appendToMobile(new_width);
       }
+      if ($('.absolute-img').length > 0) {
+         dataImage('.carousel__item.slick-slide[id^="slick-slide"]', '.carousel__item-', '890', '590');
+         dataImage('.busareas__block', '.busareas_image-', '890', '590');
+         dataImage('.variety_products__block-rectangle', '.image__', '970', '485');
+         dataImage('.variety_products__block-square', '.square__', '890', '485');
+         dataImage('.delivery_index__image', '.delivery_index__img-', '890', '590');
+         dataImage('.cover__holder', '.cover_holder-', '1190', '660');
+         dataImage('.request__holder', '.request__image-', '890', '590');
+         dataImage('.request__holder', '.request__image-', '590', '370');
+      }
    });
    
    function showBlackBack() {
@@ -108,7 +118,7 @@ $(document).ready(function () {
          arrows: true,
          dots: true,
          infinite: true,
-         // autoplay: true,
+         autoplay: true,
          focusOnSelect: true,
          pauseOnDotsHover: true
       });
@@ -165,21 +175,36 @@ $(document).ready(function () {
    
    /* размер картинок через data */
    if ($('.absolute-img').length > 0) {
-      dataImage('.carousel__item.slick-slide[id^="slick-slide"]');
+      dataImage('.carousel__item.slick-slide[id^="slick-slide"]', '.carousel__item-', '890', '590');
+      dataImage('.busareas__block', '.busareas_image-', '890', '590');
+      dataImage('.variety_products__block-rectangle', '.image__', '970', '485');
+      dataImage('.variety_products__block-square', '.square__', '890', '485');
+      dataImage('.delivery_index__image', '.delivery_index__img-', '890', '590');
+      dataImage('.cover__holder', '.cover_holder-', '1190', '660');
+      dataImage('.request__holder', '.request__image-', '890', '590');
+      dataImage('.request__holder', '.request__image-', '590', '370');
    }
-   function dataImage( parent, item ) {
-      let $parent = $(parent),
-          $img = $('.absolute-img');
-      let large = $parent.find($img).data('large'),
-          middle = $parent.find($img).data('middle'),
-          small = $parent.find($img).data('small');
-      let path;
-      if ( width >= 890 ) { path = large; }
-      else if ( width >= 590) { path = middle; }
-      else { path = small; }
-      $parent.find($img).css({"background-image": "url(" + path + ")"});
-      console.log($parent.find($img).css( 'background-image'));
-      // console.log($img);
+   function dataImage( parent, item, media1, media2 ) {
+      // console.log(item);
+      $.each($(parent), function(index, v) {
+         let $img = '.absolute-img';
+         let i = index + 1;
+         let large = $(item + i).find($img).data('large'),
+             middle = $(item + i).find($img).data('middle'),
+             small = $(item + i).find($img).data('small');
+         let div = $(parent).find(item + i).find($img);
+         console.log(div);
+         if ( width >= media1 ) {
+            div.css({"background-image": "url(" + large + ")"});
+         }
+         else if ( width >= media2) {
+            div.css({"background-image": "url(" + middle + ")"});
+         }
+         else {
+            div.css({"background-image": "url(" + small + ")"});
+         }
+        // console.log(value);
+      });
    }
    
    
@@ -344,7 +369,7 @@ $(document).ready(function () {
    /* ГЛАВНАЯ  читать далее */
    $('.watch-more').slideUp(0);
    if ( container_width <= 475 && $('.reputation__tile').length > 0 ) {
-      $('.watch-more').slideDown(0);
+      $('.watch-more').css( 'display', 'flex');
       $('.reputation__block-6, .reputation__block-7, .reputation__block-8').appendTo('.reputation__tile .reputation__more');
       $('.reputation__tile .watch-more').on( 'click', showMore);
    } else if ( container_width > 470 ) {
