@@ -28,19 +28,17 @@
         @content();
     }
 }
-.wrapper-full-big(){
-    padding-left: @fields-big;
-    padding-right: @fields-big;
+.wrapper-big(){
+    max-width: 1756px !important;
+    margin: 0 auto;
+    
+    padding-left: @fields-big !important;
+    padding-right: @fields-big !important;;
 
     .big-xxl-block({
-        padding-left: @fields-big_xxl;
-        padding-right: @fields-big_xxl;
+        padding-left: @fields-big_xxl !important;;
+        padding-right: @fields-big_xxl !important;;
     });
-}
-.wrapper-big(){
-    max-width: 1756px;
-    margin: 0 auto;
-    .wrapper-full-big();
 }
 
 

@@ -1,0 +1,33 @@
+include __filter-atom
+mixin filter-item( main, id, type, text, text1, text2, text3, text4, text5 )
+   form( name='#{id}' ).catalog_main__block
+      .catalog_main__title_14
+         span.text-blue.text-14 !{main}
+         .icon__angle
+      .catalog_main__list( id='#{id}')
+         +filter-atom( id, '1', type, text )
+         +filter-atom( id, '2', type, text1 )
+         case text2
+            when '-'
+               break
+            default
+               +filter-atom( id, '3', type, text2 )
+               case text3
+                  when '-'
+                     break
+                  default
+                     +filter-atom( id, '4', type, text3 )
+                     case text4
+                        when '-'
+                           break
+                        default
+                           +filter-atom( id, '5', type, text4 )
+                              case text5
+                                 when '-'
+                                    break
+                                 default
+                                    +filter-atom( id, '6', type, text5 )
+
+
+
+

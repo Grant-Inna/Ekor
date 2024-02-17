@@ -187,6 +187,16 @@ h3.caption.text-blue {
    font-size: 12px;
    line-height: 16px;
 }
+.row_flex-8 {
+   .flex();
+   margin-left: -4px;
+   margin-right: -4px;
+   
+   & > * {
+      padding-right: 4px;
+      padding-left: 4px;
+   }
+}
 .row_flex-16 {
    .flex();
    margin-left: -8px;
@@ -259,7 +269,7 @@ h3.caption.text-blue {
 .mt10 {
    margin-top: 10px;
 }
-.mb20 { //del
+.mb20 {
    margin-bottom: 20px;
 }
 .pt20 { // del
@@ -278,6 +288,7 @@ h3.caption.text-blue {
    grid-template-columns: repeat( 12, 1fr);
    grid-column-gap: 32px;
    margin-bottom: 40px;
+   
    
    .section-title-text-14 {
       grid-column: ~"1 / 4";

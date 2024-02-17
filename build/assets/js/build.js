@@ -183,6 +183,7 @@ $(document).ready(function () {
       dataImage('.cover__holder', '.cover_holder-', '1190', '660');
       dataImage('.request__holder', '.request__image-', '890', '590');
       dataImage('.request__holder', '.request__image-', '590', '370');
+      dataImage('.production__block', '.production_caption__img-', '1440', '768');
    }
    function dataImage( parent, item, media1, media2 ) {
       // console.log(item);
@@ -193,7 +194,6 @@ $(document).ready(function () {
              middle = $(item + i).find($img).data('middle'),
              small = $(item + i).find($img).data('small');
          let div = $(parent).find(item + i).find($img);
-         console.log(div);
          if ( width >= media1 ) {
             div.css({"background-image": "url(" + large + ")"});
          }
@@ -203,7 +203,6 @@ $(document).ready(function () {
          else {
             div.css({"background-image": "url(" + small + ")"});
          }
-        // console.log(value);
       });
    }
    
@@ -293,7 +292,7 @@ $(document).ready(function () {
       $('.catalog__section .catalog__section_caption').on( 'click', (event) => showCatalogArticles(event.target));
       
        if ($('.catalog_main__container').length > 0) {
-          // $('.catalog__section.open').find('.catalog__articles').css( 'display', 'flex');
+          $('.catalog__section.open').find('.catalog__articles').css( 'display', 'block');
        }
    }
     function showCatalogArticles( target ) {
@@ -360,9 +359,8 @@ $(document).ready(function () {
    if ($('.offer__container').length > 0) {
       $('.offer__info .offer__label:first-child').addClass('focus');
       $('.offer__info .offer__label').on( 'click', function() {
-         // console.log($(this));
-         $('.offer__info  .focus').not($(this)).removeClass('focus');
-         $(this).addClass('focus');
+      $('.offer__info  .focus').not($(this)).removeClass('focus');
+      $(this).addClass('focus');
       });
    }
    
@@ -511,20 +509,16 @@ $(document).ready(function () {
    function unlockButtonSubmit() {
       let btn = $('#catalog_filters_submit, .filters_mobile__footer #catalog_filters_submit');
       let box = $('.catalog_main__item').find('input');
-      
-         // console.log($('.catalog_main__item').find('input').is(':checked'));
-
-      // $(box).is(':checked') ? $(btn).prop('disabled', false ) : $(btn).prop('disabled', true );
       $(btn).prop('disabled', ![
          $(box).is(':checked'),
       ].every(Boolean));
    }
-   // console.log($('#catalog_filters_submit').length > 0);
    function resetFormButton() {
       let btn = $('#catalog_filters_submit, .filters_mobile__footer #catalog_filters_submit');
       let box = $('.catalog_main__item, .filters_mobile__content').find('input');
        $(box).prop('checked', false);
        $(btn).prop('disabled', true);
+       $('.cm__tag').remove()
    }
    
    /* CATALOG один продукт */
@@ -587,5 +581,50 @@ $(document).ready(function () {
    function hideMobileFilters() {
       $('#filters_mobile_panel').animate({ right: '-550px'}, 150, 'linear');
       hideBlackBack();
+   }
+   
+   /*  tag фильтр производство  */
+   if ($('.catalog_main__labels').length > 0) {
+      $('.catalog_main__tags').on( 'click', '.ico__del', (event) => { delTag(event.target)});
+      $('.catalog__link').on( 'click', (event) => { showTag(event.target)});
+      $('.catalog_input.input-type-checkbox').on( 'click', (event) => { showTagCheckboxFilter(event.target)});
+      $('.catalog_input.input-type-radio').on( 'click', (event) => { showTagRadioFilter(event.target)});
+   }
+   function showTag ( element ) {
+      let text = $(element).text();
+      let newTag = '<div data-tag=' + text + ' class="cm__tag"><div class="ico__del"></div></div>',
+          icon = '<div class="ico__del"></div>';
+      $(newTag).prependTo('.catalog_main__tags').data('tag', text).text(text).append($(icon));
+   }
+   function showTagCheckboxFilter ( input ) {
+      let text = $(input).text(),
+          id = $(input).data( 'id');
+      let checked = $(input).closest('label').find('input');
+
+      if (!$(checked).is(':checked')) {
+         let newTag = '<div class="cm__tag"><div class="ico__del"></div></div>',
+             icon = '<div class="ico__del"></div>';
+         $(newTag).addClass(id).prependTo('.catalog_main__tags').text(text).append($(icon));
+      } else {
+         $('.catalog_main__tags').find('.' + id).remove()
+      }
+   }
+   function showTagRadioFilter ( input ) {
+      let text = $(input).text(),
+          id = $(input).data( 'id');
+      let checked = $(input).closest('label').find('input');
+      $('.catalog_main__tags').find('.radio--' + id).remove();
+      if (!$(checked).is(':checked')) {
+         let newTag = '<div class="cm__tag"><div class="ico__del"></div></div>',
+             icon = '<div class="ico__del"></div>';
+         $(newTag).addClass('radio--' + id).prependTo('.catalog_main__tags').text(text).append($(icon));
+      } else {
+         // $('.catalog_main__tags').find('.' + id).remove()
+      }
+   }
+   
+   function delTag ( btn ) {
+      let tag = $(btn).closest('.cm__tag');
+      tag.remove();
    }
  });

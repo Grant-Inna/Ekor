@@ -1,0 +1,42 @@
+include __catalog-article
+include __catalog_section-food
+include __catalog_section-fish
+
+.catalog__block.catalog__block-aside
+   section( aria-label='Филе рыбы, стейки, фарш' ).catalog__section.open
+      .catalog__section_caption( data-article='fileryby' )
+         div( class='icofish__fileryby')
+         h2.catalog__section-name Филе рыбы, стейки, фарш
+         .icon__angle
+      article.catalog__articles( id='fileryby' )
+         +catalog-article( 'Голец' )
+         +catalog-article( 'Филе кеты' )
+         +catalog-article( 'Голец' )
+         +catalog-article( 'Голец' )
+         +catalog-article( 'Горбуша' )
+         +catalog-article( 'Горбуша' )
+         +catalog-article( 'Горбуша' )
+         +catalog-article( 'Горбуша' )
+         +catalog-article( 'Горбуша' )
+   section( aria-label='Свежемороженая рыба' ).catalog__section
+      .catalog__section_caption( data-article='sveshemor' )
+         div( class='icofish__sveshemor')
+         h2.catalog__section-name Свежемороженая рыба
+         .icon__angle
+      article.catalog__articles( id='sveshemor' )
+         +catalog-article( 'Голец' )
+         +catalog-article( 'Голец' )
+         +catalog-article( 'Голец' )
+         +catalog-article( 'Голец' )
+         +catalog-article( 'Голец' )
+         +catalog-article( 'Горбуша' )
+         +catalog-article( 'Горбуша' )
+         +catalog-article( 'Горбуша' )
+         +catalog-article( 'Горбуша' )
+         +catalog-article( 'Горбуша' )
+   +catalog-fish( 'moreprodukty', 'Креветки / Морепродукты', '-' )
+   +catalog-fish( 'morejap', 'Морепродукты для&nbsp;японской кухни', 'Морепродукты для японской кухни' )
+   +catalog-food( 'packaging', 'Фасованная рыба &laquo;Экор&raquo;', 'Фасованная рыба Экор' )
+   +catalog-food( 'gotovaya', 'Готовая продукция &laquo;Экор&raquo;', 'Готовая продукция Экор')
+   +catalog-food( 'okhlazhdennaya_ryba', 'Охлаждённая рыба', '-')
+

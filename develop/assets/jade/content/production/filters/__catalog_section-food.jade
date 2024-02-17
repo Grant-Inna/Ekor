@@ -1,0 +1,43 @@
+mixin catalog-food( icon, text, textS )
+   case textS
+      when '-'
+         section( aria-label='#{text}' ).catalog__section.catalog__section-food
+            .catalog__section_caption( data-article='#{icon}' )
+               div( class='icofood__#{icon}')
+               .catalog__section-name !{text}
+               .icon__angle
+            article.catalog__articles( id='#{icon}' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Креветки' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Креветки' )
+               +catalog-article( 'Креветки' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Горбуша' )
+               +catalog-article( 'Горбуша' )
+               +catalog-article( 'Горбуша' )
+               +catalog-article( 'Горбуша' )
+      default
+         section( aria-label='#{textS}' ).catalog__section.catalog__section-food
+            .catalog__section_caption( data-article='#{icon}' )
+               div( class='icofood__#{icon}')
+               .catalog__section-name !{text}
+               .icon__angle
+            article.catalog__articles( id='#{icon}' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Креветки' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Голец' )
+               +catalog-article( 'Горбуша' )
+               +catalog-article( 'Горбуша' )
+               +catalog-article( 'Горбуша' )
+               +catalog-article( 'Горбуша' )

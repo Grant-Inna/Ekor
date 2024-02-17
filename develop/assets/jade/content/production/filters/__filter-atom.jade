@@ -1,0 +1,6 @@
+mixin filter-atom( id, number, type, text )
+   label( for='#{id}-#{number}' ).catalog_main__item
+      .label-checkbox
+         input( id='#{id}-#{number}' name='#{id}' type='#{type}' ).checkbox-hidden
+         span( class='#{type}' )
+      span.catalog_input.text-blue( data-id='#{id}' class='input-type-#{type}' ) !{text}
