@@ -3,5 +3,5 @@ mixin filter-atom( id, number, type, text )
       .label-checkbox
          input( id='#{id}-#{number}' name='#{id}' type='#{type}' ).checkbox-hidden
          span( class='#{type}' )
-      span.text-blue !{text}
+      span.catalog_input.text-blue( data-id='#{id}' class='input-type-#{type}' ) !{text}
 

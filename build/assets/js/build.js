@@ -323,7 +323,7 @@ $(document).ready(function () {
        /* catalog на мобилках */
    
    if ($('#catalog').length > 0 && width <= 970 ) {
-      let $section_caption = $('.catalog__section_caption');
+      let $section_caption = $('#catalog .catalog__section_caption');
       $section_caption.on( 'click', (event) => { showArticlesList(event.target)});
       
       $('.icon__close.cat').on( 'click', hideCatalog);
@@ -506,6 +506,10 @@ $(document).ready(function () {
    }
    
    
+   function unlockButton() {
+      let btn = $('#catalog_filters_submit, .filters_mobile__footer #catalog_filters_submit');
+      $(btn).prop('disabled', false);
+   }
    function unlockButtonSubmit() {
       let btn = $('#catalog_filters_submit, .filters_mobile__footer #catalog_filters_submit');
       let box = $('.catalog_main__item').find('input');
@@ -518,7 +522,8 @@ $(document).ready(function () {
       let box = $('.catalog_main__item, .filters_mobile__content').find('input');
        $(box).prop('checked', false);
        $(btn).prop('disabled', true);
-       $('.cm__tag').remove()
+       $('.cm__tag').remove();
+       $('.catalog__link.chosen').removeClass('chosen')
    }
    
    /* CATALOG один продукт */
@@ -562,12 +567,8 @@ $(document).ready(function () {
    }
    function showMobileFilters() {
       showBlackBackUP();
-      $('#black_back').on( 'click', function() {
-         hideMobileFilters()
-      });
-      $('.icon__close.fil').on( 'click', function() {
-         hideMobileFilters()
-      });
+      $('#black_back, .icon__close.fil, #catalog_filters_submit').on( 'click', hideMobileFilters);
+   
       $(document).keydown(function(event) { // закрытие при клике на esk (вдруг чудик какой на компе будет сидеть)
          if (event.keyCode === 27) {
             event.stopPropagation();
@@ -584,7 +585,7 @@ $(document).ready(function () {
    }
    
    /*  tag фильтр производство  */
-   if ($('.catalog_main__labels').length > 0) {
+   if ($('.catalog_main__tags').length > 0) {
       $('.catalog_main__tags').on( 'click', '.ico__del', (event) => { delTag(event.target)});
       $('.catalog__link').on( 'click', (event) => { showTag(event.target)});
       $('.catalog_input.input-type-checkbox').on( 'click', (event) => { showTagCheckboxFilter(event.target)});
@@ -592,9 +593,14 @@ $(document).ready(function () {
    }
    function showTag ( element ) {
       let text = $(element).text();
-      let newTag = '<div data-tag=' + text + ' class="cm__tag"><div class="ico__del"></div></div>',
-          icon = '<div class="ico__del"></div>';
-      $(newTag).prependTo('.catalog_main__tags').data('tag', text).text(text).append($(icon));
+      
+      if (!$(element).hasClass('chosen')) {
+         $(element).addClass('chosen');
+         let newTag = '<div class="cm__tag"><div class="ico__del"></div></div>',
+            icon = '<div class="ico__del"></div>';
+         $(newTag).prependTo('.catalog_main__tags').data('tag', text).text(text).append($(icon));
+         unlockButton();
+      }
    }
    function showTagCheckboxFilter ( input ) {
       let text = $(input).text(),
@@ -605,6 +611,7 @@ $(document).ready(function () {
          let newTag = '<div class="cm__tag"><div class="ico__del"></div></div>',
              icon = '<div class="ico__del"></div>';
          $(newTag).addClass(id).prependTo('.catalog_main__tags').text(text).append($(icon));
+         unlockButtonSubmit();
       } else {
          $('.catalog_main__tags').find('.' + id).remove()
       }
@@ -618,13 +625,12 @@ $(document).ready(function () {
          let newTag = '<div class="cm__tag"><div class="ico__del"></div></div>',
              icon = '<div class="ico__del"></div>';
          $(newTag).addClass('radio--' + id).prependTo('.catalog_main__tags').text(text).append($(icon));
-      } else {
-         // $('.catalog_main__tags').find('.' + id).remove()
       }
    }
    
    function delTag ( btn ) {
       let tag = $(btn).closest('.cm__tag');
       tag.remove();
+      $('.catalog__link.chosen').removeClass('chosen')
    }
  });
