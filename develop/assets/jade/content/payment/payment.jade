@@ -2,7 +2,13 @@ include __labels
 section.payment__container
    .wrapper
       .payment_labels__wrapper
-         +label( '1', 'Отсрочка платежа с первой поставки' )
+         .payment__label.chosen( id='payment_label-1' )
+            .text-14 Отсрочка платежа с первой поставки
          +label( '2', 'Любая форма оплаты' )
          +label( '3', 'История платежей в личном кабинете' )
+      .payment_info__wrapper
+         .payment_info( data-id='payment_label-1' )
+            .payment_info__image
+
+            .payment_info__list
 

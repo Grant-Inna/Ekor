@@ -674,4 +674,18 @@ $(document).ready(function () {
       }
       console.log($(map).attr( 'src'));
    }
+   
+   /*  оплата  */
+   if ($('.payment__container').length > 0) {
+      $('.payment__label').on( 'click', (event) => showPaymentInfo( event.target));
+   }
+   function showPaymentInfo( current ) {
+      let id = $(current).closest('.payment__label').prop( 'id'),
+          elem = $(current).closest('.payment__label');
+      $('.payment__label').not(elem).removeClass('chosen');
+      $(elem).addClass('chosen');
+      console.log(id);
+   }
+   
+   
  });
