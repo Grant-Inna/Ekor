@@ -1,0 +1,5 @@
+mixin info( name, address, tel, number, img, link )
+   article.contacts_map__block( data-large='./assets/images/middle/map/#{img}.webp' data-small='./assets/images/middle/map/#{img}.webp' data-link='https://yandex.ru/#{link}' class='contacts_map__block-#{img}' )
+      .contacts_map__name.text-blue !{name}
+      .contacts_map__address.text-dark !{address}
+      a( href='tel:#{number}').contacts_map__tel.text-dark !{tel}

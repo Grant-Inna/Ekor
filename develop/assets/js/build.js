@@ -107,7 +107,8 @@ $(document).ready(function () {
    const carousel_holder = $('.carousel__holder'),
          variety_products = $('.variety_products__list'),
          choose_block = $('.choose__block_photo'),
-         programs_carousel = $('.programs__carousel');
+         programs_carousel = $('.programs__carousel'),
+         cameras_carousel = $('.contact_cameras__row');
    
    if (carousel_holder.length > 0) {
       carousel_holder.slick({
@@ -169,6 +170,8 @@ $(document).ready(function () {
       programs_carousel.css({ marginRight: '-5px', marginLeft: '-5px' });
       programs_carousel.find('.slick-slide').css('padding', '0 5px' )
    }
+   // console.log( width <= 1150);
+   
    
    /* нажатие на disabled ссылки или кнопки */
    $('a[disabled="disabled"], button[disabled="disabled"]').on( 'click', function(event) { event.preventDefault(); event.stopPropagation(); return false; });
@@ -366,19 +369,26 @@ $(document).ready(function () {
    
    /* ГЛАВНАЯ  читать далее */
    $('.watch-more').slideUp(0);
-   if ( container_width <= 475 && $('.reputation__tile').length > 0 ) {
+   if ( container_width <= 470 && $('.reputation__tile').length > 0 ) {
       $('.watch-more').css( 'display', 'flex');
       $('.reputation__block-6, .reputation__block-7, .reputation__block-8').appendTo('.reputation__tile .reputation__more');
       $('.reputation__tile .watch-more').on( 'click', showMore);
    } else if ( container_width > 470 ) {
       $('.reputation__block-6, .reputation__block-7, .reputation__block-8').appendTo('.reputation__tile');
    }
-   if ( container_width <= 475 && $('.cameras__row').length > 0 ) {
+   if ( container_width <= 470 && $('.cameras__row').length > 0 ) {
       $('.watch-more').slideDown(0);
       $('.cameras__row').appendTo('.cameras__wrapper .cameras__more');
       $('.cameras__wrapper .watch-more').on( 'click', showMore);
    } else if ( width > 470 ) {
       $('.cameras__row').appendTo('.cameras__wrapper');
+   }
+   if ( container_width <= 470 && $('.contact_cameras__row').length > 0 ) {
+      $('.watch-more').slideDown(0);
+      $('.contact_cameras__row').appendTo('.cameras__wrapper .cameras__more');
+      $('.cameras__wrapper .watch-more').on( 'click', showMore);
+   } else if ( width > 470 ) {
+      $('.contact_cameras__row').appendTo('.cameras__wrapper');
    }
    
    function showMore() {
@@ -632,5 +642,36 @@ $(document).ready(function () {
       let tag = $(btn).closest('.cm__tag');
       tag.remove();
       $('.catalog__link.chosen').removeClass('chosen')
+   }
+   
+   /*  CONTACT контакты карта из data  */
+   if ($('.contacts_map__container').length > 0) {
+      $('.contacts_map__block').on( 'click', (event) => showMapLink(event.target))
+   }
+   function showMapLink ( target ) {
+      let $target = $(target);
+      let current = $(target).closest('.contacts_map__block'),
+          link = $(current).data( 'link');
+      
+      if (!$(current).hasClass('show')) {
+         $('.contacts_map__block.show').removeClass('show');
+         $(current).addClass('show');
+         showMapImage( $target );
+      }
+      $('.contacts_map___link').attr( 'href', link);
+   }
+   function showMapImage ( target ) {
+      let current = $(target).closest('.contacts_map__block'),
+          large = $(current).data( 'large'),
+          small = $(current).data( 'small'),
+          map = $('.contacts_map__img');
+      
+      if ( width >= 660 ) {
+         $(map).attr( 'src', large);
+      }
+      else if ( width < 660) {
+         $(map).attr( 'src', small);
+      }
+      console.log($(map).attr( 'src'));
    }
  });

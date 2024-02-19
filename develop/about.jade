@@ -6,9 +6,26 @@ html( lang='ru' )
 
 
    body
-      #container_about
+      #container_about.container
          include assets/jade/header/header
+         .wrapper.about__wrapper.caption__wrapper
+            h1.caption.text-blue О&nbsp;компании
+            .about__video
+               img( src='./assets/images/middle/about.jpg' )
 
 
-         include assets/jade/footer/footer
+         include assets/jade/content/index/about/about
+         include assets/jade/content/index/busareas/busareas
+         include assets/jade/content/index/subscribe/subscribe
+         include assets/jade/content/index/programs/programs
+         include assets/jade/content/index/cameras/cameras
+         include assets/jade/content/request/request
+
+
+
+      include assets/jade/catalog/catalog
+
+      include assets/jade/footer/footer
+      include assets/jade/modal/modal-callme
+
       include assets/jade/static/script

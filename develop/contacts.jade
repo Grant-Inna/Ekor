@@ -6,9 +6,22 @@ html( lang='ru' )
 
 
    body
-      #container_contacts
+      #container_contacts.container
          include assets/jade/header/header
+         .wrapper.caption__wrapper
+            h1.caption.text-blue Контакты
+            
+         include assets/jade/contacts/map
+         include assets/jade/contacts/requisites
+         include assets/jade/content/index/subscribe/subscribe
+         include assets/jade/contacts/cameras
+         include assets/jade/content/request/request
 
+      include assets/jade/catalog/catalog
 
-         include assets/jade/footer/footer
+      include assets/jade/footer/footer
+      include assets/jade/modal/modal-callme
+
       include assets/jade/static/script
+
+
