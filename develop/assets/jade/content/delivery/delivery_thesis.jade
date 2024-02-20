@@ -1,0 +1,7 @@
+mixin thesis( id, title )
+   .delivery_main__thesis( class='delivery_thesis-#{id}' )
+      .delivery_main__thesis_image.relative( class='delivery_thesis_image-#{id}' )
+         .relation
+         .relation_content
+            .delivery__image.absolute-img( data-large='./assets/images/large/delivery/#{id}.webp' data-middle='./assets/images/middle/delivery/#{id}.webp' data-small='./assets/images/small/delivery/#{id}.webp' )
+      .delivery_main__thesis_title.text-blue !{title}

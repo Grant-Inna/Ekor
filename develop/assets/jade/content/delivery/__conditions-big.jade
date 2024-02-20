@@ -1,0 +1,26 @@
+mixin condition-big( icon, title, text1, text2, text3, text4, text5, text6 )
+   .delivery_conditions__block
+      .delivery_conditions__icon( class='ico__#{icon}' )
+      .delivery_conditions__content
+         .text-18-title.mb10 !{title}
+         .delivery_conditions__text.text-14.text-dark.flex
+            .delivery_conditions__text_big
+               .condition-text.flex.mb10
+                  .dc-dot
+                  p !{text1}
+               .condition-text.flex.mb10
+                  .dc-dot
+                  p !{text2}
+               .condition-text.flex.mb10
+                  .dc-dot
+                  p !{text3}
+            .delivery_conditions__text_big
+               .condition-text.flex.mb10
+                  .dc-dot
+                  p !{text4}
+               .condition-text.flex.mb10
+                  .dc-dot
+                  p !{text5}
+               .condition-text.flex.mb10
+                  .dc-dot
+                  p !{text6}

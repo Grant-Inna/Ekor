@@ -28,6 +28,8 @@ $(document).ready(function () {
          dataImage('.cover__holder', '.cover_holder-', '1190', '660');
          dataImage('.request__holder', '.request__image-', '890', '590');
          dataImage('.request__holder', '.request__image-', '590', '370');
+         dataImage('.production__block', '.production_caption__img-', '1440', '768');
+         dataImage('.delivery_main__thesis', '.delivery_thesis_image-', '1000', '660');
       }
    });
    
@@ -187,9 +189,10 @@ $(document).ready(function () {
       dataImage('.request__holder', '.request__image-', '890', '590');
       dataImage('.request__holder', '.request__image-', '590', '370');
       dataImage('.production__block', '.production_caption__img-', '1440', '768');
+      dataImage('.delivery_main__thesis', '.delivery_thesis_image-', '1100', '660');
+      dataImage('.delivery_camera__video', '.delivery_camera-', '1100', '660');
    }
    function dataImage( parent, item, media1, media2 ) {
-      // console.log(item);
       $.each($(parent), function(index, v) {
          let $img = '.absolute-img';
          let i = index + 1;
@@ -198,14 +201,11 @@ $(document).ready(function () {
              small = $(item + i).find($img).data('small');
          let div = $(parent).find(item + i).find($img);
          if ( width >= media1 ) {
-            div.css({"background-image": "url(" + large + ")"});
-         }
+            div.css({"background-image": "url(" + large + ")"}); }
          else if ( width >= media2) {
-            div.css({"background-image": "url(" + middle + ")"});
-         }
+            div.css({"background-image": "url(" + middle + ")"}); }
          else {
-            div.css({"background-image": "url(" + small + ")"});
-         }
+            div.css({"background-image": "url(" + small + ")"}); }
       });
    }
    
