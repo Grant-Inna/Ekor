@@ -106,19 +106,88 @@
         <div class="wrapper">
           <div class="payment_labels__wrapper">
             <div id="payment_label-1" class="payment__label chosen">
-              <div class="text-14">Отсрочка платежа с первой поставки</div>
+              <div class="text-14">Отсрочка платежа с&nbsp;первой поставки</div>
             </div>
                   <div id="payment_label-2" class="payment__label">
                     <div class="text-14">Любая форма оплаты</div>
                   </div>
                   <div id="payment_label-3" class="payment__label">
-                    <div class="text-14">История платежей в личном кабинете</div>
+                    <div class="text-14">История платежей в&nbsp;личном кабинете</div>
                   </div>
           </div>
           <div class="payment_info__wrapper">
-            <div data-id="payment_label-1" class="payment_info">
-              <div class="payment_info__image"></div>
-              <div class="payment_info__list"></div>
+            <h2 class="caption payment__title text-blue mb20">Отсрочка платежа с&nbsp;первой поставки</h2>
+            <div id="payment_1" class="payment_info chosen">
+              <div class="payment_info__image">
+                <div class="payment_info__form">
+                  <h2 class="caption text-blue">Отправьте заявку на&nbsp;отсрочку платежа</h2>
+                  <form id="payment_form" class="payment__form">
+                    <label for="payment_name" class="label-input mb10 full">
+                      <input id="payment_name" type="text" class="input input-big"><span class="sup">Название компании</span>
+                    </label>
+                    <label for="payment_personal-name" class="label-input mb10 half">
+                      <input id="payment_personal-name" type="text" class="input input-big"><span class="sup">Ваше имя</span>
+                    </label>
+                    <label for="payment_inn" class="label-input mb10 half">
+                      <input id="payment_inn" type="text" class="input input-big"><span class="sup">ИНН</span>
+                    </label>
+                    <label for="payment_numb" class="label-input mb10 half">
+                      <input id="payment_numb" type="tel" class="input input-big"><span class="sup">Номер телефона</span>
+                    </label>
+                    <label for="payment_mail" class="label-input mb16 half">
+                      <input id="payment_mail" type="email" class="input input-big"><span class="sup">Email</span>
+                    </label>
+                    <div class="flex row_flex-10">
+                      <label id="payment_label" for="payment_checkbox" class="label-checkbox">
+                        <input id="payment_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
+                      </label><span class="text-dark text-small">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
+                    </div>
+                    <button id="payment_btn" type="button" class="button-yellow button-long"><span>Отправить</span></button>
+                  </form>
+                </div>
+              </div>
+              <div class="payment_info__list">
+                <div class="payment_info__line">
+                  <div class="text-18-title">Кому пригодится</div>
+                  <div class="text-14 text-dark">Предоставляем отсрочку платежа юридическим лицам и&nbsp;индивидуальным предпринимателям с&nbsp;первого заказа на&nbsp;сайте</div>
+                </div>
+                <div class="payment_info__line">
+                  <div class="text-18-title">Условия отсрочки</div>
+                  <div class="text-14 text-dark">Для этого необходимо иметь физическую точку продаж, такую как ресторан, магазин, отель, склад и&nbsp;т.д.</div>
+                </div>
+                <div class="payment_info__line">
+                  <div class="text-18-title">Процесс заказа и подписания договора</div>
+                  <div class="text-14 text-dark">После оформления заказа на&nbsp;сайте и&nbsp;предоставления необходимых документов, к&nbsp;вам приедет наш менеджер с&nbsp;готовым договором для подписания</div>
+                </div>
+                <div class="payment_info__line">
+                  <div class="text-18-title">Начало процесса отсрочки</div>
+                  <div class="text-14 text-dark">Заполните форму для&nbsp;начала оформления отсрочки платежа</div>
+                </div>
+              </div>
+            </div>
+            <h2 class="caption payment__title text-blue mt40 mb20">Любая форма оплаты</h2>
+            <div id="payment_2" class="payment_info">
+              <div class="payment_info__image"><img srcset="assets/images/small/payment/1.webp 470w, assets/images/middle/payment/1.webp 1000w" sizes="(max-width: 470px) 470px, 1000px" src="assets/images/middle/payment/1.webp" alt="Любая форма оплаты"></div>
+              <div class="payment_info__list">
+                <div class="payment_info__line">
+                  <div class="text-18-title">Безналичная оплата</div>
+                  <div class="text-14 text-dark">После оформления заказа, выберите пункт меню безналичной оплаты и&nbsp;введите свои банковские реквизиты и&nbsp;у&nbsp;вас появится возможность получить счет для&nbsp;безналичной оплаты.</div>
+                </div>
+                <div class="payment_info__line">
+                  <div class="text-18-title">Наличная оплата</div>
+                  <div class="text-14 text-dark">После оформления заказа выберите пункт меню наличной оплаты. При поставке вы получите кассовый чек.</div>
+                </div>
+              </div>
+            </div>
+            <h2 class="caption payment__title text-blue mt40 mb20">История платежей в личном кабинете</h2>
+            <div id="payment_3" class="payment_info">
+              <div class="payment_info__image payment_info__screen"><img srcset="assets/images/small/payment/2.webp 470w, assets/images/middle/payment/2.webp 1000w" sizes="(max-width: 470px) 470px, 1000px" src="assets/images/middle/payment/1.webp" alt="Любая форма оплаты"></div>
+              <div class="payment_info__list">
+                <div class="payment_info__line">
+                  <div class="text-18-title">История платежей в&nbsp;личном кабинете</div>
+                  <div class="text-14 text-dark">После осуществления поставки и&nbsp;оплаты в&nbsp;вашем личном кабинете появится информация о&nbsp;проведенных операциях</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

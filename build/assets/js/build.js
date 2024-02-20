@@ -222,9 +222,13 @@ $(document).ready(function () {
     }
    if ( $('.offer__contact').length > 0 ) {
        checkboxChecked( '#offer_form', '#offer_checkbox', '#offer_btn', '#offer_name', '#offer_mail');
-    }
+   }
    if ($('#openModal_callme').length > 0) {
       checkboxChecked( '#callme_form', '#callme_checkbox', '#callme_btn', '#callme_name', '#callme_number');
+   }
+   // console.log($('.payment__container').length);
+   if ($('.payment__container').length > 0) {
+      checkboxCheckedPayment( '#payment_form', '#payment_checkbox', '#payment_btn', '#payment_name', '#payment_personal-name', '#payment_inn', '#payment_numb', '#payment_mail');
    }
    
    function checkboxChecked( form, box, btn, input1, input2 ) {
@@ -233,6 +237,19 @@ $(document).ready(function () {
          $(btn).prop('disabled', ![
          $(input1).val().length !== 0,
          $(input2).val().length !== 0,
+         $(box).prop('checked'),
+         ].every(Boolean));
+      });
+    }
+   function checkboxCheckedPayment( form, box, btn, name, yourname, inn, numb, mail ) {
+      $(form).on( 'focus', function() {$(btn).prop('disabled', true)});
+      $(form).on( 'input', function() {
+         $(btn).prop('disabled', ![
+         $(name).val().length !== 0,
+         $(yourname).val().length !== 0,
+         $(inn).val().length !== 0,
+         $(numb).val().length !== 0,
+         $(mail).val().length !== 0,
          $(box).prop('checked'),
          ].every(Boolean));
       });
@@ -680,11 +697,13 @@ $(document).ready(function () {
       $('.payment__label').on( 'click', (event) => showPaymentInfo( event.target));
    }
    function showPaymentInfo( current ) {
-      let id = $(current).closest('.payment__label').prop( 'id'),
-          elem = $(current).closest('.payment__label');
+      let elem = $(current).closest('.payment__label'),
+          id = $(current).closest('.payment__label').prop( 'id').slice(-1),
+          info = $('.payment_info#payment_' + id);
       $('.payment__label').not(elem).removeClass('chosen');
+      $('.payment_info').not(info).removeClass('chosen');
       $(elem).addClass('chosen');
-      console.log(id);
+      $(info).addClass('chosen');
    }
    
    

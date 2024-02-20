@@ -3,12 +3,44 @@ section.payment__container
    .wrapper
       .payment_labels__wrapper
          .payment__label.chosen( id='payment_label-1' )
-            .text-14 Отсрочка платежа с первой поставки
+            .text-14 Отсрочка платежа с&nbsp;первой поставки
          +label( '2', 'Любая форма оплаты' )
-         +label( '3', 'История платежей в личном кабинете' )
+         +label( '3', 'История платежей в&nbsp;личном кабинете' )
       .payment_info__wrapper
-         .payment_info( data-id='payment_label-1' )
+         h2.caption.payment__title.text-blue.mb20 Отсрочка платежа с&nbsp;первой поставки
+         .payment_info.chosen( id='payment_1' )
             .payment_info__image
-
+               include form
             .payment_info__list
+               .payment_info__line
+                  .text-18-title Кому пригодится
+                  .text-14.text-dark Предоставляем отсрочку платежа юридическим лицам и&nbsp;индивидуальным предпринимателям с&nbsp;первого заказа на&nbsp;сайте
+               .payment_info__line
+                  .text-18-title Условия отсрочки
+                  .text-14.text-dark Для этого необходимо иметь физическую точку продаж, такую как ресторан, магазин, отель, склад и&nbsp;т.д.
+               .payment_info__line
+                  .text-18-title Процесс заказа и подписания договора
+                  .text-14.text-dark После оформления заказа на&nbsp;сайте и&nbsp;предоставления необходимых документов, к&nbsp;вам приедет наш менеджер с&nbsp;готовым договором для подписания
+               .payment_info__line
+                  .text-18-title Начало процесса отсрочки
+                  .text-14.text-dark Заполните форму для&nbsp;начала оформления отсрочки платежа
+         h2.caption.payment__title.text-blue.mt40.mb20 Любая форма оплаты
+         .payment_info( id='payment_2' )
+               .payment_info__image
+                  img( srcset='assets/images/small/payment/1.webp 470w, assets/images/middle/payment/1.webp 1000w' sizes='(max-width: 470px) 470px, 1000px' src='assets/images/middle/payment/1.webp' alt='Любая форма оплаты')
+               .payment_info__list
+                  .payment_info__line
+                     .text-18-title Безналичная оплата
+                     .text-14.text-dark После оформления заказа, выберите пункт меню безналичной оплаты и&nbsp;введите свои банковские реквизиты и&nbsp;у&nbsp;вас появится возможность получить счет для&nbsp;безналичной оплаты.
+                  .payment_info__line
+                     .text-18-title Наличная оплата
+                     .text-14.text-dark После оформления заказа выберите пункт меню наличной оплаты. При поставке вы получите кассовый чек.
+         h2.caption.payment__title.text-blue.mt40.mb20 История платежей в личном кабинете
+         .payment_info( id='payment_3' )
+            .payment_info__image.payment_info__screen
+               img( srcset='assets/images/small/payment/2.webp 470w, assets/images/middle/payment/2.webp 1000w' sizes='(max-width: 470px) 470px, 1000px' src='assets/images/middle/payment/1.webp' alt='Любая форма оплаты')
+            .payment_info__list
+               .payment_info__line
+                  .text-18-title История платежей в&nbsp;личном кабинете
+                  .text-14.text-dark После осуществления поставки и&nbsp;оплаты в&nbsp;вашем личном кабинете появится информация о&nbsp;проведенных операциях
 

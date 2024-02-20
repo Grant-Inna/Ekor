@@ -70,11 +70,14 @@
 .third { // del
    width: 33%;
 }
-.half { // del
+.half {
    width: 50%;
 }
 .two-thirds { // del
    width: 66%;
+}
+.full {
+   width: 100%;
 }
 .text-white {
    color: @color-white
@@ -197,6 +200,16 @@ h3.caption.text-blue {
       padding-left: 4px;
    }
 }
+.row_flex-10 { // del
+   .flex();
+   margin-left: -5px;
+   margin-right: -5px;
+   
+   & > * {
+      padding-right: 5px;
+      padding-left: 5px;
+   }
+}
 .row_flex-16 {
    .flex();
    margin-left: -8px;
@@ -271,6 +284,9 @@ h3.caption.text-blue {
 }
 .mb20 {
    margin-bottom: 20px;
+}
+.mt40 {
+   margin-top: 40px;
 }
 .pt20 { // del
    padding-top: 20px;

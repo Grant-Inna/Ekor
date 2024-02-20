@@ -1,0 +1,26 @@
+.payment_info__form
+   h2.caption.text-blue Отправьте заявку на&nbsp;отсрочку платежа
+   form#payment_form.payment__form
+      label( for='payment_name' ).label-input.mb10.full
+         input#payment_name( type='text' ).input.input-big
+         span.sup Название компании
+      label( for='payment_personal-name' ).label-input.mb10.half
+         input#payment_personal-name( type='text' ).input.input-big
+         span.sup Ваше имя
+      label( for='payment_inn' ).label-input.mb10.half
+         input#payment_inn( type='text' ).input.input-big
+         span.sup ИНН
+      label( for='payment_numb' ).label-input.mb10.half
+         input#payment_numb( type='tel' ).input.input-big
+         span.sup Номер телефона
+      label( for='payment_mail' ).label-input.mb16.half
+         input#payment_mail( type='email' ).input.input-big
+         span.sup Email
+      .flex.row_flex-10
+         label#payment_label.label-checkbox( for='payment_checkbox' )
+            input#payment_checkbox.checkbox-hidden( type='checkbox' checked='true' )
+            span.checkbox
+         span.text-dark.text-small Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением
+      button#payment_btn.button-yellow.button-long( type='button' )
+         span Отправить
+
