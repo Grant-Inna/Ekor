@@ -6,9 +6,31 @@ html( lang='ru' )
 
 
    body
-      #container_price
+      #container_price.container
          include assets/jade/header/header
+         .wrapper.caption__wrapper.price__caption
+            h1.caption.text-blue Прайс
+            p.text-14.text-blue Дата обновления прайс-листа 22.10.2023&nbsp;г. В&nbsp;прайс-листе указаны базовые цены с&nbsp;доставкой по&nbsp;Москве и&nbsp;Московской области
+            button.button-yellow
+               .button-inner.flex
+                  .text-14.text-blue.ml20 Скачать прайс
+                  .ico__load
+         .wrapper.price__search
+            form.header__form.price__form
+               select.select-price( type='search' placeholder='Поиск по всем разделам' ).select-price
+                  optgroup( label="Group Name")
+                     option 1
+                  optgroup( label="Group Name")
+                     option 2
+                     option 3
+         include assets/jade/content/price/price
 
 
-         include assets/jade/footer/footer
+      include assets/jade/catalog/catalog
+
+      include assets/jade/footer/footer
+      include assets/jade/modal/modal-callme
+
       include assets/jade/static/script
+
+

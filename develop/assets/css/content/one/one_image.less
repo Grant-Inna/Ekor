@@ -1,0 +1,59 @@
+.catalog_main__container {
+    .slick-track:before, .slick-track:after {
+      position: absolute;
+      background-color: @color-back-main;
+   }
+   button.slick-arrow {
+      color: transparent;
+      font-size: 0;
+   }
+   .slick-prev.slick-arrow,
+   .slick-next.slick-arrow {
+      position: absolute;
+      background-color: @color-back-main;
+      transform: none;
+      z-index: 100;
+      top: -1px;
+      bottom: -1px;
+      width: 51px;
+      height: calc(100% + 2px);
+      color: transparent;
+      font-size: 1px;
+      line-height: 0;
+   }
+   .slick-prev.slick-arrow {
+      left: -1px;
+      background-image: url("../images/svg/icons/b-angle-l.svg");
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-position: center;
+   }
+   .slick-next.slick-arrow {
+      right: -2px;
+      background-image: url("../images/svg/icons/b-angle-r.svg");
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-position: center;
+   }
+}
+.one_image__main {
+   margin-bottom: 20px;
+}
+.one_image__main,
+.one_image__main .slick-list,
+.one_image__main img {
+   border-radius: 10px;
+   overflow: hidden;
+}
+.one_item__small img {
+   border-radius: 10px;
+   overflow: hidden;
+   width: 82px;
+   height: 82px;
+   object-fit: cover;
+   border: 1px solid transparent;
+   box-sizing: border-box;
+}
+.one_item__small .slick-slide.slick-current.slick-active.slick-center {
+   border-color: @color-blue;
+}

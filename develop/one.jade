@@ -1,0 +1,24 @@
+doctype
+html( lang='ru' )
+
+   include assets/jade/static/__head
+   +title( 'Треска тихоокеанская стейк (хвостовая часть) 1/8 Экор | Экор' )
+
+
+
+
+   body
+      #container_one.container
+
+         include assets/jade/header/header
+
+         include assets/jade/content/catalog/breadcrumbs/breadcrumbs
+         include assets/jade/content/one/one_item
+
+         include assets/jade/catalog/catalog
+
+      include assets/jade/content/catalog/mobile-filters/mobile_filters
+      include assets/jade/footer/footer
+      include assets/jade/modal/modal-callme
+
+      include assets/jade/static/script

@@ -1,0 +1,15 @@
+.subscribe__wrapper.subscribe__wrapper_catalog
+   h2.subscribe__caption Подписывайтесь на&nbsp;чат-бот оптовых цен
+   h3.subscribe__title Узнайте наши цены за&nbsp;пару секунд через наш чат-бот без писем и&nbsp;звонков менеджеру
+   .subscribe__holder
+      .subscribe__socials
+         label( for='number_whatsapp').subscribe__social_holder.subscribe__social-whatsapp
+            a( href='' title='Перейти в whatsapp компании' aria-label='Ссылка на вотсап компании' ).icon__whatsapp
+            input( type='tel' id='number_whatsapp' placeholder='+7(_ _ _) _ _-_ _-_ _').subscribe__social_input.input-thin.input-big
+            span.text-white WhatsApp
+         +sub( 'telegram', 'Telegram' )
+         +sub( 'vkontakte', 'ВКонтакте' )
+
+      .subscribe__check
+         .ico__checkbox.mr10
+         span.text-small.text-gray Нажимая на&nbsp;кнопку, вы соглашаетесь с&nbsp;политикой конфиденциальности ресурса

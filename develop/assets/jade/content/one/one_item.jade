@@ -1,0 +1,24 @@
+include ../../catalog/__catalog-article
+include ../../catalog/__catalog_section-fish
+include ../../catalog/__catalog_section-food
+include ../../content/index/subscribe/__subscribe_social.jade
+
+
+section.catalog_main__container.one_item
+   .wrapper-big
+      .one_item__wrapper
+         .one_item__content
+            section.one__image__holder
+               include img/image
+            section.one__data__holder
+               include section
+            section.one__purchase__holder
+            section.one__about__holder
+
+
+
+            include subscribe
+
+
+         .catalog_main__filter
+            include ../catalog/filters/sections_block
