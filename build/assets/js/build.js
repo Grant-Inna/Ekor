@@ -733,7 +733,6 @@ $(document).ready(function () {
       else if ( width < 660) {
          $(map).attr( 'src', small);
       }
-      console.log($(map).attr( 'src'));
    }
    
    /*  оплата  */
@@ -749,6 +748,9 @@ $(document).ready(function () {
       $(elem).addClass('chosen');
       $(info).addClass('chosen');
    }
+   /*  страница одного товара - тип упаковки + число в количестве  */
+   if ($('.one_item__parameter_holder').length > 0) {
    
+   }
    
  });
