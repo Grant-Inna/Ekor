@@ -1,11 +1,18 @@
+#container_one .header__main.wrapper,
+#container_one aside .wrapper {
+   .from( @break_first, {
+      .wrapper-big();
+   });
+   .wrapper();
+}
 .one_item__wrapper {
    .gr();
    grid-template-columns: 256px auto;
    grid-template-rows: auto auto auto;
    grid-column-gap: 50px;
-   .to(@break_first, {
+   .to(1640px, {
       .gr();
-      grid-template-columns: 256px minmax(auto, 448px) auto minmax(255px, 397px);
+      grid-template-columns: auto;
       grid-column-gap: 32px;
    });
    .to(@break_second, {
@@ -15,55 +22,111 @@
       grid-row-gap: 16px;
    });
 }
+.one_item__filter {
+   .to(1640px, {.none()});
+}
 .one_item__content { // тут фото, конфигурации, блок покупки, описание
    .gr();
-   grid-template-columns: 553px minmax(353px, auto) minmax(255px, 397px);
-   grid-template-rows: repeat(12, min-content);
+   grid-template-columns: 553px minmax(300px, 400px) minmax(255px, 420px);
+   grid-template-rows: repeat(4, min-content);
    grid-column-gap: 50px;
    grid-row-gap: 50px;
-   .to(@break_first, {
+   .to(1640px, {
       .gr();
-      grid-template-columns: 256px minmax(auto, 448px) auto minmax(255px, 397px);
-      grid-column-gap: 32px;
+      grid-template-columns: 448px minmax(353px, 465px) minmax(255px, 460px);
    });
-   .to(@break_second, { // 1095px
+   .to(@break_first, {
+      grid-column-gap: 32px;
+      grid-row-gap: 40px;
+   });
+   .xxl-block({
+      grid-template-columns: 448px auto auto;
+   });
+   .lg-block({ // 1095px
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
       grid-column-gap: 0;
-      grid-row-gap: 16px;
+      grid-row-gap: 20px;
    });
 }
 
 .one_image__holder {
    grid-column: ~"1 / 2";
-   grid-row: ~"1 / 11";
+   grid-row: ~"1 / 6";
    max-width: 553px;
    .lg-block({
       width: 100%;
       max-width: unset;
+      margin-bottom: 12px;
+      grid-column: ~"1 / 4";
+      grid-row: ~"1 / 2";
+   });
+   .xs-block({
+      margin-bottom: 0;
    })
 }
 .one_data__holder {
    .gr();
    grid-column: ~"2 / 3";
-   grid-row: ~"1 / 11";
+   grid-row: ~"1 / 6";
    grid-template-columns: 353px;
    grid-template-rows: repeat(4, min-content);
    grid-row-gap: 20px;
+   .xxl-block({
+      grid-template-columns: auto;
+      grid-column: ~"2 / 4";
+      grid-row: ~"2 / 3";
+   });
+   .lg-block({
+      grid-column: ~"1 / 4";
+      grid-row: ~"2 / 3";
+      grid-template-rows: repeat(3, min-content);
+   })
 }
 .one_item__characteristic {
    grid-column: ~"1 / 2";
-   grid-row: ~"4 / 11";
+   grid-row: ~"4 / 6";
 }
 .one_purchase__holder {
    grid-column: ~"3 / 4";
    //grid-row: ~"1 / 2";
+   .xxl-block({
+      grid-column: ~"2 / 4";
+      grid-row: ~"1 / 2";
+   });
+   .lg-block({
+      grid-column: ~"1 / 4";
+      grid-row: ~"3 / 4";
+   })
 }
 .one_about__holder {
    grid-column: ~"3 / 4";
-   //grid-row: ~"2 / 4";
+   .to(@break_first, {
+      grid-column: ~"1 / 3";
+      grid-row: ~"6 / 7";
+   });
+   .xxl-block({
+      grid-column: ~"1 / 4";
+      grid-row: ~"3 / 4";
+   });
+   .lg-block({
+      grid-column: ~"1 / 4";
+      grid-row: ~"4 / 5";
+   })
 }
 .one_item__wrapper .subscribe__wrapper_catalog.subscribe__wrapper {
    grid-column: ~"1 / 4";
-   grid-row: ~"11 / 13";
+   grid-row: ~"6 / 7";
+   .to(@break_first, {
+      grid-column: ~"1 / 3";
+      grid-row: ~"7 / 8";
+   });
+   .xxl-block({
+      grid-column: ~"1 / 4";
+      grid-row: ~"4 / 5";
+   });
+   .lg-block({
+      grid-column: ~"1 / 4";
+      grid-row: ~"5 / 6";
+   })
 }
