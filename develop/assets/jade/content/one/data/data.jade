@@ -2,21 +2,21 @@ include __characteristic-one
 
 h1.one_item__caption.text-blue Треска тихоокеанская стейк (хвостовая часть) 1/8 Экор
 section.one_item__parameter
-   h2.mb10.text-blue.text-16-big Тип упаковки
+   .one__section.mb10.text-blue.text-16-big Тип упаковки
    .one_item__parameter_holder
-      .one_item__parameter_pack.text-blue( data-weight='1' data-price='1130.30' ) Меньше упаковки – 6-8 кг
-      .one_item__parameter_pack.text-blue( data-weight='12' data-price='13 536.60' ) Упаковка – 12 кг
-      .one_item__parameter_pack.text-blue( data-weight='200' data-price='226 060' ) Оптом
+      .one_item__parameter_pack.parameter_pack-1.text-blue.chosen( data-weight='1' data-price='1130.30' ) Меньше упаковки – 6-8 кг
+      .one_item__parameter_pack.parameter_pack-2.text-blue( data-weight='12' data-price='13 536.60' ) Упаковка – 12 кг
+      .one_item__parameter_pack.parameter_pack-3.text-blue( data-weight='200' data-price='226 060' ) Оптом
 section.one_item__parameter
-   h2.mb10.text-blue.text-16-big Количество
+   .one__section.mb10.text-blue.text-16-big Количество
    .product__amount
       button( disabled='true').button.ico__minus
       .product__weight.text-blue
          .weight
          span &nbsp;кг
       button( disabled='false').button.ico__plus
-section.one_item__characteristic
-   h2.mb10.text-blue.text-16-big Характеристики
+section#characteristic.one_item__characteristic
+   .one__section.mb10.text-blue.text-16-big Характеристики
    +characteristic( 'Дата выработки', '20.10.2023 г.')
    +characteristic( 'Срок годности', '20.10.2024 г. ')
    +characteristic( 'Номер партии', 'значение фильтра 1')

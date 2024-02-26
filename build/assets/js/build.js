@@ -31,6 +31,12 @@ $(document).ready(function () {
          dataImage('.production__block', '.production_caption__img-', '1440', '768');
          dataImage('.delivery_main__thesis', '.delivery_thesis_image-', '1000', '660');
       }
+      
+      if (new_width <= 890 && $('#characteristic').length > 0) {
+         $('#characteristic').appendTo($('#characteristic_lg'))
+      } else if (new_width > 890) {
+         $('#characteristic').appendTo($('.one_data__holder'))
+   }
    });
    
    function showBlackBack() {
@@ -199,11 +205,20 @@ $(document).ready(function () {
    }
    if (one_main.length > 0) {
       one_main.slick({
-         slidesToShow: 1,
+        slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.one_item__small'
+        asNavFor: '.one_item__small',
+        responsive: [
+         {
+            breakpoint: 768,
+            settings: {
+               arrows: false,
+               dots: true,
+               slidesToShow: 1
+            }
+         }]
       });
       $('.one_item__small').slick({
         slidesToShow: 5,
@@ -213,8 +228,6 @@ $(document).ready(function () {
         centerMode: true,
         focusOnSelect: true
       });
-      // let current_slick = $('.one_item__small .slick-slide.slick-current.slick-center').prop( 'src');
-          // $(one_main + ' .slick-slide.slick-current.slick-active').prop( 'src', current_slick);
       $('.one_item__small').css({ marginRight: '-8px', marginLeft: '-8px' });
       $('.one_item__small').find('.slick-slide').css('margin', '0 8px' )
    }
@@ -748,9 +761,14 @@ $(document).ready(function () {
       $(elem).addClass('chosen');
       $(info).addClass('chosen');
    }
-   /*  страница одного товара - тип упаковки + число в количестве  */
+   /*  страница одного товара - тип упаковки + число  */
    if ($('.one_item__parameter_holder').length > 0) {
    
+   }
+   if (container_width <= 890 && $('#characteristic').length > 0) {
+      $('#characteristic').appendTo($('#characteristic_lg'))
+   } else if (container_width > 890) {
+      $('#characteristic').appendTo($('.one_data__holder'))
    }
    
  });
