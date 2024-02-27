@@ -19,27 +19,92 @@
    });
 }
 .one_item__total {
+   .flex();
    .montserrat-semibold();
    font-size: 24px;
    line-height: 120%;
    margin-bottom: 10px;
+   .lg-block({
+      margin-bottom: 0;
+   });
+   .xs-block({
+      margin-bottom: 10px;
+   });
 }
 .one_item__price {
    .flex();
    .justify-between();
    .items-start();
 }
-.one_item__delivery {
-   padding: 20px 0;
-   margin: 20px 0;
-   border-top: 1px solid @color-gray-light;
+.one_item__buy {
    border-bottom: 1px solid @color-gray-light;
+   padding-bottom: 20px;
+   .lg-block({
+      .gr();
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+   });
+   button {
+      .lg-block({
+         grid-column: ~"2 / 3";
+         grid-row: ~"1 / 3";
+      });
+   }
+   .one_item__total {
+      .lg-block({
+         grid-column: ~"1 / 2";
+         grid-row: ~"1 / 2";
+      });
+   }
+   .xs-block({
+      display: block;
+   });
+}
+.one_item__delivery {
+   margin-top: 20px;
+   .lg-block({
+      .gr();
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+   });
+   .sm-block({
+      display: block;
+   });
+   .one_item__schedule {
+      .lg-block({
+         grid-column: ~"1 / 2";
+         grid-row: ~"1 / 3";
+      });
+   }
 }
 .one_item__schedule {
-   .row-flex();
+   .gr();
+   grid-template-columns: repeat(2, max-content);
+   grid-template-rows: repeat(2, min-content);
+   grid-column-gap: 20px;
+   .mb10.text-blue.text-16-big {
+      grid-column: ~"1 / 2";
+   }
+   .one_item__schedule_day:first-of-type {
+      grid-column: ~"1 / 2";
+   }
+   .one_item__schedule_day:nth-of-type(2) {
+      grid-column: ~"2 / 3";
+   }
 }
 .one_item__schedule_day {
-   .col();
+   //.col();
+   padding-bottom: 20px;
+}
+.one_item__availability {
+   padding-top: 20px;
+   border-top: 1px solid @color-gray-light;
+   .lg-block({
+      border-top: unset;
+   });
+   .sm-block({
+      border-top: 1px solid @color-gray-light;
+   });
 }
 .one_item__availability_warehouse {
    .flex();

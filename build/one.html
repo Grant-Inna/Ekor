@@ -203,19 +203,23 @@
               <section class="one_purchase__holder">
                 <div class="one_purchase__title text-18-title text-blue mb10">Стоимость</div>
                 <div class="one_item__purchase_holder">
-                  <h2 class="one_item__total text-blue">
-                    <div class="mr"></div><span> &#8381;</span>
-                  </h2>
-                  <h3 class="one_item__price">
-                    <div class="text-dark">Цена, &#8381; / кг</div>
-                    <div class="text-blue"></div>
-                  </h3>
-                  <button class="button-yellow button-long">
-                    <div class="text-14-big text-blue">В корзину</div>
-                  </button>
+                  <div class="one_item__buy">
+                    <h2 class="one_item__total text-blue">
+                      <div class="mr"></div><span>&#8381;</span>
+                    </h2>
+                    <h3 class="one_item__price">
+                      <div class="text-dark flex"><span>Цена,</span>
+                        <div class="elem">&nbsp;&#8381; / кг</div>
+                      </div>
+                      <div class="text-blue"></div>
+                    </h3>
+                    <button class="button-yellow button-long">
+                      <div class="text-14-big text-blue">В корзину</div>
+                    </button>
+                  </div>
                   <div class="one_item__delivery">
-                    <h4 class="mb10 text-blue text-16-big">Доставка</h4>
                     <div class="one_item__schedule">
+                      <h4 class="mb10 text-blue text-16-big">Доставка</h4>
                       <div class="one_item__schedule_day">
                         <div class="text-14 text-blue">Сегодня</div>
                         <div class="text-small text-dark">15.00 &ndash; 23.00</div>
@@ -225,21 +229,21 @@
                         <div class="text-small text-dark">15.00 &ndash; 23.00</div>
                       </div>
                     </div>
-                  </div>
-                  <div class="one_item__availability">
-                    <h5 class="mb10 text-blue text-16-big">Наличие</h5>
-                    <div class="one_item__availability_warehouse">
-                      <div class="icon__yes"></div>
-                      <div class="one_item__warehouse">
-                        <div class="text-14 text-blue">На складах в Москве</div>
-                        <div class="text-small text-dark">Много</div>
+                    <div class="one_item__availability">
+                      <h5 class="mb10 text-blue text-16-big">Наличие</h5>
+                      <div class="one_item__availability_warehouse">
+                        <div class="icon__yes"></div>
+                        <div class="one_item__warehouse">
+                          <div class="text-14 text-blue">На складах в Москве</div>
+                          <div class="text-small text-dark">Много</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="one_item__availability_warehouse mb10">
-                      <div class="icon__no"></div>
-                      <div class="one_item__warehouse">
-                        <div class="text-14 text-blue">На складе в Санкт-Петербурге</div>
-                        <div class="text-small text-dark">Нет</div>
+                      <div class="one_item__availability_warehouse mb10">
+                        <div class="icon__no"></div>
+                        <div class="one_item__warehouse">
+                          <div class="text-14 text-blue">На складе в Санкт-Петербурге</div>
+                          <div class="text-small text-dark">Нет</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -598,6 +602,453 @@
                                                 <div class="catalog__link">Горбуша</div>
                                 </article>
                               </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="one_item_wrapper" class="wrapper-big">
+          <div class="similar_carousel__holder">
+            <div class="section__caption caption text-blue">Похожие товары</div>
+            <div class="similar__carousel">
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
+              </div>
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
+              </div>
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
+              </div>
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
+              </div>
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
+              </div>
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
+              </div>
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
+              </div>
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
+              </div>
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
+              </div>
+              <div class="catalog_main__products"><a href="./one.html">
+                  <div class="product__image relative">
+                    <div class="relation"></div>
+                    <div class="relation_content"><img src="./assets/images/1.jpg"></div>
+                    <button class="button icon__like"></button>
+                  </div>
+                  <div data-name="Барабулька н/р 12шт х 0,6кг 1/12 Араката" class="product__name text-blue">Барабулька н/р 12шт х 0,6кг 1/12 Араката</div></a>
+                <div class="product__data row">
+                  <div class="block-12"><span class="text-dark">Дата выработки:</span>
+                    <div data-virabotka="15.11.2023" class="text-blue">15.11.2023 г.</div>
+                  </div>
+                  <div class="block-12"><span class="text-dark">Срок годности:</span>
+                    <div data-godnoct="02.03.2024" class="text-blue">02.03.2024 г.</div>
+                  </div>
+                </div>
+                <div class="product__options">
+                  <div data-text="Цена от 1 упаковки (12 кг)" data-weight="12" data-price="13 536.60" class="product__box product__options_btn">
+                    <div class="icon__box"></div>
+                  </div>
+                  <div data-text="Меньше упаковки (6-8 кг)" data-weight="1" data-price="1130.30" class="product__scale product__options_btn opacity">
+                    <div class="icon__scale"></div>
+                  </div>
+                  <div data-text="Оптом (от 200 кг)" data-weight="200" data-price="226 060" class="product__wholesale product__options_btn opacity">
+                    <div class="icon__wholesale"></div>
+                  </div>
+                  <div class="product__text text-blue"></div>
+                </div>
+                <div class="product__purchase">
+                  <div class="product__amount">
+                    <button disabled="true" class="button ico__minus"></button>
+                    <div class="product__weight text-blue">
+                      <div class="weight"></div><span>&nbsp;кг</span>
+                    </div>
+                    <button disabled="false" class="button ico__plus"></button>
+                  </div>
+                  <div class="product__buy">
+                    <div class="product__price">
+                      <div class="price text-blue"><span></span><i>&nbsp;&#8381;</i></div>
+                      <div class="price-kg text-dark"><span></span><i>&nbsp;&#8381; / кг</i></div>
+                    </div>
+                  </div>
+                  <button class="button button-buy product__button"></button>
+                </div>
               </div>
             </div>
           </div>
