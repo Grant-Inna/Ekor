@@ -126,7 +126,8 @@ $(document).ready(function () {
          programs_carousel = $('.programs__carousel'),
          cameras_carousel = $('.contact_cameras__row'),
          one_main = $('.one_image__main'),
-         similar = $('.similar__carousel');
+         similar = $('.similar__carousel'),
+         watched = $('.watched__recently');
    
    if (carousel_holder.length > 0) {
       carousel_holder.slick({
@@ -276,8 +277,6 @@ $(document).ready(function () {
          {
             breakpoint: 470,
             settings: {
-               // centerMode: true,
-               // infinite: true,
                slidesToShow: 1
             }
          }]
@@ -296,9 +295,58 @@ $(document).ready(function () {
          similar.find('.slick-slide').css('padding', '0 25px' );
       }
    }
+   if (watched.length > 0) {
+            // console.log(container_width + ' wat');
+      watched.not('.slick-initialized').slick({
+         slidesToShow: 5,
+         slidesToScroll: 5,
+         speed: 500,
+         lazyLoad: 'ondemand',
+         arrows: true,
+         dots: false,
+         infinite: false,
+         focusOnSelect: true,
+        responsive: [
+         {
+            breakpoint: 1440,
+            settings: {
+               slidesToShow: 4,
+               slidesToScroll: 4
+            }
+         },
+         {
+            breakpoint: 1000,
+            settings: {
+               slidesToShow: 3,
+               slidesToScroll: 3
+            }
+         },
+         {
+            breakpoint: 590,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 2
+            }
+         },
+         {
+            breakpoint: 470,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         }]
+      });
+      if (container_width <= 1440) {
+         $(watched).css({ marginRight: '-10px', marginLeft: '-10px' });
+         $(watched).find('.slick-slide').css('padding', '0 10px' );
+      } else if (container_width > 1440) {
+        $(watched).css({ marginRight: '0', marginLeft: '-8px' });
+         $(watched).find('.slick-slide').css({margin: '0 2px', padding: '0 4.5px' });
+      }
+   }
    
    /* нажатие на disabled ссылки или кнопки */
-   $('a[disabled="disabled"], button[disabled="disabled"]').on( 'click', function(event) { event.preventDefault(); event.stopPropagation(); return false; });
+   $('a[disabled="disabled"], a[disabled="true"], button[disabled="disabled"], button[disabled="true"] ').on( 'click', function(event) { event.preventDefault(); event.stopPropagation(); return false; });
    
    /* размер картинок через data */
    if ($('.absolute-img').length > 0) {
@@ -855,4 +903,27 @@ $(document).ready(function () {
       $('#characteristic').appendTo($('.one_data__holder'))
    }
    
+   /*  lk/basket корзина - активация блока  */
+   if ($('.basket_order__wrapper').length > 0) {
+      $('.basket_order__wrapper .section_holder').not($('.section_holder.show')).hide();
+      $('button[data-next]').on( 'click', (event) => showNextBasketSection($(event.target).data('next')));
+      
+   }
+   
+   function showNextBasketSection(next) {
+      let prev = next - 1,
+         stepBtn = '.basket_order__step',
+         stepFather = '.basket_order__wrapper .section_holder';
+      $(stepBtn + '[data-id^=' + next + ']').addClass('progress');
+      $(stepBtn + '[data-id^=' + next + ']').addClass('click');
+      $(stepFather + '[data-section^=' + next + ']').not($('.section_holder.show')).css('display', 'grid').addClass('show');
+      $(stepFather + '[data-section^=' + prev + ']').removeClass('show').removeAttr('style');
+      
+      $('.basket_order__steps').on('click', '.click', (event) => showPrevBasketSection($(event.target).data('id')))
+   }
+   function showPrevBasketSection(id) {
+      $('.basket_order__step[data-id^=' + id + ']').next('.basket_order__step').removeClass('click');
+      $('.section_holder.show').removeClass('show').removeAttr('style');
+      $('.basket_order__wrapper .section_holder[data-section^=' + id + ']').css('display', 'grid').addClass('show');
+   }
  });

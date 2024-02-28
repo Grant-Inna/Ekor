@@ -1,0 +1,15 @@
+include __order-step
+section.wrapper
+   .basket_order__steps
+      button.basket_order__step.progress.click( data-id='1' )
+         .basket_order__number 1
+         .basket_order__title Корзина
+      +step( '2', 'Адрес и&nbsp;время доставки')
+      +step( '3', 'Оплата')
+      +step( '4', 'Спасибо')
+section.wrapper
+   .basket_order__wrapper
+      include ./order/order
+      include ./address/address
+      include ./payment/payment
+      include ./thanks/thanks

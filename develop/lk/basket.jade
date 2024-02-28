@@ -1,0 +1,41 @@
+doctype
+html( lang='ru' )
+
+   include ../assets/jade/static/__head-lk
+   +title( 'Корзина | Экор' )
+
+
+   body
+      #container_basket.container
+
+         include ../assets/jade/lk/header
+         include ../assets/jade/lk/breadcrumbs/breadcrumbs
+         .wrapper
+            h1.title.text-blue.basket__caption_top.relative
+               span Корзина
+               #amount_basket.amount 2
+
+         include ../assets/jade/lk/basket/basket_main
+
+         .wrapper#basket_wrapper
+            .similar_carousel__holder
+               .section__caption.caption.text-blue Вы смотрели недавно
+               .similar__carousel.watched__recently
+                  include ../assets/jade/lk/product
+                  include ../assets/jade/lk/product
+                  include ../assets/jade/lk/product
+                  include ../assets/jade/lk/product
+                  include ../assets/jade/lk/product
+                  include ../assets/jade/lk/product
+                  include ../assets/jade/lk/product
+                  include ../assets/jade/lk/product
+                  include ../assets/jade/lk/product
+                  include ../assets/jade/lk/product
+      include ../assets/jade/catalog/catalog
+
+      include ../assets/jade/lk/footer
+      include ../assets/jade/modal/modal-callme
+
+      include ../assets/jade/lk/script
+
+

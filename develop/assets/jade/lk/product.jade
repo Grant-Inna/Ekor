@@ -1,0 +1,39 @@
+.catalog_main__products
+   a( href='../one.html')
+      .product__image.relative
+         .relation
+         .relation_content
+            img( src='../assets/images/1.jpg')
+         button.button.icon__like
+      .product__name.text-blue( data-name='Барабулька н/р 12шт х 0,6кг 1/12 Араката' ) Барабулька н/р 12шт х 0,6кг 1/12 Араката
+   .product__data.row
+      .block-12
+         span.text-dark Дата выработки:
+         .text-blue( data-virabotka='15.11.2023') 15.11.2023 г.
+      .block-12
+         span.text-dark Срок годности:
+         .text-blue( data-godnoct='02.03.2024' ) 02.03.2024 г.
+   .product__options
+      .product__box.product__options_btn( data-text='Цена от 1 упаковки (12 кг)' data-weight='12' data-price='13 536.60' )
+         .icon__box
+      .product__scale.product__options_btn( data-text='Меньше упаковки (6-8 кг)' data-weight='1' data-price='1130.30' ).opacity
+         .icon__scale
+      .product__wholesale.product__options_btn( data-text='Оптом (от 200 кг)' data-weight='200' data-price='226 060' ).opacity
+         .icon__wholesale
+      .product__text.text-blue
+   .product__purchase
+      .product__amount
+         button( disabled='true').button.ico__minus
+         .product__weight.text-blue
+            .weight
+            span &nbsp;кг
+         button( disabled='false').button.ico__plus
+      .product__buy
+         .product__price
+            .price.text-blue
+               span
+               i &nbsp;&#8381;
+            .price-kg.text-dark
+               span
+               i &nbsp;&#8381; / кг
+      button.button.button-buy.product__button

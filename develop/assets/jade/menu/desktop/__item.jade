@@ -1,8 +1,8 @@
-mixin menu-item( text, link, clear )
+mixin menu-item( text, link, path, clear )
    case clear
       when 'О'
          li.menu__item
-            a.menu__item_link( href='./#{link}.html' aria-label='Ссылка на страницу о компании') !{text}
+            a.menu__item_link( href='#{path}/#{link}.html' aria-label='Ссылка на страницу о компании') !{text}
       default
          li.menu__item
-            a.menu__item_link( href='./#{link}.html' aria-label='Ссылка на страницу #{text}') !{text}
+            a.menu__item_link( href='#{path}/#{link}.html' aria-label='Ссылка на страницу #{text}') !{text}

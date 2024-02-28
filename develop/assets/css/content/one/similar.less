@@ -51,19 +51,19 @@
    });
    .from(@break_sm, {
       .slick-prev[aria-disabled="false"] {
-         right: 66px;
+         left: calc(100% - 66px);
          .arrow-prev-active();
       };
       .slick-next[aria-disabled="false"] {
-         right: 28px;
+         left: calc(100% - 28px);
          .arrow-next-active();
       };
       .slick-next[aria-disabled="true"] {
-         right: 28px;
+         left: calc(100% - 28px);
          .arrow-next()
       };
       .slick-prev[aria-disabled="true"] {
-         right: 66px;
+         left: calc(100% - 66px);
          .arrow-prev()
       };
    });
