@@ -337,8 +337,8 @@ $(document).ready(function () {
          }]
       });
       if (container_width <= 1440) {
-         $(watched).css({ marginRight: '-10px', marginLeft: '-10px' });
-         $(watched).find('.slick-slide').css('padding', '0 10px' );
+         $(watched).css({ marginRight: '-8px', marginLeft: '-8px' });
+         $(watched).find('.slick-slide').css('padding', '0 2px' );
       } else if (container_width > 1440) {
         $(watched).css({ marginRight: '0', marginLeft: '-8px' });
          $(watched).find('.slick-slide').css({margin: '0 2px', padding: '0 4.5px' });
@@ -399,6 +399,16 @@ $(document).ready(function () {
    // console.log($('.payment__container').length);
    if ($('.payment__container').length > 0) {
       checkboxCheckedPayment( '#payment_form', '#payment_checkbox', '#payment_btn', '#payment_name', '#payment_personal-name', '#payment_inn', '#payment_numb', '#payment_mail');
+   }
+   if ($('#basket_address_form').length > 0) {
+      $('#basket_address_form').on( 'change', function() { // В ПРОЦЕССЕ!
+            console.log($('#basket_name').val());
+            console.log($('#basket_tel').val());
+         $('#basket_address_button').prop('disabled', ![
+         $('#basket_name').val().length !== 0,
+         $('#basket_tel').val().length !== 0
+         ].every(Boolean));
+      });
    }
    
    function checkboxChecked( form, box, btn, input1, input2 ) {
@@ -727,7 +737,7 @@ $(document).ready(function () {
    if ($('.product__options').length > 0) {
       $('.product__options_btn').on( 'click', (event) => showProductOption(event.target));
       $('.product__text').text($('.product__box').data('text'));
-      $('.product__weight .weight').text($('.product__box').data('weight'));
+      $('.product__options .product__weight .weight').text($('.product__box').data('weight'));
       $('.product__buy .price span').text($('.product__box').data('price'));
       if (!($('.similar__carousel').length > 0) && width <= 660 ) { $('.product__buy .price-kg').text('') }
       else { $('.product__buy .price-kg span').text($('.product__scale').data('price'));}
@@ -907,23 +917,58 @@ $(document).ready(function () {
    if ($('.basket_order__wrapper').length > 0) {
       $('.basket_order__wrapper .section_holder').not($('.section_holder.show')).hide();
       $('button[data-next]').on( 'click', (event) => showNextBasketSection($(event.target).data('next')));
-      
    }
    
    function showNextBasketSection(next) {
+      $('#basket_wrapper').hide();
       let prev = next - 1,
          stepBtn = '.basket_order__step',
          stepFather = '.basket_order__wrapper .section_holder';
+      
       $(stepBtn + '[data-id^=' + next + ']').addClass('progress');
       $(stepBtn + '[data-id^=' + next + ']').addClass('click');
       $(stepFather + '[data-section^=' + next + ']').not($('.section_holder.show')).css('display', 'grid').addClass('show');
       $(stepFather + '[data-section^=' + prev + ']').removeClass('show').removeAttr('style');
       
-      $('.basket_order__steps').on('click', '.click', (event) => showPrevBasketSection($(event.target).data('id')))
+      if ( next ==  $(stepBtn).length) { // console.log(next ==  $(stepBtn).length);
+         $('.basket_order__step').removeClass('click').css('cursor', 'default');
+         $(stepFather + '[data-section^=' + next + ']').addClass('last');
+         return false;
+      } else {
+         $('.basket_order__steps').on('click', '.click', (event) => showPrevBasketSection($(event.target).data('id')))
+      }
    }
    function showPrevBasketSection(id) {
       $('.basket_order__step[data-id^=' + id + ']').next('.basket_order__step').removeClass('click');
       $('.section_holder.show').removeClass('show').removeAttr('style');
       $('.basket_order__wrapper .section_holder[data-section^=' + id + ']').css('display', 'grid').addClass('show');
+      if (id == '1') {
+         $('#basket_wrapper').show();
+      }
+   }
+   
+   /*  чекбоксы на странице корзины  */
+   if ($('.basket_order__wrapper').is(':visible')) {
+      $('#basket_all_checkbox').on( 'change', () => {
+         $('.one').prop( 'checked', this.checked);
+      });
+      $('.one').on( 'change', (event) => { // чёт не работает....
+         let allNOTChecked = $('.one:not(:checked)').length == $('.one').length;
+         allNOTChecked ? $('.all').prop( 'checked', 'false') : $('.all').prop( 'checked', 'true');
+      });
+      
+      $.each( $('.basket_product__checkbox'), (index, value) => {
+         $(value).find('label').prop( 'for', 'basket_checkbox-' + index);
+         $(value).find('input').prop( 'id', 'basket_checkbox-' + index)
+      })
+   }
+   
+   /*  страница доставки в lk  */
+   if ($('.basket_address__obtaining').is(':visible')) {
+      $('.address_obtaining__button.hidden').on( 'click', (event) => showObtainingMethod(target));
+   }
+   function showObtainingMethod(target) {
+      $('.address_obtaining__button').removeClass('hidden');
+      $(target).removeClass('hidden').addClass('chosen');
    }
  });

@@ -1,0 +1,28 @@
+.basket_address__contact {
+   button {
+      width: 200px;
+      max-width: unset;
+   }
+}
+.basket_address__obtaining {
+   position: relative;
+   z-index: 10;
+   .flex();
+   .items-start();
+   .justify-start();
+   border-bottom: 1px solid @opacity-blue-20;
+}
+.address_obtaining__button {
+   position: relative;
+   z-index: 50;
+   padding: 16px;
+   border-bottom: 1px solid transparent;
+   margin-bottom: -1px;
+   .tr();
+}
+.address_obtaining__button.hidden {
+   border-bottom-color: transparent;
+}
+.address_obtaining__button.chosen {
+   border-bottom-color: @color-blue;
+}

@@ -140,8 +140,9 @@ function watch(done){
    gulp.watch( base + '*.jade', html);
    gulp.watch( src + 'jade/**/*.jade', html);
    gulp.watch( base + 'lk/*.jade', htmlLK);
-   gulp.watch( base + 'lk/**/*.jade', htmlLK);
    gulp.watch( base + 'lk/basket/**/*.jade', htmlLK);
+   gulp.watch( base + 'lk/basket/order/*.jade', htmlLK);
+   gulp.watch( base + 'lk/**/**/*.jade', htmlLK);
    gulp.watch( src + 'images/**/*', images);
    gulp.watch( src + 'images/*', data);
    gulp.watch( src + 'images/**/*', data);

@@ -2,6 +2,9 @@
    .flex();
    .items-center();
    .justify-start();
+   .to( 710px, {
+      margin-bottom: 20px;
+   });
 }
 .basket__caption_top #amount_basket {
    position: relative;
@@ -23,6 +26,7 @@
    margin-left: 20px;
    .lg-block({
       margin-left: 16px;
+      padding: 0;
    });
    .xs-block({
       width: 24px;
@@ -43,12 +47,13 @@
    .lg-block({
       margin-top: 20px;
    });
-   .xs-block({
+   .to( 710px, {
       .none();
    });
 }
 .basket_order__step {
    .flex();
+   .justify-start();
    .items-center();
    width: 25%;
    padding: 18px 20px;
@@ -65,8 +70,22 @@
    &:last-of-type {
       border-left: 1px solid @color-gray-light;
    }
+   .xl-block({
+      &:nth-of-type(2) {
+         width: 32%;
+      }
+   });
    .lg-block({
       padding: 12px 20px;
+      &:nth-of-type(2) {
+         min-width: 250px;
+      }
+   });
+   .to( 760px, {
+      padding: 8px 10px;
+      &:nth-of-type(2) {
+         min-width: 240px;
+      }
    });
 }
 .basket_order__number {
@@ -79,9 +98,12 @@
    box-sizing: border-box;
    padding: 0 0 1px 1px;
    .tr();
+   flex-shrink: 0;
 }
 .basket_order__title {
    .tr();
+   text-align: left;
+   white-space: nowrap;
 }
 .basket_order__step.progress {
    cursor: pointer;
@@ -216,9 +238,10 @@
    grid-template-rows: auto;
    grid-column-gap: 20px;
    grid-row-gap: 20px;
-   .lg-block({
+   .xl-block({
       grid-template-columns: 1fr;
       grid-template-rows: auto;
+      grid-column-gap: 0;
    });
    
    .none();
@@ -228,9 +251,26 @@
 }
 .basket_order__wrapper .section_main {
    grid-column: ~"1 / 9";
-   background-color: grey;
+   .xl-block({
+      grid-column: span 1;
+   });
 }
 .basket_order__wrapper .section_second {
    grid-column: ~"9 / 13";
-   background-color: #3a945b;
+   .xl-block({
+      grid-column: span 1;
+   });
+}
+.basket_order__wrapper .section_block {
+   background-color: white;
+   border-radius: 10px;
+   padding: 20px;
+   box-sizing: border-box;
+   .sm-block({
+      padding: 15px;
+   })
+}
+.basket_order__main {
+   .gr();
+   grid-row-gap: 20px;
 }

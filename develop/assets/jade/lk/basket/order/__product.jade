@@ -1,0 +1,33 @@
+mixin product( id )
+   .basket_product__block
+      .basket_product__checkbox.items-center
+         label.label-checkbox( )
+            input.checkbox-hidden( type='checkbox').one
+            span.checkbox
+      .basket_product__image.relative
+         .relation-square
+         .relation_content
+            img( src='../assets/images/#{id}.png' )
+      .product__title Барабулька черноморская свежемороженая 500 г
+      .product__info
+         .product__article
+            span Артикул:&nbsp;
+            .elem 3371176
+         .product__piece
+            span Штука:&nbsp;
+            .elem 0,5 кг
+      .basket_product__buy
+         .basket__price
+            span 1130.54
+            .elem &nbsp;&#8381; / кг
+         .basket__item
+            span 123.8
+            .elem &nbsp;&#8381;
+      .basket__amount
+         button( disabled='true').button.ico__minus
+         .product__weight.text-blue
+            .weight 1
+            span &nbsp;шт
+         button( disabled='false').button.ico__plus
+
+

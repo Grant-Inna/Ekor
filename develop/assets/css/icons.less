@@ -437,3 +437,29 @@ header {
 .icon__back {
    .icon-i('back');
 }
+/*  basket  */
+.icon-lk(@folder, @name) {
+   background-image: url("../images/svg/icons/lk/@{folder}/@{name}");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.thanks {
+   .icon-lk( 'basket', 'thanks.webp');
+   width: 110px;
+   height: 110px;
+}
+.ico__box {
+   .icon-lk( 'basket', 'box.svg');
+   width: 32px;
+   height: 32px;
+}
+.icon__bin {
+   .icon-lk( 'basket', 'bin.svg')
+}
+.ico__bell {
+   .icon-lk( 'basket', 'bell.svg');
+   width: 32px;
+   height: 32px;
+}

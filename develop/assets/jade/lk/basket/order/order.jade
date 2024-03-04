@@ -1,7 +1,97 @@
+include __product
+include __product-out
 .basket_order__holder.section_holder.show( data-section='1' )
    .basket_order__main.section_main
-      span Сама корзина
+      .basket_order__cart.section_block
+         .basket_order__management
+            include __managment
+         .basket_order__group
+            .basket_group__title.text-blue Замороженная рыба
+            +product( '1')
+            .basket_product__block
+               .basket_product__checkbox.items-center
+                  label.label-checkbox(  )
+                     input.checkbox-hidden( type='checkbox' ).one
+                     span.checkbox
+               .basket_product__image.relative
+                  .relation-square
+                  .relation_content
+                     img( src='../assets/images/1.png' )
+               .product__title Барабулька черноморская свежемороженая 500 г
+               .product__info
+                  .product__article
+                     span Артикул:&nbsp;
+                     .elem 3371176
+                  .product__piece
+                     span Штука:&nbsp;
+                     .elem 0,5 кг
+               .basket_product__buy
+                  .basket__price
+                     span 1130.54
+                     .elem &nbsp;&#8381; / кг
+                  .basket__item
+                     span 123.8
+                     .elem &nbsp;&#8381;
+               .basket__amount
+                  button( disabled='true').button.ico__minus
+                  .product__weight.text-blue
+                     .weight 1
+                     span &nbsp;шт
+                  button( disabled='false').button.ico__plus
+               .amount_important.text-small.text-red Доступно:&nbsp;
+                  #important только 1 шт
+
+            +product( '1' )
+         .basket_order__group
+            .basket_group__title.text-blue Копченая рыба
+            +product( '1' )
+            +product( '1' )
+
+      .basket_order__out.basket_order__cart.section_block
+         .basket_order__management
+            include __managment-out
+         .basket_order__group
+            .basket_group__title.text-blue Нет в наличии
+            +product-out( '1' )
+            +product-out( '1' )
    .basket_order__second.section_second
-      span Сама корзина
-      button.button-yellow( data-next='2' ) Кнопка, типа всё ок
+      .basket_order__important
+         .line_blue
+         .order__important
+            .ico__box
+            .order_important__text.text-blue
+               p.mb Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.
+               p В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.
+      .section_block
+         .basket_order_total__title.text-blue Ваш заказ
+         .mb12.text-16-big.text-blue Промокод
+         form.basket_order_total__promo
+            label( for='request_name' ).label-input.order_total__input
+               input#request_name( type='text' ).input.input-big
+               span.sup Введите код
+            button.button-yellow.button-long( type='submit' ).order_total__button Применить
+         .basket_order_total__sum
+            .order_total__sum.text-blue
+               .total_sum__text
+                  span Товары (
+                  #number 2
+                  span ) &ndash;&nbsp;
+                  #weight 0,35
+                  span &nbsp;кг
+               .total__sum
+                  #sum 169.00
+                  .elem &nbsp;&#8381;
+            .order_total__discount
+               .total_discount__text.text-blue Скидка
+               .total__discount.text-green
+                  #discount 0.00
+                  .elem &nbsp;&#8381;
+         .basket_order__total
+            .order_total__text.text-blue Итого
+            .order__total.text-green
+               #total 0.00
+               .elem &nbsp;&#8381;
+            .text-small.text-dark Общая стоимость без&nbsp;учёта доставки
+
+         button.button-yellow.button-long( data-next='2' ) Оформить заказ
 

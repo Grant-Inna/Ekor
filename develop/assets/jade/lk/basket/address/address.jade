@@ -1,6 +1,30 @@
 .basket_address__holder.section_holder( data-section='2' )
    .basket_order__main.section_main
-      span Адрес
+      .section_block
+         .basket_group__title.text-blue.mb20 Контактные данные
+         form#basket_address_form.basket_address__contact
+            label( for='basket_name' ).label-input.mb10
+               input#basket_name( type='text' ).input.input-big
+               span.sup Имя и Фамилия
+            label( for='basket_tel' ).label-input.mb20
+               input#basket_tel( type='tel' ).input.input-big
+               span.sup Номер телефона
+            button#basket_address_button.button-yellow( type='submit' disabled='true') Отправить код
+      .section_block
+         .basket_group__title.text-blue.mb20 Способ получения
+         .basket_address__obtaining
+            .address_obtaining__button.text-blue.chosen( data-obtaining='1' ) Доставка
+            .address_obtaining__button.text-blue.hidden( data-obtaining='2' ) Самовывоз
+         #obtaining_1.address__obtaining
+         #obtaining_2.address__obtaining
+
    .basket_order__second.section_second
-      span Адрес
-      button.button-yellow( data-next='3' ) Кнопка, типа всё ок
+      .basket_order__important
+         .line_blue
+         .order__important
+            .ico__box
+            .order_important__text.text-blue
+               p.mb Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.
+               p В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.
+      .section_block
+         button.button-yellow.button-long( data-next='3' ) Перейти к оплате

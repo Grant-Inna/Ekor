@@ -128,15 +128,352 @@
       <section class="wrapper">
         <div class="basket_order__wrapper">
           <div data-section="1" class="basket_order__holder section_holder show">
-            <div class="basket_order__main section_main"><span>Сама корзина</span></div>
-            <div class="basket_order__second section_second"><span>Сама корзина</span>
-              <button data-next="2" class="button-yellow">Кнопка, типа всё ок</button>
+            <div class="basket_order__main section_main">
+              <div class="basket_order__cart section_block">
+                <div class="basket_order__management">
+                  <div class="items-center row_flex-10">
+                    <label for="basket_all_checkbox" class="label-checkbox">
+                      <input id="basket_all_checkbox" type="checkbox" class="checkbox-hidden"><span class="checkbox pointer"></span>
+                    </label><span class="text-small text-dark">Выбрать все</span>
+                  </div>
+                  <button class="basket_del_all">
+                    <div class="text-small basket_order__del basket_order__del_in">Удалить выбранные</div>
+                    <div class="icon__bin"></div>
+                  </button>
+                  <button id="basket_show_in" class="text-14 text-blue basket_order__stock_btn chosen">В наличии (23)</button>
+                  <button id="basket_show_out" class="text-14 text-blue basket_order__stock_btn">Нет в наличии (23)</button>
+                </div>
+                <div class="basket_order__group">
+                  <div class="basket_group__title text-blue">Замороженная рыба</div>
+                            <div class="basket_product__block">
+                              <div class="basket_product__checkbox items-center">
+                                <label class="label-checkbox">
+                                  <input type="checkbox" class="checkbox-hidden one"><span class="checkbox"></span>
+                                </label>
+                              </div>
+                              <div class="basket_product__image relative">
+                                <div class="relation-square"></div>
+                                <div class="relation_content"><img src="../assets/images/1.png"></div>
+                              </div>
+                              <div class="product__title">Барабулька черноморская свежемороженая 500 г</div>
+                              <div class="product__info">
+                                <div class="product__article"><span>Артикул:&nbsp;</span>
+                                  <div class="elem">3371176</div>
+                                </div>
+                                <div class="product__piece"><span>Штука:&nbsp;</span>
+                                  <div class="elem">0,5 кг</div>
+                                </div>
+                              </div>
+                              <div class="basket_product__buy">
+                                <div class="basket__price"><span>1130.54</span>
+                                  <div class="elem">&nbsp;&#8381; / кг</div>
+                                </div>
+                                <div class="basket__item"><span>123.8</span>
+                                  <div class="elem">&nbsp;&#8381;</div>
+                                </div>
+                              </div>
+                              <div class="basket__amount">
+                                <button disabled="true" class="button ico__minus"></button>
+                                <div class="product__weight text-blue">
+                                  <div class="weight">1</div><span>&nbsp;шт</span>
+                                </div>
+                                <button disabled="false" class="button ico__plus"></button>
+                              </div>
+                            </div>
+                  <div class="basket_product__block">
+                    <div class="basket_product__checkbox items-center">
+                      <label class="label-checkbox">
+                        <input type="checkbox" class="checkbox-hidden one"><span class="checkbox"></span>
+                      </label>
+                    </div>
+                    <div class="basket_product__image relative">
+                      <div class="relation-square"></div>
+                      <div class="relation_content"><img src="../assets/images/1.png"></div>
+                    </div>
+                    <div class="product__title">Барабулька черноморская свежемороженая 500 г</div>
+                    <div class="product__info">
+                      <div class="product__article"><span>Артикул:&nbsp;</span>
+                        <div class="elem">3371176</div>
+                      </div>
+                      <div class="product__piece"><span>Штука:&nbsp;</span>
+                        <div class="elem">0,5 кг</div>
+                      </div>
+                    </div>
+                    <div class="basket_product__buy">
+                      <div class="basket__price"><span>1130.54</span>
+                        <div class="elem">&nbsp;&#8381; / кг</div>
+                      </div>
+                      <div class="basket__item"><span>123.8</span>
+                        <div class="elem">&nbsp;&#8381;</div>
+                      </div>
+                    </div>
+                    <div class="basket__amount">
+                      <button disabled="true" class="button ico__minus"></button>
+                      <div class="product__weight text-blue">
+                        <div class="weight">1</div><span>&nbsp;шт</span>
+                      </div>
+                      <button disabled="false" class="button ico__plus"></button>
+                    </div>
+                    <div class="amount_important text-small text-red">Доступно:&nbsp;
+                      <div id="important">только 1 шт</div>
+                    </div>
+                  </div>
+                            <div class="basket_product__block">
+                              <div class="basket_product__checkbox items-center">
+                                <label class="label-checkbox">
+                                  <input type="checkbox" class="checkbox-hidden one"><span class="checkbox"></span>
+                                </label>
+                              </div>
+                              <div class="basket_product__image relative">
+                                <div class="relation-square"></div>
+                                <div class="relation_content"><img src="../assets/images/1.png"></div>
+                              </div>
+                              <div class="product__title">Барабулька черноморская свежемороженая 500 г</div>
+                              <div class="product__info">
+                                <div class="product__article"><span>Артикул:&nbsp;</span>
+                                  <div class="elem">3371176</div>
+                                </div>
+                                <div class="product__piece"><span>Штука:&nbsp;</span>
+                                  <div class="elem">0,5 кг</div>
+                                </div>
+                              </div>
+                              <div class="basket_product__buy">
+                                <div class="basket__price"><span>1130.54</span>
+                                  <div class="elem">&nbsp;&#8381; / кг</div>
+                                </div>
+                                <div class="basket__item"><span>123.8</span>
+                                  <div class="elem">&nbsp;&#8381;</div>
+                                </div>
+                              </div>
+                              <div class="basket__amount">
+                                <button disabled="true" class="button ico__minus"></button>
+                                <div class="product__weight text-blue">
+                                  <div class="weight">1</div><span>&nbsp;шт</span>
+                                </div>
+                                <button disabled="false" class="button ico__plus"></button>
+                              </div>
+                            </div>
+                </div>
+                <div class="basket_order__group">
+                  <div class="basket_group__title text-blue">Копченая рыба</div>
+                            <div class="basket_product__block">
+                              <div class="basket_product__checkbox items-center">
+                                <label class="label-checkbox">
+                                  <input type="checkbox" class="checkbox-hidden one"><span class="checkbox"></span>
+                                </label>
+                              </div>
+                              <div class="basket_product__image relative">
+                                <div class="relation-square"></div>
+                                <div class="relation_content"><img src="../assets/images/1.png"></div>
+                              </div>
+                              <div class="product__title">Барабулька черноморская свежемороженая 500 г</div>
+                              <div class="product__info">
+                                <div class="product__article"><span>Артикул:&nbsp;</span>
+                                  <div class="elem">3371176</div>
+                                </div>
+                                <div class="product__piece"><span>Штука:&nbsp;</span>
+                                  <div class="elem">0,5 кг</div>
+                                </div>
+                              </div>
+                              <div class="basket_product__buy">
+                                <div class="basket__price"><span>1130.54</span>
+                                  <div class="elem">&nbsp;&#8381; / кг</div>
+                                </div>
+                                <div class="basket__item"><span>123.8</span>
+                                  <div class="elem">&nbsp;&#8381;</div>
+                                </div>
+                              </div>
+                              <div class="basket__amount">
+                                <button disabled="true" class="button ico__minus"></button>
+                                <div class="product__weight text-blue">
+                                  <div class="weight">1</div><span>&nbsp;шт</span>
+                                </div>
+                                <button disabled="false" class="button ico__plus"></button>
+                              </div>
+                            </div>
+                            <div class="basket_product__block">
+                              <div class="basket_product__checkbox items-center">
+                                <label class="label-checkbox">
+                                  <input type="checkbox" class="checkbox-hidden one"><span class="checkbox"></span>
+                                </label>
+                              </div>
+                              <div class="basket_product__image relative">
+                                <div class="relation-square"></div>
+                                <div class="relation_content"><img src="../assets/images/1.png"></div>
+                              </div>
+                              <div class="product__title">Барабулька черноморская свежемороженая 500 г</div>
+                              <div class="product__info">
+                                <div class="product__article"><span>Артикул:&nbsp;</span>
+                                  <div class="elem">3371176</div>
+                                </div>
+                                <div class="product__piece"><span>Штука:&nbsp;</span>
+                                  <div class="elem">0,5 кг</div>
+                                </div>
+                              </div>
+                              <div class="basket_product__buy">
+                                <div class="basket__price"><span>1130.54</span>
+                                  <div class="elem">&nbsp;&#8381; / кг</div>
+                                </div>
+                                <div class="basket__item"><span>123.8</span>
+                                  <div class="elem">&nbsp;&#8381;</div>
+                                </div>
+                              </div>
+                              <div class="basket__amount">
+                                <button disabled="true" class="button ico__minus"></button>
+                                <div class="product__weight text-blue">
+                                  <div class="weight">1</div><span>&nbsp;шт</span>
+                                </div>
+                                <button disabled="false" class="button ico__plus"></button>
+                              </div>
+                            </div>
+                </div>
+              </div>
+              <div class="basket_order__out basket_order__cart section_block">
+                <div class="basket_order__management"><span class="text-small text-blue">Недоступны для заказа</span>
+                  <button class="basket_del_all text-small basket_order__del">Удалить</button>
+                </div>
+                <div class="basket_order__group">
+                  <div class="basket_group__title text-blue">Нет в наличии</div>
+                            <div class="basket_product__block basket_product__block_out">
+                              <div class="basket_product__checkbox items-center">
+                                <label class="label-checkbox">
+                                  <input type="checkbox" class="checkbox-hidden one"><span class="checkbox"></span>
+                                </label>
+                              </div>
+                              <div class="basket_product__image relative">
+                                <div class="relation-square"></div>
+                                <div class="relation_content"><img src="../assets/images/1.png"></div>
+                              </div>
+                              <div class="product__title">Барабулька черноморская свежемороженая 500 г</div>
+                              <div class="product__info">
+                                <div class="product__article"><span>Артикул:&nbsp;</span>
+                                  <div class="elem">3371176</div>
+                                </div>
+                                <div class="product__piece"><span>Штука:&nbsp;</span>
+                                  <div class="elem">0,5 кг</div>
+                                </div>
+                              </div>
+                              <div class="product__another">
+                                <button class="button-another">Выбрать замену</button>
+                                <div class="ico__bell"></div>
+                              </div>
+                            </div>
+                            <div class="basket_product__block basket_product__block_out">
+                              <div class="basket_product__checkbox items-center">
+                                <label class="label-checkbox">
+                                  <input type="checkbox" class="checkbox-hidden one"><span class="checkbox"></span>
+                                </label>
+                              </div>
+                              <div class="basket_product__image relative">
+                                <div class="relation-square"></div>
+                                <div class="relation_content"><img src="../assets/images/1.png"></div>
+                              </div>
+                              <div class="product__title">Барабулька черноморская свежемороженая 500 г</div>
+                              <div class="product__info">
+                                <div class="product__article"><span>Артикул:&nbsp;</span>
+                                  <div class="elem">3371176</div>
+                                </div>
+                                <div class="product__piece"><span>Штука:&nbsp;</span>
+                                  <div class="elem">0,5 кг</div>
+                                </div>
+                              </div>
+                              <div class="product__another">
+                                <button class="button-another">Выбрать замену</button>
+                                <div class="ico__bell"></div>
+                              </div>
+                            </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket_order__second section_second">
+              <div class="basket_order__important">
+                <div class="line_blue"></div>
+                <div class="order__important">
+                  <div class="ico__box"></div>
+                  <div class="order_important__text text-blue">
+                    <p class="mb">Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.</p>
+                    <p>В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="section_block">
+                <div class="basket_order_total__title text-blue">Ваш заказ</div>
+                <div class="mb12 text-16-big text-blue">Промокод</div>
+                <form class="basket_order_total__promo">
+                  <label for="request_name" class="label-input order_total__input">
+                    <input id="request_name" type="text" class="input input-big"><span class="sup">Введите код</span>
+                  </label>
+                  <button type="submit" class="button-yellow button-long order_total__button">Применить</button>
+                </form>
+                <div class="basket_order_total__sum">
+                  <div class="order_total__sum text-blue">
+                    <div class="total_sum__text"><span>Товары (</span>
+                      <div id="number">2</div><span>) &ndash;&nbsp;</span>
+                      <div id="weight">0,35</div><span>&nbsp;кг</span>
+                    </div>
+                    <div class="total__sum">
+                      <div id="sum">169.00</div>
+                      <div class="elem">&nbsp;&#8381;</div>
+                    </div>
+                  </div>
+                  <div class="order_total__discount">
+                    <div class="total_discount__text text-blue">Скидка</div>
+                    <div class="total__discount text-green">
+                      <div id="discount">0.00</div>
+                      <div class="elem">&nbsp;&#8381;</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basket_order__total">
+                  <div class="order_total__text text-blue">Итого</div>
+                  <div class="order__total text-green">
+                    <div id="total">0.00</div>
+                    <div class="elem">&nbsp;&#8381;</div>
+                  </div>
+                  <div class="text-small text-dark">Общая стоимость без&nbsp;учёта доставки</div>
+                </div>
+                <button data-next="2" class="button-yellow button-long">Оформить заказ</button>
+              </div>
             </div>
           </div>
           <div data-section="2" class="basket_address__holder section_holder">
-            <div class="basket_order__main section_main"><span>Адрес</span></div>
-            <div class="basket_order__second section_second"><span>Адрес</span>
-              <button data-next="3" class="button-yellow">Кнопка, типа всё ок</button>
+            <div class="basket_order__main section_main">
+              <div class="section_block">
+                <div class="basket_group__title text-blue mb20">Контактные данные</div>
+                <form id="basket_address_form" class="basket_address__contact">
+                  <label for="basket_name" class="label-input mb10">
+                    <input id="basket_name" type="text" class="input input-big"><span class="sup">Имя и Фамилия</span>
+                  </label>
+                  <label for="basket_tel" class="label-input mb20">
+                    <input id="basket_tel" type="tel" class="input input-big"><span class="sup">Номер телефона</span>
+                  </label>
+                  <button id="basket_address_button" type="submit" disabled="true" class="button-yellow">Отправить код</button>
+                </form>
+              </div>
+              <div class="section_block">
+                <div class="basket_group__title text-blue mb20">Способ получения</div>
+                <div class="basket_address__obtaining">
+                  <div data-obtaining="1" class="address_obtaining__button text-blue chosen">Доставка</div>
+                  <div data-obtaining="2" class="address_obtaining__button text-blue">Самовывоз</div>
+                </div>
+                <div id="obtaining_1" class="address__obtaining"></div>
+                <div id="obtaining_2" class="address__obtaining"></div>
+              </div>
+            </div>
+            <div class="basket_order__second section_second">
+              <div class="basket_order__important">
+                <div class="line_blue"></div>
+                <div class="order__important">
+                  <div class="ico__box"></div>
+                  <div class="order_important__text text-blue">
+                    <p class="mb">Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.</p>
+                    <p>В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="section_block">
+                <button data-next="3" class="button-yellow button-long">Перейти к оплате</button>
+              </div>
             </div>
           </div>
           <div data-section="3" class="basket_payment__holder section_holder">
@@ -145,7 +482,12 @@
               <button data-next="4" class="button-yellow">Кнопка, типа всё ок</button>
             </div>
           </div>
-          <div data-section="4" class="basket_thanks__holder section_holder"><span>Спасибки</span></div>
+          <div data-section="4" class="basket_thanks__holder section_holder">
+            <div class="thanks"></div>
+            <div class="basket_thanks__caption text-blue"><span>Спасибо</span><span class="f">!</span><span class="s">&nbsp;за заказ!</span></div>
+            <p class="basket_thanks__text text-dark"><span>Ваш платеж успешно обработан. Ожидайте скорую доставку и&nbsp;свяжитесь с&nbsp;нами, если у&nbsp;вас есть какие-либо вопросы.</span><span class="t"> Спасибо за покупку!</span></p><a href="../catalog.html" class="basket_thanks__button_holder">
+              <button class="basket_thanks__button button-yellow">Вернуться к покупкам</button></a>
+          </div>
         </div>
       </section>
       <div id="basket_wrapper" class="wrapper">
