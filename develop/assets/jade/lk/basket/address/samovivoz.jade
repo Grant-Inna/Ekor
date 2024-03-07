@@ -1,0 +1,50 @@
+.text-16-big.text-blue.mb16 Адрес пункта самовывоза
+form( name='option').address_obtaining__items
+   .address_obtaining__point( data-obtaining-point='1' ).mt16
+      label( for='option-1' )
+         .label-checkbox
+            input( id='option-1' name='option' type='radio' ).checkbox-hidden
+            span( class='radio' )
+         .obtaining_point__text
+            .text-16-big.text-blue.mb4( class='input-type-radio' ) Пункт самовывоза 1
+            .text-14.text-dark Столярный переулок, дом 3, корпус 6
+      .ico__options.mlauto.pointer
+      #obtaining_point-1.point_options__popup
+         .line_gray
+         .options_popup.address_obtaining
+            .obtaining_map.items-center( data-click='map').pointer
+               .ico__navigation
+               .options_popup__text Посмотреть на&nbsp;карте
+            .items-center( data-click='del').pointer
+               .ico__bin-r
+               .options_popup__text.text-red Удалить
+            button.address_popup__button Отмена
+
+   .address_obtaining__point( data-obtaining-point='2' ).mt16
+      label( for='option-2' )
+         .label-checkbox
+            input( id='option-2' name='option' type='radio' ).checkbox-hidden
+            span( class='radio' )
+         .obtaining_point__text
+            .text-16-big.text-blue.mb4( class='input-type-radio' ) Пункт самовывоза 2
+            .text-14.text-dark Столярный переулок, дом 3, корпус 6
+      .ico__options.mlauto.pointer
+      #obtaining_point-2.point_options__popup
+         .line_gray
+         .options_popup.address_obtaining
+            .obtaining_map.items-center.mb10( data-click='map')
+               .ico__navigation
+               .options_popup__text Посмотреть на&nbsp;карте
+            .items-center( data-click='del')
+               .ico__bin-r
+               .options_popup__text.text-red Удалить
+            button.address_popup__button Отмена
+
+
+#obtaining_add_point.address_obtaining__add.mt16
+   .icon__address_add.mr10
+   .text-14.text-blue Новый пункт самовывоза
+
+
+
+

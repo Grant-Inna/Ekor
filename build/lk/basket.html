@@ -127,7 +127,7 @@
       </section>
       <section class="wrapper">
         <div class="basket_order__wrapper">
-          <div data-section="1" class="basket_order__holder section_holder show">
+          <section data-section="1" class="basket_order__holder section_holder show">
             <div class="basket_order__main section_main">
               <div class="basket_order__cart section_block">
                 <div class="basket_order__management">
@@ -391,7 +391,7 @@
                 <div class="order__important">
                   <div class="ico__box"></div>
                   <div class="order_important__text text-blue">
-                    <p class="mb">Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.</p>
+                    <p class="mb4">Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.</p>
                     <p>В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.</p>
                   </div>
                 </div>
@@ -400,8 +400,8 @@
                 <div class="basket_order_total__title text-blue">Ваш заказ</div>
                 <div class="mb12 text-16-big text-blue">Промокод</div>
                 <form class="basket_order_total__promo">
-                  <label for="request_name" class="label-input order_total__input">
-                    <input id="request_name" type="text" class="input input-big"><span class="sup">Введите код</span>
+                  <label for="promo_input" class="label-input order_total__input">
+                    <input id="promo_input" type="text" class="input input-big"><span class="sup">Введите код</span>
                   </label>
                   <button type="submit" class="button-yellow button-long order_total__button">Применить</button>
                 </form>
@@ -425,7 +425,7 @@
                   </div>
                 </div>
                 <div class="basket_order__total">
-                  <div class="order_total__text text-blue">Итого</div>
+                  <div class="order_total__text text-blue mb6">Итого</div>
                   <div class="order__total text-green">
                     <div id="total">0.00</div>
                     <div class="elem">&nbsp;&#8381;</div>
@@ -435,29 +435,146 @@
                 <button data-next="2" class="button-yellow button-long">Оформить заказ</button>
               </div>
             </div>
-          </div>
-          <div data-section="2" class="basket_address__holder section_holder">
+          </section>
+          <section data-section="2" class="basket_address__holder section_holder">
             <div class="basket_order__main section_main">
               <div class="section_block">
                 <div class="basket_group__title text-blue mb20">Контактные данные</div>
-                <form id="basket_address_form" class="basket_address__contact">
-                  <label for="basket_name" class="label-input mb10">
-                    <input id="basket_name" type="text" class="input input-big"><span class="sup">Имя и Фамилия</span>
+                <form id="basket_order_form" class="basket_address__contact">
+                  <label for="order_name" class="label-input mb10">
+                    <input id="order_name" type="text" class="input input-big"><span class="sup">Имя и Фамилия</span>
                   </label>
-                  <label for="basket_tel" class="label-input mb20">
-                    <input id="basket_tel" type="tel" class="input input-big"><span class="sup">Номер телефона</span>
+                  <label for="order_tel" class="label-input label-tel mb20">
+                    <input id="order_tel" type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input input-big"><span class="sup">Номер телефона</span>
                   </label>
-                  <button id="basket_address_button" type="submit" disabled="true" class="button-yellow">Отправить код</button>
+                  <button id="basket_order_button" type="submit" disabled="true" class="button-yellow">Отправить код</button>
+                </form>
+                <form id="basket_order_code">
+                  <div class="text-small text-blue mb10">Отправлен код для&nbsp;подтверждения</div>
+                  <label for="order_code" class="label-input">
+                    <input id="order_code" type="text" class="number input input-big"><span class="sup">Введите код</span>
+                  </label>
+                  <button id="order_code_button" type="submit" disabled="true" class="button-yellow">Подтвердить</button>
+                  <button id="order_code_again" type="button" class="order_button__again relative pointer">
+                    <div class="ico__again mr8"></div>
+                    <div class="text-14 text-dark">Отправить повторно</div>
+                    <div class="send_again__popup">
+                      <div class="options_popup order_code_again text-dark">
+                        <div class="text-14">Отправить повторно можно будет через</div>
+                        <div id="code_again" class="text-14-big">13 секунд</div>
+                      </div>
+                    </div>
+                  </button>
                 </form>
               </div>
               <div class="section_block">
                 <div class="basket_group__title text-blue mb20">Способ получения</div>
                 <div class="basket_address__obtaining">
-                  <div data-obtaining="1" class="address_obtaining__button text-blue chosen">Доставка</div>
-                  <div data-obtaining="2" class="address_obtaining__button text-blue">Самовывоз</div>
+                  <div data-obtaining="1" class="address_obtaining__button text-blue pointer chosen">Доставка</div>
+                  <div data-obtaining="2" class="address_obtaining__button text-blue pointer hidden">Самовывоз</div>
                 </div>
-                <div id="obtaining_1" class="address__obtaining"></div>
-                <div id="obtaining_2" class="address__obtaining"></div>
+                <section id="obtaining_1" class="address_obtaining__holder">
+                  <div class="text-16-big text-blue mb16">Адрес доставки</div>
+                  <div class="address_obtaining__items">
+                    <div data-obtaining-address="1" class="address_obtaining__address mt16">
+                      <div class="ico__del"></div>
+                      <div class="obtaining_address__text">
+                        <div class="text-14 text-blue">Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328</div>
+                      </div>
+                      <div class="ico__edit"></div>
+                    </div>
+                  </div>
+                  <div id="obtaining_add_address" class="address_obtaining__add mt16">
+                    <div class="icon__address_add mr10"></div>
+                    <div class="text-14 text-blue">Новый адрес</div>
+                  </div>
+                </section>
+                <section id="obtaining_2" class="address_obtaining__holder hide">
+                  <div class="text-16-big text-blue mb16">Адрес пункта самовывоза</div>
+                  <form name="option" class="address_obtaining__items">
+                    <div data-obtaining-point="1" class="address_obtaining__point mt16">
+                      <label for="option-1">
+                        <div class="label-checkbox">
+                          <input id="option-1" name="option" type="radio" class="checkbox-hidden"><span class="radio"></span>
+                        </div>
+                        <div class="obtaining_point__text">
+                          <div class="text-16-big text-blue mb4 input-type-radio">Пункт самовывоза 1</div>
+                          <div class="text-14 text-dark">Столярный переулок, дом 3, корпус 6</div>
+                        </div>
+                      </label>
+                      <div class="ico__options mlauto pointer"></div>
+                      <div id="obtaining_point-1" class="point_options__popup">
+                        <div class="line_gray"></div>
+                        <div class="options_popup address_obtaining">
+                          <div data-click="map" class="obtaining_map items-center pointer">
+                            <div class="ico__navigation"></div>
+                            <div class="options_popup__text">Посмотреть на&nbsp;карте</div>
+                          </div>
+                          <div data-click="del" class="items-center pointer">
+                            <div class="ico__bin-r"></div>
+                            <div class="options_popup__text text-red">Удалить</div>
+                          </div>
+                          <button class="address_popup__button">Отмена</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-obtaining-point="2" class="address_obtaining__point mt16">
+                      <label for="option-2">
+                        <div class="label-checkbox">
+                          <input id="option-2" name="option" type="radio" class="checkbox-hidden"><span class="radio"></span>
+                        </div>
+                        <div class="obtaining_point__text">
+                          <div class="text-16-big text-blue mb4 input-type-radio">Пункт самовывоза 2</div>
+                          <div class="text-14 text-dark">Столярный переулок, дом 3, корпус 6</div>
+                        </div>
+                      </label>
+                      <div class="ico__options mlauto pointer"></div>
+                      <div id="obtaining_point-2" class="point_options__popup">
+                        <div class="line_gray"></div>
+                        <div class="options_popup address_obtaining">
+                          <div data-click="map" class="obtaining_map items-center mb10">
+                            <div class="ico__navigation"></div>
+                            <div class="options_popup__text">Посмотреть на&nbsp;карте</div>
+                          </div>
+                          <div data-click="del" class="items-center">
+                            <div class="ico__bin-r"></div>
+                            <div class="options_popup__text text-red">Удалить</div>
+                          </div>
+                          <button class="address_popup__button">Отмена</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div id="obtaining_add_point" class="address_obtaining__add mt16">
+                    <div class="icon__address_add mr10"></div>
+                    <div class="text-14 text-blue">Новый пункт самовывоза</div>
+                  </div>
+                </section>
+              </div>
+              <div id="obtaining_data" class="section_block">
+                <div class="basket_group__title text-blue mb20">Дата и&nbsp;время получения</div>
+                <form class="basket_address__form">
+                  <div class="basket_address__select">
+                    <div class="text-small text-dark mb8">Дата доставки</div>
+                    <select id="obtaining_time" class="select2 obtaining__select">
+                      <option selected="true">Сегодня, 12 декабря</option>
+                      <option>Завтра, 13 декабря</option>
+                      <option>Послезавтра, 14 декабря</option>
+                      <option>15 декабря</option>
+                      <option>16 декабря</option>
+                    </select>
+                  </div>
+                  <div class="basket_address__select">
+                    <div class="text-small text-dark mb8">Время доставки</div>
+                    <select id="obtaining_date" class="select2 obtaining__select">
+                      <option selected="true">08:00-10:00</option>
+                      <option>10:00-12:00</option>
+                      <option>12:00-14:00</option>
+                      <option>14:00-16:00</option>
+                      <option>16:00-18:00</option>
+                    </select>
+                  </div>
+                </form>
               </div>
             </div>
             <div class="basket_order__second section_second">
@@ -472,10 +589,45 @@
                 </div>
               </div>
               <div class="section_block">
+                <div class="basket_order_total__title text-blue">Ваш заказ</div>
+                <div class="mb12 text-16-big text-blue">Промокод</div>
+                <form class="basket_order_total__promo">
+                  <label for="request_name" class="label-input order_total__input">
+                    <input id="request_name" type="text" class="input input-big"><span class="sup">Введите код</span>
+                  </label>
+                  <button type="button" class="button-yellow button-long order_total__button">Применить</button>
+                </form>
+                <div class="basket_order_total__sum">
+                  <div class="order_total__sum text-blue">
+                    <div class="total_sum__text"><span>Товары (</span>
+                      <div id="number">2</div><span>) &ndash;&nbsp;</span>
+                      <div id="weight">0,35</div><span>&nbsp;кг</span>
+                    </div>
+                    <div class="total__sum">
+                      <div id="sum">169.00</div>
+                      <div class="elem">&nbsp;&#8381;</div>
+                    </div>
+                  </div>
+                  <div class="order_total__discount">
+                    <div class="total_discount__text text-blue">Скидка</div>
+                    <div class="total__discount text-green">
+                      <div id="discount">0.00</div>
+                      <div class="elem">&nbsp;&#8381;</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basket_order__total">
+                  <div class="order_total__text text-blue mb6">Итого</div>
+                  <div class="order__total text-green">
+                    <div id="total">0.00</div>
+                    <div class="elem">&nbsp;&#8381;</div>
+                  </div>
+                  <div class="text-small text-dark">Общая стоимость без&nbsp;учёта доставки</div>
+                </div>
                 <button data-next="3" class="button-yellow button-long">Перейти к оплате</button>
               </div>
             </div>
-          </div>
+          </section>
           <div data-section="3" class="basket_payment__holder section_holder">
             <div class="basket_order__main section_main"><span>Оплата</span></div>
             <div class="basket_order__second section_second"><span>Оплата</span>
@@ -1230,8 +1382,8 @@
                 <label for="callme_name" class="label-input mb10">
                   <input id="callme_name" type="text" class="input input-big"><span class="sup">Имя</span>
                 </label>
-                <label for="callme_number" class="label-input mb10">
-                  <input id="callme_number" type="tel" class="input input-big"><span class="sup">Номер телефона</span>
+                <label for="callme_number" class="label-input label-tel mb10">
+                  <input id="callme_number" type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input input-big"><span class="sup">Номер телефона</span>
                 </label>
                 <label for="callme_comment" class="label-input mb16">
                   <input id="callme_comment" type="email" class="input input-big"><span class="sup">Комментарий</span>
@@ -1257,5 +1409,6 @@
     <script src="../assets/js/scrollbar.js"></script>
     <script src="../assets/js/select2.js"></script>
     <script src="../assets/js/build.js"></script>
+    <script src="../assets/js/basket.js"></script>
   </body>
 </html>

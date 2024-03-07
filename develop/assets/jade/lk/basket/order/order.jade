@@ -1,6 +1,6 @@
 include __product
 include __product-out
-.basket_order__holder.section_holder.show( data-section='1' )
+section.basket_order__holder.section_holder.show( data-section='1' )
    .basket_order__main.section_main
       .basket_order__cart.section_block
          .basket_order__management
@@ -60,14 +60,14 @@ include __product-out
          .order__important
             .ico__box
             .order_important__text.text-blue
-               p.mb Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.
+               p.mb4 Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.
                p В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.
       .section_block
          .basket_order_total__title.text-blue Ваш заказ
          .mb12.text-16-big.text-blue Промокод
          form.basket_order_total__promo
-            label( for='request_name' ).label-input.order_total__input
-               input#request_name( type='text' ).input.input-big
+            label( for='promo_input' ).label-input.order_total__input
+               input#promo_input( type='text' ).input.input-big
                span.sup Введите код
             button.button-yellow.button-long( type='submit' ).order_total__button Применить
          .basket_order_total__sum
@@ -87,7 +87,7 @@ include __product-out
                   #discount 0.00
                   .elem &nbsp;&#8381;
          .basket_order__total
-            .order_total__text.text-blue Итого
+            .order_total__text.text-blue.mb6 Итого
             .order__total.text-green
                #total 0.00
                .elem &nbsp;&#8381;

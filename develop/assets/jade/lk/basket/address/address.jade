@@ -1,22 +1,53 @@
-.basket_address__holder.section_holder( data-section='2' )
+section.basket_address__holder.section_holder( data-section='2' )
    .basket_order__main.section_main
       .section_block
          .basket_group__title.text-blue.mb20 Контактные данные
-         form#basket_address_form.basket_address__contact
-            label( for='basket_name' ).label-input.mb10
-               input#basket_name( type='text' ).input.input-big
-               span.sup Имя и Фамилия
-            label( for='basket_tel' ).label-input.mb20
-               input#basket_tel( type='tel' ).input.input-big
-               span.sup Номер телефона
-            button#basket_address_button.button-yellow( type='submit' disabled='true') Отправить код
+         include form
+         form#basket_order_code
+            .text-small.text-blue.mb10 Отправлен код для&nbsp;подтверждения
+            label( for='order_code' ).label-input
+               input#order_code.number( type='text' ).input.input-big
+               span.sup Введите код
+            button#order_code_button.button-yellow( type='submit' disabled='true') Подтвердить
+            button#order_code_again.order_button__again( type='button' ).relative.pointer
+               .ico__again.mr8
+               .text-14.text-dark Отправить повторно
+               .send_again__popup
+                  .options_popup.order_code_again.text-dark
+                     .text-14 Отправить повторно можно будет через
+                     #code_again.text-14-big 13 секунд
+
+
+
       .section_block
          .basket_group__title.text-blue.mb20 Способ получения
          .basket_address__obtaining
-            .address_obtaining__button.text-blue.chosen( data-obtaining='1' ) Доставка
-            .address_obtaining__button.text-blue.hidden( data-obtaining='2' ) Самовывоз
-         #obtaining_1.address__obtaining
-         #obtaining_2.address__obtaining
+            .address_obtaining__button.text-blue.pointer.chosen( data-obtaining='1' ) Доставка
+            .address_obtaining__button.text-blue.pointer.hidden( data-obtaining='2' ) Самовывоз
+         section#obtaining_1.address_obtaining__holder
+            include dostavka
+         section#obtaining_2.address_obtaining__holder.hide
+            include samovivoz
+      #obtaining_data.section_block
+         .basket_group__title.text-blue.mb20 Дата и&nbsp;время получения
+         form.basket_address__form
+            .basket_address__select
+               .text-small.text-dark.mb8 Дата доставки
+               select.select2.obtaining__select#obtaining_time
+                  option( selected='true') Сегодня, 12 декабря
+                  option Завтра, 13 декабря
+                  option Послезавтра, 14 декабря
+                  option 15 декабря
+                  option 16 декабря
+            .basket_address__select
+               .text-small.text-dark.mb8 Время доставки
+               select.select2.obtaining__select#obtaining_date
+                  option( selected='true') 08:00-10:00
+                  option 10:00-12:00
+                  option 12:00-14:00
+                  option 14:00-16:00
+                  option 16:00-18:00
+
 
    .basket_order__second.section_second
       .basket_order__important
@@ -27,4 +58,33 @@
                p.mb Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.
                p В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.
       .section_block
+         .basket_order_total__title.text-blue Ваш заказ
+         .mb12.text-16-big.text-blue Промокод
+         form.basket_order_total__promo
+            label( for='request_name' ).label-input.order_total__input
+               input#request_name( type='text' ).input.input-big
+               span.sup Введите код
+            button.button-yellow.button-long( type='button' ).order_total__button Применить
+         .basket_order_total__sum
+            .order_total__sum.text-blue
+               .total_sum__text
+                  span Товары (
+                  #number 2
+                  span ) &ndash;&nbsp;
+                  #weight 0,35
+                  span &nbsp;кг
+               .total__sum
+                  #sum 169.00
+                  .elem &nbsp;&#8381;
+            .order_total__discount
+               .total_discount__text.text-blue Скидка
+               .total__discount.text-green
+                  #discount 0.00
+                  .elem &nbsp;&#8381;
+         .basket_order__total
+            .order_total__text.text-blue.mb6 Итого
+            .order__total.text-green
+               #total 0.00
+               .elem &nbsp;&#8381;
+            .text-small.text-dark Общая стоимость без&nbsp;учёта доставки
          button.button-yellow.button-long( data-next='3' ) Перейти к оплате
