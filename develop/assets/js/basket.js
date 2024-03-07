@@ -123,9 +123,8 @@ $(document).ready(function () {
          $(current).addClass('popup');
          $(current).closest('.address_obtaining__items').addClass('godown');
          showBlackBackUP();
-         $(current).on( 'swipe', () => {
-            $(current).css( 'background-color', 'red');
-            // $(current).removeClass('popup').fadeOut();
+         $(current).find('.line_gray').on( 'click', () => {
+            $(current).removeClass('popup').fadeOut();
             $(current).closest('.address_obtaining__items').removeClass('godown');
             hideBlackBack();
          });
