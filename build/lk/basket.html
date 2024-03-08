@@ -390,7 +390,7 @@
                 <div class="line_blue"></div>
                 <div class="order__important">
                   <div class="ico__box"></div>
-                  <div class="order_important__text text-blue">
+                  <div class="text-blue text-14">
                     <p class="mb4">Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.</p>
                     <p>В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.</p>
                   </div>
@@ -484,9 +484,9 @@
                       <div class="ico__edit"></div>
                     </div>
                   </div>
-                  <div id="obtaining_add_address" class="address_obtaining__add mt16">
-                    <div class="icon__address_add mr10"></div>
-                    <div class="text-14 text-blue">Новый адрес</div>
+                  <div id="obtaining_add_address" data-modal="add_dostavka" class="address_obtaining__add mt16 pointer openModal_add_dostavka">
+                    <div data-modal="add_dostavka" class="icon__address_add mr10"></div>
+                    <div data-modal="add_dostavka" class="text-14 text-blue">Новый адрес</div>
                   </div>
                 </section>
                 <section id="obtaining_2" class="address_obtaining__holder hide">
@@ -545,9 +545,9 @@
                       </div>
                     </div>
                   </form>
-                  <div id="obtaining_add_point" class="address_obtaining__add mt16">
-                    <div class="icon__address_add mr10"></div>
-                    <div class="text-14 text-blue">Новый пункт самовывоза</div>
+                  <div id="obtaining_add_point" data-modal="add_samovivoz" class="address_obtaining__add mt16 pointer openModal_add_samovivoz">
+                    <div data-modal="add_samovivoz" class="icon__address_add mr10"></div>
+                    <div data-modal="add_samovivoz" class="text-14 text-blue">Новый пункт самовывоза</div>
                   </div>
                 </section>
               </div>
@@ -582,7 +582,7 @@
                 <div class="line_blue"></div>
                 <div class="order__important">
                   <div class="ico__box"></div>
-                  <div class="order_important__text text-blue">
+                  <div class="text-blue text-14">
                     <p class="mb">Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.</p>
                     <p>В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.</p>
                   </div>
@@ -1367,10 +1367,84 @@
         </div>
       </div>
     </footer>
+        <div id="openModal_add_dostavka" class="modal">
+          <div class="wrapper">
+            <div class="modal__dialog">
+              <div class="modal__content">
+                <div class="add_place__title_xs text-blue">Адрес доставки</div>
+                <div class="add_place_form__holder">
+                  <div class="add_place__title text-18-title text-blue">Адрес доставки</div>
+                  <div class="add_place_form__dostavka">
+                    <form id="dostavka_form" class="dostavka__form">
+                      <label for="dostavka_st" class="label-input dostavka_st">
+                        <input id="dostavka_st" type="text" class="input"><span class="sup">Город, улица, дом, корпус, строение</span>
+                      </label>
+                      <div class="flex row_flex-10-m mb10">
+                        <label for="dostavka_kv" class="label-input dostavka_kv">
+                          <input id="dostavka_kv" type="text" class="input"><span class="sup">Квартира</span>
+                        </label>
+                        <label for="dostavka_pd" class="label-input dostavka_pd">
+                          <input id="dostavka_pd" type="text" class="input"><span class="sup">Подъезд</span>
+                        </label>
+                        <label for="dostavka_et" class="label-input dostavka_et">
+                          <input id="dostavka_et" type="text" class="input"><span class="sup">Этаж</span>
+                        </label>
+                      </div>
+                      <div class="flex row_flex-12 dostavka_ch mb10">
+                        <label for="dostavka_ch" class="label-checkbox">
+                          <input id="dostavka_ch" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                        </label><span class="text-14 text-blue">Доставка в частный дом</span>
+                      </div>
+                      <div class="flex row_flex-12 dostavka_of">
+                        <label for="dostavka_of" class="label-checkbox">
+                          <input id="dostavka_of" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                        </label><span class="text-14 text-blue">Доставка в офис</span>
+                      </div>
+                      <div class="items-center dostavka_info">
+                        <div class="ico__time mr16"></div>
+                        <div class="add_place__block">
+                          <div id="add_place__data" class="text-14 text-blue">08:00 - 10:00, 12 апреля</div><span class="text-small text-dark">Ближайшее время доставки</span>
+                        </div>
+                      </div>
+                      <button id="dostavka_btn" type="button" class="button-yellow button-long text-blue mtauto dostavka_btn"><span>Подтвердить адрес</span></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="add_place_map__holder"><img src="../assets/images/map.jpg"></div>
+              </div>
+              <div class="modal__close">
+                <div class="icon__close-w"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="openModal_add_samovivoz" class="modal">
+          <div class="wrapper">
+            <div class="modal__dialog">
+              <div class="modal__content">
+                <div class="add_place__title_xs text-blue">Пункт самовывоза</div>
+                <div class="add_place_form__holder">
+                  <div class="add_place__title text-18-title text-blue">Пункт самовывоза</div>
+                  <div class="add_place_form__dostavka">
+                    <form id="dostavka_form" class="dostavka__form">
+                      <label for="dostavka_st" class="label-input dostavka_st">
+                        <input id="dostavka_st" type="text" class="input"><span class="sup">Найти адрес</span>
+                      </label>
+                    </form>
+                  </div>
+                </div>
+                <div class="add_place_map__holder"><img src="../assets/images/map.jpg"></div>
+              </div>
+              <div class="modal__close">
+                <div class="icon__close-w"></div>
+              </div>
+            </div>
+          </div>
+        </div>
     <div id="openModal_callme" class="modal">
       <div class="wrapper">
         <div class="modal__dialog">
-          <div class="modal__content">
+          <div class="modal__content relative">
             <div class="request__image_holder request__holder">
               <div class="request__image-1">
                 <div data-large="./assets/images/large/request.webp" data-middle="./assets/images/large/request.webp" data-small="./assets/images/large/request.webp" class="request_img absolute-img"></div>

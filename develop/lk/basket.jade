@@ -5,6 +5,8 @@ html( lang='ru' )
    +title( 'Корзина | Экор' )
 
 
+
+
    body
       #container_basket.container
 
@@ -34,9 +36,10 @@ html( lang='ru' )
       include ../assets/jade/catalog/catalog
 
       include ../assets/jade/lk/footer
+      include ../assets/jade/lk/basket/address/__add_new
+      +add-new( 'dostavka', 'Адрес доставки', '1')
+      +add-new( 'samovivoz', 'Пункт самовывоза', '2')
       include ../assets/jade/modal/modal-callme
 
       include ../assets/jade/lk/script
       script( src='../assets/js/basket.js' )
-
-

@@ -1,13 +1,9 @@
 /* Стили всплывающего окна по-умолчанию */
 .modal {
    position: fixed;
-   z-index: 1500;
+   z-index: 2000;
    top: 22vh;
    width: 100%;
-   //right: 0;
-   //bottom: 0;
-   //left: 0;
-   //background-color: rgba(32, 54, 134, 0.35);
    opacity: 0;
    transition: opacity .2s;
    
@@ -31,15 +27,17 @@
 
 /* Стили для блока с контентом окна */
 .modal__content {
-    position: relative;
-   z-index: 1550;
+    z-index: 1550;
     .flex();
     background-color: #fff;
     width: calc(100% - 20px);
-   overflow: hidden;
+    overflow: hidden;
     outline: 0;
     border-radius: 20px;
-   &:after {
+   //.lg-block({
+   //   flex-direction: column;
+   //});
+   &.relative:after {
       .pseudo();
       z-index: 1500;
       top: 0;

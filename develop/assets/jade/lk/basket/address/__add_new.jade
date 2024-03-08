@@ -1,0 +1,18 @@
+mixin add-new( what, title, id )
+   .modal( id='openModal_add_#{what}')
+      .wrapper
+         .modal__dialog
+            .modal__content
+               .add_place__title_xs.text-blue !{title}
+               .add_place_form__holder
+                  .add_place__title.text-18-title.text-blue !{title}
+                  case id
+                     when '1'
+                        include add_dostavka
+                     when '2'
+                        include add_samovivoz
+
+               .add_place_map__holder
+                  img( src='../assets/images/map.jpg')
+            .modal__close
+               .icon__close-w

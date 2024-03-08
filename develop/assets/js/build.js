@@ -45,6 +45,7 @@ $(document).ready(function () {
          opacity: "1"
       };
       $('#black_back').css(style_blackLayer); // Появление заднего фона
+      $('.address_obtaining__items').addClass('godown');
    }
    function showBlackBackUP() {
       showBlackBack(); // Появление заднего фона
@@ -52,7 +53,8 @@ $(document).ready(function () {
    }
    function hideBlackBack() {
       $('#black_back').prop('style', '');  // Скрытие задника
-      $('#black_back').removeClass('up')
+      $('#black_back').removeClass('up');
+      $('.address_obtaining__items').removeClass('godown');
    }
    
    function appendToMobile( width ) {
@@ -82,6 +84,7 @@ $(document).ready(function () {
       
       if ( $('.header__menu_mobile').css('display') !== 'block' ) {
          $('.header__menu_mobile').slideDown(500);
+         $('header').css( 'z-index', 9999);
          $('.header__main .burger__holder').addClass('close');
          hideCatalog();
          showBlackBack() // Появление заднего фона
@@ -94,7 +97,7 @@ $(document).ready(function () {
       });
    }
    function hideMobileMenu() {
-      $('.header__menu_mobile').slideUp(200);
+      $('.header__menu_mobile').slideUp(200, () => {$('header').removeAttr( 'style');});
       hideBlackBack();  // Скрытие задника
       $('.header__main .burger__holder').removeClass('close');
    }
@@ -336,7 +339,7 @@ $(document).ready(function () {
             }
          }]
       });
-      if (container_width <= 400) {
+      if (container_width <= 600) {
          $(watched).css({ marginRight: '-5px', marginLeft: '-5px' });
          $(watched).find('.slick-slide').css('padding', '0 5px' );
       } else if (container_width <= 1440) {
@@ -626,6 +629,9 @@ $(document).ready(function () {
    /* ГЛОБАЛЬНЫЙ открытие модального окна popup ввод номера */
    if ($('.openModal_callme').length > 0) {
       $('.openModal_callme').on( 'click', (event) => openModal(event.target));
+   }
+   if ($('.openModal_add_samovivoz').length > 0) { // страница lk/basket
+      $('.address_obtaining__add').on( 'click', (event) => {openModal(event.target)});
    }
    function openModal( target ) {
       let click = $(target).data( 'modal');
