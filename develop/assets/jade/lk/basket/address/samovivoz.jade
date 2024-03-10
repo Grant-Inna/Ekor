@@ -12,9 +12,9 @@ form( name='option').address_obtaining__items
       #obtaining_point-1.point_options__popup
          .line_gray
          .options_popup.address_obtaining
-            .obtaining_map.items-center( data-click='map').pointer
-               .ico__navigation
-               .options_popup__text Посмотреть на&nbsp;карте
+            .obtaining_map.items-center.mb10.pointer( data-modal='watch_point')
+               .ico__navigation( data-modal='watch_point')
+               .options_popup__text( data-modal='watch_point') Посмотреть на&nbsp;карте
             .items-center( data-click='del').pointer
                .ico__bin-r
                .options_popup__text.text-red Удалить
@@ -32,9 +32,9 @@ form( name='option').address_obtaining__items
       #obtaining_point-2.point_options__popup
          .line_gray
          .options_popup.address_obtaining
-            .obtaining_map.items-center.mb10( data-click='map')
-               .ico__navigation
-               .options_popup__text Посмотреть на&nbsp;карте
+            .obtaining_map.items-center.mb10.pointer( data-modal='watch_point')
+               .ico__navigation( data-modal='watch_point')
+               .options_popup__text( data-modal='watch_point') Посмотреть на&nbsp;карте
             .items-center( data-click='del')
                .ico__bin-r
                .options_popup__text.text-red Удалить

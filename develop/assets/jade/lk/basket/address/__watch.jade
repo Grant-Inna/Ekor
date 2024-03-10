@@ -1,18 +1,20 @@
-mixin add-new( what, title, id )
-   .modal( id='openModal_add_#{what}')
+mixin watch( what, title, id )
+   .modal( id='openModal_#{what}')
       .wrapper.wrapper-small
          .modal__dialog
             .modal__content
                .add_place__title_xs.text-blue !{title}
                .add_place_form__holder
-                  .add_place__title.text-18-title.text-blue !{title}
+                  .add_place__title.row_flex-12
+                     .icon__back
+                     .text-18-title.text-blue !{title}
                   case id
                      when '1'
-                        include add_dostavka
+                        include watch_dostavka
                      when '2'
-                        include add_samovivoz
+                        include edit_address
 
                .add_place_map__holder
-                  img( src='../assets/images/map.jpg')
+                  img( src='../assets/images/map+.jpg')
             .modal__close
                .icon__close-w

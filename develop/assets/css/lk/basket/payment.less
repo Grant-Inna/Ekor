@@ -1,0 +1,42 @@
+.check_type__holder {
+   padding-bottom: 20px;
+   .xs-block({
+     padding-bottom: 16px;
+   });
+}
+.check_info__holder {
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border-top: 1px solid @color-gray-light;
+   .xs-block({
+      padding-top: 10px;
+      padding-bottom: 10px;
+   });
+}
+.order_info__holder {
+   border-top: 1px solid @color-gray-light;
+   padding-top: 20px;
+   .sm-block({
+      display: none;
+   })
+}
+.payment_type__item {
+   margin-bottom: 20px;
+   .xs-block({
+      margin-bottom: 10px;
+   });
+   &:last-of-type {
+      margin-bottom: 0;
+      .xs-block({
+         margin-bottom: 0;
+      })
+   }
+   .flex();
+   & .label-checkbox {
+      margin-right: 12px;
+   }
+   & > span {
+      font-size: 14px;
+      line-height: 20px;
+   }
+}

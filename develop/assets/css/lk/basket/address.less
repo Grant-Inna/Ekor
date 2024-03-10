@@ -279,18 +279,12 @@
    
 });
 
-
-#openModal_add_samovivoz,
-#openModal_add_dostavka {
-   .wrapper {
-      max-width: 862px;
-      .xs-block({
-         padding-right: 0 !important;
-         padding-left: 0 !important;
-      });
-   }
-   
+.watch_place__dostavka {
+   flex-grow: 999;
+   .column();
+   .justify-between();
 }
+
 .add_place_form__holder,
 .add_place_map__holder {
    width: 50%;
@@ -315,7 +309,7 @@
       border-top-left-radius: 20px;
    });
 }
-.add_place_form__dostavka {
+.obtaining__dostavka {
    flex-grow: 999;
    .label-input,
    input[type='text'] {
@@ -345,6 +339,9 @@
 }
 .add_place__title {
    margin-bottom: 20px;
+   .sm-block({
+      margin-bottom: 10px;
+   });
    .xs-block({
       margin-bottom: 0;
    });
@@ -393,7 +390,8 @@
 
 
 .md-block({
-   .modal[id^='openModal_add_'] {
+   .modal[id^='openModal_add_'],
+   .modal[id^='openModal_edit_'] {
       top: 15vh;
       .add_place_form__holder {
          padding-bottom: 25px;
@@ -405,7 +403,8 @@
          margin-top: 20px;
       }
    }
-   .modal[id^='openModal_add_'] .modal__content {
+   .modal[id^='openModal_add_'] .modal__content,
+   .modal[id^='openModal_edit_'] .modal__content {
       flex-direction: column;
    }
 });
@@ -416,7 +415,8 @@
 }
 
 .xs-block({
-   .modal[id^='openModal_add_'] {
+   .modal[id^='openModal_add_'],
+   .modal[id^='openModal_edit_'] {
       top: 0;
       height: 100vh;
 

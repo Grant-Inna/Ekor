@@ -128,18 +128,22 @@ $(document).ready(function () {
       $(current).fadeIn(200);
       if (width <= 470) {
          $(current).addClass('popup');
+         // $(current).closest('.address_obtaining__items').addClass('godown');
          showBlackBackUP();
          $(current).find('.line_gray').on( 'click', () => {
             $(current).removeClass('popup').fadeOut();
+            // $(current).closest('.address_obtaining__items').removeClass('godown');
             hideBlackBack();
          });
          $('.address_popup__button').on( 'click', (e) => {
             e.preventDefault();
             $(current).removeClass('popup').fadeOut();
+            // $(current).closest('.address_obtaining__items').removeClass('godown');
             hideBlackBack();
          });
          $('#black_back').on( 'click', () => {
             $(current).removeClass('popup').fadeOut();
+            // $(current).closest('.address_obtaining__items').removeClass('godown');
             hideBlackBack();
          })
       } else {

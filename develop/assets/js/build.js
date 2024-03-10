@@ -44,6 +44,7 @@ $(document).ready(function () {
          display: "block",
          opacity: "1"
       };
+
       $('#black_back').css(style_blackLayer); // Появление заднего фона
       $('.address_obtaining__items').addClass('godown');
    }
@@ -51,9 +52,10 @@ $(document).ready(function () {
       showBlackBack(); // Появление заднего фона
       $('#black_back').addClass('up');
    }
+
    function hideBlackBack() {
       $('#black_back').prop('style', '');  // Скрытие задника
-      $('#black_back').removeClass('up');
+      $('#black_back').removeClass('up').removeClass('upup');
       $('.address_obtaining__items').removeClass('godown');
    }
    
@@ -622,7 +624,7 @@ $(document).ready(function () {
    if ($('input.number')) {
       $('input.number').on( 'input', function() {
          $.mask.definitions['h'] = "[0|1|3|4|5|6|7|8|9]";
-         $(this).mask("99 99 99");
+         $(this).mask("99 99");
      });
    }
   
@@ -631,22 +633,30 @@ $(document).ready(function () {
       $('.openModal_callme').on( 'click', (event) => openModal(event.target));
    }
    if ($('.openModal_add_samovivoz').length > 0) { // страница lk/basket
-      $('.address_obtaining__add').on( 'click', (event) => {openModal(event.target)});
+      $('.address_obtaining__add').on( 'click', (event) => { openModal(event.target)});
+      $('.obtaining_map').on( 'click', (event) => { openModal(event.target)});
+      $('.ico__edit').on( 'click', (event) => { openModal(event.target)});
+   }
+   if ($('.order_info__read').length > 0) { // страница lk/basket
+      $('.order_info__read').on( 'click', (event) => { openModal(event.target)});
    }
    function openModal( target ) {
+            // debugger;
       let click = $(target).data( 'modal');
       $('#openModal_' + click).removeAttr( 'style').addClass('show');
+   
       showBlackBackUP();
+      // console.log($('#black_back').prop('class'));
+
       $('.header__menu_mobile').slideUp(300);
       $('.header__main .burger__holder').removeClass('close');
       
-            // Клик по ссылке "Закрыть".
+       // Клик по ссылке "Закрыть".
       $('.modal__close').on( 'click', function() {
          $(this).parents('.modal').fadeOut();
          hideMobileMenu();
          $('div[id^="openModal_"]').removeClass('show');
       });
-
       // Закрытие по клавише Esc.
       $(document).keydown(function(event) {
          if (event.keyCode === 27) {
@@ -655,18 +665,22 @@ $(document).ready(function () {
             hideModal();
          }
       });
-
       // Клик по фону, но не по окну.
       $('#black_back').on( 'click', function() {
          hideMobileMenu();
          hideModal()
       });
-      
+      // Клик по стрелке
+      $('.icon__back').on( 'click', function() {
+         hideMobileMenu();
+         hideModal()
+      });
       $('#openModal_' + click).find('button').on( 'click', function(event) {
          event.stopPropagation();
          hideMobileMenu();
          hideModal();
       });
+      
    }
    function hideModal() {
       $('.modal').fadeOut();

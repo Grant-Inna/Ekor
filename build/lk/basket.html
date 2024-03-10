@@ -481,7 +481,7 @@
                       <div class="obtaining_address__text">
                         <div class="text-14 text-blue">Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328</div>
                       </div>
-                      <div class="ico__edit"></div>
+                      <div data-modal="edit_address" class="ico__edit pointer"></div>
                     </div>
                   </div>
                   <div id="obtaining_add_address" data-modal="add_dostavka" class="address_obtaining__add mt16 pointer openModal_add_dostavka">
@@ -506,9 +506,9 @@
                       <div id="obtaining_point-1" class="point_options__popup">
                         <div class="line_gray"></div>
                         <div class="options_popup address_obtaining">
-                          <div data-click="map" class="obtaining_map items-center pointer">
-                            <div class="ico__navigation"></div>
-                            <div class="options_popup__text">Посмотреть на&nbsp;карте</div>
+                          <div data-modal="watch_point" class="obtaining_map items-center mb10 pointer">
+                            <div data-modal="watch_point" class="ico__navigation"></div>
+                            <div data-modal="watch_point" class="options_popup__text">Посмотреть на&nbsp;карте</div>
                           </div>
                           <div data-click="del" class="items-center pointer">
                             <div class="ico__bin-r"></div>
@@ -532,9 +532,9 @@
                       <div id="obtaining_point-2" class="point_options__popup">
                         <div class="line_gray"></div>
                         <div class="options_popup address_obtaining">
-                          <div data-click="map" class="obtaining_map items-center mb10">
-                            <div class="ico__navigation"></div>
-                            <div class="options_popup__text">Посмотреть на&nbsp;карте</div>
+                          <div data-modal="watch_point" class="obtaining_map items-center mb10 pointer">
+                            <div data-modal="watch_point" class="ico__navigation"></div>
+                            <div data-modal="watch_point" class="options_popup__text">Посмотреть на&nbsp;карте</div>
                           </div>
                           <div data-click="del" class="items-center">
                             <div class="ico__bin-r"></div>
@@ -628,18 +628,173 @@
               </div>
             </div>
           </section>
-          <div data-section="3" class="basket_payment__holder section_holder">
-            <div class="basket_order__main section_main"><span>Оплата</span></div>
-            <div class="basket_order__second section_second"><span>Оплата</span>
-              <button data-next="4" class="button-yellow">Кнопка, типа всё ок</button>
+          <section data-section="3" class="basket_payment__holder section_holder">
+            <div class="basket_order__main section_main">
+              <div class="section_block">
+                <div class="basket_group__title text-blue mb20">Информация о&nbsp;заказе</div>
+                <div class="text-14 flex mb4">
+                  <div class="text-dark">Количество товаров в корзине:&nbsp;</div>
+                  <div class="text-blue">
+                    <div id="total-amount">3</div>
+                  </div>
+                </div>
+                <div class="text-14 flex mb4">
+                  <div class="text-dark">Общий вес заказа:&nbsp;</div>
+                  <div class="text-blue flex">
+                    <div id="total-weight">0.21</div>
+                    <div class="elem">&nbsp;кг</div>
+                  </div>
+                </div>
+                <div class="text-14 flex">
+                  <div class="text-dark">Общий объем заказа:&nbsp;</div>
+                  <div class="text-dark flex">
+                    <div id="total-volume">0</div>
+                    <div class="elem">&nbsp;м</div><sub>3</sub>
+                  </div>
+                </div>
+              </div>
+              <div class="section_block">
+                <div class="basket_group__title text-blue mb20">Способ оплаты</div>
+                <form id="payment_form__holder" name="payment_type">
+                  <label for="payment_type_radio-1" class="catalog_main__item">
+                    <div class="label-checkbox">
+                      <input id="payment_type_radio-1" name="payment_type" type="radio" checked="true" class="checkbox-hidden"><span class="radio"></span>
+                    </div>
+                    <div class="block">
+                      <div class="text-16 text-16-big text-blue input-type-radio">Безналичная оплата</div>
+                      <div class="text-14 text-dark">Получить счет</div>
+                    </div>
+                  </label>
+                  <label for="payment_type_radio-2" class="payment_type__item">
+                    <div class="label-checkbox">
+                      <input id="payment_type_radio-2" name="payment_type" type="radio" class="checkbox-hidden"><span class="radio"></span>
+                    </div>
+                    <div class="text-16 text-16-big text-blue mr4 input-type-radio">Рассмотреть отсрочку платежа</div>
+                    <div class="ico__question-circle"></div>
+                  </label>
+                  <label for="payment_type_radio-3" class="payment_type__item">
+                    <div class="label-checkbox">
+                      <input id="payment_type_radio-3" name="payment_type" type="radio" class="checkbox-hidden"><span class="radio"></span>
+                    </div>
+                    <div class="text-16 text-16-big text-blue input-type-radio">Оплата наличными при&nbsp;получении</div>
+                  </label>
+                </form>
+              </div>
+              <div class="section_block">
+                <div class="basket_group__title text-blue mb20">Дополнительная информация</div>
+                <div class="flex row_flex-10 mb20">
+                  <label id="request_label" for="request_checkbox" class="label-checkbox">
+                    <input id="request_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
+                  </label><span class="text-dark text-small">Получать уведомления об&nbsp;оформлении и&nbsp;статусе доставки заказа</span>
+                </div>
+                <div class="check_type__holder">
+                  <div class="text-16-big text-blue mb20">Кассовый чек</div>
+                  <form id="cash_check_form__holder" name="cash_check_type">
+                    <label for="cash_check_type_radio-1" class="payment_type__item">
+                      <div class="label-checkbox">
+                        <input id="cash_check_type_radio-1" name="payment_type" type="radio" checked="true" class="checkbox-hidden"><span class="radio"></span>
+                      </div>
+                      <div class="items-center text-14 input-type-radio">
+                        <div class="text-dark">По смс&nbsp;</div>
+                        <div id="cash_check_phone" class="text-blue">+7 999 999-99-99</div>
+                      </div>
+                    </label>
+                    <label for="cash_check_type_radio-2" class="payment_type__item">
+                      <div class="label-checkbox">
+                        <input id="cash_check_type_radio-2" name="payment_type" type="radio" class="checkbox-hidden"><span class="radio"></span>
+                      </div>
+                      <div class="items-center text-14 input-type-radio">
+                        <div class="text-dark">Письмом на&nbsp;</div>
+                        <div id="cash_check_mail" class="text-blue">mail@mail.ru</div>
+                      </div>
+                    </label>
+                  </form>
+                </div>
+                <div class="check_info__holder">
+                  <div class="text-16-big text-blue mb10">Мы отказались от бумажных чеков в пользу электронных благодаря ФЗ-54</div>
+                  <div class="text-14 text-dark">
+                    <p class="mb4">Электронный чек содержит всю необходимую информацию и в отличии от бумажного чека:
+                      <div class="items-center mb4">
+                        <div class="dot mr6"></div><span>не теряется</span>
+                      </div>
+                      <div class="items-center mr4">
+                        <div class="dot mr6"></div><span>не загрязняет окружающую среду</span>
+                      </div>
+                      <div class="items-center mr4">
+                        <div class="dot mr6"></div><span>не требует вырубки деревьев</span>
+                      </div>
+                    </p>
+                  </div>
+                </div>
+                <div class="order_info__holder text-dark">
+                  <p class="mb6">Подтверждая заказ, вы принимаете порядок приёма-передачи товаров. Заказы доставляются нами в указанное вами место и время для того, чтобы вы могли с ними ознакомиться и принять решение о покупке. Вы не принимаете на себя никаких обязательств по покупке товаров и можете в любой момент отказаться от непонравившихся товаров. При этом, торговая сеть «Утконос» связана обязательствами по доставке товаров, но не принимает на себя обязательств по продаже товаров до момента вашего ознакомления с товарами и решения их купить.</p>
+                  <div data-modal="order_info" class="order_info__read text-small text-big pointer">Подробнее</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div data-section="4" class="basket_thanks__holder section_holder">
+            <div class="basket_order__second section_second">
+              <div class="basket_order__important">
+                <div class="line_blue"></div>
+                <div class="order__important">
+                  <div class="ico__box"></div>
+                  <div class="text-blue text-14">
+                    <p class="mb">Минимальная сумма заказа с&nbsp;доставкой на&nbsp;дом&nbsp;&mdash; 3&nbsp;000&nbsp;&#8381;.</p>
+                    <p>В&nbsp;продуктомат&nbsp;&mdash; 1&nbsp;000&nbsp;&#8381;.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="section_block">
+                <div class="basket_order_total__title text-blue">Ваш заказ</div>
+                <div class="mb12 text-16-big text-blue">Промокод</div>
+                <form class="basket_order_total__promo">
+                  <label for="request_name" class="label-input order_total__input">
+                    <input id="request_name" type="text" class="input input-big"><span class="sup">Введите код</span>
+                  </label>
+                  <button type="button" class="button-yellow button-long order_total__button">Применить</button>
+                </form>
+                <div class="basket_order_total__sum">
+                  <div class="order_total__sum text-blue">
+                    <div class="total_sum__text"><span>Товары (</span>
+                      <div id="number">2</div><span>) &ndash;&nbsp;</span>
+                      <div id="weight">0,35</div><span>&nbsp;кг</span>
+                    </div>
+                    <div class="total__sum">
+                      <div id="sum">169.00</div>
+                      <div class="elem">&nbsp;&#8381;</div>
+                    </div>
+                  </div>
+                  <div class="order_total__sum">
+                    <div class="total_discount__text text-blue">Доставка</div>
+                    <div class="total__discount text-blue">
+                      <div id="obtaining">99.00</div>
+                      <div class="elem">&nbsp;&#8381;</div>
+                    </div>
+                  </div>
+                  <div class="order_total__discount">
+                    <div class="total_discount__text text-blue">Скидка</div>
+                    <div class="total__discount text-green">
+                      <div id="discount">5.00</div>
+                      <div class="elem">&nbsp;&#8381;</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basket_order__total">
+                  <div class="order_total__text text-blue mb6">Итого</div>
+                  <div class="order__total text-green">
+                    <div id="total">0.00</div>
+                    <div class="elem">&nbsp;&#8381;</div>
+                  </div>
+                </div>
+                <button data-next="4" class="button-yellow button-long">Оформить заказ</button>
+              </div>
+            </div>
+          </section>
+          <section data-section="4" class="basket_thanks__holder section_holder">
             <div class="thanks"></div>
             <div class="basket_thanks__caption text-blue"><span>Спасибо</span><span class="f">!</span><span class="s">&nbsp;за заказ!</span></div>
             <p class="basket_thanks__text text-dark"><span>Ваш платеж успешно обработан. Ожидайте скорую доставку и&nbsp;свяжитесь с&nbsp;нами, если у&nbsp;вас есть какие-либо вопросы.</span><span class="t"> Спасибо за покупку!</span></p><a href="../catalog.html" class="basket_thanks__button_holder">
               <button class="basket_thanks__button button-yellow">Вернуться к покупкам</button></a>
-          </div>
+          </section>
         </div>
       </section>
       <div id="basket_wrapper" class="wrapper">
@@ -1368,13 +1523,13 @@
       </div>
     </footer>
         <div id="openModal_add_dostavka" class="modal">
-          <div class="wrapper">
+          <div class="wrapper wrapper-small">
             <div class="modal__dialog">
               <div class="modal__content">
                 <div class="add_place__title_xs text-blue">Адрес доставки</div>
                 <div class="add_place_form__holder">
                   <div class="add_place__title text-18-title text-blue">Адрес доставки</div>
-                  <div class="add_place_form__dostavka">
+                  <div class="add_place_form__dostavka obtaining__dostavka">
                     <form id="dostavka_form" class="dostavka__form">
                       <label for="dostavka_st" class="label-input dostavka_st">
                         <input id="dostavka_st" type="text" class="input"><span class="sup">Город, улица, дом, корпус, строение</span>
@@ -1419,13 +1574,13 @@
           </div>
         </div>
         <div id="openModal_add_samovivoz" class="modal">
-          <div class="wrapper">
+          <div class="wrapper wrapper-small">
             <div class="modal__dialog">
               <div class="modal__content">
                 <div class="add_place__title_xs text-blue">Пункт самовывоза</div>
                 <div class="add_place_form__holder">
                   <div class="add_place__title text-18-title text-blue">Пункт самовывоза</div>
-                  <div class="add_place_form__dostavka">
+                  <div class="add_place_form__dostavka obtaining__dostavka">
                     <form id="dostavka_form" class="dostavka__form">
                       <label for="dostavka_st" class="label-input dostavka_st">
                         <input id="dostavka_st" type="text" class="input"><span class="sup">Найти адрес</span>
@@ -1441,6 +1596,109 @@
             </div>
           </div>
         </div>
+        <div id="openModal_watch_point" class="modal">
+          <div class="wrapper wrapper-small">
+            <div class="modal__dialog">
+              <div class="modal__content">
+                <div class="add_place__title_xs text-blue">Пункт самовывоза</div>
+                <div class="add_place_form__holder">
+                  <div class="add_place__title row_flex-12">
+                    <div class="icon__back"></div>
+                    <div class="text-18-title text-blue">Пункт самовывоза</div>
+                  </div>
+                  <div class="watch_place__dostavka obtaining__dostavka">
+                    <div class="items-center dostavka_info">
+                      <div class="ico__point mr16"></div>
+                      <div class="add_place__block">
+                        <div id="watch_place__data" class="text-14 text-blue">г. Москва, ул. Тверская, д. 1, стр. 1</div>
+                      </div>
+                    </div>
+                    <button id="watch_btn" type="button" class="button-yellow button-long text-blue mtauto dostavka_btn"><span>Заберу отсюда</span></button>
+                  </div>
+                </div>
+                <div class="add_place_map__holder"><img src="../assets/images/map+.jpg"></div>
+              </div>
+              <div class="modal__close">
+                <div class="icon__close-w"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="openModal_edit_address" class="modal">
+          <div class="wrapper wrapper-small">
+            <div class="modal__dialog">
+              <div class="modal__content">
+                <div class="add_place__title_xs text-blue">Адрес доставки</div>
+                <div class="add_place_form__holder">
+                  <div class="add_place__title row_flex-12">
+                    <div class="icon__back"></div>
+                    <div class="text-18-title text-blue">Адрес доставки</div>
+                  </div>
+                  <div class="edit_address__dostavka obtaining__dostavka">
+                    <form id="edit_address_form" class="dostavka__form">
+                      <label for="edit_address_st" class="label-input dostavka_st">
+                        <input id="edit_address_st" type="text" class="input"><span class="sup">Город, улица, дом, корпус, строение</span>
+                      </label>
+                      <div class="flex row_flex-10-m mb10">
+                        <label for="edit_address_kv" class="label-input dostavka_kv">
+                          <input id="edit_address_kv" type="text" class="input"><span class="sup">Квартира</span>
+                        </label>
+                        <label for="edit_address_pd" class="label-input dostavka_pd">
+                          <input id="edit_address_pd" type="text" class="input"><span class="sup">Подъезд</span>
+                        </label>
+                        <label for="edit_address_et" class="label-input dostavka_et">
+                          <input id="edit_address_et" type="text" class="input"><span class="sup">Этаж</span>
+                        </label>
+                      </div>
+                      <div class="flex row_flex-12 dostavka_ch mb10">
+                        <label for="edit_address_ch" class="label-checkbox">
+                          <input id="edit_address_ch" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                        </label><span class="text-14 text-blue">Доставка в частный дом</span>
+                      </div>
+                      <div class="flex row_flex-12 dostavka_of">
+                        <label for="edit_address_of" class="label-checkbox">
+                          <input id="edit_address_of" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                        </label><span class="text-14 text-blue">Доставка в офис</span>
+                      </div>
+                      <div class="items-center dostavka_info">
+                        <div class="ico__time mr16"></div>
+                        <div class="add_place__block">
+                          <div id="add_place__data" class="text-14 text-blue">08:00 - 10:00, 12 апреля</div><span class="text-small text-dark">Ближайшее время доставки</span>
+                        </div>
+                      </div>
+                      <button id="edit_address_btn" type="button" class="button-yellow button-long text-blue mtauto dostavka_btn"><span>Доставить сюда</span></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="add_place_map__holder"><img src="../assets/images/map+.jpg"></div>
+              </div>
+              <div class="modal__close">
+                <div class="icon__close-w"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div id="openModal_order_info" class="modal order_info__modal">
+      <div class="wrapper wrapper-small">
+        <div class="modal__dialog">
+          <div class="modal__content block p20">
+            <div class="add_place__title text-18-title text-blue">Порядок приема-передачи товара покупателю:</div>
+            <div class="text-dark">
+              <p class="mb4">1. Процесс приёма-передачи товара опосредует совокупность действий сторон, складывающихся по факту доставки продавцом товара по адресу, указанному покупателем, и направленных на переход права собственности на продукцию от продавца к покупателю.</p>
+              <p class="mb4">2. По факту доставки продавцом товара по адресу, указанному покупателем, и вручения его последнему, покупатель в течение 15 минут вправе осуществлять проверку продукции на предмет её соответствия ранее заказанным позициям, соблюдения сроков годности товара (в отношении товара для которого это применимо), целостности упаковки и т.п.</p>
+              <p class="mb4">3. При осуществлении проверки покупатель не должен нарушать целостность упаковки товара. Под нарушением целостности упаковки товара понимаются такие действия покупателя, по факту совершения которых внешний вид товара, прошедшего проверку у покупателя, будет отличаться от первоначального внешнего вида продукции и подобное несоответствие будет препятствовать последующей реализации данного товара.</p>
+              <p class="mb4">Аналогичные правила подлежат применению и в том случае, если товар продаётся в упакованном виде, состоящем из нескольких единиц подобной продукции (например, йогурты, напиток Actimel, яйцо куриное, и т.п.). Применительно к указанным товарам покупатель не должен вскрывать, разламывать, иным образом нарушать целостность таких упаковок и отбирать определённое количество единиц продукции, а может приобрести лишь целиком всю упаковку такого товара.</p>
+              <p class="mb4">Если при проверке товара покупатель нарушает целостность его упаковки, то тем самым он выражает своё волеизъявление на приобретение данного товара у продавца, вследствие чего подобные действия покупателя порождают его обязанность по оплате такого товара.</p>
+              <p class="mb4">4. По истечении периода времени, указанного в пункте 2 настоящего Порядка, покупатель принимает решение о приобретении заказанного ранее товара (полностью или частично), либо об отказе в приобретении продукции (полностью или частично). О своём решении покупатель информирует представителя продавца. В случае принятия решения приобрести товар (полностью или частично) покупатель производит его оплату и проставляет свою подпись в сопроводительных документах. Отказ покупателя от оплаты товара, а равно от подписания сопроводительной документации, будет расцениваться продавцом как отказ покупателя от приобретения продукции.</p>
+              <p class="mb4">5. Если по истечении периода времени, указанного в пункте 2 настоящего Порядка, покупатель не принимает какого‑либо решения о дальнейшей судьбе заказанного ранее товара (не озвучивает его представителю продавца), то представитель продавца вправе забрать такой товар и покинуть место расположения покупателя. Подобные ситуации будут классифицироваться как отказ покупателя от приобретения продукции.</p>
+            </div>
+          </div>
+          <div class="modal__close">
+            <div class="icon__close-w"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="openModal_callme" class="modal">
       <div class="wrapper">
         <div class="modal__dialog">

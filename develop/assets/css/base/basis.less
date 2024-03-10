@@ -14,6 +14,13 @@ body {
 .wrapper {
    .wrapper();
 }
+.wrapper-small {
+   max-width: 862px;
+   .xs-block({
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+   });
+}
 .row() {
    .row-flex();
 }
@@ -72,16 +79,25 @@ input::placeholder { color: @color-gray-search; font-size: 14px; .montserrat-med
    right: 0;
    bottom: 0;
    left: 0;
-   background-color: rgba(32, 54, 134, 0.35);
+   background-color: rgba(32, 54, 134, 0.6);
    //opacity: 0;
    transition: opacity .2s;
    
    display: none;
 }
 #black_back.up {
-   z-index: 1500;
+   z-index: 1900;
+   .xs-block({
+      z-index: 1500;
+   })
 }
 .absolute-img {
    width: 100%;
    height: 100%;
+}
+.dot {
+   width: 4px;
+   height: 4px;
+   background-color: @color-blue;
+   border-radius: 50px;
 }

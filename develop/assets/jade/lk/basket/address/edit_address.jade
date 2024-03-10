@@ -1,0 +1,35 @@
+.edit_address__dostavka.obtaining__dostavka
+   form#edit_address_form.dostavka__form
+      label( for='edit_address_st' ).label-input.dostavka_st
+         input#edit_address_st( type='text' ).input
+         span.sup Город, улица, дом, корпус, строение
+      .flex.row_flex-10-m.mb10
+         label( for='edit_address_kv' ).label-input.dostavka_kv
+            input#edit_address_kv( type='text' ).input
+            span.sup Квартира
+         label( for='edit_address_pd' ).label-input.dostavka_pd
+            input#edit_address_pd( type='text' ).input
+            span.sup Подъезд
+         label( for='edit_address_et' ).label-input.dostavka_et
+            input#edit_address_et( type='text' ).input
+            span.sup Этаж
+      .flex.row_flex-12.dostavka_ch.mb10
+         label.label-checkbox( for='edit_address_ch' )
+            input#edit_address_ch.checkbox-hidden( type='checkbox' )
+            span.checkbox
+         span.text-14.text-blue Доставка в частный дом
+      .flex.row_flex-12.dostavka_of
+         label.label-checkbox( for='edit_address_of' )
+            input#edit_address_of.checkbox-hidden( type='checkbox' )
+            span.checkbox
+         span.text-14.text-blue Доставка в офис
+
+      .items-center.dostavka_info
+         .ico__time.mr16
+         .add_place__block
+            #add_place__data.text-14.text-blue 08:00 - 10:00, 12 апреля
+            span.text-small.text-dark Ближайшее время доставки
+
+
+      button#edit_address_btn.button-yellow.button-long.text-blue.mtauto( type='button' ).dostavka_btn
+         span Доставить сюда
