@@ -23,7 +23,7 @@ $(document).ready(function () {
    
    if ($('.login__container').length > 0) {
       $('.login__container button').on( 'click', (event) => { event.preventDefault()});
-      $('#open_login').on( 'click', () => {
+      $('#open_login, #open_login_m').on( 'click', () => {
          // $('#openModal_login').fadeIn().css( 'right', '0');
          // $('#openModal_register').fadeIn().css( 'right', '0');
          // $('#openModal_recover').fadeIn().css( 'right', '0');
