@@ -527,3 +527,58 @@ header {
    width: 24px;
    height: 24px;
 }
+
+/*  вход login  */
+.icon__login_close {
+   .icon-i-i( 'login', 'close');
+   .sm-block({
+      .icon-i-i( 'login', 'b-close');
+   })
+}
+.ico__google {
+   .icon-i-i( 'login', 'google');
+   width: 20px;
+   height: 20px;
+}
+.ico__eye.no {
+   .icon-i-i( 'login', 'eye-hide');
+   width: 24px;
+   height: 24px;
+}
+.ico__eye.show {
+   .icon-i-i( 'login', 'eye-show');
+   width: 24px;
+   height: 24px;
+}
+.welcome {
+   background-image: url("../images/svg/icons/login/welcome.webp");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   width: 100%;
+   height: 91px;
+   .xs-block({
+      height: 49px;
+   });
+}
+.register_social( @name ) {
+   background-image: url("../images/svg/icons/login/@{name}.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+   width: 40px;
+   height: 40px;
+}
+.register_social__vk {
+   .register_social( 'vk');
+}
+.register_social__instagram {
+   .register_social( 'instagram');
+}
+.register_social__facebook {
+   .register_social( 'facebook');
+}
+.register_social__odnoklassniki {
+   .register_social( 'odnoklassniki');
+}

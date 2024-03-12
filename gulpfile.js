@@ -117,11 +117,10 @@ function fonts(done){
 }
 function js(done){
    return gulp.src(src + 'js/*')
-   .pipe(gulpif(isProd, uglify()))
    .pipe(gulp.dest( dist + 'js'));
    done();
 }
-
+// .pipe(gulpif(isProd, uglify()))
 function clear(){
    return del( prod + '*');
 }

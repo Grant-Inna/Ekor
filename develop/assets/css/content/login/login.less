@@ -1,0 +1,245 @@
+.login__container {
+   background-color: white;
+   position: fixed;
+   z-index: 2000;
+   top: 0;
+   
+   bottom: 0;
+   
+   width: 730px;
+   padding: 40px;
+   box-sizing: border-box;
+   
+   .middle-block({
+      width: 100%;
+   });
+   .sm-block({
+      padding: 21px 15px;
+   });
+   
+   right: -1000px;
+   display: none;
+   .tr();
+   
+   input {
+      color: @color-blue;
+   }
+}
+.register__container {
+   position: relative;
+   .column();
+   height: 100%;
+}
+.login__title {
+   .montserrat-semibold();
+   font-size: 40px;
+   line-height: 100%;
+   .md-block({
+      font-size: 24px;
+      line-height: 120%;
+   });
+   .xs-block({
+      font-size: 16px;
+      line-height: 120%;
+   });
+}
+.login__button {
+   .flex-center();
+   padding: 20px;
+   border: 1px solid @color-gray-light;
+   border-radius: 10px;
+}
+.login__or {
+   .flex-center();
+   position: relative;
+   &:before,
+   &:after {
+      .pseudo();
+      height: 1px;
+      width: 50%;
+      top: 50%;
+      transform: translateY(50%);
+      background-color: @color-gray-light;
+      z-index: 100;
+   }
+   &:before {
+      left: 0;
+   }
+   &:after {
+      right: 0;
+   }
+}
+.login__or p {
+   position: relative;
+   z-index: 200;
+   padding: 0 8px;
+   background-color: white;
+}
+.login__form,
+.register__form {
+   .column();
+}
+.login__container .ico__eye {
+   position: absolute;
+   z-index: 1000;
+   right: 16px;
+}
+.login__form .button-yellow,
+.login__form .button-hollow {
+   height: 60px;
+}
+.register__entities {
+   .gr();
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: 60px;
+   grid-column-gap: 16px;
+   margin-bottom: 20px;
+   .sm-block({
+      grid-column-gap: 8px;
+      margin-bottom: 16px;
+   })
+}
+.register_entities__button {
+   .column-center();
+   .montserrat-semibold();
+   font-size: 14px;
+   line-height: 110%;
+   border-radius: 10px;
+   background-color: transparent;
+   color: @color-blue;
+   border: 1px solid @color-gray-light;
+   padding: 12.5px 24px;
+   flex-grow: 1;
+   
+   box-sizing: border-box;
+   .tr();
+}
+.register_entities__button.active {
+   background-color: @color-blue;
+   color: white;
+   border: 1px solid @color-blue;
+}
+.register_form {
+   .column();
+}
+.register__form {
+   //.gr();
+   grid-row-gap: 10px;
+   .sm-block({
+      grid-column-gap: 5px;
+   })
+}
+.register__form {
+   display: none;
+   &:first-of-type {
+      display: grid;
+      //margin-bottom: 100%;
+   }
+}
+.register_agree {
+   margin-bottom: 6px;
+   .sm-block({
+      margin-bottom: 5px;
+   });
+}
+.register__form button {
+   margin-top: 10px;
+   .sm-block({
+      margin-top: 15px;
+   });
+}
+.register__form  p.text-small {
+   .sm-block({
+      font-size: 10px;
+      margin-top: 5px;
+   });
+}
+
+.login_via_social__holder {
+   .column-center();
+   width: 100%;
+   position: absolute;
+   bottom: 45px;
+   .middle-block({
+      bottom: 10px;
+   });
+}
+.login_via_social__title {
+   .montserrat-medium();
+   font-size: 14px;
+   line-height: 130%;
+   margin-bottom: 15px;
+   .sm-block({
+      font-size: 12px;
+      line-height: 120%;
+      margin-bottom: 10px;
+   });
+}
+.login_via_social__buttons {
+   .gr();
+   grid-template-columns: repeat(4, 40px);
+   grid-template-rows: 40px;
+   grid-column-gap: 16px;
+   .sm-block({
+      grid-column-gap: 6px;
+   });
+}
+#register_form_yr .select2-container {
+   min-width: 100%;
+}
+#register_form_yr .select2-container--default .select2-selection--single {
+   background: #F4F7FB;
+}
+.login__container .margin {
+   margin-bottom: 20px;
+   .sm-block({
+      margin-bottom: 10px;
+   });
+}
+.login__container .button-yellow {
+   height: 60px;
+   .sm-block({
+      height: 48px;
+   });
+}
+#recover_gomail,
+#reset_done {
+   display: none;
+}
+.login__welcome {
+   .column();
+   .justify-center();
+   text-align: center;
+   max-width: 345px;
+   margin: 25% auto 0;
+   .sm-block({
+      width: 80%;
+   })
+}
+.login__welcome .welcome {
+   margin-bottom: 31px;
+   .sm-block({
+      margin-bottom: 12px;
+   })
+}
+.login__welcome .margin {
+   margin-bottom: 10px;
+   .sm-block({
+      margin-bottom: 5px;
+   })
+}
+.login__welcome #login_finish {
+   margin: 30px auto 0;
+   .sm-block({
+      min-width: 100%;
+      margin-top: 20px;
+   })
+}
+.login_welcome__title {
+   .montserrat-semibold();
+   font-size: 24px;
+   line-height: 120%;
+   .sm-block({
+      font-size: 16px;
+   })
+}

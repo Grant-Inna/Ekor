@@ -82,7 +82,7 @@
                           <div id="amount_basket" class="amount">1</div>
                         </div><span>10 000,00</span>
                         <div class="element">&#8381;</div></a>
-                      <div class="header__section row_flex-10">
+                      <div id="open_login" class="header__section row_flex-10">
                         <div class="icon__user"></div>
                         <div class="login">Вход</div>
                       </div>
@@ -1059,6 +1059,193 @@
         </div>
       </div>
     </footer>
+    <section id="openModal_login" class="login__container">
+      <div class="items-center mb30">
+        <div class="login__title text-blue">Вход</div>
+        <div class="icon__login_close mlauto"></div>
+      </div>
+      <div class="login_content__holder"><a class="login__button mb16">
+          <div class="ico__google mr16"></div>
+          <div class="text-14-big text-blue">Войти с аккаунтом Google</div></a>
+        <div class="login__or mb25">
+          <p class="text-14 text-dark">или</p>
+        </div>
+        <form id="login_form" class="login__form">
+          <label for="login_name" class="label-input mb10">
+            <input id="login_name" type="text" class="input input-big"><span class="sup">Телефон, email или логин</span>
+          </label>
+          <label for="login_pass" class="label-input password mb10">
+            <input id="login_pass" type="password" class="input input-big"><span class="sup">Пароль</span>
+            <div class="ico__eye no"></div>
+          </label>
+          <div id="login_recet" class="text-14 text-blue mlauto mb20">Забыли пароль?</div>
+          <button class="button-yellow button-long mb20">Войти</button>
+          <button class="button-hollow button-long">Купить без регистрации</button>
+        </form>
+      </div>
+    </section>
+    <section id="openModal_register" class="login__container">
+      <div class="register__container">
+        <div class="items-center mb30">
+          <div class="login__title text-blue">Регистрация</div>
+          <div class="icon__login_close mlauto"></div>
+        </div>
+        <div class="login_content__holder">
+          <div class="register__entities">
+            <div data-register="fiz" class="register_entities__button active">Физ. лицо</div>
+            <div data-register="yr" class="register_entities__button">Юр. лицо</div>
+          </div>
+          <form id="register_form_fiz" class="register_form">
+            <div class="register__form">
+              <label for="register_fiz_name" class="label-input">
+                <input id="register_fiz_name" type="text" class="input input-big"><span class="sup">Имя</span>
+              </label>
+              <label for="register_fiz_surname" class="label-input">
+                <input id="register_fiz_surname" type="text" class="input input-big"><span class="sup">Фамилия</span>
+              </label>
+              <label for="register_fiz_mail" class="label-input">
+                <input id="register_fiz_mail" type="text" class="input input-big"><span class="sup">Email</span>
+              </label>
+              <label for="register_fiz_tel" class="label-input label-tel mb16">
+                <input id="register_fiz_tel" type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input input-big"><span class="sup">Телефон</span>
+              </label>
+              <div class="flex row_flex-10 register_agree">
+                <label for="register_fiz_agree" class="label-checkbox">
+                  <input id="register_fiz_agree" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
+                </label><span class="text-small text-dark">Я согласен(а) получать рассылку (новости, акции, скидки)*</span>
+              </div>
+              <div class="flex row_flex-10">
+                <label for="register_fiz_yes" class="label-checkbox">
+                  <input id="register_fiz_yes" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
+                </label>
+                <div class="text-small text-dark">Подтверждаю своё согласие на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;<b>пользовательским соглашением</b></div>
+              </div>
+              <button id="register_fiz_button" class="button-yellow button-long">Зарегистрироваться</button>
+              <p class="text-small text-dark">*Отмечая этот пункт, вы подтверждаете свое согласие на&nbsp;получение рассылки Утконоса. Для получения подтвердите телефон и/или&nbsp;email.</p>
+            </div>
+            <div class="login_via_social__holder">
+              <div class="login_via_social__title text-dark">Войти с&nbsp;помощью</div>
+              <div class="login_via_social__buttons">
+                <div class="register_social__vk"></div>
+                <div class="register_social__instagram"></div>
+                <div class="register_social__facebook"></div>
+                <div class="register_social__odnoklassniki"></div>
+              </div>
+            </div>
+          </form>
+          <form id="register_form_yr" class="register__form">
+            <label for="register_yr_name" class="label-input">
+              <input id="register_yr_name" type="text" class="input input-big"><span class="sup">Имя</span>
+            </label>
+            <label for="register_yr_surname" class="label-input">
+              <input id="register_yr_surname" type="text" class="input input-big"><span class="sup">Фамилия</span>
+            </label>
+            <label for="register_yr_organizationalforms" class="label-input">
+              <select id="register_yr_organizationalforms" class="select-register">
+                <option selected="true">ООО</option>
+                <option>ОАО</option>
+                <option>ЗАО</option>
+              </select>
+            </label>
+            <label for="register_yr_companyname" class="label-input label-tel">
+              <input id="register_yr_companyname" type="text" class="input input-big"><span class="sup">Название компании</span>
+            </label>
+            <label for="register_yr_tel" class="label-input label-tel">
+              <input id="register_yr_tel" type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input input-big"><span class="sup">Телефон</span>
+            </label>
+            <label for="register_yr_mail" class="label-input mb16">
+              <input id="register_yr_mail" type="text" class="input input-big"><span class="sup">Email</span>
+            </label>
+            <div class="flex row_flex-10 register_agree">
+              <label for="register_yr_discount" class="label-checkbox">
+                <input id="register_yr_discount" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
+              </label><span class="text-small text-dark">Подтверждаю свое согласие на&nbsp;получение скидки 10% на&nbsp;первые 3&nbsp;заказа и&nbsp;на&nbsp;другие выгодные предложения.*</span>
+            </div>
+            <div class="flex row_flex-10 register_agree">
+              <label for="register_yr_agree" class="label-checkbox">
+                <input id="register_yr_agree" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+              </label>
+              <div class="text-small text-dark">Я подтверждаю, что&nbsp;ознакомился с&nbsp;<b>договором оферты</b> и&nbsp;принимаю условия, описанные в&nbsp;нем.</div>
+            </div>
+            <div class="flex row_flex-10">
+              <label for="register_yr_yes" class="label-checkbox">
+                <input id="register_yr_yes" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
+              </label>
+              <div class="text-small text-dark">Подтверждаю своё согласие на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;<b>пользовательским соглашением</b></div>
+            </div>
+            <button id="register_yr_button" class="button-yellow button-long">Далее</button>
+            <p class="text-small text-dark">*Отмечая этот пункт, вы подтверждаете свое согласие на&nbsp;получение рассылки Утконоса. Для получения подтвердите телефон и/или&nbsp;email.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="openModal_recover" class="login__container">
+      <div class="items-center mb30">
+        <div class="login__title text-blue">Восстановить пароль</div>
+        <div class="icon__login_close mlauto"></div>
+      </div>
+      <div id="recover_pass">
+        <div class="margin text-14 text-blue">Введите адрес электронной почты, указанный при&nbsp;&nbsp;&mdash; мы отправим вам ссылку для&nbsp;восстановления пароля</div>
+        <form id="recover_form" class="register__form">
+          <label for="recover_form_mail" class="label-input mb10">
+            <input id="recover_form_mail" type="text" class="input input-big"><span class="sup">Email</span>
+          </label>
+          <div class="flex row_flex-10 register_agree mb20">
+            <label for="recover_agree" class="label-checkbox">
+              <input id="recover_agree" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+            </label>
+            <div class="text-small text-dark">Подтверждаю своё согласие на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;<b>пользовательским соглашением</b></div>
+          </div>
+          <button id="recover_button" class="button-yellow button-long">Отправить</button>
+          <div id="openModal_return_login" class="text-small text-dark">Я вспомнил пароль!<b>  Вернуться</b></div>
+        </form>
+      </div>
+      <div id="recover_gomail">
+        <div class="margin text-14 text-blue">Письмо с&nbsp;инструкцией по&nbsp;восстановлению пароля отправлено на&nbsp;указанный email</div>
+        <button id="recover_gomail_button" class="button-yellow button-long">Перейти в&nbsp;почту</button>
+      </div>
+    </section>
+    <section id="openModal_reset" class="login__container">
+      <div class="items-center mb30">
+        <div class="login__title text-blue">Сбросить пароль</div>
+        <div class="icon__login_close mlauto"></div>
+      </div>
+      <div id="reset_password">
+        <div class="margin text-14 text-blue">Введите адрес электронной почты, указанный при&nbsp;&nbsp;&mdash; мы отправим вам ссылку для&nbsp;восстановления пароля</div>
+        <form id="reset_form" class="reset__form">
+          <label for="reset_pass" class="label-input password mb10">
+            <input id="reset_pass" type="password" class="input input-big"><span class="sup">Пароль</span>
+            <div class="ico__eye no"></div>
+          </label>
+          <label for="reset_repass" class="label-input password mb20">
+            <input id="reset_repass" type="password" class="input input-big"><span class="sup">Подтвердите пароль</span>
+            <div class="ico__eye no"></div>
+          </label>
+          <button id="reset_password_button" class="button-yellow button-long">Сохранить новый пароль</button>
+        </form>
+      </div>
+      <div id="reset_done">
+        <div class="margin text-14 text-blue">Новый пароль сохранен</div>
+        <button id="reset_gomail_button" class="button-yellow button-long">Войти</button>
+      </div>
+    </section>
+    <section id="openModal_welcome" class="login__container">
+      <div class="items-center mb30">
+        <div class="icon__login_close mlauto"></div>
+      </div>
+      <div class="login__welcome">
+        <div class="welcome"></div>
+        <div class="login_welcome__title text-blue mb10">Добро пожаловать</div>
+        <div class="text-14 margin">
+          <div class="inline text-dark">Запомните ваш логин&nbsp;</div>
+          <div id="login" class="inline text-blue">login</div>
+        </div>
+        <div class="text-14 text-dark">На&nbsp;адрес
+          <div id="mail" class="inline text-blue">mail@mail.ru</div>&nbsp;было отправлено письмо с кодом подтверждения регистрации
+        </div>
+        <button id="login_finish" class="button-yellow">Начать покупки</button>
+      </div>
+    </section>
     <div id="openModal_callme" class="modal">
       <div class="wrapper">
         <div class="modal__dialog">
@@ -1101,5 +1288,6 @@
     <script src="./assets/js/scrollbar.js"></script>
     <script src="./assets/js/select2.js"></script>
     <script src="./assets/js/build.js"></script>
+    <script src="./assets/js/login.js"></script>
   </body>
 </html>

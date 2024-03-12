@@ -69,7 +69,8 @@ button[disabled='true'] {
       pointer-events: none;
       cursor: default;
 }
-#payment_btn[disabled] {
+#payment_btn[disabled],
+#reset_password_button[disabled] {
       background-color: @color-gray-light;
       border: 1px solid @color-gray-light;
       .tr();
@@ -110,7 +111,20 @@ button[disabled='true'] {
       width: 260px;
    });
 }
-
+.button-hollow {
+   .montserrat-semibold();
+   font-size: 14px;
+   line-height: 110%;
+   border-radius: 10px;
+   background-color: transparent;
+   color: @color-blue;
+   border: 1px solid @color-gray-light;
+   padding: 12.5px 24px;
+   flex-grow: 1;
+   
+   box-sizing: border-box;
+   .tr();
+}
 
 .watch-more {
    width: 100%;

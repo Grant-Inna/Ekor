@@ -107,7 +107,7 @@ $(document).ready(function () {
    
    /* select */
    
-   $('.select2').select2({ // Преобразуем селект #regions в select2 и заполняем данными из json
+   $('.select2').select2({ //
       "language": {
             "noResults": function () {
                return "Результаты не найдены";
@@ -116,7 +116,7 @@ $(document).ready(function () {
          minimumResultsForSearch: Infinity
       });
    
-   $('.select-price').select2({ // Преобразуем селект #regions в select2 и заполняем данными из json
+   $('.select-price').select2({
       "language": {
             "noResults": function () {
                return "Результаты не найдены";

@@ -1,0 +1,22 @@
+section#openModal_login.login__container
+   .items-center.mb30
+      .login__title.text-blue Вход
+      .icon__login_close.mlauto
+   .login_content__holder
+      a().login__button.mb16
+         .ico__google.mr16
+         .text-14-big.text-blue Войти с аккаунтом Google
+      .login__or.mb25
+         p.text-14.text-dark или
+      form#login_form.login__form
+         label( for='login_name' ).label-input.mb10
+            input#login_name( type='text' ).input.input-big
+            span.sup Телефон, email или логин
+         label( for='login_pass' ).label-input.password.mb10
+            input#login_pass( type='password' ).input.input-big
+            span.sup Пароль
+            .ico__eye.no
+         #login_recet.text-14.text-blue.mlauto.mb20 Забыли пароль?
+         button.button-yellow.button-long.mb20 Войти
+         button.button-hollow.button-long Купить без регистрации
+

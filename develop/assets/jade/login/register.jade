@@ -1,0 +1,91 @@
+section#openModal_register.login__container
+   .register__container
+      .items-center.mb30
+         .login__title.text-blue Регистрация
+         .icon__login_close.mlauto
+      .login_content__holder
+         .register__entities
+            .register_entities__button.active( data-register='fiz' ) Физ. лицо
+            .register_entities__button( data-register='yr' ) Юр. лицо
+
+         form#register_form_fiz.register_form
+            .register__form
+               label( for='register_fiz_name' ).label-input
+                  input#register_fiz_name( type='text' ).input.input-big
+                  span.sup Имя
+               label( for='register_fiz_surname' ).label-input
+                  input#register_fiz_surname( type='text' ).input.input-big
+                  span.sup Фамилия
+               label( for='register_fiz_mail' ).label-input
+                  input#register_fiz_mail( type='text' ).input.input-big
+                  span.sup Email
+               label( for='register_fiz_tel' ).label-input.label-tel.mb16
+                  input#register_fiz_tel( type='tel' placeholder='+7(_ _ _) _ _-_ _-_ _' ).input.input-big
+                  span.sup Телефон
+
+               .flex.row_flex-10.register_agree
+                  label.label-checkbox( for='register_fiz_agree' )
+                     input#register_fiz_agree.checkbox-hidden( type='checkbox' checked='true' )
+                     span.checkbox
+                  span.text-small.text-dark Я согласен(а) получать рассылку (новости, акции, скидки)*
+               .flex.row_flex-10
+                  label.label-checkbox( for='register_fiz_yes' )
+                     input#register_fiz_yes.checkbox-hidden( type='checkbox' checked='true' )
+                     span.checkbox
+                  .text-small.text-dark Подтверждаю своё согласие на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;
+                     b пользовательским соглашением
+               button#register_fiz_button.button-yellow.button-long Зарегистрироваться
+               p.text-small.text-dark *Отмечая этот пункт, вы подтверждаете свое согласие на&nbsp;получение рассылки Утконоса. Для получения подтвердите телефон и/или&nbsp;email.
+
+            .login_via_social__holder
+               .login_via_social__title.text-dark Войти с&nbsp;помощью
+               .login_via_social__buttons
+                  .register_social__vk
+                  .register_social__instagram
+                  .register_social__facebook
+                  .register_social__odnoklassniki
+
+
+         form#register_form_yr.register__form
+            label( for='register_yr_name' ).label-input
+               input#register_yr_name( type='text' ).input.input-big
+               span.sup Имя
+            label( for='register_yr_surname' ).label-input
+               input#register_yr_surname( type='text' ).input.input-big
+               span.sup Фамилия
+            label( for='register_yr_organizationalforms' ).label-input
+               select.select-register#register_yr_organizationalforms
+                  option( selected='true') ООО
+                  option ОАО
+                  option ЗАО
+            label( for='register_yr_companyname' ).label-input.label-tel
+               input#register_yr_companyname( type='text' ).input.input-big
+               span.sup Название компании
+            label( for='register_yr_tel' ).label-input.label-tel
+               input#register_yr_tel( type='tel' placeholder='+7(_ _ _) _ _-_ _-_ _' ).input.input-big
+               span.sup Телефон
+            label( for='register_yr_mail' ).label-input.mb16
+               input#register_yr_mail( type='text' ).input.input-big
+               span.sup Email
+            .flex.row_flex-10.register_agree
+               label.label-checkbox( for='register_yr_discount' )
+                  input#register_yr_discount.checkbox-hidden( type='checkbox' checked='true' )
+                  span.checkbox
+               span.text-small.text-dark Подтверждаю свое согласие на&nbsp;получение скидки 10% на&nbsp;первые 3&nbsp;заказа и&nbsp;на&nbsp;другие выгодные предложения.*
+            .flex.row_flex-10.register_agree
+               label.label-checkbox( for='register_yr_agree' )
+                  input#register_yr_agree.checkbox-hidden( type='checkbox' )
+                  span.checkbox
+               .text-small.text-dark Я подтверждаю, что&nbsp;ознакомился с&nbsp;
+                  b договором оферты
+                  |  и&nbsp;принимаю условия, описанные в&nbsp;нем.
+            .flex.row_flex-10
+               label.label-checkbox( for='register_yr_yes' )
+                  input#register_yr_yes.checkbox-hidden( type='checkbox' checked='true' )
+                  span.checkbox
+               .text-small.text-dark Подтверждаю своё согласие на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;
+                  b пользовательским соглашением
+            button#register_yr_button.button-yellow.button-long Далее
+            p.text-small.text-dark *Отмечая этот пункт, вы подтверждаете свое согласие на&nbsp;получение рассылки Утконоса. Для получения подтвердите телефон и/или&nbsp;email.
+
+

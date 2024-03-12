@@ -1,0 +1,22 @@
+section#openModal_reset.login__container
+   .items-center.mb30
+      .login__title.text-blue Сбросить пароль
+      .icon__login_close.mlauto
+
+   #reset_password
+      .margin.text-14.text-blue Введите адрес электронной почты, указанный при&nbsp;&nbsp;&mdash; мы отправим вам ссылку для&nbsp;восстановления пароля
+      form#reset_form.reset__form
+         label( for='reset_pass' ).label-input.password.mb10
+            input#reset_pass( type='password' ).input.input-big
+            span.sup Пароль
+            .ico__eye.no
+         label( for='reset_repass' ).label-input.password.mb20
+            input#reset_repass( type='password' ).input.input-big
+            span.sup Подтвердите пароль
+            .ico__eye.no
+         button#reset_password_button.button-yellow.button-long Сохранить новый пароль
+
+   #reset_done
+      .margin.text-14.text-blue Новый пароль сохранен
+      button#reset_gomail_button.button-yellow.button-long Войти
+

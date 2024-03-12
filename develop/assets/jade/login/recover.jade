@@ -1,0 +1,24 @@
+section#openModal_recover.login__container
+   .items-center.mb30
+      .login__title.text-blue Восстановить пароль
+      .icon__login_close.mlauto
+
+   #recover_pass
+      .margin.text-14.text-blue Введите адрес электронной почты, указанный при&nbsp;&nbsp;&mdash; мы отправим вам ссылку для&nbsp;восстановления пароля
+      form#recover_form.register__form
+         label( for='recover_form_mail' ).label-input.mb10
+            input#recover_form_mail( type='text' ).input.input-big
+            span.sup Email
+         .flex.row_flex-10.register_agree.mb20
+            label.label-checkbox( for='recover_agree' )
+               input#recover_agree.checkbox-hidden( type='checkbox' )
+               span.checkbox
+            .text-small.text-dark Подтверждаю своё согласие на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;
+                     b пользовательским соглашением
+         button#recover_button.button-yellow.button-long Отправить
+         #openModal_return_login.text-small.text-dark Я вспомнил пароль!
+            b   Вернуться
+   #recover_gomail
+      .margin.text-14.text-blue Письмо с&nbsp;инструкцией по&nbsp;восстановлению пароля отправлено на&nbsp;указанный email
+      button#recover_gomail_button.button-yellow.button-long Перейти в&nbsp;почту
+
