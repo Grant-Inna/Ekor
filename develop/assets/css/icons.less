@@ -582,3 +582,29 @@ header {
 .register_social__odnoklassniki {
    .register_social( 'odnoklassniki');
 }
+
+/*  personal_account  */
+.icon-pc( @name) {
+   background-image: url("../images/svg/icons/lk/personal_account/@{name}");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   flex-shrink: 0;
+}
+.ico__confirmed {
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   width: 24px;
+   height: 24px;
+}
+[data-confirmed='false'] {
+   .ico__confirmed {
+      background-image: url("../images/svg/icons/lk/personal_account/no.svg");
+   }
+}
+[data-confirmed='true'] {
+   .ico__confirmed {
+      background-image: url("../images/svg/icons/lk/personal_account/yes.svg");
+   }
+}

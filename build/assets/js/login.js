@@ -106,5 +106,6 @@ $(document).ready(function () {
       minimumResultsForSearch: Infinity,
       dropdownParent: $('#register_form_yr')
    });
+
    
  });

@@ -617,14 +617,25 @@ $(document).ready(function () {
    /* ГЛОБАЛЬНЫЙ ввод номера телефона по маске */
    if ($('input[type="tel"]')) {
       $('input[type="tel"]').on( 'input', function() {
-         $.mask.definitions['h'] = "[0|1|3|4|5|6|7|9]";
+         $.mask.definitions['h'] = "[0|1|2|3|4|5|6|7|9]";
          $(this).mask("+7 (h99) 999-99-99");
      });
-   }   /* ГЛОБАЛЬНЫЙ ввод номера по маске */
+   }   /* ГЛОБАЛЬНЫЙ ввод кода из смс по маске */
    if ($('input.number')) {
       $('input.number').on( 'input', function() {
-         $.mask.definitions['h'] = "[0|1|3|4|5|6|7|8|9]";
+         $.mask.definitions['h'] = "[0|1|2|3|4|5|6|7|8|9]";
          $(this).mask("99 99");
+     });
+   }  /* ГЛОБАЛЬНЫЙ ввод даты рождения по маске */
+   if ($('input.date')) {
+      $('input.date').on( 'input', function() {
+         $.mask.definitions['f'] = "[0|1|2]";
+         $.mask.definitions['g'] = "[0|1]";
+         $.mask.definitions['s'] = "[1|2]";
+         $.mask.definitions['q'] = "[9|0]";
+         $.mask.definitions['d'] = "[4|5|6|7|8|9]";
+         $.mask.definitions['m'] = "[0|1|2|3|4|5|6|7|8|9]";
+         $(this).mask("fm.gm.sqd9");
      });
    }
   

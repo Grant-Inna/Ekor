@@ -1,0 +1,12 @@
+include __navigation
+.wrapper
+   .personal_account__container
+      .personal_account__navigation
+         +nav( 'my_account', 'Мой профиль', '' )
+         +nav( 'order_history', 'История заказов', 'personal_account__current' )
+         +nav( 'delivery_addresses', 'Мой адрес доставки', '' )
+         +nav( 'payment_history', 'История оплат', '' )
+         +nav( 'settings', 'Настройки', '' )
+
+      .personal_account__content
+         h1.title.text-blue История заказов

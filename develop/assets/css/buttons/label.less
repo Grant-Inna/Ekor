@@ -45,14 +45,16 @@
    .tr();
    margin-bottom: 36px;
 }
-.label-tel {
+.label-tel,
+.label-date {
  input::-moz-placeholder { color: transparent; .tr();}
  input::-webkit-input-placeholder { color: transparent; .tr(); }
  input:-ms-input-placeholder { color: transparent; .tr(); }
  input::-ms-input-placeholder { color: transparent; .tr(); }
  input::placeholder { color: transparent; .tr(); }
 }
-.label-tel input:focus {
+.label-tel input:focus,
+.label-date input:focus {
  &::-moz-placeholder { color: @color-gray; .tr(); }
  &::-webkit-input-placeholder { color: @color-gray; .tr(); }
  &:-ms-input-placeholder { color: @color-gray; .tr(); }

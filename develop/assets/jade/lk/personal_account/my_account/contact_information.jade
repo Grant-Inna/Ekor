@@ -1,0 +1,44 @@
+section.my_account__contact_information
+   .account__title.text-blue Контактные данные
+   form#contact_information_form.my_account__contact_form( name='contact_information_form' )
+      label( for='contact_information_name' ).label-input
+         input#contact_information_name( type='text' ).input.input-big
+         span.sup Имя
+      label( for='contact_information_surname' ).label-input
+         input#contact_information_surname( type='text' ).input.input-big
+         span.sup Фамилия
+      .contact_information__input
+         .text-16-big.text-blue.mr20 Пол
+         label( for='contact_information_m' ).contact_information__item.mr20
+            .label-checkbox
+               input( id='contact_information_m' name='contact_information_form' type='radio' checked='true').checkbox-hidden
+               span.radio
+            span.catalog_input.text-blue.input-type-radio( data-id='contact_information_m' ) Мужской
+         label( for='contact_information_m' ).contact_information__item
+            .label-checkbox
+               input( id='contact_information_f' name='contact_information_form' type='radio' ).checkbox-hidden
+               span.radio
+            span.catalog_input.text-blue.input-type-radio( data-id='contact_information_f' ) Женский
+      label( for='contact_information_date' ).label-input.label-date
+         input#contact_information_date( type='text' placeholder='__.__.____' ).date.input.input-big
+         span.sup Дата рождения
+      label( for='contact_information_city' ).label-input
+         input#contact_information_city( type='text' ).input.input-big
+         span.sup Город
+      label( for='contact_information_mail' data-confirmed='true' ).label-input.label-confirmed
+         input#contact_information_mail( type='email' ).input.input-big
+         span.sup Email
+         .ico__confirmed
+         .confirmed.text-small
+            .yes Подтверждён
+            .no Не подтверждён
+      label( for='contact_information_numb' data-confirmed='false' ).label-input.label-tel.label-confirmed
+         input#contact_information_numb( type='tel' placeholder='+7(___) __-__-__' ).input.input-big
+         span.sup Номер телефона
+         .ico__confirmed
+         .confirmed.text-small
+            .yes Подтверждён
+            .no Не подтверждён
+      .my_account__contact_button
+         button.button-yellow Сохранить изменения
+         button.text-14.text-dark.button-cancel Отмена

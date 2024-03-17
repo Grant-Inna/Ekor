@@ -1,0 +1,34 @@
+doctype
+html( lang='ru' )
+
+   include ../assets/jade/static/__head-lk
+   +title( 'Мой профиль | Экор' )
+
+
+
+
+   body
+      #container_account.container
+
+         include ../assets/jade/lk/header
+         include ../assets/jade/lk/breadcrumbs/__breadcrumbs-lk
+         +breadcrumbs-lk( 'Мой профиль')
+
+         include ../assets/jade/lk/personal_account/my_account
+
+
+      include ../assets/jade/lk/footer
+      include ../assets/jade/lk/basket/address/__add_new
+      include ../assets/jade/lk/basket/address/__watch
+      +add-new( 'dostavka', 'Адрес доставки', '1')
+      +add-new( 'samovivoz', 'Пункт самовывоза', '2')
+      +watch( 'watch_point', 'Пункт самовывоза', '1')
+      +watch( 'edit_address', 'Адрес доставки', '2')
+      include ../assets/jade/lk/basket/payment/payment_modal
+
+      include ../assets/jade/modal/modal-callme
+
+      include ../assets/jade/lk/script
+      script( src='../assets/js/basket.js' )
+      script( src='../assets/js/lk.js' )
+

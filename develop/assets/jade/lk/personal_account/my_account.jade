@@ -1,0 +1,19 @@
+include __navigation
+.wrapper
+   .personal_account__container
+      .personal_account__navigation
+         +nav( 'my_account', 'Мой профиль', 'personal_account__current' )
+         +nav( 'order_history', 'История заказов', '' )
+         +nav( 'delivery_addresses', 'Мой адрес доставки', '' )
+         +nav( 'payment_history', 'История оплат', '' )
+         +nav( 'settings', 'Настройки', '' )
+
+      .personal_account__content
+         h1.title.text-blue Мой профиль
+         .section_block
+            include my_account/card
+            include my_account/info
+            include my_account/contact_information
+
+
+

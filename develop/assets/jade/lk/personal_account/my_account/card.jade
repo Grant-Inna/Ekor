@@ -1,0 +1,14 @@
+include __cashback
+
+section.my_account__card
+   .account__block.account_block__cashback
+      .account__title.text-blue Ваша cashback-карта
+      .account__span.text-14.text-dark Совершайте покупки и&nbsp;мы вернем вам от&nbsp;3 до&nbsp;15% стоимости заказа
+      .account_tile__cashback.mtauto
+         +cashback( '3%', 'С&nbsp;первого заказа')
+         +cashback( '5%', 'Сумма заказов на&nbsp;10&nbsp;000&nbsp;&#8381;')
+         +cashback( '10%', 'Сумма заказов на&nbsp;50&nbsp;000&nbsp;&#8381;')
+         +cashback( '15%', 'Сумма заказов на&nbsp;100&nbsp;000&nbsp;&#8381;')
+   .account__block.account_block__card
+      .account__card( data-large='../assets/images/svg/icons/lk/personal_account/card.webp' data-small='../assets/images/svg/icons/lk/personal_account/card-md.webp' )
+         img( src='../assets/images/svg/icons/lk/personal_account/card.webp' )

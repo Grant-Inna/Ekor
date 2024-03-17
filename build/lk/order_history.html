@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+      <meta name="viewport" content="width=device-width, user-scalable=6, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="MobileOptimized" content="width">
+      <meta name="HandheldFriendly" content="True">
+      <meta charset="UTF-8">
+      <title>История заказов | Экор</title>
+      <link rel="shortcut icon" href="../assets/images/svg/system/favicon.png" type="image/x-icon">
+      <link type="text/css" rel="stylesheet" href="../assets/css/style.css?v=2">
+      <style></style>
+    </head>
+  <body>
+    <div id="container_account" class="container">
+      <div id="black_back"></div>
+      <header>
+        <div class="wrapper flex center header__main"><a href="../" aria-label="Ссылка для возврата на главную страницу сайта" title="На главную страницу" class="header__logo logo__holder">
+            <div class="logo__image"></div>
+            <div class="logo__text"></div></a>
+          <div class="header__menu">
+            <ul class="menu__holder row_flex-16">
+                    <li class="menu__item"><a href="../delivery.html" aria-label="Ссылка на страницу Доставка" class="menu__item_link">Доставка</a></li>
+                    <li class="menu__item"><a href="../price.html" aria-label="Ссылка на страницу Прайс" class="menu__item_link">Прайс</a></li>
+                    <li class="menu__item"><a href="../production.html" aria-label="Ссылка на страницу Производство" class="menu__item_link">Производство</a></li>
+                    <li class="menu__item"><a href="../payment.html" aria-label="Ссылка на страницу Оплата" class="menu__item_link">Оплата</a></li>
+                    <li class="menu__item"><a href="../contacts.html" aria-label="Ссылка на страницу Контакты" class="menu__item_link">Контакты</a></li>
+                    <li class="menu__item"><a href="../about.html" aria-label="Ссылка на страницу о компании" class="menu__item_link">О&nbsp;компании</a></li>
+            </ul>
+          </div>
+          <div class="header__social">
+            <div class="social__holder row_flex-10">
+              <div class="social__icon"><a href="" target="_blank" title="Перейти в группу Telegram компании" aria-label="Ссылка на телеграм компании" class="icon__telegram"></a></div>
+              <div class="social__icon social__icon-whatsapp">
+                <div aria-label="Ввести свой номер для подключения whataspp компании" class="icon__whatsapp"></div>
+                <div class="input_number-holder">
+                  <input type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input_number">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__contact"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">8&nbsp;(495)&nbsp;637-82-28</a>
+            <div data-modal="callme" class="openModal_callme contacts__text">Заказать звонок</div>
+          </div>
+          <div class="header__holder_mobile">
+            <div class="header__m_icons row_flex-20"><a class="icon__user"></a><a class="icon__favorites"></a><a href="./lk/order.html" aria-label="Ссылка на корзину товаров" class="icon__basket relative">
+                <div id="amount_basket" class="amount">2</div></a></div>
+          </div>
+          <div class="burger__holder">
+            <div class="burger__line"></div>
+          </div>
+        </div>
+                <aside class="header__aside">
+                  <div class="wrapper flex">
+                    <div id="catalog_trigger" class="header__to-catalog row_flex-10">
+                      <div class="dots__holder">
+                        <div class="dots">
+                          <div class="d"></div>
+                        </div>
+                        <div class="dots">
+                          <div class="d"></div>
+                        </div>
+                        <div class="dots">
+                          <div class="d"></div>
+                        </div>
+                        <div class="icon__dots"></div>
+                      </div><span>Каталог товаров</span>
+                    </div>
+                    <div class="header__search">
+                      <form class="header__form">
+                        <button type="button" class="icon__search"></button>
+                        <input type="search" placeholder="Поиск" class="search">
+                      </form>
+                    </div>
+                    <div class="header__aside_icons">
+                      <div class="header__section row_flex-10">
+                        <div class="icon__favorites">
+                          <div id="amount_favorites" class="amount">5</div>
+                        </div><span>Избранное</span>
+                      </div><a href="./basket.html" aria-label="Ссылка на корзину товаров" class="header__section row_flex-10">
+                        <div class="icon__basket">
+                          <div id="amount_basket" class="amount">1</div>
+                        </div><span>10 000,00</span>
+                        <div class="element">&#8381;</div></a>
+                      <div id="open_login" class="header__section row_flex-10 poiner">
+                        <div class="icon__user"></div>
+                        <div class="login">Вход</div>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+        <div class="header__menu_mobile">
+          <div class="wrapper">
+            <div class="column start"></div>
+          </div>
+        </div>
+      </header>
+            <div class="wrapper">
+              <section class="breadcrumbs__container"><a href="../" class="breadcrumbs__link pointer">Главная</a>
+                <div class="breadcrumbs__link default">Личный кабинет</div><a href="../" class="breadcrumbs__active">История заказов</a>
+              </section>
+            </div>
+      <div class="wrapper">
+        <div class="personal_account__container">
+          <div class="personal_account__navigation"><a href="./my_account.html" class="personal_account__item text-14">Мой профиль</a><a href="./order_history.html" class="personal_account__current personal_account__item text-14">История заказов</a><a href="./delivery_addresses.html" class="personal_account__item text-14">Мой адрес доставки</a><a href="./payment_history.html" class="personal_account__item text-14">История оплат</a><a href="./settings.html" class="personal_account__item text-14">Настройки</a>
+          </div>
+          <div class="personal_account__content">
+            <h1 class="title text-blue">История заказов</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer__holder">
+      <div class="wrapper">
+        <div class="footer__information_holder">
+          <div class="footer__logo logo__holder">
+            <div class="logo__image"></div>
+            <div class="logo__text"></div>
+          </div>
+          <div class="footer__information">
+            <div class="footer__information_section"><span>Адрес: г.&nbsp;Москва, Открытое шоссе, 13, стр.&nbsp;1</span></div>
+            <div class="footer__information_section"><span>E-mail: info@ekorfish.ru</span></div>
+            <div class="footer__contacts"><a href="tel:84956378228" aria-label="Позвонить на номер компании" class="contact__number">+7&nbsp;(495)&nbsp;637-82-28</a>
+              <div class="footer__socials">
+                <div class="social__holder row_flex-10">
+                  <div class="social__icon"><a href="" target="_blank" title="Перейти в группу Telegram компании" aria-label="Ссылка на телеграм компании" class="icon__telegram"></a></div>
+                  <div class="social__icon social__icon-whatsapp">
+                    <div aria-label="Ввести свой номер для подключения whataspp компании" class="icon__whatsapp"></div>
+                    <div class="input_number-holder">
+                      <input type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input_number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__links_holder row_flex-32">
+          <div class="footer__links_section footer_links-1">
+            <div class="footer__links_caption">Покупателям</div>
+            <div class="footer__links"><a href="../catalog.html" class="footer__link">Прайс</a><a href="../catalog.html" class="footer__link">Доставка</a><a href="../catalog.html" class="footer__link">Чат-бот</a><a href="../catalog.html" class="footer__link">Производство</a><a href="../catalog.html" class="footer__link">Контакты</a><a href="../catalog.html" class="footer__link">Поставщикам</a></div>
+          </div>
+          <div class="footer__links_section footer_links-2">
+            <div class="footer__links_caption">Каталог</div>
+            <div class="footer__links row_flex-32"><a href="../catalog.html" class="footer__link">Свежемороженая <br>рыба</a><a href="../catalog.html" class="footer__link">Филе рыбы, стейки, <br>фарш</a><a href="../catalog.html" class="footer__link">Морепродукты</a><a href="../catalog.html" class="footer__link">Фасованная рыба Экор</a><a href="../catalog.html" class="footer__link">Полуфабрикаты</a><a href="../catalog.html" class="footer__link">Готовая продукция Экор</a><a href="../catalog.html" class="footer__link">Мясо, птица</a><a href="../catalog.html" class="footer__link">Замороженные <br>продукты</a><a href="../catalog.html" class="footer__link">Консервы</a><a href="../catalog.html" class="footer__link">Продукты питания оптом</a><a href="../catalog.html" class="footer__link">Карта сайта</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        <div id="openModal_add_dostavka" class="modal">
+          <div class="wrapper wrapper-small">
+            <div class="modal__dialog">
+              <div class="modal__content">
+                <div class="add_place__title_xs text-blue">Адрес доставки</div>
+                <div class="add_place_form__holder">
+                  <div class="add_place__title text-18-title text-blue">Адрес доставки</div>
+                  <div class="add_place_form__dostavka obtaining__dostavka">
+                    <form id="dostavka_form" class="dostavka__form">
+                      <label for="dostavka_st" class="label-input dostavka_st">
+                        <input id="dostavka_st" type="text" class="input"><span class="sup">Город, улица, дом, корпус, строение</span>
+                      </label>
+                      <div class="flex row_flex-10-m mb10">
+                        <label for="dostavka_kv" class="label-input dostavka_kv">
+                          <input id="dostavka_kv" type="text" class="input"><span class="sup">Квартира</span>
+                        </label>
+                        <label for="dostavka_pd" class="label-input dostavka_pd">
+                          <input id="dostavka_pd" type="text" class="input"><span class="sup">Подъезд</span>
+                        </label>
+                        <label for="dostavka_et" class="label-input dostavka_et">
+                          <input id="dostavka_et" type="text" class="input"><span class="sup">Этаж</span>
+                        </label>
+                      </div>
+                      <div class="flex row_flex-12 dostavka_ch mb10">
+                        <label for="dostavka_ch" class="label-checkbox">
+                          <input id="dostavka_ch" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                        </label><span class="text-14 text-blue">Доставка в частный дом</span>
+                      </div>
+                      <div class="flex row_flex-12 dostavka_of">
+                        <label for="dostavka_of" class="label-checkbox">
+                          <input id="dostavka_of" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                        </label><span class="text-14 text-blue">Доставка в офис</span>
+                      </div>
+                      <div class="items-center dostavka_info">
+                        <div class="ico__time mr16"></div>
+                        <div class="add_place__block">
+                          <div id="add_place__data" class="text-14 text-blue">08:00 - 10:00, 12 апреля</div><span class="text-small text-dark">Ближайшее время доставки</span>
+                        </div>
+                      </div>
+                      <button id="dostavka_btn" type="button" class="button-yellow button-long text-blue mtauto dostavka_btn"><span>Подтвердить адрес</span></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="add_place_map__holder"><img src="../assets/images/map.jpg"></div>
+              </div>
+              <div class="modal__close">
+                <div class="icon__close-w"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="openModal_add_samovivoz" class="modal">
+          <div class="wrapper wrapper-small">
+            <div class="modal__dialog">
+              <div class="modal__content">
+                <div class="add_place__title_xs text-blue">Пункт самовывоза</div>
+                <div class="add_place_form__holder">
+                  <div class="add_place__title text-18-title text-blue">Пункт самовывоза</div>
+                  <div class="add_place_form__dostavka obtaining__dostavka">
+                    <form id="dostavka_form" class="dostavka__form">
+                      <label for="dostavka_st" class="label-input dostavka_st">
+                        <input id="dostavka_st" type="text" class="input"><span class="sup">Найти адрес</span>
+                      </label>
+                    </form>
+                  </div>
+                </div>
+                <div class="add_place_map__holder"><img src="../assets/images/map.jpg"></div>
+              </div>
+              <div class="modal__close">
+                <div class="icon__close-w"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="openModal_watch_point" class="modal">
+          <div class="wrapper wrapper-small">
+            <div class="modal__dialog">
+              <div class="modal__content">
+                <div class="add_place__title_xs text-blue">Пункт самовывоза</div>
+                <div class="add_place_form__holder">
+                  <div class="add_place__title row_flex-12">
+                    <div class="icon__back"></div>
+                    <div class="text-18-title text-blue">Пункт самовывоза</div>
+                  </div>
+                  <div class="watch_place__dostavka obtaining__dostavka">
+                    <div class="items-center dostavka_info">
+                      <div class="ico__point mr16"></div>
+                      <div class="add_place__block">
+                        <div id="watch_place__data" class="text-14 text-blue">г. Москва, ул. Тверская, д. 1, стр. 1</div>
+                      </div>
+                    </div>
+                    <button id="watch_btn" type="button" class="button-yellow button-long text-blue mtauto dostavka_btn"><span>Заберу отсюда</span></button>
+                  </div>
+                </div>
+                <div class="add_place_map__holder"><img src="../assets/images/map+.jpg"></div>
+              </div>
+              <div class="modal__close">
+                <div class="icon__close-w"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="openModal_edit_address" class="modal">
+          <div class="wrapper wrapper-small">
+            <div class="modal__dialog">
+              <div class="modal__content">
+                <div class="add_place__title_xs text-blue">Адрес доставки</div>
+                <div class="add_place_form__holder">
+                  <div class="add_place__title row_flex-12">
+                    <div class="icon__back"></div>
+                    <div class="text-18-title text-blue">Адрес доставки</div>
+                  </div>
+                  <div class="edit_address__dostavka obtaining__dostavka">
+                    <form id="edit_address_form" class="dostavka__form">
+                      <label for="edit_address_st" class="label-input dostavka_st">
+                        <input id="edit_address_st" type="text" class="input"><span class="sup">Город, улица, дом, корпус, строение</span>
+                      </label>
+                      <div class="flex row_flex-10-m mb10">
+                        <label for="edit_address_kv" class="label-input dostavka_kv">
+                          <input id="edit_address_kv" type="text" class="input"><span class="sup">Квартира</span>
+                        </label>
+                        <label for="edit_address_pd" class="label-input dostavka_pd">
+                          <input id="edit_address_pd" type="text" class="input"><span class="sup">Подъезд</span>
+                        </label>
+                        <label for="edit_address_et" class="label-input dostavka_et">
+                          <input id="edit_address_et" type="text" class="input"><span class="sup">Этаж</span>
+                        </label>
+                      </div>
+                      <div class="flex row_flex-12 dostavka_ch mb10">
+                        <label for="edit_address_ch" class="label-checkbox">
+                          <input id="edit_address_ch" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                        </label><span class="text-14 text-blue">Доставка в частный дом</span>
+                      </div>
+                      <div class="flex row_flex-12 dostavka_of">
+                        <label for="edit_address_of" class="label-checkbox">
+                          <input id="edit_address_of" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
+                        </label><span class="text-14 text-blue">Доставка в офис</span>
+                      </div>
+                      <div class="items-center dostavka_info">
+                        <div class="ico__time mr16"></div>
+                        <div class="add_place__block">
+                          <div id="add_place__data" class="text-14 text-blue">08:00 - 10:00, 12 апреля</div><span class="text-small text-dark">Ближайшее время доставки</span>
+                        </div>
+                      </div>
+                      <button id="edit_address_btn" type="button" class="button-yellow button-long text-blue mtauto dostavka_btn"><span>Доставить сюда</span></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="add_place_map__holder"><img src="../assets/images/map+.jpg"></div>
+              </div>
+              <div class="modal__close">
+                <div class="icon__close-w"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div id="openModal_order_info" class="modal order_info__modal">
+      <div class="wrapper wrapper-small">
+        <div class="modal__dialog">
+          <div class="modal__content block p20">
+            <div class="add_place__title text-18-title text-blue">Порядок приема-передачи товара покупателю:</div>
+            <div class="text-dark">
+              <p class="mb4">1. Процесс приёма-передачи товара опосредует совокупность действий сторон, складывающихся по факту доставки продавцом товара по адресу, указанному покупателем, и направленных на переход права собственности на продукцию от продавца к покупателю.</p>
+              <p class="mb4">2. По факту доставки продавцом товара по адресу, указанному покупателем, и вручения его последнему, покупатель в течение 15 минут вправе осуществлять проверку продукции на предмет её соответствия ранее заказанным позициям, соблюдения сроков годности товара (в отношении товара для которого это применимо), целостности упаковки и т.п.</p>
+              <p class="mb4">3. При осуществлении проверки покупатель не должен нарушать целостность упаковки товара. Под нарушением целостности упаковки товара понимаются такие действия покупателя, по факту совершения которых внешний вид товара, прошедшего проверку у покупателя, будет отличаться от первоначального внешнего вида продукции и подобное несоответствие будет препятствовать последующей реализации данного товара.</p>
+              <p class="mb4">Аналогичные правила подлежат применению и в том случае, если товар продаётся в упакованном виде, состоящем из нескольких единиц подобной продукции (например, йогурты, напиток Actimel, яйцо куриное, и т.п.). Применительно к указанным товарам покупатель не должен вскрывать, разламывать, иным образом нарушать целостность таких упаковок и отбирать определённое количество единиц продукции, а может приобрести лишь целиком всю упаковку такого товара.</p>
+              <p class="mb4">Если при проверке товара покупатель нарушает целостность его упаковки, то тем самым он выражает своё волеизъявление на приобретение данного товара у продавца, вследствие чего подобные действия покупателя порождают его обязанность по оплате такого товара.</p>
+              <p class="mb4">4. По истечении периода времени, указанного в пункте 2 настоящего Порядка, покупатель принимает решение о приобретении заказанного ранее товара (полностью или частично), либо об отказе в приобретении продукции (полностью или частично). О своём решении покупатель информирует представителя продавца. В случае принятия решения приобрести товар (полностью или частично) покупатель производит его оплату и проставляет свою подпись в сопроводительных документах. Отказ покупателя от оплаты товара, а равно от подписания сопроводительной документации, будет расцениваться продавцом как отказ покупателя от приобретения продукции.</p>
+              <p class="mb4">5. Если по истечении периода времени, указанного в пункте 2 настоящего Порядка, покупатель не принимает какого‑либо решения о дальнейшей судьбе заказанного ранее товара (не озвучивает его представителю продавца), то представитель продавца вправе забрать такой товар и покинуть место расположения покупателя. Подобные ситуации будут классифицироваться как отказ покупателя от приобретения продукции.</p>
+            </div>
+          </div>
+          <div class="modal__close">
+            <div class="icon__close-w"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="openModal_callme" class="modal">
+      <div class="wrapper">
+        <div class="modal__dialog">
+          <div class="modal__content relative">
+            <div class="request__image_holder request__holder">
+              <div class="request__image-1">
+                <div data-large="./assets/images/large/request.webp" data-middle="./assets/images/large/request.webp" data-small="./assets/images/large/request.webp" class="request_img absolute-img"></div>
+              </div>
+            </div>
+            <div class="request__form_holder request__holder">
+              <h2 class="title text-blue">Заказать звонок</h2>
+              <form id="callme_form" class="request__form">
+                <label for="callme_name" class="label-input mb10">
+                  <input id="callme_name" type="text" class="input input-big"><span class="sup">Имя</span>
+                </label>
+                <label for="callme_number" class="label-input label-tel mb10">
+                  <input id="callme_number" type="tel" placeholder="+7(_ _ _) _ _-_ _-_ _" class="input input-big"><span class="sup">Номер телефона</span>
+                </label>
+                <label for="callme_comment" class="label-input mb16">
+                  <input id="callme_comment" type="email" class="input input-big"><span class="sup">Комментарий</span>
+                </label>
+                <div class="flex row_flex-10">
+                  <label id="callme_label" for="callme_checkbox" class="label-checkbox">
+                    <input id="callme_checkbox" type="checkbox" checked="true" class="checkbox-hidden"><span class="checkbox"></span>
+                  </label><span class="text-small text-dark">Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением</span>
+                </div>
+                <button id="callme_btn" type="button" class="button-yellow button-long text-blue"><span>Отправить</span></button>
+              </form>
+            </div>
+          </div>
+          <div class="modal__close">
+            <div class="icon__close-w"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/jquery.mask.js"></script>
+    <script src="../assets/js/slick.js"></script>
+    <script src="../assets/js/scrollbar.js"></script>
+    <script src="../assets/js/select2.js"></script>
+    <script src="../assets/js/build.js"></script>
+    <script src="../assets/js/basket.js"></script>
+    <script src="../assets/js/lk.js"></script>
+  </body>
+</html>
