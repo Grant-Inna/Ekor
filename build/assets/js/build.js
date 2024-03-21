@@ -647,6 +647,7 @@ $(document).ready(function () {
    }
    if ($('.delivery_addresses').length > 0) { // страница lk/basket
       $('#lk_add_address').on( 'click', (event) => { openModal(event.target)});
+      $('.address_personal__address .ico__edit').on( 'click', (event) => { openModal(event.target)});
    }
    function openModal( target ) {
             // debugger;
