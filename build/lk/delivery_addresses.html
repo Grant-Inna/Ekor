@@ -106,17 +106,31 @@
           </div>
           <div class="personal_account__content">
             <h1 class="title text-blue">Адреса доставки</h1>
-            <div class="delivery_adresses__title account__title text-blue">Адрес 1</div>
-            <div class="address_obtaining__items delivery_adresses">
-              <div data-obtaining-address="1" class="address_obtaining__address mt16">
-                <div class="ico__del"></div>
-                <div class="obtaining_address__text">
-                  <div class="text-14 text-blue">Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328</div>
+            <div class="delivery_addresses__holder">
+              <div class="delivery_addresses__title text-blue">Адрес 1</div>
+              <div class="address_obtaining__items delivery_addresses">
+                <div data-address-personal="1" class="address_personal__address">
+                  <div class="ico__del"></div>
+                  <div class="obtaining_address__text">
+                    <div class="text-14 text-blue">Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328</div>
+                  </div>
+                  <div data-modal="edit_address" class="ico__edit pointer"></div>
                 </div>
-                <div data-modal="edit_address" class="ico__edit pointer"></div>
               </div>
             </div>
-            <div id="lk_add_address" data-modal="add_address" class="address_obtaining__add mt16 pointer openModal_add_address delivery_adresses">
+            <div class="delivery_addresses__holder">
+              <div class="delivery_addresses__title text-blue">Адрес 1</div>
+              <div class="address_obtaining__items delivery_addresses">
+                <div data-address-personal="1" class="address_personal__address">
+                  <div class="ico__del"></div>
+                  <div class="obtaining_address__text">
+                    <div class="text-14 text-blue">Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328</div>
+                  </div>
+                  <div data-modal="edit_address" class="ico__edit pointer"></div>
+                </div>
+              </div>
+            </div>
+            <div id="lk_add_address" data-modal="add_address" class="address_obtaining__add mt16 pointer openModal_add_address delivery_addresses">
               <div data-modal="add_address" class="icon__address_add mr10"></div>
               <div data-modal="add_address" class="text-14 text-blue">Добавить адрес доставки</div>
             </div>
@@ -129,7 +143,7 @@
         <div class="modal__dialog">
           <div class="modal__content">
             <div class="add_address__title_xs text-blue">Добавление нового адреса доставки</div>
-            <div class="add_place_form__holder add_adress">
+            <div class="add_place_form__holder add_address">
               <div class="add_address__title text-blue">Добавление нового адреса доставки</div>
               <div class="add_place_form__dostavka obtaining__dostavka">
                 <form id="address_form" class="dostavka__form">

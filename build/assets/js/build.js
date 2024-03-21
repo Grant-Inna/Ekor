@@ -645,7 +645,7 @@ $(document).ready(function () {
    if ($('.order_info__read').length > 0) { // страница lk/basket
       $('.order_info__read').on( 'click', (event) => { openModal(event.target)});
    }
-   if ($('.delivery_adresses').length > 0) { // страница lk/basket
+   if ($('.delivery_addresses').length > 0) { // страница lk/basket
       $('#lk_add_address').on( 'click', (event) => { openModal(event.target)});
    }
    function openModal( target ) {

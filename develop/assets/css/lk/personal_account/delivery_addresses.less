@@ -1,21 +1,49 @@
-.delivery_addresses__title {
+.delivery_addresses__holder {
    margin-top: 40px;
    .xs-block({
       margin-top: 20px;
    })
 }
-.delivery_adresses .address_obtaining__address {
+.delivery_addresses__title {
+   .montserrat-semibold();
+   font-size: 24px;
+   line-height: 120%;
+   margin-bottom: 16px;
+   .sm-block({
+      font-size: 16px;
+      margin-bottom: 10px;
+   });
+}
+.delivery_addresses .address_obtaining__address {
    background-color: white;
    max-width: 658px;
 }
-#lk_add_address.delivery_adresses {
+.address_personal__address {
+   width: 100%;
+   padding: 12px 16px;
+   box-sizing: border-box;
+   background-color: @color-blue-gray;
+   border-radius: 10px;
+   
+   .gr();
+   grid-template-columns: 20px auto 24px;
+   grid-column-gap: 12px;
+   align-items: center;
+   .sm-block({
+      grid-column-gap: 10px;
+      align-items: flex-start;
+   });
+}
+#lk_add_address.delivery_addresses {
    padding: 15px 14.5px;
    background-color: @color-blue-gray;
 }
 .add_place_form__holder.add_adress {
    width: 100%;
 }
+.delivery_addresses {
 
+}
 
 .add_address__title {
    .montserrat-semibold();
@@ -34,7 +62,7 @@
    text-align: left;
    display: none;
 }
-.add_place_form__holder.add_adress {
+.add_place_form__holder.add_address {
    height: auto;
 }
 .xs-block({
