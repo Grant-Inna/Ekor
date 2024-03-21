@@ -21,6 +21,6 @@ $(document).ready(function () {
          $('.account__card img').prop( 'src', large); }
       else {
          $('.account__card img').prop( 'src', small); }
-      }
+   }
    
  });

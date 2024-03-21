@@ -1,0 +1,28 @@
+include ../__navigation
+.wrapper
+   .personal_account__container
+      .personal_account__navigation
+         +nav( 'my_account', 'Мой профиль', '' )
+         +nav( 'order_history', 'История заказов', 'personal_account__current' )
+         +nav( 'delivery_addresses', 'Мой адрес доставки', '' )
+         +nav( 'payment_history', 'История оплат', '' )
+         +nav( 'settings', 'Настройки', '' )
+
+      .personal_account__content.orders_history__container
+         h1.title.text-blue Заказ &#8470;83094018
+
+         .one_order__container
+            .section_block
+               include status
+            .section_block
+               include delivery
+            .section_block
+               include details
+            .section_block
+               include payment
+
+         .section_block
+            section.one_order_composition__holder
+               include information
+               include composition
+

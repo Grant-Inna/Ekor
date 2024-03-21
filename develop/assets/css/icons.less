@@ -585,7 +585,7 @@ header {
 
 /*  personal_account  */
 .icon-pc( @name) {
-   background-image: url("../images/svg/icons/lk/personal_account/@{name}");
+   background-image: url("../images/svg/icons/lk/personal_account/@{name}.svg");
    background-repeat: no-repeat;
    background-size: contain;
    background-position: center;
@@ -607,4 +607,75 @@ header {
    .ico__confirmed {
       background-image: url("../images/svg/icons/lk/personal_account/yes.svg");
    }
+}
+.ico__eye {
+   .icon-pc( 'eye');
+   width: 24px;
+   height: 24px;
+}
+
+.radio_checked {
+   .icon-pc( 'b-check-circle');
+   width: 24px;
+   height: 24px;
+}
+.radio_false {
+   .icon-pc( 'check-circle');
+   width: 24px;
+   height: 24px;
+}
+.star {
+   .icon-pc( 'star');
+   width: 16px;
+   height: 16px;
+}
+.star.fill {
+   .icon-pc( 'star-fill');
+   width: 16px;
+   height: 16px;
+}
+/* личный кабинет - доставка */
+.lk-delivery() {
+   width: 48px;
+   height: 48px;
+   .md-block({
+      width: 38px;
+      height: 38px;
+   });
+   .md-block({
+      width: 38px;
+      height: 38px;
+   });
+}
+.ico__pin {
+   .icon-pc( 'pin');
+   .lk-delivery();
+}
+.ico__day {
+   .icon-pc( 'day');
+   .lk-delivery();
+}
+.ico__time {
+   .icon-pc( 'time');
+   .lk-delivery();
+}
+.ico__person {
+   .icon-pc( 'men');
+   .lk-delivery();
+}
+.ico__phone {
+   .icon-pc( 'tel');
+   .lk-delivery();
+}
+.ico__car {
+   .icon-pc( 'car');
+   .lk-delivery();
+}
+.ico__wallet {
+   .icon-pc( 'money');
+   .lk-delivery();
+}
+.ico__cheque {
+   .icon-pc( 'cheque');
+   .lk-delivery();
 }

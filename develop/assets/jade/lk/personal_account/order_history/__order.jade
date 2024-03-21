@@ -1,0 +1,18 @@
+mixin order( status )
+   .orders_info__table_row
+      .orders_info__col.orders_col_numb.text-blue
+         span Заказ&nbsp;
+         .elem &#8470;&nbsp;
+         .orders__numb 83468295
+      .orders_info__col.orders_col_date.text-blue
+         .block-sm.text-small.text-dark Дата создания
+         .orders__date 23.11.2023
+         .etem &nbsp;г.
+      .orders_info__col.orders_col_status
+         .block-sm.text-small.text-dark Статус
+         span( class='#{status}' ) Статус
+      .orders_info__col.orders_col_amount.text-blue
+         .block-sm.text-small.text-dark Сумма заказа, &#8381;
+         .col_amount 6 837.00
+      .orders_info__col.orders_col_watch
+         a( href='./order_one.html').ico__eye

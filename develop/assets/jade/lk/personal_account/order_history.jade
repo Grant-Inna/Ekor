@@ -8,5 +8,12 @@ include __navigation
          +nav( 'payment_history', 'История оплат', '' )
          +nav( 'settings', 'Настройки', '' )
 
-      .personal_account__content
+      .personal_account__content.orders_history__container
          h1.title.text-blue История заказов
+         include order_history/top
+         .orders_history
+            include order_history/table
+         button.button-orders-more
+            span Показать еще
+
+         include ../../../jade/content/catalog/pagination/pagination

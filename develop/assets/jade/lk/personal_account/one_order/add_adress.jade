@@ -1,0 +1,38 @@
+.modal( id='openModal_add_address')
+   .wrapper.wrapper-add-address
+      .modal__dialog
+         .modal__content
+            .add_address__title_xs.text-blue Добавление нового адреса доставки
+            .add_place_form__holder.add_adress
+               .add_address__title.text-blue Добавление нового адреса доставки
+               .add_place_form__dostavka.obtaining__dostavka
+                  form#address_form.dostavka__form
+                     label( for='address_st' ).label-input.address_st.mb10
+                        input#address_st( type='text' ).input
+                        span.sup Адрес доставки
+                     label( for='address_kv' ).label-input.address_kv.mb10
+                        input#address_kv( type='text' ).input
+                        span.sup Грузополучатель
+                     label( for='address_pd' ).label-input.address_pd.mb10
+                        input#address_pd( type='text' ).input
+                        span.sup ФИО контактного лица
+                     label( for='address_et' ).label-input.address_et.mb16
+                        input#address_et( type='text' ).input
+                        span.sup Телефон контактного лица
+
+
+                     .flex.row_flex-12.address_of.mb20
+                        label.label-checkbox( for='address_of' )
+                           input#address_of.checkbox-hidden( type='checkbox' checked='checked' )
+                           span.checkbox
+                        span.text-small.text-dark Использовать этот адрес в графе «Грузополучатель» в УПД
+
+
+                     .address_btn.flex
+                        button#address_btn_reset( type='reset' ).button.button-gray Отмена
+                        button#address_btn.button-yellow.text-blue.mtauto( type='button' ).address_btn
+                           span Сохранить
+
+
+         .modal__close
+            .icon__close-w

@@ -620,12 +620,6 @@ $(document).ready(function () {
          $.mask.definitions['h'] = "[0|1|2|3|4|5|6|7|9]";
          $(this).mask("+7 (h99) 999-99-99");
      });
-   }   /* ГЛОБАЛЬНЫЙ ввод кода из смс по маске */
-   if ($('input.number')) {
-      $('input.number').on( 'input', function() {
-         $.mask.definitions['h'] = "[0|1|2|3|4|5|6|7|8|9]";
-         $(this).mask("99 99");
-     });
    }  /* ГЛОБАЛЬНЫЙ ввод даты рождения по маске */
    if ($('input.date')) {
       $('input.date').on( 'input', function() {
@@ -650,6 +644,9 @@ $(document).ready(function () {
    }
    if ($('.order_info__read').length > 0) { // страница lk/basket
       $('.order_info__read').on( 'click', (event) => { openModal(event.target)});
+   }
+   if ($('.delivery_adresses').length > 0) { // страница lk/basket
+      $('#lk_add_address').on( 'click', (event) => { openModal(event.target)});
    }
    function openModal( target ) {
             // debugger;
@@ -687,6 +684,11 @@ $(document).ready(function () {
          hideModal()
       });
       $('#openModal_' + click).find('button').on( 'click', function(event) {
+         event.stopPropagation();
+         hideMobileMenu();
+         hideModal();
+      });
+      $('#address_btn_reset').on( 'click', function(event) {
          event.stopPropagation();
          hideMobileMenu();
          hideModal();

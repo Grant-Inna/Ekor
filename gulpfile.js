@@ -145,6 +145,7 @@ function watch(done){
    gulp.watch( base + 'lk/personal_account/*.jade', htmlLK);
    gulp.watch( base + 'lk/personal_account/my_account/*.jade', htmlLK);
    gulp.watch( base + 'lk/personal_account/order_history/*.jade', htmlLK);
+   gulp.watch( base + 'lk/personal_account/one_order/*.jade', htmlLK);
    gulp.watch( base + 'lk/personal_account/payment_history/*.jade', htmlLK);
    gulp.watch( base + 'lk/personal_account/delivery_addresses/*.jade', htmlLK);
    gulp.watch( base + 'lk/personal_account/settings/*.jade', htmlLK);

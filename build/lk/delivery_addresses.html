@@ -106,6 +106,60 @@
           </div>
           <div class="personal_account__content">
             <h1 class="title text-blue">Адреса доставки</h1>
+            <div class="delivery_adresses__title account__title text-blue">Адрес 1</div>
+            <div class="address_obtaining__items delivery_adresses">
+              <div data-obtaining-address="1" class="address_obtaining__address mt16">
+                <div class="ico__del"></div>
+                <div class="obtaining_address__text">
+                  <div class="text-14 text-blue">Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328</div>
+                </div>
+                <div data-modal="edit_address" class="ico__edit pointer"></div>
+              </div>
+            </div>
+            <div id="lk_add_address" data-modal="add_address" class="address_obtaining__add mt16 pointer openModal_add_address delivery_adresses">
+              <div data-modal="add_address" class="icon__address_add mr10"></div>
+              <div data-modal="add_address" class="text-14 text-blue">Добавить адрес доставки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="openModal_add_address" class="modal">
+      <div class="wrapper wrapper-add-address">
+        <div class="modal__dialog">
+          <div class="modal__content">
+            <div class="add_address__title_xs text-blue">Добавление нового адреса доставки</div>
+            <div class="add_place_form__holder add_adress">
+              <div class="add_address__title text-blue">Добавление нового адреса доставки</div>
+              <div class="add_place_form__dostavka obtaining__dostavka">
+                <form id="address_form" class="dostavka__form">
+                  <label for="address_st" class="label-input address_st mb10">
+                    <input id="address_st" type="text" class="input"><span class="sup">Адрес доставки</span>
+                  </label>
+                  <label for="address_kv" class="label-input address_kv mb10">
+                    <input id="address_kv" type="text" class="input"><span class="sup">Грузополучатель</span>
+                  </label>
+                  <label for="address_pd" class="label-input address_pd mb10">
+                    <input id="address_pd" type="text" class="input"><span class="sup">ФИО контактного лица</span>
+                  </label>
+                  <label for="address_et" class="label-input address_et mb16">
+                    <input id="address_et" type="text" class="input"><span class="sup">Телефон контактного лица</span>
+                  </label>
+                  <div class="flex row_flex-12 address_of mb20">
+                    <label for="address_of" class="label-checkbox">
+                      <input id="address_of" type="checkbox" checked="checked" class="checkbox-hidden"><span class="checkbox"></span>
+                    </label><span class="text-small text-dark">Использовать этот адрес в графе «Грузополучатель» в УПД</span>
+                  </div>
+                  <div class="address_btn flex">
+                    <button id="address_btn_reset" type="reset" class="button button-gray">Отмена</button>
+                    <button id="address_btn" type="button" class="button-yellow text-blue mtauto address_btn"><span>Сохранить</span></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal__close">
+            <div class="icon__close-w"></div>
           </div>
         </div>
       </div>
@@ -147,183 +201,6 @@
         </div>
       </div>
     </footer>
-        <div id="openModal_add_dostavka" class="modal">
-          <div class="wrapper wrapper-small">
-            <div class="modal__dialog">
-              <div class="modal__content">
-                <div class="add_place__title_xs text-blue">Адрес доставки</div>
-                <div class="add_place_form__holder">
-                  <div class="add_place__title text-18-title text-blue">Адрес доставки</div>
-                  <div class="add_place_form__dostavka obtaining__dostavka">
-                    <form id="dostavka_form" class="dostavka__form">
-                      <label for="dostavka_st" class="label-input dostavka_st">
-                        <input id="dostavka_st" type="text" class="input"><span class="sup">Город, улица, дом, корпус, строение</span>
-                      </label>
-                      <div class="flex row_flex-10-m mb10">
-                        <label for="dostavka_kv" class="label-input dostavka_kv">
-                          <input id="dostavka_kv" type="text" class="input"><span class="sup">Квартира</span>
-                        </label>
-                        <label for="dostavka_pd" class="label-input dostavka_pd">
-                          <input id="dostavka_pd" type="text" class="input"><span class="sup">Подъезд</span>
-                        </label>
-                        <label for="dostavka_et" class="label-input dostavka_et">
-                          <input id="dostavka_et" type="text" class="input"><span class="sup">Этаж</span>
-                        </label>
-                      </div>
-                      <div class="flex row_flex-12 dostavka_ch mb10">
-                        <label for="dostavka_ch" class="label-checkbox">
-                          <input id="dostavka_ch" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                        </label><span class="text-14 text-blue">Доставка в частный дом</span>
-                      </div>
-                      <div class="flex row_flex-12 dostavka_of">
-                        <label for="dostavka_of" class="label-checkbox">
-                          <input id="dostavka_of" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                        </label><span class="text-14 text-blue">Доставка в офис</span>
-                      </div>
-                      <div class="items-center dostavka_info">
-                        <div class="ico__time mr16"></div>
-                        <div class="add_place__block">
-                          <div id="add_place__data" class="text-14 text-blue">08:00 - 10:00, 12 апреля</div><span class="text-small text-dark">Ближайшее время доставки</span>
-                        </div>
-                      </div>
-                      <button id="dostavka_btn" type="button" class="button-yellow button-long text-blue mtauto dostavka_btn"><span>Подтвердить адрес</span></button>
-                    </form>
-                  </div>
-                </div>
-                <div class="add_place_map__holder"><img src="../assets/images/map.jpg"></div>
-              </div>
-              <div class="modal__close">
-                <div class="icon__close-w"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="openModal_add_samovivoz" class="modal">
-          <div class="wrapper wrapper-small">
-            <div class="modal__dialog">
-              <div class="modal__content">
-                <div class="add_place__title_xs text-blue">Пункт самовывоза</div>
-                <div class="add_place_form__holder">
-                  <div class="add_place__title text-18-title text-blue">Пункт самовывоза</div>
-                  <div class="add_place_form__dostavka obtaining__dostavka">
-                    <form id="dostavka_form" class="dostavka__form">
-                      <label for="dostavka_st" class="label-input dostavka_st">
-                        <input id="dostavka_st" type="text" class="input"><span class="sup">Найти адрес</span>
-                      </label>
-                    </form>
-                  </div>
-                </div>
-                <div class="add_place_map__holder"><img src="../assets/images/map.jpg"></div>
-              </div>
-              <div class="modal__close">
-                <div class="icon__close-w"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="openModal_watch_point" class="modal">
-          <div class="wrapper wrapper-small">
-            <div class="modal__dialog">
-              <div class="modal__content">
-                <div class="add_place__title_xs text-blue">Пункт самовывоза</div>
-                <div class="add_place_form__holder">
-                  <div class="add_place__title row_flex-12">
-                    <div class="icon__back"></div>
-                    <div class="text-18-title text-blue">Пункт самовывоза</div>
-                  </div>
-                  <div class="watch_place__dostavka obtaining__dostavka">
-                    <div class="items-center dostavka_info">
-                      <div class="ico__point mr16"></div>
-                      <div class="add_place__block">
-                        <div id="watch_place__data" class="text-14 text-blue">г. Москва, ул. Тверская, д. 1, стр. 1</div>
-                      </div>
-                    </div>
-                    <button id="watch_btn" type="button" class="button-yellow button-long text-blue mtauto dostavka_btn"><span>Заберу отсюда</span></button>
-                  </div>
-                </div>
-                <div class="add_place_map__holder"><img src="../assets/images/map+.jpg"></div>
-              </div>
-              <div class="modal__close">
-                <div class="icon__close-w"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="openModal_edit_address" class="modal">
-          <div class="wrapper wrapper-small">
-            <div class="modal__dialog">
-              <div class="modal__content">
-                <div class="add_place__title_xs text-blue">Адрес доставки</div>
-                <div class="add_place_form__holder">
-                  <div class="add_place__title row_flex-12">
-                    <div class="icon__back"></div>
-                    <div class="text-18-title text-blue">Адрес доставки</div>
-                  </div>
-                  <div class="edit_address__dostavka obtaining__dostavka">
-                    <form id="edit_address_form" class="dostavka__form">
-                      <label for="edit_address_st" class="label-input dostavka_st">
-                        <input id="edit_address_st" type="text" class="input"><span class="sup">Город, улица, дом, корпус, строение</span>
-                      </label>
-                      <div class="flex row_flex-10-m mb10">
-                        <label for="edit_address_kv" class="label-input dostavka_kv">
-                          <input id="edit_address_kv" type="text" class="input"><span class="sup">Квартира</span>
-                        </label>
-                        <label for="edit_address_pd" class="label-input dostavka_pd">
-                          <input id="edit_address_pd" type="text" class="input"><span class="sup">Подъезд</span>
-                        </label>
-                        <label for="edit_address_et" class="label-input dostavka_et">
-                          <input id="edit_address_et" type="text" class="input"><span class="sup">Этаж</span>
-                        </label>
-                      </div>
-                      <div class="flex row_flex-12 dostavka_ch mb10">
-                        <label for="edit_address_ch" class="label-checkbox">
-                          <input id="edit_address_ch" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                        </label><span class="text-14 text-blue">Доставка в частный дом</span>
-                      </div>
-                      <div class="flex row_flex-12 dostavka_of">
-                        <label for="edit_address_of" class="label-checkbox">
-                          <input id="edit_address_of" type="checkbox" class="checkbox-hidden"><span class="checkbox"></span>
-                        </label><span class="text-14 text-blue">Доставка в офис</span>
-                      </div>
-                      <div class="items-center dostavka_info">
-                        <div class="ico__time mr16"></div>
-                        <div class="add_place__block">
-                          <div id="add_place__data" class="text-14 text-blue">08:00 - 10:00, 12 апреля</div><span class="text-small text-dark">Ближайшее время доставки</span>
-                        </div>
-                      </div>
-                      <button id="edit_address_btn" type="button" class="button-yellow button-long text-blue mtauto dostavka_btn"><span>Доставить сюда</span></button>
-                    </form>
-                  </div>
-                </div>
-                <div class="add_place_map__holder"><img src="../assets/images/map+.jpg"></div>
-              </div>
-              <div class="modal__close">
-                <div class="icon__close-w"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-    <div id="openModal_order_info" class="modal order_info__modal">
-      <div class="wrapper wrapper-small">
-        <div class="modal__dialog">
-          <div class="modal__content block p20">
-            <div class="add_place__title text-18-title text-blue">Порядок приема-передачи товара покупателю:</div>
-            <div class="text-dark">
-              <p class="mb4">1. Процесс приёма-передачи товара опосредует совокупность действий сторон, складывающихся по факту доставки продавцом товара по адресу, указанному покупателем, и направленных на переход права собственности на продукцию от продавца к покупателю.</p>
-              <p class="mb4">2. По факту доставки продавцом товара по адресу, указанному покупателем, и вручения его последнему, покупатель в течение 15 минут вправе осуществлять проверку продукции на предмет её соответствия ранее заказанным позициям, соблюдения сроков годности товара (в отношении товара для которого это применимо), целостности упаковки и т.п.</p>
-              <p class="mb4">3. При осуществлении проверки покупатель не должен нарушать целостность упаковки товара. Под нарушением целостности упаковки товара понимаются такие действия покупателя, по факту совершения которых внешний вид товара, прошедшего проверку у покупателя, будет отличаться от первоначального внешнего вида продукции и подобное несоответствие будет препятствовать последующей реализации данного товара.</p>
-              <p class="mb4">Аналогичные правила подлежат применению и в том случае, если товар продаётся в упакованном виде, состоящем из нескольких единиц подобной продукции (например, йогурты, напиток Actimel, яйцо куриное, и т.п.). Применительно к указанным товарам покупатель не должен вскрывать, разламывать, иным образом нарушать целостность таких упаковок и отбирать определённое количество единиц продукции, а может приобрести лишь целиком всю упаковку такого товара.</p>
-              <p class="mb4">Если при проверке товара покупатель нарушает целостность его упаковки, то тем самым он выражает своё волеизъявление на приобретение данного товара у продавца, вследствие чего подобные действия покупателя порождают его обязанность по оплате такого товара.</p>
-              <p class="mb4">4. По истечении периода времени, указанного в пункте 2 настоящего Порядка, покупатель принимает решение о приобретении заказанного ранее товара (полностью или частично), либо об отказе в приобретении продукции (полностью или частично). О своём решении покупатель информирует представителя продавца. В случае принятия решения приобрести товар (полностью или частично) покупатель производит его оплату и проставляет свою подпись в сопроводительных документах. Отказ покупателя от оплаты товара, а равно от подписания сопроводительной документации, будет расцениваться продавцом как отказ покупателя от приобретения продукции.</p>
-              <p class="mb4">5. Если по истечении периода времени, указанного в пункте 2 настоящего Порядка, покупатель не принимает какого‑либо решения о дальнейшей судьбе заказанного ранее товара (не озвучивает его представителю продавца), то представитель продавца вправе забрать такой товар и покинуть место расположения покупателя. Подобные ситуации будут классифицироваться как отказ покупателя от приобретения продукции.</p>
-            </div>
-          </div>
-          <div class="modal__close">
-            <div class="icon__close-w"></div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="openModal_callme" class="modal">
       <div class="wrapper">
         <div class="modal__dialog">
@@ -366,7 +243,5 @@
     <script src="../assets/js/scrollbar.js"></script>
     <script src="../assets/js/select2.js"></script>
     <script src="../assets/js/build.js"></script>
-    <script src="../assets/js/basket.js"></script>
-    <script src="../assets/js/lk.js"></script>
   </body>
 </html>

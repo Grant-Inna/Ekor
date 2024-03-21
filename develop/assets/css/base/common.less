@@ -25,7 +25,7 @@
 .hide { // del
    display: none;
 }
-.dis {
+.dis { // del
    opacity: 0;
 }
 .element {
@@ -100,6 +100,22 @@
 .text-green {
    color: @color-green;
 }
+.status-green {
+   border-color: @color-green;
+   color: @color-green;
+}
+.status-red {
+   border-color: @color-red;
+   color: @color-red;
+}
+.status-blue {
+   border-color: @color-blue;
+   color: @color-blue;
+}
+.status-gray {
+   border-color: @color-gray;
+   color: @color-gray;
+}
 .back-blue { // del
    background-color: @color-blue-gray;
 }
@@ -158,6 +174,10 @@ h3.caption.text-blue {
       font-size: 16px;
    });
 }
+.text-18 {
+   font-size: 18px;
+   line-height: 120%;
+}
 .text-16 {
    .montserrat-medium();
    font-size: 16px;
@@ -176,6 +196,14 @@ h3.caption.text-blue {
    .montserrat-medium();
    font-size: 14px;
    line-height: 120%;
+}
+.text-14-small {
+   .montserrat-medium();
+   font-size: 14px;
+   line-height: 120%;
+   .xs-block({
+      font-size: 12px;
+   })
 }
 .text-14-big {
    .montserrat-semibold();
@@ -336,6 +364,9 @@ h3.caption.text-blue {
 }
 .mb16 {
    margin-bottom: 16px;
+}
+.mt20 {
+   margin-top: 20px;
 }
 .mb20 {
    margin-bottom: 20px;

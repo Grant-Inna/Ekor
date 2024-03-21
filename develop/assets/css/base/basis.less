@@ -7,16 +7,27 @@ body {
    .montserrat-medium();
    background-color: @color-back-main;
    min-width: 280px;
+   flex-direction: column;
+   display: flex;
+   min-height: 100vh;
 }
 .container {
    overflow-x: hidden;
    position: relative;
+   margin-bottom: auto;
 }
 .wrapper {
    .wrapper();
 }
 .wrapper-small {
    max-width: 862px;
+   .xs-block({
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+   });
+}
+.wrapper-add-address {
+   max-width: 630px;
    .xs-block({
       padding-right: 0 !important;
       padding-left: 0 !important;
@@ -53,7 +64,8 @@ input:focus {
    color: @color-gray;
 }
 button {
-   .un-button()
+   .un-button();
+   cursor: pointer;
 }
 
 menu {

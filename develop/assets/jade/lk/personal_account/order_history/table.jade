@@ -1,0 +1,16 @@
+include __order
+section.orders_info__table
+   .orders_info__table_header.text-small.text-dark
+      .orders_info__col.orders_col_numb Номер заказа
+      .orders_info__col.orders_col_date Дата создания
+      .orders_info__col.orders_col_status Статус
+      .orders_info__col.orders_col_amount Сумма заказа, &#8381;
+      .orders_info__col.orders_col_watch
+   +order( 'text-blue')
+   +order( 'text-blue')
+   +order( 'text-green')
+   +order( 'text-green')
+   +order( 'text-green')
+   +order( 'text-green')
+   +order( 'text-green')
+   +order( 'text-red')
