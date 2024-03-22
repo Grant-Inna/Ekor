@@ -10,3 +10,10 @@ include __navigation
 
       .personal_account__content
          h1.title.text-blue История оплат
+         include payment_history/top
+         .orders_history
+            include payment_history/table
+         button.button-orders-more
+            span Показать еще
+
+         include ../../../jade/content/catalog/pagination/pagination

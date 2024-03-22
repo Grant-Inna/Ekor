@@ -1,0 +1,46 @@
+.payment_info__admin {
+   .gr();
+   grid-template-columns: 245px 189px;
+   grid-template-rows: 36px;
+   align-items: center;
+   grid-column-gap: 16px;
+   margin-bottom: 20px;
+   justify-content: space-between;
+   
+   .sm-block({
+      grid-template-columns: 100%;
+      grid-template-rows: 20px 36px;
+      grid-column-gap: 0;
+      grid-row-gap: 10px;
+   });
+   .xs-block({
+      margin-bottom: 10px;
+   });
+}
+.payment_info__admin .orders_info__sum {
+   grid-column: ~"1 / 2";
+   grid-row: ~"1 / 2";
+   min-width: unset;
+}
+.payment_info__admin .orders_info__select {
+   grid-row: ~"1 / 2";
+   
+   .sm-block({
+      grid-column: ~"1 / 2";
+      grid-row: ~"2 / 3";
+   });
+
+   justify-self: flex-end;
+   margin-left: 0;
+   .xs-block({
+      width: 100%;
+   });
+}
+.payment_info__admin {
+   .orders_info__select .select2.select2-container.select2-container--default {
+      .xs-block({
+         max-width: 100%;
+         min-width: 100%;
+      });
+   }
+}
