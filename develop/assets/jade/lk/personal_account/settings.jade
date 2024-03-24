@@ -10,3 +10,44 @@ include __navigation
 
       .personal_account__content
          h1.title.text-blue Настройки
+         section.section_block.personal_account__setting
+            .account__title.text-blue Настройка уведомлений
+            .flex.row_flex-10.personal_account__checkbox.mb
+               label.label-checkbox( for='setting_offers' )
+                  input#setting_offers.checkbox-hidden( type='checkbox' checked='true' )
+                  span.checkbox
+               span.text-14.text-dark Присылать специальные предложения
+            .flex.row_flex-10.personal_account__checkbox
+               label.label-checkbox( for='setting_notifications' )
+                  input#setting_notifications.checkbox-hidden( type='checkbox' checked='true' )
+                  span.checkbox
+               span.text-14.text-dark Присылать уведомления об оформлении и статусе доставки заказа
+
+            .account__title.title-mt.text-blue Каталог
+            .flex.row_flex-10.personal_account__checkbox.mb
+               label.label-checkbox( for='setting_profitable' )
+                  input#setting_profitable.checkbox-hidden( type='checkbox' checked='true' )
+                  span.checkbox
+               span.text-14.text-dark Показывать выгодные предложения на страницах каталога
+
+            .personal_account__bottom
+               .account__title.title-mt.text-blue Промоакции
+               .flex.row_flex-10.personal_account__checkbox
+                  label.label-checkbox( for='setting_promotions' )
+                     input#setting_promotions.checkbox-hidden( type='checkbox' checked='true' )
+                     span.checkbox
+                  span.text-14.text-dark Получать подарки / образцы
+
+            .account__title.title-mt.text-blue Сменить пароль
+            form.form_pass.personal_account__password
+               label( for='new_pass' ).label-input.password
+                  input#new_pass( type='password' ).input.input-big
+                  span.sup Старый пароль
+                  .ico__eye.no
+               label( for='new_repass' ).label-input.password
+                  input#new_repass( type='password' ).input.input-big
+                  span.sup Новый пароль
+                  .ico__eye.no
+               .my_account__contact_button
+                  button.button-yellow Сохранить изменения
+                  button.text-14.text-dark.button-cancel Отмена

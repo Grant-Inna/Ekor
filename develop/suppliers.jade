@@ -1,0 +1,64 @@
+doctype
+html( lang='ru' )
+
+   include assets/jade/static/__head
+   +title( 'Поставщикам товаров и услуг | Экор' )
+
+
+   body
+      #container_contacts.container
+         include assets/jade/header/header
+         .wrapper.caption__wrapper
+            h1.caption.text-blue Поставщикам товаров и&nbsp;услуг
+
+
+         include assets/jade/content/suppliers/top
+         include assets/jade/content/suppliers/cooperation
+
+         section( aria-label='Подать заявку на сотрудничество' ).request__container.wrapper
+            .request__wrapper
+               .request__image_holder.request__holder
+                  .request__image-1
+                     .request_img.absolute-img( data-large='./assets/images/large/request.webp' data-middle='./assets/images/middle/request.webp' data-small='./assets/images/middle/request.webp' )
+               .request__form_holder.request__holder.supplier_form__holder
+                  h2.caption.text-blue Оставьте заявку на&nbsp;сотрудничество
+                  form#supplier_form( name='supplier_form').supplier__form
+                     label( for='supplier_copname' ).label-input.mb10
+                        input#supplier_copname( type='text' ).input.input-big
+                        span.sup Название компании
+                     .gr
+                        label( for='supplier_name' ).label-input.mb10
+                           input#supplier_name( type='text' ).input.input-big
+                           span.sup Ваше имя
+                        label( for='supplier_mail' ).label-input.mb10
+                           input#supplier_mail( type='email' ).input.input-big
+                           span.sup Email
+                     label( for='supplier_numb' ).label-input.label-tel.mb10
+                        input#supplier_numb( type='tel' placeholder='+7(_ _ _) _ _-_ _-_ _' ).input.input-big
+                        span.sup Номер телефона
+                     label( for='supplier_comment' ).label-input.label-area.mb10
+                        textarea#supplier_comment( form='supplier_form' cols='100%' )
+                        span.sup Ваш комментарий
+                     .flex.row_flex-10.mb
+                        label#supplier_label.label-checkbox( for='supplier_checkbox' )
+                           input#supplier_checkbox.checkbox-hidden( type='checkbox' checked='true' )
+                           span.checkbox
+                        span.text-dark.text-small Подтверждаю своё согласие на обработку и хранение моих персональных данных в соответствии с пользовательским соглашением
+                     .gr
+                        button#supplier_btn.button-yellow.button-long( type='button' )
+                           span Отправить
+                        label( for='supplier_load' ).label-load
+                           input#supplier_load.checkbox-hidden( type='file' )
+                           .button-hollow.button-long.pointer
+                              .text-14.mr20 Загрузить прайс-лист
+                              .ico__plus
+
+
+      include assets/jade/catalog/catalog
+
+      include assets/jade/footer/footer
+      include assets/jade/modal/modal-callme
+
+      include assets/jade/static/script
+
+

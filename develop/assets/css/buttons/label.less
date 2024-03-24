@@ -38,7 +38,7 @@
    color: @color-gray;
    .tr();
 }
-.label-input input:focus + .sup {
+.label-input input:focus + .sup{
    font-size: 12px;
    line-height: 120%;
    color: rgba(60, 60, 67, 0.3);
@@ -60,4 +60,28 @@
  &:-ms-input-placeholder { color: @color-gray; .tr(); }
  &::-ms-input-placeholder { color: @color-gray; .tr(); }
  &::placeholder { color: @color-gray; .tr(); }
+}
+
+textarea {
+   resize: none;
+   background-color: transparent;
+   padding: 18px 16px;
+   box-sizing: border-box;
+   border-radius: 10px;
+   border: 1px solid #DDE1E6;
+   min-width: 100%;
+   width: 100%;
+   max-height: 120px;
+   height: 120px;
+}
+.label-area .sup {
+   top: 18px;
+}
+.label-area textarea:focus + .sup {
+   top: 3px;
+   font-size: 12px;
+   line-height: 120%;
+   color: rgba(60, 60, 67, 0.3);
+   .tr();
+   margin-bottom: 36px;
 }

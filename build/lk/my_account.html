@@ -97,7 +97,8 @@
       </header>
             <div class="wrapper">
               <section class="breadcrumbs__container"><a href="../" class="breadcrumbs__link pointer">Главная</a>
-                <div class="breadcrumbs__link default">Личный кабинет</div><a href="../" class="breadcrumbs__active">Мой профиль</a>
+                <div id="open_menu" class="breadcrumbs__link">Личный кабинет</div>
+                <div class="breadcrumbs__active default">Мой профиль</div>
               </section>
             </div>
       <div class="wrapper">
@@ -246,6 +247,257 @@
         </div>
       </div>
     </footer>
+    <div id="personal_menu_mobile" class="personal_menu__mobile">
+      <div class="personal_menu__header">
+        <div class="personal_menu__title text-16-big text-blue">Личный кабинет</div>
+        <div class="personal_menu__close">
+          <div class="ico__close"></div>
+        </div>
+      </div>
+      <div class="personal_menu__links"><a href="./my_account.html" class="personal_link_current personal_menu__link mb10">Мой профиль</a><a href="./order_history.html" class="personal_menu__link mb10">История заказов</a><a href="./delivery_addresses.html" class="personal_menu__link mb10">Мой адрес доставки</a><a href="./payment_history.html" class="personal_menu__link mb10">История оплат</a><a href="./settings.html" class="personal_menu__link mb10">Настройки</a>
+      </div>
+      <div class="personal__out">Выйти</div>
+    </div>
+    <section id="catalog" aria-label="Каталог со всеми товарами" class="catalog__container">
+      <div class="wrapper">
+        <div class="catalog__holder">
+          <div class="catalog__top">
+            <div class="icon__angle cat dis"></div>
+            <div class="catalog__caption">Каталог товаров</div>
+            <div class="icon__close cat"></div>
+          </div>
+          <div class="scrollbar-inner">
+            <div class="catalog__scroll-main">
+              <div class="catalog__block catalog__block-aside">
+                    <section aria-label="Свежемороженая рыба" class="catalog__section">
+                      <div data-article="sveshemor" class="catalog__section_caption">
+                        <div class="icofish__sveshemor"></div>
+                        <h2 class="catalog__section-name">Свежемороженая рыба</h2>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-sveshemor" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Филе рыбы, стейки, фарш" class="catalog__section">
+                      <div data-article="fileryby" class="catalog__section_caption">
+                        <div class="icofish__fileryby"></div>
+                        <h2 class="catalog__section-name">Филе рыбы, стейки, фарш</h2>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-fileryby" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Креветки / Морепродукты" class="catalog__section">
+                      <div data-article="moreprodukty" class="catalog__section_caption">
+                        <div class="icofish__moreprodukty"></div>
+                        <h2 class="catalog__section-name">Креветки / Морепродукты</h2>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-moreprodukty" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Морепродукты для японской кухни" class="catalog__section">
+                      <div data-article="morejap" class="catalog__section_caption">
+                        <div class="icofish__morejap"></div>
+                        <h2 class="catalog__section-name">Морепродукты для&nbsp;японской кухни</h2>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-morejap" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Фасованная рыба Экор" class="catalog__section">
+                      <div data-article="fileryby2" class="catalog__section_caption">
+                        <div class="icofish__fileryby2"></div>
+                        <h2 class="catalog__section-name">Фасованная рыба &laquo;Экор&raquo;</h2>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-fileryby2" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+              </div>
+              <div class="catalog__block row">
+                    <section aria-label="Полуфабрикаты" class="catalog__section catalog__section-food">
+                      <div data-article="polufabrikaty" class="catalog__section_caption">
+                        <div class="icofood__polufabrikaty"></div>
+                        <div class="catalog__section-name">Полуфабрикаты</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-polufabrikaty" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Консервация" class="catalog__section catalog__section-food">
+                      <div data-article="konservy" class="catalog__section_caption">
+                        <div class="icofood__konservy"></div>
+                        <div class="catalog__section-name">Консервация</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-konservy" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Масло и молочная продукция" class="catalog__section catalog__section-food">
+                      <div data-article="molochnaya_produktsiya" class="catalog__section_caption">
+                        <div class="icofood__molochnaya_produktsiya"></div>
+                        <div class="catalog__section-name">Масло и&nbsp;молочная продукция</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-molochnaya_produktsiya" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Готовая продукция Экор" class="catalog__section catalog__section-food">
+                      <div data-article="gotovaya" class="catalog__section_caption">
+                        <div class="icofood__gotovaya"></div>
+                        <div class="catalog__section-name">Готовая продукция &laquo;Экор&raquo;</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-gotovaya" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Изделия из теста" class="catalog__section catalog__section-food">
+                      <div data-article="izdelie_iz_testa" class="catalog__section_caption">
+                        <div class="icofood__izdelie_iz_testa"></div>
+                        <div class="catalog__section-name">Изделия из&nbsp;теста</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-izdelie_iz_testa" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Бакалея и специи" class="catalog__section catalog__section-food">
+                      <div data-article="bakaleya" class="catalog__section_caption">
+                        <div class="icofood__bakaleya"></div>
+                        <div class="catalog__section-name">Бакалея и&nbsp;специи</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-bakaleya" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Мясо, птица" class="catalog__section catalog__section-food">
+                      <div data-article="myaso_i_ptitsa" class="catalog__section_caption">
+                        <div class="icofood__myaso_i_ptitsa"></div>
+                        <div class="catalog__section-name">Мясо, птица</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-myaso_i_ptitsa" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Охлаждённая рыба" class="catalog__section catalog__section-food">
+                      <div data-article="okhlazhdennaya_ryba" class="catalog__section_caption">
+                        <div class="icofood__okhlazhdennaya_ryba"></div>
+                        <div class="catalog__section-name">Охлаждённая рыба</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-okhlazhdennaya_ryba" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Масло растительное" class="catalog__section catalog__section-food">
+                      <div data-article="maslo_rastitelnyoe" class="catalog__section_caption">
+                        <div class="icofood__maslo_rastitelnyoe"></div>
+                        <div class="catalog__section-name">Масло растительное</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-maslo_rastitelnyoe" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Замороженные овощи" class="catalog__section catalog__section-food">
+                      <div data-article="zamorozhennyye_ovoshchi_yagody" class="catalog__section_caption">
+                        <div class="icofood__zamorozhennyye_ovoshchi_yagody"></div>
+                        <div class="catalog__section-name">Замороженные овощи</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-zamorozhennyye_ovoshchi_yagody" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Икра красная" class="catalog__section catalog__section-food">
+                      <div data-article="krasnaya_ikra" class="catalog__section_caption">
+                        <div class="icofood__krasnaya_ikra"></div>
+                        <div class="catalog__section-name">Икра красная</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-krasnaya_ikra" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+                    <section aria-label="Майонезы, соусы" class="catalog__section catalog__section-food">
+                      <div data-article="sousy" class="catalog__section_caption">
+                        <div class="icofood__sousy"></div>
+                        <div class="catalog__section-name">Майонезы, соусы</div>
+                        <div class="icon__angle"></div>
+                      </div>
+                      <article id="c-sousy" class="catalog__articles">
+                        <div class="scrollbar-inner">
+                          <div class="catalog__scroll"><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Креветки</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Голец</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a><a href="./catalog.html" class="catalog__link">Горбуша</a>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <div id="openModal_callme" class="modal">
       <div class="wrapper">
         <div class="modal__dialog">
@@ -288,5 +540,6 @@
     <script src="../assets/js/scrollbar.js"></script>
     <script src="../assets/js/select2.js"></script>
     <script src="../assets/js/build.js"></script>
+    <script src="../assets/js/lk.js"></script>
   </body>
 </html>

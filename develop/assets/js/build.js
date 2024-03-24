@@ -122,6 +122,7 @@ $(document).ready(function () {
                return "Результаты не найдены";
             }
          },
+         placeholder: "Поиск по всем разделам"
       });
    
   /* каруселька крутилка */
@@ -432,11 +433,28 @@ $(document).ready(function () {
          ].every(Boolean));
       });
     }
+   
+   if ($('.supplier__form').length > 0) {
+      checkboxCheckedSuppliers( '#supplier_form', '#supplier_checkbox', '#supplier_btn', '#supplier_copname', '#supplier_name', '#supplier_mail', '#supplier_numb', '#supplier_comment');
+   }
+   function checkboxCheckedSuppliers( form, box, btn, input1, input2, input3, input4, input5 ) {
+      $(form).on( 'focus', function() {$(btn).prop('disabled', true)});
+      $(form).on( 'input', function() {
+         $(btn).prop('disabled', ![
+         $(input1).val().length !== 0,
+         $(input2).val().length !== 0,
+         $(input3).val().length !== 0,
+         $(input4).val().length !== 0,
+         $(input5).val().length !== 0,
+         $(box).prop('checked'),
+         ].every(Boolean));
+      });
+    }
     
     /* placeholder */
   if ($('.sup').length > 0) {
      // $('input').val().length === 0 ? $('input').siblings('.sup').hide() : $('input').siblings('.sup').show();
-     $('input').on( 'input, change', function() {
+     $('input, textarea').on( 'input, change', function() {
         let sup = $(this).siblings('.sup');
         $(this).val().length > 1 ? sup.hide() : sup.show()
      });
@@ -458,7 +476,7 @@ $(document).ready(function () {
       }
       
       if ( $('#catalog').css('display') !== 'block' ) {
-         $('#catalog').slideDown(500).offset({top: catalog_top});
+         $('#catalog').fadeIn(200).offset({top: catalog_top});
          // $('#catalog').animate({ top: catalog_top }, 200);
          
          $('#catalog_trigger').addClass('open');

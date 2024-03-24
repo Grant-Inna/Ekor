@@ -27,8 +27,8 @@ $(document).ready(function () {
          // $('#openModal_login').fadeIn().css( 'right', '0');
          // $('#openModal_register').fadeIn().css( 'right', '0');
          // $('#openModal_recover').fadeIn().css( 'right', '0');
-         // $('#openModal_reset').fadeIn().css( 'right', '0');
-         $('#openModal_welcome').fadeIn().css( 'right', '0');
+         $('#openModal_reset').fadeIn().css( 'right', '0');
+         // $('#openModal_welcome').fadeIn().css( 'right', '0');
          showBlackBackUP();
          
          $('.header__menu_mobile').slideUp(200, () => {$('header').removeAttr( 'style');});
