@@ -609,7 +609,8 @@
   left: -24px;
   transition: unset;
 }
-.price__form .select2.select2-container.select2-container--default.select2-container--open .select2-selection__arrow {
+.price__form .select2.select2-container.select2-container--default.select2-container--open .select2-selection__arrow,
+.price_section_form .select2.select2-container.select2-container--default.select2-container--open .select2-selection__arrow {
   transform: unset;
   top: 25%;
   transition: unset;
@@ -622,7 +623,7 @@
 #container_price .select2-search--dropdown .select2-search__field,
 #container_price .select2-search--dropdown {
   border-radius: 8px;
-    border-top-color: transparent;
+  border-top-color: transparent;
   border-right-color: transparent;
   border-left-color: transparent;
 }
@@ -632,8 +633,11 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+.search() {
+  background-image: url(../images/svg/icons/menu/search.svg);
+}
 .price__form .select2-container--default .select2-selection--single .select2-selection__arrow {
-    background-image: url(../images/svg/icons/menu/search.svg);
+    .search();
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

@@ -145,41 +145,7 @@
                 </div>
                 <div class="basket_order__group">
                   <div class="basket_group__title text-blue">Замороженная рыба</div>
-                            <div class="basket_product__block">
-                              <div class="basket_product__checkbox items-center">
-                                <label class="label-checkbox">
-                                  <input type="checkbox" class="checkbox-hidden one"><span class="checkbox"></span>
-                                </label>
-                              </div>
-                              <div class="basket_product__image relative">
-                                <div class="relation-square"></div>
-                                <div class="relation_content"><img src="../assets/images/1.png"></div>
-                              </div>
-                              <div class="product__title">Барабулька черноморская свежемороженая 500 г</div>
-                              <div class="product__info">
-                                <div class="product__article"><span>Артикул:&nbsp;</span>
-                                  <div class="elem">3371176</div>
-                                </div>
-                                <div class="product__piece"><span>Штука:&nbsp;</span>
-                                  <div class="elem">0,5 кг</div>
-                                </div>
-                              </div>
-                              <div class="basket_product__buy">
-                                <div class="basket__price"><span>1130.54</span>
-                                  <div class="elem">&nbsp;&#8381; / кг</div>
-                                </div>
-                                <div class="basket__item"><span>123.8</span>
-                                  <div class="elem">&nbsp;&#8381;</div>
-                                </div>
-                              </div>
-                              <div class="basket__amount">
-                                <button disabled="true" class="button ico__minus"></button>
-                                <div class="product__weight text-blue">
-                                  <div class="weight">1</div><span>&nbsp;шт</span>
-                                </div>
-                                <button disabled="false" class="button ico__plus"></button>
-                              </div>
-                            </div>
+                  <!--+product( '1')-->
                   <div class="basket_product__block">
                     <div class="basket_product__checkbox items-center">
                       <label class="label-checkbox">
@@ -473,83 +439,96 @@
                   <div data-obtaining="1" class="address_obtaining__button text-blue pointer chosen">Доставка</div>
                   <div data-obtaining="2" class="address_obtaining__button text-blue pointer hidden">Самовывоз</div>
                 </div>
-                <section id="obtaining_1" class="address_obtaining__holder">
-                  <div class="text-16-big text-blue mb16">Адрес доставки</div>
-                  <div class="address_obtaining__items">
-                    <div data-obtaining-address="1" class="address_obtaining__address mt16">
-                      <div class="ico__del"></div>
-                      <div class="obtaining_address__text">
-                        <div class="text-14 text-blue">Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328</div>
+                <form name="address">
+                  <section id="obtaining_1" class="address_obtaining__holder">
+                    <div class="text-16-big text-blue mb16">Адрес доставки</div>
+                    <label for="address_obtaining-1" class="address_obtaining__items">
+                      <div data-obtaining-address="1" class="address_obtaining__address mt16">
+                        <input id="address_obtaining-1" name="address" type="radio" class="checkbox-hidden"><span class="radio"></span>
+                        <div class="obtaining_address__text">
+                          <div class="text-14 text-blue">Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328</div>
+                        </div>
+                        <div data-modal="edit_address" class="ico__edit pointer"></div>
                       </div>
-                      <div data-modal="edit_address" class="ico__edit pointer"></div>
-                    </div>
-                  </div>
-                  <div id="obtaining_add_address" data-modal="add_dostavka" class="address_obtaining__add mt16 pointer openModal_add_dostavka">
-                    <div data-modal="add_dostavka" class="icon__address_add mr10"></div>
-                    <div data-modal="add_dostavka" class="text-14 text-blue">Новый адрес</div>
-                  </div>
-                </section>
-                <section id="obtaining_2" class="address_obtaining__holder hide">
-                  <div class="text-16-big text-blue mb16">Адрес пункта самовывоза</div>
-                  <form name="option" class="address_obtaining__items">
-                    <div data-obtaining-point="1" class="address_obtaining__point mt16">
-                      <label for="option-1">
-                        <div class="label-checkbox">
-                          <input id="option-1" name="option" type="radio" class="checkbox-hidden"><span class="radio"></span>
+                    </label>
+                    <label for="address_obtaining-2" class="address_obtaining__items">
+                      <div data-obtaining-address="1" class="address_obtaining__address mt16">
+                        <input id="address_obtaining-2" name="address" type="radio" class="checkbox-hidden"><span class="radio"></span>
+                        <div class="obtaining_address__text">
+                          <div class="text-14 text-blue">Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328</div>
                         </div>
-                        <div class="obtaining_point__text">
-                          <div class="text-16-big text-blue mb4 input-type-radio">Пункт самовывоза 1</div>
-                          <div class="text-14 text-dark">Столярный переулок, дом 3, корпус 6</div>
-                        </div>
-                      </label>
-                      <div class="ico__options mlauto pointer"></div>
-                      <div id="obtaining_point-1" class="point_options__popup">
-                        <div class="line_gray"></div>
-                        <div class="options_popup address_obtaining">
-                          <div data-modal="watch_point" class="obtaining_map items-center mb10 pointer">
-                            <div data-modal="watch_point" class="ico__navigation"></div>
-                            <div data-modal="watch_point" class="options_popup__text">Посмотреть на&nbsp;карте</div>
-                          </div>
-                          <div data-click="del" class="items-center pointer">
-                            <div class="ico__bin-r"></div>
-                            <div class="options_popup__text text-red">Удалить</div>
-                          </div>
-                          <button class="address_popup__button">Отмена</button>
-                        </div>
+                        <div data-modal="edit_address" class="ico__edit pointer"></div>
                       </div>
+                    </label>
+                    <div id="obtaining_add_address" data-modal="add_dostavka" class="address_obtaining__add mt16 pointer openModal_add_dostavka">
+                      <div data-modal="add_dostavka" class="icon__address_add mr10"></div>
+                      <div data-modal="add_dostavka" class="text-14 text-blue">Новый адрес</div>
                     </div>
-                    <div data-obtaining-point="2" class="address_obtaining__point mt16">
-                      <label for="option-2">
-                        <div class="label-checkbox">
-                          <input id="option-2" name="option" type="radio" class="checkbox-hidden"><span class="radio"></span>
-                        </div>
-                        <div class="obtaining_point__text">
-                          <div class="text-16-big text-blue mb4 input-type-radio">Пункт самовывоза 2</div>
-                          <div class="text-14 text-dark">Столярный переулок, дом 3, корпус 6</div>
-                        </div>
-                      </label>
-                      <div class="ico__options mlauto pointer"></div>
-                      <div id="obtaining_point-2" class="point_options__popup">
-                        <div class="line_gray"></div>
-                        <div class="options_popup address_obtaining">
-                          <div data-modal="watch_point" class="obtaining_map items-center mb10 pointer">
-                            <div data-modal="watch_point" class="ico__navigation"></div>
-                            <div data-modal="watch_point" class="options_popup__text">Посмотреть на&nbsp;карте</div>
+                  </section>
+                  <section id="obtaining_2" class="address_obtaining__holder hide">
+                    <div class="text-16-big text-blue mb16">Адрес пункта самовывоза</div>
+                    <div class="address_obtaining__items">
+                      <div data-obtaining-point="1" class="address_obtaining__point mt16">
+                        <label for="option-1">
+                          <div class="label-checkbox">
+                            <input id="option-1" name="address" type="radio" class="checkbox-hidden"><span class="radio"></span>
                           </div>
-                          <div data-click="del" class="items-center">
-                            <div class="ico__bin-r"></div>
-                            <div class="options_popup__text text-red">Удалить</div>
+                          <div class="obtaining_point__text">
+                            <div class="text-16-big text-blue mb4 input-type-radio">Пункт самовывоза 1</div>
+                            <div class="text-14 text-dark">Столярный переулок, дом 3, корпус 6</div>
                           </div>
-                          <button class="address_popup__button">Отмена</button>
+                        </label>
+                        <label for="obtaining_point-1" class="ico__options mlauto pointer"></label>
+                        <input id="obtaining_point-1" type="checkbox" class="checkbox-hidden obtaining_point_checkbox">
+                        <div class="point_options__popup">
+                          <div class="line_gray"></div>
+                          <div class="options_popup address_obtaining">
+                            <div data-modal="watch_point" class="obtaining_map items-center mb10 pointer">
+                              <div data-modal="watch_point" class="ico__navigation"></div>
+                              <div data-modal="watch_point" class="options_popup__text">Посмотреть на&nbsp;карте</div>
+                            </div>
+                            <div data-click="del" class="items-center pointer">
+                              <div class="ico__bin-r"></div>
+                              <div class="options_popup__text text-red">Удалить</div>
+                            </div>
+                            <button class="address_popup__button">Отмена</button>
+                          </div>
                         </div>
                       </div>
+                      <div data-obtaining-point="2" class="address_obtaining__point mt16">
+                        <label for="option-2">
+                          <div class="label-checkbox">
+                            <input id="option-2" name="address" type="radio" class="checkbox-hidden"><span class="radio"></span>
+                          </div>
+                          <div class="obtaining_point__text">
+                            <div class="text-16-big text-blue mb4 input-type-radio">Пункт самовывоза 2</div>
+                            <div class="text-14 text-dark">Столярный переулок, дом 3, корпус 6</div>
+                          </div>
+                        </label>
+                        <label for="obtaining_point-2" class="ico__options mlauto pointer"></label>
+                        <input id="obtaining_point-2" type="checkbox" class="checkbox-hidden obtaining_point_checkbox">
+                        <div class="point_options__popup">
+                          <div class="line_gray"></div>
+                          <div class="options_popup address_obtaining">
+                            <div data-modal="watch_point" class="obtaining_map items-center mb10 pointer">
+                              <div data-modal="watch_point" class="ico__navigation"></div>
+                              <div data-modal="watch_point" class="options_popup__text">Посмотреть на&nbsp;карте</div>
+                            </div>
+                            <div data-click="del" class="items-center">
+                              <div class="ico__bin-r"></div>
+                              <div class="options_popup__text text-red">Удалить</div>
+                            </div>
+                            <button class="address_popup__button">Отмена</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </form>
-                  <div id="obtaining_add_point" data-modal="add_samovivoz" class="address_obtaining__add mt16 pointer openModal_add_samovivoz">
-                    <div data-modal="add_samovivoz" class="icon__address_add mr10"></div>
-                    <div data-modal="add_samovivoz" class="text-14 text-blue">Новый пункт самовывоза</div>
-                  </div>
-                </section>
+                    <div id="obtaining_add_point" data-modal="add_samovivoz" class="address_obtaining__add mt16 pointer openModal_add_samovivoz">
+                      <div data-modal="add_samovivoz" class="icon__address_add mr10"></div>
+                      <div data-modal="add_samovivoz" class="text-14 text-blue">Новый пункт самовывоза</div>
+                    </div>
+                  </section>
+                </form>
               </div>
               <div id="obtaining_data" class="section_block">
                 <div class="basket_group__title text-blue mb20">Дата и&nbsp;время получения</div>
@@ -670,7 +649,7 @@
                       <input id="payment_type_radio-2" name="payment_type" type="radio" class="checkbox-hidden"><span class="radio"></span>
                     </div>
                     <div class="text-16 text-16-big text-blue mr4 input-type-radio">Рассмотреть отсрочку платежа</div>
-                    <div class="ico__question-circle"></div>
+                    <div data-modal="order_answer" class="ico__question-circle"></div>
                   </label>
                   <label for="payment_type_radio-3" class="payment_type__item">
                     <div class="label-checkbox">
@@ -727,7 +706,7 @@
                   </div>
                 </div>
                 <div class="order_info__holder text-dark">
-                  <p class="mb6 text-small">Подтверждая заказ, вы принимаете порядок приёма-передачи товаров. Заказы доставляются нами в указанное вами место и время для того, чтобы вы могли с ними ознакомиться и принять решение о покупке. Вы не принимаете на себя никаких обязательств по покупке товаров и можете в любой момент отказаться от непонравившихся товаров. При этом, торговая сеть «Утконос» связана обязательствами по доставке товаров, но не принимает на себя обязательств по продаже товаров до момента вашего ознакомления с товарами и решения их купить.</p>
+                  <p class="mb6 text-small">Подтверждая заказ, вы принимаете порядок приёма-передачи товаров. Заказы доставляются нами в указанное вами место и время для того, чтобы вы могли с ними ознакомиться и принять решение о покупке. Вы не принимаете на себя никаких обязательств по покупке товаров и можете в любой момент отказаться от непонравившихся товаров. При этом, торговая сеть &laquo;Утконос&raquo; связана обязательствами по доставке товаров, но не принимает на себя обязательств по продаже товаров до момента вашего ознакомления с товарами и решения их купить.</p>
                   <div data-modal="order_info" class="order_info__read text-small text-big pointer">Подробнее</div>
                 </div>
               </div>
@@ -1683,6 +1662,27 @@
         <div class="modal__dialog">
           <div class="modal__content block p20">
             <div class="add_place__title text-18-title text-blue">Порядок приема-передачи товара покупателю:</div>
+            <div class="text-dark">
+              <p class="mb4">1. Процесс приёма-передачи товара опосредует совокупность действий сторон, складывающихся по факту доставки продавцом товара по адресу, указанному покупателем, и направленных на переход права собственности на продукцию от продавца к покупателю.</p>
+              <p class="mb4">2. По факту доставки продавцом товара по адресу, указанному покупателем, и вручения его последнему, покупатель в течение 15 минут вправе осуществлять проверку продукции на предмет её соответствия ранее заказанным позициям, соблюдения сроков годности товара (в отношении товара для которого это применимо), целостности упаковки и т.п.</p>
+              <p class="mb4">3. При осуществлении проверки покупатель не должен нарушать целостность упаковки товара. Под нарушением целостности упаковки товара понимаются такие действия покупателя, по факту совершения которых внешний вид товара, прошедшего проверку у покупателя, будет отличаться от первоначального внешнего вида продукции и подобное несоответствие будет препятствовать последующей реализации данного товара.</p>
+              <p class="mb4">Аналогичные правила подлежат применению и в том случае, если товар продаётся в упакованном виде, состоящем из нескольких единиц подобной продукции (например, йогурты, напиток Actimel, яйцо куриное, и т.п.). Применительно к указанным товарам покупатель не должен вскрывать, разламывать, иным образом нарушать целостность таких упаковок и отбирать определённое количество единиц продукции, а может приобрести лишь целиком всю упаковку такого товара.</p>
+              <p class="mb4">Если при проверке товара покупатель нарушает целостность его упаковки, то тем самым он выражает своё волеизъявление на приобретение данного товара у продавца, вследствие чего подобные действия покупателя порождают его обязанность по оплате такого товара.</p>
+              <p class="mb4">4. По истечении периода времени, указанного в пункте 2 настоящего Порядка, покупатель принимает решение о приобретении заказанного ранее товара (полностью или частично), либо об отказе в приобретении продукции (полностью или частично). О своём решении покупатель информирует представителя продавца. В случае принятия решения приобрести товар (полностью или частично) покупатель производит его оплату и проставляет свою подпись в сопроводительных документах. Отказ покупателя от оплаты товара, а равно от подписания сопроводительной документации, будет расцениваться продавцом как отказ покупателя от приобретения продукции.</p>
+              <p class="mb4">5. Если по истечении периода времени, указанного в пункте 2 настоящего Порядка, покупатель не принимает какого‑либо решения о дальнейшей судьбе заказанного ранее товара (не озвучивает его представителю продавца), то представитель продавца вправе забрать такой товар и покинуть место расположения покупателя. Подобные ситуации будут классифицироваться как отказ покупателя от приобретения продукции.</p>
+            </div>
+          </div>
+          <div class="modal__close">
+            <div class="icon__close-w"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="openModal_order_answer" class="modal order_info__modal">
+      <div class="wrapper wrapper-small">
+        <div class="modal__dialog">
+          <div class="modal__content block p20">
+            <div class="add_place__title text-18-title text-blue">Какой-то текст:</div>
             <div class="text-dark">
               <p class="mb4">1. Процесс приёма-передачи товара опосредует совокупность действий сторон, складывающихся по факту доставки продавцом товара по адресу, указанному покупателем, и направленных на переход права собственности на продукцию от продавца к покупателю.</p>
               <p class="mb4">2. По факту доставки продавцом товара по адресу, указанному покупателем, и вручения его последнему, покупатель в течение 15 минут вправе осуществлять проверку продукции на предмет её соответствия ранее заказанным позициям, соблюдения сроков годности товара (в отношении товара для которого это применимо), целостности упаковки и т.п.</p>

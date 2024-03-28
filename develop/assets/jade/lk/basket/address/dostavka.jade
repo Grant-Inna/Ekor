@@ -1,7 +1,18 @@
 .text-16-big.text-blue.mb16 Адрес доставки
-.address_obtaining__items
+
+label( for='address_obtaining-1' ).address_obtaining__items
    .address_obtaining__address( data-obtaining-address='1' ).mt16
-      .ico__del
+      input#address_obtaining-1( name='address' type='radio' ).checkbox-hidden
+      span.radio
+      .obtaining_address__text
+         .text-14.text-blue Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328
+      .ico__edit.pointer( data-modal='edit_address')
+
+
+label( for='address_obtaining-2' ).address_obtaining__items
+   .address_obtaining__address( data-obtaining-address='1' ).mt16
+      input#address_obtaining-2( name='address' type='radio' ).checkbox-hidden
+      span.radio
       .obtaining_address__text
          .text-14.text-blue Московкая область, Реутов, Юбилейный проспект, 72, кв. 328, этаж 22, подъезд 3, код домофона 328
       .ico__edit.pointer( data-modal='edit_address')

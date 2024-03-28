@@ -11,11 +11,16 @@
    });
    .middle-block({
       grid-row-gap: 20px;
+      grid-column-gap: 0;
    });
    .md-block({
+      grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
       grid-row-gap: 10px;
    });
+   
+   .button-yellow {
+   }
 }
 .price__caption {
    h1.caption {
@@ -36,9 +41,10 @@
          min-width: 233px;
       });
    }
-   button.button-yellow {
+   .button-yellow {
+      grid-column: ~"11/ 13";
       width: 245px;
-      grid-column: ~"10 / 13";
+      min-width: 245px;
       justify-self: flex-end;
       .lg-block({
          grid-column: ~"9 / 13";
@@ -50,13 +56,17 @@
          justify-self: flex-start;
          margin-top: 10px;
       });
-      .sm-block({
+      .xs-block({
+         grid-column: ~"1 / 13";
          width: 100%;
+         max-width: 100%;
+         box-sizing: border-box;
       });
    }
    .button-inner {}
    .ico__load {
-   
+      width: 20px;
+      height: 20px;
    }
 }
 .price__search {
@@ -70,4 +80,246 @@
    padding-left: 12px + 24px;
    border: 1px solid #DDE1E6;
 }
+.price_section__column {
+   background-color: white;
+   border-radius: 10px;
+}
 
+
+
+
+
+.price_section__about {
+   .gr();
+   grid-template-columns: 13px auto 300px;
+   grid-column-gap: 10px;
+   padding: 16px 24px;
+   box-sizing: border-box;
+   .md-block({
+      padding: 16px 24px 1px;
+      grid-template-columns: 13px auto 20px;
+      grid-template-rows: repeat(2, auto);
+   });
+   .sm-block({
+      padding: 15px 15px 0;
+   });
+}
+
+.price_section__title {
+   .montserrat-semibold();
+   font-size: 24px;
+   line-height: 24px;
+   .sm-block({
+      font-size: 16px;
+      line-height: 26px;
+   })
+}
+.price_section__item {
+   .gr();
+   grid-template-columns: auto 90px 120px  128px 40px;
+   grid-column-gap: 10px;
+   align-items: center;
+   
+   padding: 10px 24px;
+   border-top: 1px solid @color-gray-light;
+   
+   .xl-block({
+      grid-template-columns: auto 50px 90px  128px 40px;
+   });
+   .lg-block({
+      padding: 16px 24px;
+   });
+   .middle-block({
+      grid-template-columns: auto 30px 80px  128px 40px;
+   });
+   .md-block({
+      grid-template-columns: auto 89px 28px;
+      grid-template-rows: auto 18px 28px;
+      grid-column-gap: 10px;
+      grid-row-gap: 8px;
+   });
+   .sm-block({
+      padding: 15px;
+   });
+}
+.price_item__title {
+   .md-block({
+      grid-column: ~"1 / 4";
+   });
+}
+.price_item__weight {
+   .md-block({
+      grid-column: ~"1 / 2";
+   });
+}
+.price_item_price {
+   .md-block({
+      grid-column: ~"1 / 2";
+   });
+}
+.price_item__purchase {
+   .md-block({
+      grid-column: ~"2 / 3";
+      width: 89px;
+      height: 28px;
+      padding: 6.5px;
+   });
+}
+.button-buy {
+   .md-block({
+      grid-column: ~"3 / 4";
+      width: 28px;
+      height: 28px;
+      background-size: 17px
+   });
+}
+//.price__container .select-price-sm{
+//   display: none;
+//   .md-block({
+//      display: block;
+//   })
+//}
+//.price__container select.select-price {
+//   display: block;
+//   .md-block({
+//      display: none;
+//   })
+//}
+.price__container .mb {
+   margin-bottom: 40px;
+   .sm-block({
+      margin-bottom: 20px;
+   })
+}
+.price_item__title {
+   padding-right: 24px;
+   box-sizing: border-box;
+}
+.price_item__purchase {
+   .flex();
+   .justify-between();
+   width: 128px;
+   height: 40px;
+   border: 1px solid @color-gray-light;
+   border-radius: 10px;
+   padding: 12.5px 24px;
+   box-sizing: border-box;
+   .ico__minus,
+   .ico__plus {
+      width: 15px;
+      height: 15px;
+   }
+}
+
+.search-button() {
+   .search();
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+}
+.select-icon {
+   .search-button();
+   display: none;
+   .md-block({
+      display: block;
+   })
+}
+.price_section_form {
+   .md-block({
+      &:focus {
+         outline: none;
+      }
+      *:focus {
+         outline: none;
+      }
+      * {
+         outline: none;
+      }
+      .select2-container .select2-selection--single .select2-selection__rendered {
+         color: transparent;
+      }
+   });
+   .select2-container--default .select2-selection--single .select2-selection__arrow {
+      .search-button()
+   }
+   
+   .md-block({
+      grid-column: ~"1 / 4";
+      grid-row: ~"2 / 3";
+      width: 100%;
+      min-width: 100%;
+      height: 15px;
+      border: unset;
+      padding-left: 0;
+      
+      .select2-container .select2-selection--single .select2-selection__rendered,
+      .select2-container--default .select2-selection--single {
+         max-height: 15px;
+         padding-right: 0;
+      }
+      .select2-container--default .select2-selection--single .select2-selection__arrow {
+         background-image: none;
+      }
+      .select2-container--default .select2-selection--single .select2-selection__placeholder {
+         color: transparent;
+      }
+   })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.select-price-md {
+   .select2-container--default .select2-selection--single .select2-selection__arrow {
+      left: 0;
+   }
+   .select2-container,
+   .select2-container--default .select2-selection--single {
+      min-width: 20px;
+      max-width: 20px;
+      height: 20px;
+   }
+   .select2-container--default .select2-selection--single .select2-selection__arrow {
+      right: unset;
+   }
+   .select2-container .select2-selection--single .select2-selection__rendered {
+      padding-left: 0;
+   }
+   .select2.select2-container.select2-container--default.select2-container--open .select2-selection__arrow {
+      top: 0;
+       transition: unset;
+   }
+   .select2.select2-container.select2-container--default.select2-container--below.select2-container--focus {
+      transition: unset;
+   }
+   .select2-container--default .select2-selection--single {
+      border: unset;
+   }
+    select::-moz-placeholder { color: transparent; .tr();}
+    select::-webkit-input-placeholder { color: transparent; .tr(); }
+    select::-ms-input-placeholder { color: transparent; .tr(); }
+    select::-ms-input-placeholder { color: transparent; .tr(); }
+    select::placeholder { color: transparent; .tr(); }
+   
+}
+
+.select-price-full {
+   border: 1px solid #DDE1E6;
+}

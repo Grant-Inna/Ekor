@@ -11,9 +11,9 @@ html( lang='ru' )
          .wrapper.caption__wrapper.price__caption
             h1.caption.text-blue Прайс
             p.text-14.text-blue Дата обновления прайс-листа 22.10.2023&nbsp;г. В&nbsp;прайс-листе указаны базовые цены с&nbsp;доставкой по&nbsp;Москве и&nbsp;Московской области
-            button.button-yellow
-               .button-inner.flex
-                  .text-14.text-blue.ml20 Скачать прайс
+            a( download='Прайс' ).button-yellow
+               .button-inner.items-center
+                  .text-14.text-blue.mr20 Скачать прайс
                   .ico__load
          .wrapper.price__search
             form.header__form.price__form
@@ -26,6 +26,8 @@ html( lang='ru' )
                      option 3
          include assets/jade/content/price/price
 
+
+         include assets/jade/content/request/request
 
       include assets/jade/catalog/catalog
 

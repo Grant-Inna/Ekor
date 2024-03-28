@@ -122,9 +122,34 @@ $(document).ready(function () {
                return "Результаты не найдены";
             }
          },
-         placeholder: "Поиск по всем разделам"
+      placeholder: "Поиск по всем разделам"
+   });
+   if ($('.select-icon').length > 0) {
+      $('.select-icon').on( 'click', function () {
+         $(this).siblings('.price_section_form').find('.select-price-section').select2('open');
       });
-   
+   }
+
+   if ( width <= 660 && $('.price_section__column').length > 0) {
+      $('.price_section_form .select-price-section').select2({
+         "language": {
+            "noResults": function () {
+               return "Результаты не найдены";
+            }
+         },
+         placeholder: ''
+      });
+      
+   } else if ($('.price_section__column').length > 0) {
+      $('.price_section_form .select-price-section').select2({
+         "language": {
+               "noResults": function () {
+                  return "Результаты не найдены";
+               }
+            },
+         placeholder: 'Поиск по разделу'
+      });
+   }
   /* каруселька крутилка */
    const carousel_holder = $('.carousel__holder'),
          variety_products = $('.variety_products__list'),
@@ -662,6 +687,7 @@ $(document).ready(function () {
    }
    if ($('.order_info__read').length > 0) { // страница lk/basket
       $('.order_info__read').on( 'click', (event) => { openModal(event.target)});
+      $('.ico__question-circle').on( 'click', (event) => { openModal(event.target)});
    }
    if ($('.delivery_addresses').length > 0) { // страница lk/basket
       $('#lk_add_address').on( 'click', (event) => { openModal(event.target)});

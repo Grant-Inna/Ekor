@@ -1,5 +1,13 @@
-mixin item( number )
-   article.price_item__list
-      .price_item__title
-         span !{number}
-         h2.title
+mixin item( text, price )
+   article.price_section__item
+      .price_item__title.text-16.text-blue !{text}
+      .price_item__weight.text-14.text-blue шт
+      .price_item_price.text-16-big.text-blue.flex
+         span !{price}
+         .elem &nbsp;&#8381;
+      .price_item__purchase
+         button( disabled='true').button.ico__minus
+         .product__weight.text-blue
+            .weight 1
+         button( disabled='false').button.ico__plus
+      .button-buy

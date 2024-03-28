@@ -119,7 +119,7 @@ $(document).ready(function () {
    
    /*  страница доставки в lk  появление всплывашки */
    if ($('.address_obtaining__point').length > 0) {
-      $('.ico__options').on( 'click', (event) => showObtainingOptionsPanel(event.target));
+      // $('.ico__options').on( 'click', (event) => showObtainingOptionsPanel(event.target));
    }
    function showObtainingOptionsPanel( target ) {
       let num = $(target).closest('.address_obtaining__point').data('obtaining-point'),

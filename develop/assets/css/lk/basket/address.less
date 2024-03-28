@@ -129,6 +129,12 @@
    .sm-block({
       grid-column-gap: 10px;
    });
+   input {
+      grid-column: ~"1 / 2";
+   }
+   .obtaining_address__text {
+       grid-column: ~"2 / 3";
+   }
 }
 .basket_address__form {
    .gr();
@@ -468,3 +474,11 @@
 
    }
 });
+
+
+input.obtaining_point_checkbox:checked + .point_options__popup {
+   display: block;
+}
+input.obtaining_point_checkbox:not(:checked) + .point_options__popup {
+   display: none;
+}

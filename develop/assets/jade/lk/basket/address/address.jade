@@ -24,10 +24,11 @@ section.basket_address__holder.section_holder( data-section='2' )
          .basket_address__obtaining
             .address_obtaining__button.text-blue.pointer.chosen( data-obtaining='1' ) Доставка
             .address_obtaining__button.text-blue.pointer.hidden( data-obtaining='2' ) Самовывоз
-         section#obtaining_1.address_obtaining__holder
-            include dostavka
-         section#obtaining_2.address_obtaining__holder.hide
-            include samovivoz
+         form( name='address' )
+            section#obtaining_1.address_obtaining__holder
+               include dostavka
+            section#obtaining_2.address_obtaining__holder.hide
+               include samovivoz
       #obtaining_data.section_block
          .basket_group__title.text-blue.mb20 Дата и&nbsp;время получения
          form.basket_address__form
